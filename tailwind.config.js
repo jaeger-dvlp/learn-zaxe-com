@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
-        zaxe: '1440px',
+        zaxe: '1300px',
       },
       colors: {
         zaxe: '#009ade',
