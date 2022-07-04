@@ -5,7 +5,17 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        zaxe: '1440px',
+      },
+      colors: {
+        zaxe: '#009ade',
+      },
+      fontFamily: {
+        zaxe: ['Mark'],
+      },
+    },
   },
   plugins: [],
 };
