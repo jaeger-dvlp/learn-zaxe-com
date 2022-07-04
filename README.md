@@ -1,1 +1,1 @@
-This is a branch is for front-end demo.
+This branch is for front-end demo.
