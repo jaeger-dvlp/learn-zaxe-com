@@ -10,7 +10,31 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-screen bg-gray-900 h-screen flex flex-wrap justify-center items-center">
-        <p className="text-sky-500 text-3xl font-bold">Hello Zaxe!</p>
+        <div className="bg-zaxe/5 p-5 w-full grid grid-cols-1 place-content-start place-items-center max-w-zaxe">
+          <p className="text-zaxe text-3xl font-zaxe  font-black">
+            Hello Zaxe!
+          </p>
+          <p className="text-zaxe text-3xl font-zaxe  font-extrabold">
+            Hello Zaxe!
+          </p>
+          <p className="text-zaxe text-3xl font-zaxe  font-bold">Hello Zaxe!</p>
+          <p className="text-zaxe text-3xl font-zaxe  font-semibold">
+            Hello Zaxe!
+          </p>
+          <p className="text-zaxe text-3xl font-zaxe  font-medium">
+            Hello Zaxe!
+          </p>
+          <p className="text-zaxe text-3xl font-zaxe  font-normal">
+            Hello Zaxe!
+          </p>
+          <p className="text-zaxe text-3xl font-zaxe  font-light">
+            Hello Zaxe!
+          </p>
+          <p className="text-zaxe text-3xl font-zaxe  font-extralight">
+            Hello Zaxe!
+          </p>
+          <p className="text-zaxe text-3xl font-zaxe  font-thin">Hello Zaxe!</p>
+        </div>
       </div>
     </>
   );
