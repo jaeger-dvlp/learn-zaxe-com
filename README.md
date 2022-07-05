@@ -1,6 +1,4 @@
-## 🛠 Zaxe | Knowledge Base
-
----
+## **🛠 Zaxe | Knowledge Base**
 
 ```
 Branch : demo
