@@ -2,8 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Header from '../components/Header';
-import SearchBar from '../components/SearchBar';
+import Header from '../components/main/Header';
+import SearchBar from '../components/misc/SearchBar';
 
 function Home() {
   const { t } = useTranslation();
@@ -15,20 +15,20 @@ function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="w-full !font-zaxe grid grid-cols-1 place-content-start place-items-center pt-[90px] bg-zinc-50">
+      <div className="w-full !font-zaxe grid grid-cols-1 place-content-start place-items-center pt-[130px] bg-white">
         <div className="w-full max-w-zaxe p-5 pt-7 pb-10 grid grid-cols-1 place-content-start place-items-center">
-          <div className="grid grid-cols-1 place-content-center place-items-center gap-2">
-            <h1 className="text-4xl text-center font-semibold text-[#515151]">
+          <div className="grid grid-cols-1 place-content-center place-items-center gap-0">
+            <h1 className="text-[60px] text-center font-bold text-[#515151]">
               {t('homepage.banner.heading')}
             </h1>
-            <h1 className="text-4xl text-center font-semibold text-zaxe">
+            <h1 className="text-[60px] relative -top-5 text-center font-bold text-zaxe">
               {t('homepage.banner.second-heading')}
             </h1>
             <p className="text-[18px] mt-2 w-full max-w-[550px] text-center font-medium text-[#666666]">
               {t('homepage.banner.description')}
             </p>
           </div>
-          <div className="grid relative w-full grid-cols-1 place-content-center place-items-center mt-7">
+          <div className="grid relative w-full grid-cols-1 place-content-center place-items-center mt-10">
             <SearchBar />
           </div>
         </div>
