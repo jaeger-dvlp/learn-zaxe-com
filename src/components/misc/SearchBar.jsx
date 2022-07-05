@@ -1,16 +1,18 @@
 import React from 'react';
+import { useTranslation } from 'next-i18next';
 
 import { AiOutlineSearch } from 'react-icons/ai';
 
-export default function SearchBar() {
+function SearchBar() {
+  const { t } = useTranslation();
   const [searchBarPHs, setSearchBarPHs] = React.useState({
     placeHolders: [
-      'How to replace Print Table?',
-      'How can i change 0.4mm Nozzle?',
-      'Migrating from X2..',
-      'is there a way to change the nozzle size?',
-      'How to change the nozzle size?',
-      'My screen of Zaxe X3 is frozen!',
+      t('searchbar.placeholders.0'),
+      t('searchbar.placeholders.1'),
+      t('searchbar.placeholders.2'),
+      t('searchbar.placeholders.3'),
+      t('searchbar.placeholders.4'),
+      t('searchbar.placeholders.5'),
     ],
     active: 0,
   });
@@ -34,7 +36,11 @@ export default function SearchBar() {
       e.preventDefault();
       const searchInput = barForm.querySelector('input');
       // eslint-disable-next-line no-alert
-      alert(searchInput.value);
+      alert(
+        searchInput.value
+          ? `${t('searchbar.searching-for')} ${searchInput.value}`
+          : `${t('searchbar.searching-for')} Nothing`
+      );
     };
 
     barForm.addEventListener('submit', HandleSearch);
@@ -58,3 +64,5 @@ export default function SearchBar() {
     </form>
   );
 }
+
+export default SearchBar;
