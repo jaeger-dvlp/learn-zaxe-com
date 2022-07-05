@@ -5,5 +5,16 @@
       "second-heading": "Zaxe Bilgi Merkezi",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, incidunt, quis! Voluptatem repellat, modi sunt odio Eum dignissimos cum odio."
     }
+  },
+  "searchbar": {
+    "placeholders": [
+      "Baskı tablası nasıl değiştirilir?",
+      "0.4mm Nozül nasıl değiştirilir?",
+      "X2'den Yükseltme..",
+      "Nozül boyutu değiştirilebilir mi?",
+      "Nozül boyutu nasıl değiştirilir?",
+      "Zaxe X3'ümün ekranı dondu!"
+    ],
+    "searching-for": "Şu değer aranıyor :"
   }
 }
