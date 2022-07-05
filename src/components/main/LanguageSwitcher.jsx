@@ -11,14 +11,14 @@ export default function LanguageSwitcher() {
   return (
     <div className="absolute group grid grid-cols-1 place-content-start place-items-start min-w-[60px] font-zaxe right-5 top-1/2 -translate-y-1/2 text-[#585858]">
       <div className="w-full grid grid-cols-2 items-center border border-[#585858] px-2 p-0 rounded-sm">
-        <div className="w-full transition-all duration-150 text-sm">
+        <div className="w-full text-sm transition-all duration-150">
           {currentLanguage.toUpperCase()}
         </div>
-        <div className="w-full flex justify-end">
-          <FaChevronDown className="group-hover:rotate-180 transition-all duration-150 text-xs" />
+        <div className="flex justify-end w-full">
+          <FaChevronDown className="text-xs transition-all duration-150 group-hover:rotate-180" />
         </div>
       </div>
-      <div className="p-0 m-0 pt-2 grid grid-cols-1 place-content-start place-items-center transition-all duration-150 invisible opacity-0 group-hover:visible group-hover:opacity-100 -translate-y-4 group-hover:-translate-y-0 absolute top-full left-0 w-full gap-1">
+      <div className="absolute left-0 grid invisible w-full grid-cols-1 gap-1 p-0 pt-2 m-0 transition-all duration-150 -translate-y-4 opacity-0 place-content-start place-items-center group-hover:visible group-hover:opacity-100 group-hover:-translate-y-0 top-full">
         {router.locales.map(
           (locale) =>
             locale !== currentLanguage && (

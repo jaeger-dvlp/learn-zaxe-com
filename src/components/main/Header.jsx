@@ -5,14 +5,17 @@ import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   return (
-    <div className="w-full bg-transparent p-0 flex flex-wrap justify-center items-center absolute left-0 top-0">
-      <div className="w-full relative bg-transparent max-w-zaxe flex flex-wrap justify-center items-center p-5">
+    <div className="absolute top-0 left-0 flex flex-wrap items-center justify-center w-full p-0 bg-transparent">
+      <div className="relative flex flex-wrap items-center justify-center w-full p-5 bg-transparent max-w-zaxe">
         {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-        <a href="/" className="w-full max-w-[200px] block">
+        <a
+          href="/"
+          className="w-full xl:max-w-[200px] lg:max-w-[200px] max-w-[100px] block"
+        >
           <Image
             alt="Zaxe Knowledge Base Logo"
             src={Images.logo.zxkb}
-            className="w-full h-full hover:scale-90 transition-all duration-150"
+            className="w-full h-full transition-all duration-150 hover:scale-90"
             layout="responsive"
           />
         </a>

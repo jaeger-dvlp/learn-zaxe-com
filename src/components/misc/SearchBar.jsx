@@ -26,7 +26,7 @@ function SearchBar() {
             ? 0
             : searchBarPHs.active + 1,
       });
-    }, 2500);
+    }, 1500);
     return () => clearInterval(interval);
   }, [searchBarPHs]);
 
@@ -49,10 +49,10 @@ function SearchBar() {
   }, []);
 
   return (
-    <form className="relative main-search-bar w-full max-w-md ring-2 ring-transparent focus-within:ring-zaxe transition-all duration-150 h-12 flex justify-center items-center rounded-md overflow-hidden">
+    <form className="relative flex items-center justify-center w-full max-w-md overflow-hidden transition-all duration-150 rounded-md main-search-bar ring-2 ring-transparent focus-within:ring-zaxe xl:h-12 lg:h-12 h-9">
       <input
         placeholder={searchBarPHs.placeHolders[searchBarPHs.active]}
-        className=" bg-[#F5F5F5] text-lg placeholder-slate-300 outline-none p-2 px-4 pr-0 relative w-full h-full text-center"
+        className=" bg-[#F5F5F5] xl:text-lg lg:text-lg text-sm placeholder-slate-300 outline-none p-2 px-4 pr-0 relative w-full h-full text-center"
         type="text"
       />
       <button

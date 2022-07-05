@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import Header from '../components/main/Header';
 import SearchBar from '../components/misc/SearchBar';
 
@@ -15,20 +16,22 @@ function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="w-full !font-zaxe grid grid-cols-1 place-content-start place-items-center pt-[130px] bg-white">
-        <div className="w-full max-w-zaxe p-5 pt-7 pb-10 grid grid-cols-1 place-content-start place-items-center">
-          <div className="grid grid-cols-1 place-content-center place-items-center gap-0">
-            <h1 className="text-[60px] text-center font-bold text-[#515151]">
+      <div className="w-full !font-zaxe grid grid-cols-1 place-content-start place-items-center pt-[15vh] bg-white">
+        <div className="grid w-full grid-cols-1 p-5 pb-10 max-w-zaxe pt-7 place-content-start place-items-center">
+          <div className="grid grid-cols-1 gap-0 place-content-center place-items-center">
+            <h1 className="xl:text-6xl lg:text-6xl text-xl text-center font-bold text-[#515151]">
               {t('homepage.banner.heading')}
             </h1>
-            <h1 className="text-[60px] relative -top-5 text-center font-bold text-zaxe">
+            <h1 className="text-xl font-bold text-center xl:text-6xl lg:text-6xl text-zaxe">
               {t('homepage.banner.second-heading')}
             </h1>
-            <p className="text-[18px] mt-2 w-full max-w-[550px] text-center font-medium text-[#666666]">
+          </div>
+          <div className="relative grid w-full grid-cols-1 my-5 xl:my-10 lg:my-10 place-content-center place-items-center">
+            <p className="xl:text-lg lg:text-lg text-xs w-full max-w-[550px] text-center font-medium text-[#666666]">
               {t('homepage.banner.description')}
             </p>
           </div>
-          <div className="grid relative w-full grid-cols-1 place-content-center place-items-center mt-10">
+          <div className="relative grid w-full grid-cols-1 place-content-center place-items-center">
             <SearchBar />
           </div>
         </div>
