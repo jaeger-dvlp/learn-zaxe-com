@@ -1,6 +1,7 @@
+import React from 'react';
+import Link from 'next/link';
 import { i18n } from 'next-i18next';
 import { useRouter } from 'next/router';
-import React from 'react';
 
 import { FaChevronDown } from 'react-icons/fa';
 
@@ -22,20 +23,15 @@ export default function LanguageSwitcher() {
         {router.locales.map(
           (locale) =>
             locale !== currentLanguage && (
-              <button
+              <Link
+                href={router.pathname}
+                locale={locale}
                 key={`languageSwitchFor${locale}`}
-                type="button"
-                onClick={() => {
-                  router.push(
-                    `/${locale.toLowerCase()}${router.pathname}`,
-                    `/${locale.toLowerCase()}${router.pathname}`,
-                    { locale: locale.toLowerCase() }
-                  );
-                }}
-                className="w-full hover:underline text-sm px-2 p-0 grid grid-cols-1 place-content-start border border-[#585858] rounded-sm"
               >
-                {locale.toUpperCase()}
-              </button>
+                <a className="w-full hover:underline text-sm px-2 p-0 grid grid-cols-1 place-content-start place-items-center text-center border border-[#585858] rounded-sm">
+                  {locale.toUpperCase()}
+                </a>
+              </Link>
             )
         )}
       </div>
