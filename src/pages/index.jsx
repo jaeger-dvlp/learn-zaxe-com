@@ -14,11 +14,19 @@ function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="w-screen bg-gray-900 h-screen flex flex-wrap justify-center items-center">
-        <div className="bg-zaxe/5 rounded-lg p-5 w-full grid grid-cols-1 place-content-start place-items-center max-w-zaxe">
-          <p className="text-zaxe text-3xl font-zaxe  font-bold">
-            {t('hello')}
-          </p>
+      <div className="w-full !font-zaxe grid grid-cols-1 place-content-start place-items-center pt-[90px] bg-zinc-50">
+        <div className="w-full max-w-zaxe p-5 pt-7 grid grid-cols-1 place-content-start place-items-center">
+          <div className="grid grid-cols-1 place-content-center place-items-center gap-2">
+            <h1 className="text-4xl font-semibold text-[#515151]">
+              {t('homepage.banner.heading')}
+            </h1>
+            <h1 className="text-4xl font-semibold text-zaxe">
+              {t('homepage.banner.second-heading')}
+            </h1>
+            <p className="text-[18px] mt-2 w-full max-w-[550px] text-center font-medium text-[#666666]">
+              {t('homepage.banner.description')}
+            </p>
+          </div>
         </div>
       </div>
     </>
