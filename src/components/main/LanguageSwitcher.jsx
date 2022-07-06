@@ -10,7 +10,7 @@ export default function LanguageSwitcher() {
 
   return (
     <div className="absolute group grid grid-cols-1 place-content-start place-items-start min-w-[60px] font-zaxe right-5 top-1/2 -translate-y-1/2 text-[#585858]">
-      <div className="w-full grid grid-cols-2 items-center border border-[#585858] px-2 p-0 rounded-sm">
+      <div className="w-full grid grid-cols-2 place-items-center border border-[#585858] px-2 p-0 rounded-sm">
         <div className="w-full text-sm transition-all duration-300">
           {currentLanguage.toUpperCase()}
         </div>
