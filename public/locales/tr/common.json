@@ -1,4 +1,12 @@
 {
+  "meta": {
+    "title": {
+      "home": "Zaxe | Bilgi Merkezi"
+    },
+    "content": {
+      "home": "Zaxe Bilgi Merkezine Hoşgeldin. Zaxe ile başlamak için ihtiyacın olan tüm bilgilere buradan ulaşabilirsin."
+    }
+  },
   "homepage": {
     "banner": {
       "heading": "Hoşgeldin",

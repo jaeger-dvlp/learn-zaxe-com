@@ -1,4 +1,12 @@
 {
+  "meta": {
+    "title": {
+      "home": "Zaxe | Knowledge Base"
+    },
+    "content": {
+      "home": "Welcome to Zaxe Knowledge Base. Here you can find all the information you need to get started with Zaxe."
+    }
+  },
   "homepage": {
     "banner": {
       "heading": "Welcome to",
