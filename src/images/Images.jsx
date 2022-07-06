@@ -1,4 +1,7 @@
 const Images = {
+  og: {
+    home: require('./og/zaxe-knowledge-base.png'),
+  },
   logo: {
     zxkb: require('./misc/logo-zxkb.png'),
   },
