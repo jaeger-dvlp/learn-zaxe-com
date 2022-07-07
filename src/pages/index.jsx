@@ -7,6 +7,7 @@ import Header from '../components/main/Header';
 import WelcomeSection from '../components/homepage/WelcomeSection';
 import Products from '../components/homepage/Products';
 import Images from '../images/Images';
+import QuickViewer from '../components/misc/QuickViewer';
 
 function Home() {
   const { t } = useTranslation();
@@ -57,6 +58,7 @@ function Home() {
       <Header />
       <WelcomeSection />
       <Products />
+      <QuickViewer />
     </>
   );
 }

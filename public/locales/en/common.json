@@ -37,5 +37,28 @@
       "My screen of Zaxe X3 is frozen!"
     ],
     "searching-for": "Searching Value :"
+  },
+  "components": {
+    "quick-viewer": {
+      "subjects": ["Quick View", "Documents", "Videos"],
+      "substances": [
+        {
+          "heading": "Filament stuck in hotend!",
+          "description": "Each smoothing process in the SVS technology consists of several stages, including creating negative pressure in the chamber or condensation of the solvent’s vapors. During each stage, the device has to keep full tightness of the chamber and solvent system to successfully complete the smoothing."
+        },
+        {
+          "heading": "How to change print table?",
+          "description": "Each smoothing process in the SVS technology consists of several stages, including creating negative pressure in the chamber or condensation of the solvent’s vapors. During each stage, the device has to keep full tightness of the chamber and solvent system to successfully complete the smoothing."
+        },
+        {
+          "heading": "How to 3D print flex?",
+          "description": "Each smoothing process in the SVS technology consists of several stages, including creating negative pressure in the chamber or condensation of the solvent’s vapors. During each stage, the device has to keep full tightness of the chamber and solvent system to successfully complete the smoothing."
+        },
+        {
+          "heading": "My screen of device is frozen!",
+          "description": "Each smoothing process in the SVS technology consists of several stages, including creating negative pressure in the chamber or condensation of the solvent’s vapors. During each stage, the device has to keep full tightness of the chamber and solvent system to successfully complete the smoothing."
+        }
+      ]
+    }
   }
 }
