@@ -6,7 +6,12 @@ export default function WelcomeSection() {
   const { t } = useTranslation();
   return (
     <div className="w-full !font-zaxe grid grid-cols-1 place-content-start place-items-center pt-[15vh] bg-white">
-      <div className="grid w-full grid-cols-1 p-5 pb-10 max-w-zaxe pt-7 place-content-start place-items-center">
+      <div
+        data-aos="fade"
+        data-aos-delay={200}
+        data-aos-duration={500}
+        className="grid w-full grid-cols-1 p-5 pb-10 max-w-zaxe pt-7 place-content-start place-items-center"
+      >
         <div className="grid grid-cols-1 gap-0 place-content-center place-items-center">
           <h1 className="xl:text-6xl lg:text-6xl text-xl text-center font-bold text-[#515151]">
             {t('homepage.banner.heading')}
