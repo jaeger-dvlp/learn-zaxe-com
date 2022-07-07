@@ -14,11 +14,16 @@ export default function Products() {
   ]);
   return (
     <div className="grid w-full grid-cols-1 bg-white font-zaxe place-content-start place-items-center">
-      <div className="grid w-full grid-cols-1 gap-10 px-5 py-10 bg-white max-w-zaxe place-content-start place-items-center">
-        <h1 className="text-2xl font-bold text-zaxe xl:text-6xl lg:text-6xl">
+      <div
+        data-aos="fade"
+        data-aos-delay={400}
+        data-aos-duration={500}
+        className="grid w-full grid-cols-1 gap-10 px-5 py-10 bg-white max-w-zaxe place-content-start place-items-center"
+      >
+        <h1 className="text-2xl z-[2] font-bold text-zaxe xl:text-6xl lg:text-6xl">
           {t('homepage.products.heading')}
         </h1>
-        <div className="grid w-full grid-cols-1 gap-10 xl:grid-cols-3 lg:grid-cols-3 place-content-start place-items-center">
+        <div className="grid z-[1] w-full grid-cols-1 gap-10 xl:grid-cols-3 lg:grid-cols-3 place-content-start place-items-center">
           {products.map((product) => (
             <Link
               key={`route-product-${product.slug}`}
