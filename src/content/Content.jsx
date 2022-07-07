@@ -1,3 +1,5 @@
+import { v4 as uuidV4 } from 'uuid';
+
 const ProductCategories = [
   {
     name: { tr: '3D Yazıcılar', en: '3D Printers' },
@@ -47,5 +49,93 @@ const Products = [
     },
   },
 ];
-const Content = { products: Products, productCategories: ProductCategories };
+
+const QuickViewerContent = [
+  {
+    slug: 'quick-view',
+    name: 'components.quick-viewer.subjects.0',
+    substances: [
+      {
+        id: uuidV4(),
+        heading: 'components.quick-viewer.substances.0.heading',
+        description: 'components.quick-viewer.substances.0.description',
+      },
+      {
+        id: uuidV4(),
+        heading: 'components.quick-viewer.substances.1.heading',
+        description: 'components.quick-viewer.substances.1.description',
+      },
+      {
+        id: uuidV4(),
+        heading: 'components.quick-viewer.substances.2.heading',
+        description: 'components.quick-viewer.substances.2.description',
+      },
+      {
+        id: uuidV4(),
+        heading: 'components.quick-viewer.substances.3.heading',
+        description: 'components.quick-viewer.substances.3.description',
+      },
+    ],
+  },
+  {
+    slug: 'documents',
+    name: 'components.quick-viewer.subjects.1',
+    substances: [
+      {
+        id: uuidV4(),
+        heading: 'components.quick-viewer.substances.0.heading',
+        description: 'components.quick-viewer.substances.0.description',
+      },
+      {
+        id: uuidV4(),
+        heading: 'components.quick-viewer.substances.1.heading',
+        description: 'components.quick-viewer.substances.1.description',
+      },
+      {
+        id: uuidV4(),
+        heading: 'components.quick-viewer.substances.2.heading',
+        description: 'components.quick-viewer.substances.2.description',
+      },
+      {
+        id: uuidV4(),
+        heading: 'components.quick-viewer.substances.3.heading',
+        description: 'components.quick-viewer.substances.3.description',
+      },
+    ],
+  },
+  {
+    slug: 'videos',
+    name: 'components.quick-viewer.subjects.2',
+    substances: [
+      {
+        id: uuidV4(),
+        heading: 'components.quick-viewer.substances.0.heading',
+        description: 'components.quick-viewer.substances.0.description',
+      },
+      {
+        id: uuidV4(),
+        heading: 'components.quick-viewer.substances.1.heading',
+        description: 'components.quick-viewer.substances.1.description',
+      },
+      {
+        id: uuidV4(),
+        heading: 'components.quick-viewer.substances.2.heading',
+        description: 'components.quick-viewer.substances.2.description',
+      },
+      {
+        id: uuidV4(),
+        heading: 'components.quick-viewer.substances.3.heading',
+        description: 'components.quick-viewer.substances.3.description',
+      },
+    ],
+  },
+];
+
+const Content = {
+  products: Products,
+  productCategories: ProductCategories,
+  components: {
+    quickViewer: QuickViewerContent,
+  },
+};
 export default Content;
