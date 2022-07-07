@@ -7,6 +7,16 @@
       "home": "Zaxe Bilgi Merkezine Hoşgeldin. Zaxe ile başlamak için ihtiyacın olan tüm bilgilere buradan ulaşabilirsin."
     }
   },
+  "links": {
+    "home": "Anasayfa",
+    "3d-printers": "3D Yazıcılar",
+    "softwares": "Yazılımlar"
+  },
+  "404": {
+    "heading": "Oops.",
+    "message": "Bu sayfayı bulamadık.",
+    "try-search": "Başka bir şeyi aramayı deneyin."
+  },
   "homepage": {
     "banner": {
       "heading": "Hoşgeldin",

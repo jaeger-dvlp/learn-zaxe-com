@@ -7,6 +7,16 @@
       "home": "Welcome to Zaxe Knowledge Base. Here you can find all the information you need to get started with Zaxe."
     }
   },
+  "links": {
+    "home": "Home",
+    "3d-printers": "3D Printers",
+    "softwares": "Softwares"
+  },
+  "404": {
+    "heading": "Oops.",
+    "message": "The page you are looking for does not exist.",
+    "try-search": "Try searching for something else."
+  },
   "homepage": {
     "banner": {
       "heading": "Welcome to",
