@@ -37,5 +37,28 @@
       "Zaxe X3'ümün ekranı dondu!"
     ],
     "searching-for": "Şu değer aranıyor :"
+  },
+  "components": {
+    "quick-viewer": {
+      "subjects": ["İlk Bakış", "Dökümanlar", "Videolar"],
+      "substances": [
+        {
+          "heading": "Hotend'de filament sıkışması!",
+          "description": "SVS teknolojisindeki her yumuşatma işlemi, haznede negatif basınç oluşturma veya çözücü buharlarının yoğunlaşması dahil olmak üzere birkaç aşamadan oluşur. Her aşamada cihaz, düzgünleştirmeyi başarıyla tamamlamak için haznenin ve solvent sisteminin tam sızdırmazlığını sağlamalıdır."
+        },
+        {
+          "heading": "Baskı tablası nasıl değiştirilir?",
+          "description": "SVS teknolojisindeki her yumuşatma işlemi, haznede negatif basınç oluşturma veya çözücü buharlarının yoğunlaşması dahil olmak üzere birkaç aşamadan oluşur. Her aşamada cihaz, düzgünleştirmeyi başarıyla tamamlamak için haznenin ve solvent sisteminin tam sızdırmazlığını sağlamalıdır."
+        },
+        {
+          "heading": "Nasıl flex baskı alınır?",
+          "description": "SVS teknolojisindeki her yumuşatma işlemi, haznede negatif basınç oluşturma veya çözücü buharlarının yoğunlaşması dahil olmak üzere birkaç aşamadan oluşur. Her aşamada cihaz, düzgünleştirmeyi başarıyla tamamlamak için haznenin ve solvent sisteminin tam sızdırmazlığını sağlamalıdır."
+        },
+        {
+          "heading": "Cihazımın ekranı dondu!",
+          "description": "SVS teknolojisindeki her yumuşatma işlemi, haznede negatif basınç oluşturma veya çözücü buharlarının yoğunlaşması dahil olmak üzere birkaç aşamadan oluşur. Her aşamada cihaz, düzgünleştirmeyi başarıyla tamamlamak için haznenin ve solvent sisteminin tam sızdırmazlığını sağlamalıdır."
+        }
+      ]
+    }
   }
 }
