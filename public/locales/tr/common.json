@@ -63,6 +63,22 @@
           "description": "SVS teknolojisindeki her yumuşatma işlemi, haznede negatif basınç oluşturma veya çözücü buharlarının yoğunlaşması dahil olmak üzere birkaç aşamadan oluşur. Her aşamada cihaz, düzgünleştirmeyi başarıyla tamamlamak için haznenin ve solvent sisteminin tam sızdırmazlığını sağlamalıdır."
         }
       ]
+    },
+    "tips-n-tricks": {
+      "heading": "İpuçları & Tavsiyeler",
+      "description": "Kolay & Basit",
+      "values": [
+        "Kullanım",
+        "Kullanım",
+        "Kullanım",
+        "Kullanım",
+        "Kullanım",
+        "Kullanım",
+        "Kullanım",
+        "Kullanım",
+        "Kullanım",
+        "Kullanım"
+      ]
     }
   }
 }

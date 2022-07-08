@@ -63,6 +63,22 @@
           "description": "Each smoothing process in the SVS technology consists of several stages, including creating negative pressure in the chamber or condensation of the solvent’s vapors. During each stage, the device has to keep full tightness of the chamber and solvent system to successfully complete the smoothing."
         }
       ]
+    },
+    "tips-n-tricks": {
+      "heading": "Tips & Tricks",
+      "description": "Easy Peasy",
+      "values": [
+        "Using",
+        "Using",
+        "Using",
+        "Using",
+        "Using",
+        "Using",
+        "Using",
+        "Using",
+        "Using",
+        "Using"
+      ]
     }
   }
 }
