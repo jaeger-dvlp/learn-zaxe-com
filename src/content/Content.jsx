@@ -131,11 +131,57 @@ const QuickViewerContent = [
   },
 ];
 
+const DownloadDocuments = [
+  {
+    name: {
+      tr: 'Güvenlik ve Teknik Veri Sayfaları',
+      en: 'Safety and Technical Data Sheets',
+    },
+    url: 'doc.zaxe',
+  },
+  {
+    name: {
+      tr: 'Uygunluk Belgesi',
+      en: 'Certificate of Compliance',
+    },
+    url: 'doc.zaxe',
+  },
+  {
+    name: {
+      tr: 'Dilimleyici için ABS Profili',
+      en: 'ABS Profile for Slicer',
+    },
+    url: 'doc.zaxe',
+  },
+  {
+    name: {
+      tr: "Dilimlemeyi xDesktop'a Aktarma",
+      en: 'How to Import Slicing to xDesktop',
+    },
+    url: 'doc.zaxe',
+  },
+  {
+    name: {
+      tr: 'Çoklu Malzeme Uyumluluğu',
+      en: 'Multimaterial Compatibility',
+    },
+    url: 'doc.zaxe',
+  },
+  {
+    name: {
+      tr: 'NFC Özellikleri',
+      en: 'NFC Specs',
+    },
+    url: 'doc.zaxe',
+  },
+];
+
 const Content = {
   products: Products,
   productCategories: ProductCategories,
   components: {
     quickViewer: QuickViewerContent,
+    downloadDocuments: DownloadDocuments,
   },
 };
 export default Content;
