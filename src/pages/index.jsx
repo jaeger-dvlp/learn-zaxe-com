@@ -10,6 +10,7 @@ import TipsNTrips from '../components/main/TipsNTrips';
 import QuickViewer from '../components/misc/QuickViewer';
 import WelcomeSection from '../components/homepage/WelcomeSection';
 import FrequentlyViewed from '../components/homepage/FrequentlyViewed';
+import DownloadDocuments from '../components/homepage/DownloadDocuments';
 
 function Home() {
   const { t } = useTranslation();
@@ -63,6 +64,7 @@ function Home() {
       <QuickViewer />
       <FrequentlyViewed />
       <TipsNTrips />
+      <DownloadDocuments />
     </>
   );
 }
