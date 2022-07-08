@@ -1,60 +1,20 @@
-import { i18n } from 'next-i18next';
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
 import { BsImage } from 'react-icons/bs';
+import { i18n, useTranslation } from 'next-i18next';
+import Content from '../../content/Content';
 
 function DownloadDocuments() {
-  const [documents] = React.useState([
-    {
-      name: {
-        tr: 'Güvenlik ve Teknik Veri Sayfaları',
-        en: 'Safety and Technical Data Sheets',
-      },
-      url: 'doc.zaxe',
-    },
-    {
-      name: {
-        tr: 'Uygunluk Belgesi',
-        en: 'Certificate of Compliance',
-      },
-      url: 'doc.zaxe',
-    },
-    {
-      name: {
-        tr: 'Dilimleyici için ABS Profili',
-        en: 'ABS Profile for Slicer',
-      },
-      url: 'doc.zaxe',
-    },
-    {
-      name: {
-        tr: "Dilimlemeyi xDesktop'a Aktarma",
-        en: 'How to Import Slicing to xDesktop',
-      },
-      url: 'doc.zaxe',
-    },
-    {
-      name: {
-        tr: 'Çoklu Malzeme Uyumluluğu',
-        en: 'Multimaterial Compatibility',
-      },
-      url: 'doc.zaxe',
-    },
-    {
-      name: {
-        tr: 'NFC Özellikleri',
-        en: 'NFC Specs',
-      },
-      url: 'doc.zaxe',
-    },
-  ]);
+  const { t } = useTranslation();
+
+  const [documents] = React.useState(Content.components.downloadDocuments);
   return (
     <div className="grid w-full grid-cols-1 bg-white font-zaxe place-content-start place-items-center">
       <div className="grid w-full grid-cols-1 px-5 bg-white xl:px-9 lg:px-9 max-w-app place-content-start place-items-center py-28">
         <div className="grid w-full grid-cols-1 gap-1 xl:grid-cols-12 lg:grid-cols-12 place-content-start place-items-center">
           <div className="grid w-full h-full grid-cols-1 col-span-5 py-0 xl:py-3 lg:py-3 place-content-start place-items-start">
             <h1 className="mb-6 text-2xl font-bold xl:text-4xl lg:text-4xl text-zaxe">
-              Download Documents
+              {t('homepage.download-documents.heading')}
             </h1>
             <ul className="grid w-full grid-cols-1 gap-3 place-content-start place-items-start">
               {documents.map((document) => (
