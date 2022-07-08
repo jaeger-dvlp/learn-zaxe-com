@@ -20,7 +20,7 @@ function NotFound() {
           data-aos="zoom-in"
           data-aos-delay={200}
           data-aos-duration={500}
-          className="grid w-full grid-cols-1 p-5 gap-7 max-w-zaxe place-content-start place-items-center"
+          className="grid w-full grid-cols-1 p-5 gap-7 max-w-app place-content-start place-items-center"
         >
           <div className="grid w-full grid-cols-1 gap-1 xl:gap-3 lg:gap-3 place-content-start place-items-center">
             <h1 className="xl:text-6xl lg:text-6xl text-2xl text-center font-bold text-[#515151]">

@@ -18,7 +18,7 @@ export default function Products() {
         data-aos="fade"
         data-aos-delay={400}
         data-aos-duration={500}
-        className="grid w-full grid-cols-1 gap-10 px-5 py-10 bg-white max-w-zaxe place-content-start place-items-center"
+        className="grid w-full grid-cols-1 gap-10 px-5 py-10 bg-white max-w-app place-content-start place-items-center"
       >
         <h1 className="text-2xl z-[2] font-bold text-zaxe xl:text-6xl lg:text-6xl">
           {t('homepage.products.heading')}

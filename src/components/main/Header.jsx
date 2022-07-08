@@ -6,7 +6,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 export default function Header() {
   return (
     <div className="absolute top-0 left-0 flex flex-wrap items-center justify-center w-full p-0 bg-transparent">
-      <div className="relative flex flex-wrap items-center justify-center w-full p-5 bg-transparent max-w-zaxe">
+      <div className="relative flex flex-wrap items-center justify-center w-full p-5 bg-transparent max-w-app">
         {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
         <a
           href="/"
