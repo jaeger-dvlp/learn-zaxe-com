@@ -9,6 +9,7 @@ import Products from '../components/homepage/Products';
 import Images from '../images/Images';
 import QuickViewer from '../components/misc/QuickViewer';
 import FrequentlyViewed from '../components/homepage/FrequentlyViewed';
+import TipsNTrips from '../components/main/TipsNTrips';
 
 function Home() {
   const { t } = useTranslation();
@@ -61,6 +62,7 @@ function Home() {
       <Products />
       <QuickViewer />
       <FrequentlyViewed />
+      <TipsNTrips />
     </>
   );
 }
