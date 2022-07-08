@@ -29,6 +29,9 @@
     "frequently-viewed-manuals": {
       "heading": "Frequently Viewed Manuals",
       "description": "Each smoothing process in the SVS technology consists of several stages, including creating negative pressure in the chamber."
+    },
+    "download-documents": {
+      "heading": "Download Documents"
     }
   },
   "searchbar": {
