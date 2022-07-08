@@ -5,7 +5,7 @@ import { i18n, useTranslation } from 'next-i18next';
 
 import Content from '../../content/Content';
 
-export default function Products() {
+function Products() {
   const { t } = useTranslation();
   const [products] = React.useState([
     Content.products.find(({ slug }) => slug === 'zaxe-xdesktop'),
@@ -53,3 +53,5 @@ export default function Products() {
     </div>
   );
 }
+
+export default Products;

@@ -4,7 +4,7 @@ import { i18n } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { FaChevronDown } from 'react-icons/fa';
 
-export default function LanguageSwitcher() {
+function LanguageSwitcher() {
   const currentLanguage = i18n.language;
   const router = useRouter();
 
@@ -37,3 +37,5 @@ export default function LanguageSwitcher() {
     </div>
   );
 }
+
+export default LanguageSwitcher;

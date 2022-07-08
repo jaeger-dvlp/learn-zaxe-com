@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-
 import { AiOutlineSearch } from 'react-icons/ai';
 
 function SearchBar() {
@@ -42,7 +41,6 @@ function SearchBar() {
           : `${t('searchbar.searching-for')} Nothing`
       );
     };
-
     barForm.addEventListener('submit', HandleSearch);
 
     return () => barForm.removeEventListener('submit', HandleSearch);

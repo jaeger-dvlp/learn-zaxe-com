@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 
-export default function FrequentlyViewed() {
+function FrequentlyViewed() {
   const { t } = useTranslation();
   return (
     <div className="grid w-full grid-cols-1 bg-white font-zaxe place-content-start place-items-center">
@@ -16,3 +16,5 @@ export default function FrequentlyViewed() {
     </div>
   );
 }
+
+export default FrequentlyViewed;

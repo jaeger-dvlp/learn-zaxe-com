@@ -1,8 +1,8 @@
-import { useTranslation } from 'next-i18next';
 import React from 'react';
+import { useTranslation } from 'next-i18next';
 import SearchBar from '../misc/SearchBar';
 
-export default function WelcomeSection() {
+function WelcomeSection() {
   const { t } = useTranslation();
   return (
     <div className="w-full !font-zaxe grid grid-cols-1 place-content-start place-items-center pt-[15vh] bg-white">
@@ -32,3 +32,5 @@ export default function WelcomeSection() {
     </div>
   );
 }
+
+export default WelcomeSection;

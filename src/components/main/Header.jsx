@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Images from '../../images/Images';
 import LanguageSwitcher from './LanguageSwitcher';
 
-export default function Header() {
+function Header() {
   return (
     <div className="absolute top-0 left-0 flex flex-wrap items-center justify-center w-full p-0 bg-transparent">
       <div className="relative flex flex-wrap items-center justify-center w-full p-5 bg-transparent max-w-app">
@@ -24,3 +24,5 @@ export default function Header() {
     </div>
   );
 }
+
+export default Header;
