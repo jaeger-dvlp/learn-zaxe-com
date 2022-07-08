@@ -25,6 +25,10 @@
     },
     "products": {
       "heading": "Ürünler"
+    },
+    "frequently-viewed-manuals": {
+      "heading": "Sık Görüntülenen Dökümanlar",
+      "description": "SVS teknolojisindeki her yumuşatma işlemi, haznede negatif basınç oluşturma veya çözücü buharlarının yoğunlaşması dahil olmak üzere birkaç aşamadan oluşur."
     }
   },
   "searchbar": {
