@@ -10,23 +10,52 @@ function QuickViewer() {
     activeSubstance: null,
     subjects: Content.components.quickViewer,
   });
+
+  const scrollToSubject = (id) => {
+    const subject = document.querySelector(`#subject${id}`) || null;
+    if (subject && window.innerWidth < 1024) {
+      subject.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'center',
+      });
+    }
+  };
+
+  const changeActiveSubject = (subject, index) => {
+    scrollToSubject(index);
+    if (QuickView.activeSubstance !== subject.slug) {
+      return setQuickView({
+        ...QuickView,
+        activeView: subject.slug,
+      });
+    }
+    return false;
+  };
+
+  const changeActiveSubtance = (substance) => {
+    if (QuickView.activeSubstance !== substance) {
+      return setQuickView({
+        ...QuickView,
+        activeSubstance: substance,
+      });
+    }
+    return setQuickView({
+      ...QuickView,
+      activeSubstance: null,
+    });
+  };
+
   return (
     <div className="grid w-full grid-cols-1 font-zaxe place-content-start place-items-center">
       <div className="grid w-full grid-cols-1 py-16 bg-white max-w-[1150px] place-content-start place-items-center">
         <div className="grid w-full grid-cols-1 gap-5 xl:gap-16 lg:gap-16 xl:grid-cols-11 lg:grid-cols-11 place-content-start place-items-start">
-          <div className="relative flex justify-between w-full gap-6 p-5 py-3 overflow-scroll xl:px-5 lg:px-5 xl:overflow-visible lg:overflow-visible xl:py-0 lg:py-0 xl:col-span-3 lg:col-span-3 col-span-full xl:grid lg:grid xl:grid-cols-1 lg:grid-cols-1 place-content-start place-items-center">
-            {QuickView.subjects.map((subject) => (
+          <div className="relative flex justify-between w-full gap-6 p-5 py-3 overflow-scroll subjects-container xl:px-5 lg:px-5 xl:overflow-visible lg:overflow-visible xl:py-0 lg:py-0 xl:col-span-3 lg:col-span-3 col-span-full xl:grid lg:grid xl:grid-cols-1 lg:grid-cols-1 place-content-start place-items-center">
+            {QuickView.subjects.map((subject, index) => (
               <button
                 key={subject.slug}
-                onClick={() => {
-                  if (QuickView.activeSubstance !== subject.slug) {
-                    return setQuickView({
-                      ...QuickView,
-                      activeView: subject.slug,
-                    });
-                  }
-                  return null;
-                }}
+                id={`subject${index}`}
+                onClick={() => changeActiveSubject(subject, index)}
                 className={`w-full xl:min-w-[230px] lg:min-w-[230px] min-w-[200px] outline-none ring-2 ring-transparent active:ring-sky-500
                 transition-all duration-200 xl:min-h-[60px] lg:min-h-[60px] min-h-[55px] xl:text-2xl lg:text-2xl text-lg font-semibold p-1 rounded-3xl bg-[#F5F5F5]
                 text-[#6F6F6F] hover:bg-sky-200 hover:text-zinc-600 ${
@@ -45,18 +74,7 @@ function QuickViewer() {
               .substances.map((substance) => (
                 <button
                   type="button"
-                  onClick={() => {
-                    if (QuickView.activeSubstance !== substance) {
-                      return setQuickView({
-                        ...QuickView,
-                        activeSubstance: substance,
-                      });
-                    }
-                    return setQuickView({
-                      ...QuickView,
-                      activeSubstance: null,
-                    });
-                  }}
+                  onClick={() => changeActiveSubtance(substance)}
                   key={substance.id}
                   className={`w-full overflow-hidden anim-fade-down grid grid-cols-1
                   place-content-start place-items-start outline-none ring-2 ring-transparent
