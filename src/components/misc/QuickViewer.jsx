@@ -17,6 +17,7 @@ function QuickViewer() {
           <div className="relative flex justify-between w-full gap-6 p-5 py-3 overflow-scroll xl:px-5 lg:px-5 xl:overflow-visible lg:overflow-visible xl:py-0 lg:py-0 xl:col-span-3 lg:col-span-3 col-span-full xl:grid lg:grid xl:grid-cols-1 lg:grid-cols-1 place-content-start place-items-center">
             {QuickView.subjects.map((subject) => (
               <button
+                key={subject.slug}
                 onClick={() => {
                   if (QuickView.activeSubstance !== subject.slug) {
                     return setQuickView({
