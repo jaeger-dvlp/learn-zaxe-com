@@ -28,7 +28,7 @@ function TipsNTrips() {
         <div className="flex flex-wrap items-center justify-center xl:gap-14 lg:gap-14 gap-7">
           {tips.map((value, index) => (
             <Link
-              key={Math.floor(Math.random * 9999)}
+              key={Math.floor(Math.random() * 9999)}
               href="/element"
               locale={i18n.language}
             >
