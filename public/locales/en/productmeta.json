@@ -1,0 +1,15 @@
+{
+  "3dprinters": {
+    "zaxe-z3": {
+      "title": "Zaxe Z3 | Zaxe Knowledge Base"
+    },
+    "zaxe-x3": {
+      "title": "Zaxe X3 | Zaxe Knowledge Base"
+    }
+  },
+  "softwares": {
+    "zaxe-xdesktop": {
+      "title": "Zaxe xDesktop | Zaxe Knowledge Base"
+    }
+  }
+}
