@@ -23,7 +23,7 @@ function LanguageSwitcher() {
           (locale) =>
             locale !== currentLanguage && (
               <Link
-                href={router.pathname}
+                href={router.asPath}
                 locale={locale}
                 key={`languageSwitchFor${locale}`}
               >
