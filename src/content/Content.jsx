@@ -3,11 +3,11 @@ import { v4 as uuidV4 } from 'uuid';
 const ProductCategories = [
   {
     name: { tr: '3D Yazıcılar', en: '3D Printers' },
-    slug: '3dprinter',
+    slug: '3dprinters',
   },
   {
     name: { tr: 'Yazılımlar', en: 'Softwares' },
-    slug: 'software',
+    slug: 'softwares',
   },
 ];
 
