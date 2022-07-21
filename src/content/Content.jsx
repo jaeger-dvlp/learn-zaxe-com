@@ -23,6 +23,13 @@ const Products = [
         alt: 'Zaxe Z3',
       },
     },
+    content: {
+      starterVideos: [
+        { label: 'content-zxz3:starterVideos.0.label', videoURL: 'https://' },
+        { label: 'content-zxz3:starterVideos.1.label', videoURL: 'https://' },
+        { label: 'content-zxz3:starterVideos.2.label', videoURL: 'https://' },
+      ],
+    },
   },
   {
     name: 'Zaxe X3',
@@ -35,6 +42,13 @@ const Products = [
         alt: 'Zaxe X3',
       },
     },
+    content: {
+      starterVideos: [
+        { label: 'content-zxx3:starterVideos.0.label', videoURL: 'https://' },
+        { label: 'content-zxx3:starterVideos.1.label', videoURL: 'https://' },
+        { label: 'content-zxx3:starterVideos.2.label', videoURL: 'https://' },
+      ],
+    },
   },
   {
     name: 'Zaxe xDesktop',
@@ -46,6 +60,18 @@ const Products = [
         img: require('../images/softwares/xdesktop.webp'),
         alt: 'Zaxe xDesktop',
       },
+    },
+    content: {
+      starterVideos: [
+        {
+          label: 'content-zxxdesktop:starterVideos.0.label',
+          videoURL: 'https://',
+        },
+        {
+          label: 'content-zxxdesktop:starterVideos.1.label',
+          videoURL: 'https://',
+        },
+      ],
     },
   },
 ];
