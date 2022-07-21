@@ -9,6 +9,7 @@ import Content from '../../../content/Content';
 import ProductNav from '../../../components/productpage/productNav';
 import { i18n } from '../../../../next-i18next.config';
 import Images from '../../../images/Images';
+import GetStarted from '../../../components/productpage/getStarted';
 
 function Product({ product: stringProduct }) {
   const product = JSON.parse(stringProduct);
@@ -82,6 +83,7 @@ function Product({ product: stringProduct }) {
       {product && (
         <div className="grid w-full font-zaxe pt-[15vh] grid-cols-1 place-content-start place-items-center">
           <ProductNav product={product} />
+          <GetStarted product={product} />
         </div>
       )}
     </>
@@ -114,7 +116,13 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ locale, params }) => ({
   props: {
     product: JSON.stringify(getProduct(params.product, params.category)),
-    ...(await serverSideTranslations(locale, ['common', 'productmeta'])),
+    ...(await serverSideTranslations(locale, [
+      'common',
+      'productmeta',
+      'content-zxz3',
+      'content-zxx3',
+      'content-zxxdesktop',
+    ])),
   },
 });
 
