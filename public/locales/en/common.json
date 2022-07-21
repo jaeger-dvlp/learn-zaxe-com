@@ -88,6 +88,9 @@
   "product-page-components": {
     "product-nav": {
       "title": "All About"
+    },
+    "get-started": {
+      "title": "Get Started"
     }
   }
 }

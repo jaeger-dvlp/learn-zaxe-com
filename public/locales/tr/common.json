@@ -88,6 +88,9 @@
   "product-page-components": {
     "product-nav": {
       "title": "Hakkında Herşey"
+    },
+    "get-started": {
+      "title": "Hızlı Başla"
     }
   }
 }
