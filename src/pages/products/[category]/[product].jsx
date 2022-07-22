@@ -11,6 +11,7 @@ import { i18n } from '../../../../next-i18next.config';
 import ProductNav from '../../../components/productpage/productNav';
 import GetStarted from '../../../components/productpage/getStarted';
 import Categories from '../../../components/productpage/categories';
+import Downloads from '../../../components/productpage/downloads';
 
 function Product({ product: stringProduct }) {
   const product = JSON.parse(stringProduct);
@@ -86,6 +87,7 @@ function Product({ product: stringProduct }) {
           <ProductNav product={product} />
           <GetStarted product={product} />
           <Categories product={product} />
+          <Downloads product={product} />
         </div>
       )}
     </>
