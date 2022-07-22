@@ -1,3 +1,17 @@
 {
-  "starterVideos": [{ "label": "Arayüz" }, { "label": "Kısayollar" }]
+  "starterVideos": [{ "label": "Arayüz" }, { "label": "Kısayollar" }],
+  "categories": [
+    {
+      "label": "Başla"
+    },
+    {
+      "label": "İpuçları & Hileler"
+    },
+    {
+      "label": "Yazılım"
+    },
+    {
+      "label": "Hata Giderme"
+    }
+  ]
 }

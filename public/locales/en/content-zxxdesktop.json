@@ -1,3 +1,17 @@
 {
-  "starterVideos": [{ "label": "User Interface" }, { "label": "Shortcuts" }]
+  "starterVideos": [{ "label": "User Interface" }, { "label": "Shortcuts" }],
+  "categories": [
+    {
+      "label": "Start"
+    },
+    {
+      "label": "Tips & Tricks"
+    },
+    {
+      "label": "Software"
+    },
+    {
+      "label": "Troubleshooting"
+    }
+  ]
 }

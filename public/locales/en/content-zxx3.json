@@ -3,5 +3,31 @@
     { "label": "Unboxing" },
     { "label": "Your X3" },
     { "label": "Calibration" }
+  ],
+  "categories": [
+    {
+      "label": "Start"
+    },
+    {
+      "label": "Repair"
+    },
+    {
+      "label": "Maintenance"
+    },
+    {
+      "label": "Tips & Tricks"
+    },
+    {
+      "label": "Using the Printer"
+    },
+    {
+      "label": "Software"
+    },
+    {
+      "label": "Troubleshooting"
+    },
+    {
+      "label": "Filaments"
+    }
   ]
 }

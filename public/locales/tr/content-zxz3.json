@@ -3,5 +3,31 @@
     { "label": "Kutu Açılımı" },
     { "label": "Z3'ünüz" },
     { "label": "Kalibrasyon" }
+  ],
+  "categories": [
+    {
+      "label": "Başla"
+    },
+    {
+      "label": "Onarım"
+    },
+    {
+      "label": "Bakım"
+    },
+    {
+      "label": "İpuçları & Hileler"
+    },
+    {
+      "label": "Yazıcının Kullanımı"
+    },
+    {
+      "label": "Yazılım"
+    },
+    {
+      "label": "Hata Giderme"
+    },
+    {
+      "label": "Filamentler"
+    }
   ]
 }

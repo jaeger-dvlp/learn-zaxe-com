@@ -91,6 +91,11 @@
     },
     "get-started": {
       "title": "Get Started"
+    },
+    "categories": {
+      "title": "Categories",
+      "gotopage-button": "Go to Page",
+      "see-all": "See All"
     }
   }
 }

@@ -91,6 +91,11 @@
     },
     "get-started": {
       "title": "Hızlı Başla"
+    },
+    "categories": {
+      "title": "Kategoriler",
+      "gotopage-button": "Sayfaya Git",
+      "see-all": "Tümünü Gör"
     }
   }
 }
