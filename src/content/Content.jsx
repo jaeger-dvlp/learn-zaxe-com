@@ -11,6 +11,61 @@ const ProductCategories = [
   },
 ];
 
+const ProductContents = [
+  {
+    starterVideos: [
+      {
+        label: 'content-zxz3:starterVideos.0.label',
+        videoURL: 'https://',
+        thumbnail: require('../images/3dprinters/content/z3/Z3_front.webp'),
+      },
+      {
+        label: 'content-zxz3:starterVideos.1.label',
+        videoURL: 'https://',
+        thumbnail: require('../images/3dprinters/content/z3/Z3_screen.webp'),
+      },
+      {
+        label: 'content-zxz3:starterVideos.2.label',
+        videoURL: 'https://',
+        thumbnail: require('../images/3dprinters/content/z3/Z3_printtable.webp'),
+      },
+    ],
+  },
+  {
+    starterVideos: [
+      {
+        label: 'content-zxx3:starterVideos.0.label',
+        videoURL: 'https://',
+        thumbnail: require('../images/3dprinters/content/x3/X3_printtable.webp'),
+      },
+      {
+        label: 'content-zxx3:starterVideos.1.label',
+        videoURL: 'https://',
+        thumbnail: require('../images/3dprinters/content/x3/X3_screen.webp'),
+      },
+      {
+        label: 'content-zxx3:starterVideos.2.label',
+        videoURL: 'https://',
+        thumbnail: require('../images/3dprinters/content/x3/X3_corexy.webp'),
+      },
+    ],
+  },
+  {
+    starterVideos: [
+      {
+        label: 'content-zxxdesktop:starterVideos.0.label',
+        videoURL: 'https://',
+        thumbnail: require('../images/softwares/content/xdesktop/xdesktop_ui.webp'),
+      },
+      {
+        label: 'content-zxxdesktop:starterVideos.1.label',
+        videoURL: 'https://',
+        thumbnail: require('../images/softwares/content/xdesktop/xdesktop_shortcuts.webp'),
+      },
+    ],
+  },
+];
+
 const Products = [
   {
     name: 'Zaxe Z3',
@@ -19,17 +74,11 @@ const Products = [
     category: ProductCategories[0],
     images: {
       main: {
-        img: require('../images/3dprinters/z3.webp'),
+        img: require('../images/3dprinters/main/z3.webp'),
         alt: 'Zaxe Z3',
       },
     },
-    content: {
-      starterVideos: [
-        { label: 'content-zxz3:starterVideos.0.label', videoURL: 'https://' },
-        { label: 'content-zxz3:starterVideos.1.label', videoURL: 'https://' },
-        { label: 'content-zxz3:starterVideos.2.label', videoURL: 'https://' },
-      ],
-    },
+    content: ProductContents[0],
   },
   {
     name: 'Zaxe X3',
@@ -38,17 +87,11 @@ const Products = [
     category: ProductCategories[0],
     images: {
       main: {
-        img: require('../images/3dprinters/x3.webp'),
+        img: require('../images/3dprinters/main/x3.webp'),
         alt: 'Zaxe X3',
       },
     },
-    content: {
-      starterVideos: [
-        { label: 'content-zxx3:starterVideos.0.label', videoURL: 'https://' },
-        { label: 'content-zxx3:starterVideos.1.label', videoURL: 'https://' },
-        { label: 'content-zxx3:starterVideos.2.label', videoURL: 'https://' },
-      ],
-    },
+    content: ProductContents[1],
   },
   {
     name: 'Zaxe xDesktop',
@@ -57,22 +100,11 @@ const Products = [
     category: ProductCategories[1],
     images: {
       main: {
-        img: require('../images/softwares/xdesktop.webp'),
+        img: require('../images/softwares/main/xdesktop.webp'),
         alt: 'Zaxe xDesktop',
       },
     },
-    content: {
-      starterVideos: [
-        {
-          label: 'content-zxxdesktop:starterVideos.0.label',
-          videoURL: 'https://',
-        },
-        {
-          label: 'content-zxxdesktop:starterVideos.1.label',
-          videoURL: 'https://',
-        },
-      ],
-    },
+    content: ProductContents[2],
   },
 ];
 
