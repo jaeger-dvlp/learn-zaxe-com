@@ -1,4 +1,11 @@
+/* eslint-disable react/react-in-jsx-scope */
+import { BsApple, BsWindows } from 'react-icons/bs';
 import { v4 as uuidV4 } from 'uuid';
+
+const OSIcons = {
+  win: <BsWindows />,
+  mac: <BsApple />,
+};
 
 const ProductCategories = [
   {
@@ -64,6 +71,31 @@ const ProductContents = [
         slug: 'filaments',
       },
     ],
+    downloads: [
+      {
+        slug: 'z3-firmware',
+        title: 'content-zxz3:downloads.0.title',
+        updateDate: '2022-01-01',
+        link: 'https://',
+        showLastUpdate: true,
+      },
+      {
+        slug: 'xdesktop',
+        title: 'content-zxz3:downloads.1.title',
+        updateDate: '2022-01-01',
+        platforms: ['win', 'mac'],
+        link: 'https://',
+        showLastUpdate: false,
+      },
+      {
+        slug: 'z3-handbook',
+        title: 'content-zxz3:downloads.2.title',
+        updateDate: '2022-01-01',
+        type: 'PDF',
+        link: 'https://',
+        showLastUpdate: true,
+      },
+    ],
   },
   {
     starterVideos: [
@@ -117,6 +149,31 @@ const ProductContents = [
         slug: 'filaments',
       },
     ],
+    downloads: [
+      {
+        slug: 'x3-firmware',
+        title: 'content-zxx3:downloads.0.title',
+        updateDate: '2022-01-01',
+        link: 'https://',
+        showLastUpdate: true,
+      },
+      {
+        slug: 'xdesktop',
+        title: 'content-zxx3:downloads.1.title',
+        updateDate: '2022-01-01',
+        platforms: ['win', 'mac'],
+        link: 'https://',
+        showLastUpdate: false,
+      },
+      {
+        slug: 'x3-handbook',
+        title: 'content-zxx3:downloads.2.title',
+        updateDate: '2022-01-01',
+        type: 'PDF',
+        link: 'https://',
+        showLastUpdate: true,
+      },
+    ],
   },
   {
     starterVideos: [
@@ -147,6 +204,16 @@ const ProductContents = [
       {
         label: 'content-zxxdesktop:categories.3.label',
         slug: 'troubleshooting',
+      },
+    ],
+    downloads: [
+      {
+        slug: 'xdesktop',
+        title: 'content-zxxdesktop:downloads.0.title',
+        updateDate: '2022-01-01',
+        platforms: ['win', 'mac'],
+        link: 'https://',
+        showLastUpdate: false,
       },
     ],
   },
@@ -327,5 +394,6 @@ const Content = {
     quickViewer: QuickViewerContent,
     downloadDocuments: DownloadDocuments,
   },
+  OSIcons,
 };
 export default Content;
