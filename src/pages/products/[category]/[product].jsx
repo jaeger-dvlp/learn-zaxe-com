@@ -4,12 +4,13 @@ import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import Header from '../../../components/main/Header';
-import Content from '../../../content/Content';
-import ProductNav from '../../../components/productpage/productNav';
-import { i18n } from '../../../../next-i18next.config';
 import Images from '../../../images/Images';
+import Content from '../../../content/Content';
+import Header from '../../../components/main/Header';
+import { i18n } from '../../../../next-i18next.config';
+import ProductNav from '../../../components/productpage/productNav';
 import GetStarted from '../../../components/productpage/getStarted';
+import Categories from '../../../components/productpage/categories';
 
 function Product({ product: stringProduct }) {
   const product = JSON.parse(stringProduct);
@@ -84,6 +85,7 @@ function Product({ product: stringProduct }) {
         <div className="grid w-full font-zaxe pt-[15vh] grid-cols-1 place-content-start place-items-center">
           <ProductNav product={product} />
           <GetStarted product={product} />
+          <Categories product={product} />
         </div>
       )}
     </>
