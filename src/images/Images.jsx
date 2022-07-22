@@ -7,13 +7,13 @@ const Images = {
   },
   products: {
     'zaxe-z3': {
-      main: require('./3dprinters/z3.webp'),
+      main: require('./3dprinters/main/z3.webp'),
     },
     'zaxe-x3': {
-      main: require('./3dprinters/x3.webp'),
+      main: require('./3dprinters/main/x3.webp'),
     },
     'zaxe-xdesktop': {
-      main: require('./softwares/xdesktop.webp'),
+      main: require('./softwares/main/xdesktop.webp'),
     },
   },
 };
