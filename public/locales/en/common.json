@@ -96,6 +96,11 @@
       "title": "Categories",
       "gotopage-button": "Go to Page",
       "see-all": "See All"
+    },
+    "downloads": {
+      "title": "Downloads",
+      "select-platform": "Select Platform",
+      "download": "Download"
     }
   }
 }

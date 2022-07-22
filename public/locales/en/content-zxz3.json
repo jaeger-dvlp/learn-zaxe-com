@@ -29,5 +29,10 @@
     {
       "label": "Filaments"
     }
+  ],
+  "downloads": [
+    { "title": "Firmware Latest Version" },
+    { "title": "xDesktop" },
+    { "title": "Z3 Handbook" }
   ]
 }

@@ -96,6 +96,11 @@
       "title": "Kategoriler",
       "gotopage-button": "Sayfaya Git",
       "see-all": "Tümünü Gör"
+    },
+    "downloads": {
+      "title": "İndirilebilir",
+      "select-platform": "İşletim Sistemi Seçin",
+      "download": "İndir"
     }
   }
 }
