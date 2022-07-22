@@ -1,16 +1,12 @@
-import { useTranslation } from 'next-i18next';
-import Image from 'next/image';
 import React from 'react';
+import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 import { BsFillPlayFill } from 'react-icons/bs';
 
 function GetStarted({ product }) {
-  const { starterVideos } = product.content || null;
   const { t } = useTranslation();
-
-  const playVideo = ({ label, videoURL }) => {
-    // eslint-disable-next-line no-alert
-    alert(`${t(label)} - ${videoURL}`);
-  };
+  const { starterVideos } = product.content || null;
+  const playVideo = ({ label, videoURL }) => alert(`${t(label)} - ${videoURL}`);
 
   return (
     <div
