@@ -1,7 +1,6 @@
-/* eslint-disable react/destructuring-assignment */
-import { useTranslation } from 'next-i18next';
-import Image from 'next/image';
 import React from 'react';
+import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 function ProductNav({ product }) {
