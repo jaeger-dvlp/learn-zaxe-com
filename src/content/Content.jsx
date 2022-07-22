@@ -30,6 +30,40 @@ const ProductContents = [
         thumbnail: require('../images/3dprinters/content/z3/Z3_printtable.webp'),
       },
     ],
+    categories: [
+      {
+        label: 'content-zxz3:categories.0.label',
+        slug: 'start',
+      },
+      {
+        label: 'content-zxz3:categories.1.label',
+        slug: 'repair',
+      },
+      {
+        label: 'content-zxz3:categories.2.label',
+        slug: 'maintenance',
+      },
+      {
+        label: 'content-zxz3:categories.3.label',
+        slug: 'tips-tricks',
+      },
+      {
+        label: 'content-zxz3:categories.4.label',
+        slug: 'usingtheprinter',
+      },
+      {
+        label: 'content-zxz3:categories.5.label',
+        slug: 'software',
+      },
+      {
+        label: 'content-zxz3:categories.6.label',
+        slug: 'troubleshooting',
+      },
+      {
+        label: 'content-zxz3:categories.7.label',
+        slug: 'filaments',
+      },
+    ],
   },
   {
     starterVideos: [
@@ -49,6 +83,40 @@ const ProductContents = [
         thumbnail: require('../images/3dprinters/content/x3/X3_corexy.webp'),
       },
     ],
+    categories: [
+      {
+        label: 'content-zxx3:categories.0.label',
+        slug: 'start',
+      },
+      {
+        label: 'content-zxx3:categories.1.label',
+        slug: 'repair',
+      },
+      {
+        label: 'content-zxx3:categories.2.label',
+        slug: 'maintenance',
+      },
+      {
+        label: 'content-zxx3:categories.3.label',
+        slug: 'tips-tricks',
+      },
+      {
+        label: 'content-zxx3:categories.4.label',
+        slug: 'usingtheprinter',
+      },
+      {
+        label: 'content-zxx3:categories.5.label',
+        slug: 'software',
+      },
+      {
+        label: 'content-zxx3:categories.6.label',
+        slug: 'troubleshooting',
+      },
+      {
+        label: 'content-zxx3:categories.7.label',
+        slug: 'filaments',
+      },
+    ],
   },
   {
     starterVideos: [
@@ -61,6 +129,24 @@ const ProductContents = [
         label: 'content-zxxdesktop:starterVideos.1.label',
         videoURL: 'https://',
         thumbnail: require('../images/softwares/content/xdesktop/xdesktop_shortcuts.webp'),
+      },
+    ],
+    categories: [
+      {
+        label: 'content-zxxdesktop:categories.0.label',
+        slug: 'start',
+      },
+      {
+        label: 'content-zxxdesktop:categories.1.label',
+        slug: 'tips-tricks',
+      },
+      {
+        label: 'content-zxxdesktop:categories.2.label',
+        slug: 'software',
+      },
+      {
+        label: 'content-zxxdesktop:categories.3.label',
+        slug: 'troubleshooting',
       },
     ],
   },
