@@ -8,6 +8,7 @@ import Images from '../../../images/Images';
 import Content from '../../../content/Content';
 import Header from '../../../components/main/Header';
 import { i18n } from '../../../../next-i18next.config';
+import TipsNTrips from '../../../components/main/TipsNTrips';
 import ProductNav from '../../../components/productpage/productNav';
 import GetStarted from '../../../components/productpage/getStarted';
 import Categories from '../../../components/productpage/categories';
@@ -88,6 +89,7 @@ function Product({ product: stringProduct }) {
           <GetStarted product={product} />
           <Categories product={product} />
           <Downloads product={product} />
+          <TipsNTrips />
         </div>
       )}
     </>
