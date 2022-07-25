@@ -1,4 +1,18 @@
 {
+  "navButtons": [
+    {
+      "label": "Printable Parts"
+    },
+    {
+      "label": "Forum"
+    },
+    {
+      "label": "Spare Parts"
+    },
+    {
+      "label": "X3 Video"
+    }
+  ],
   "starterVideos": [
     { "label": "Unboxing" },
     { "label": "Your X3" },

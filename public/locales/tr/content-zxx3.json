@@ -1,4 +1,18 @@
 {
+  "navButtons": [
+    {
+      "label": "Örnek Baskılar"
+    },
+    {
+      "label": "Forum"
+    },
+    {
+      "label": "Yedek Parçalar"
+    },
+    {
+      "label": "X3 Video"
+    }
+  ],
   "starterVideos": [
     { "label": "Kutu Açılımı" },
     { "label": "X3'ünüz" },

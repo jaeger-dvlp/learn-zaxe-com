@@ -1,4 +1,18 @@
 {
+  "navButtons": [
+    {
+      "label": "Örnek Baskılar"
+    },
+    {
+      "label": "Forum"
+    },
+    {
+      "label": "Yedek Parçalar"
+    },
+    {
+      "label": "Z3 Video"
+    }
+  ],
   "starterVideos": [
     { "label": "Kutu Açılımı" },
     { "label": "Z3'ünüz" },

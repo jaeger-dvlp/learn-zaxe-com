@@ -1,4 +1,18 @@
 {
+  "navButtons": [
+    {
+      "label": "Dilimleyici Özl."
+    },
+    {
+      "label": "Forum"
+    },
+    {
+      "label": "3D Baskılar"
+    },
+    {
+      "label": "xDesktop Video"
+    }
+  ],
   "starterVideos": [{ "label": "Arayüz" }, { "label": "Kısayollar" }],
   "categories": [
     {

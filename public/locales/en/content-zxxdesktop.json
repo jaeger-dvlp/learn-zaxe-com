@@ -1,4 +1,18 @@
 {
+  "navButtons": [
+    {
+      "label": "Slicer Props"
+    },
+    {
+      "label": "Forum"
+    },
+    {
+      "label": "3D Printings"
+    },
+    {
+      "label": "xDesktop Video"
+    }
+  ],
   "starterVideos": [{ "label": "User Interface" }, { "label": "Shortcuts" }],
   "categories": [
     {
