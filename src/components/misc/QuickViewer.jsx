@@ -47,7 +47,12 @@ function QuickViewer() {
   };
 
   return (
-    <div className="grid w-full grid-cols-1 font-zaxe place-content-start place-items-center">
+    <div
+      data-aos="fade"
+      data-aos-delay={200}
+      data-aos-duration={500}
+      className="grid w-full grid-cols-1 font-zaxe place-content-start place-items-center"
+    >
       <div className="grid w-full grid-cols-1 py-16 bg-white max-w-[1150px] place-content-start place-items-center">
         <div className="grid w-full grid-cols-1 gap-5 xl:gap-16 lg:gap-16 xl:grid-cols-11 lg:grid-cols-11 place-content-start place-items-start">
           <div className="relative flex justify-between w-full gap-6 p-5 py-3 overflow-scroll subjects-container xl:px-5 lg:px-5 xl:overflow-visible lg:overflow-visible xl:py-0 lg:py-0 xl:col-span-3 lg:col-span-3 col-span-full xl:grid lg:grid xl:grid-cols-1 lg:grid-cols-1 place-content-start place-items-center">

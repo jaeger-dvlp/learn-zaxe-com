@@ -27,7 +27,7 @@ function Products() {
     <div className="grid w-full grid-cols-1 bg-white font-zaxe place-content-start place-items-center">
       <div
         data-aos="fade"
-        data-aos-delay={400}
+        data-aos-delay={200}
         data-aos-duration={500}
         className="grid w-full grid-cols-1 gap-10 px-5 py-10 bg-white max-w-app place-content-start place-items-center"
       >

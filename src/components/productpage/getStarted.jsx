@@ -11,7 +11,7 @@ function GetStarted({ product }) {
   return (
     <div
       data-aos="fade"
-      data-aos-delay={400}
+      data-aos-delay={300}
       data-aos-duration={500}
       className="grid w-full grid-cols-1 p-0 m-0 bg-white place-content-start place-items-center"
     >

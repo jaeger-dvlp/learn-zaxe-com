@@ -9,7 +9,12 @@ function DownloadDocuments() {
 
   const [documents] = React.useState(Content.components.downloadDocuments);
   return (
-    <div className="grid w-full grid-cols-1 bg-white font-zaxe place-content-start place-items-center">
+    <div
+      data-aos="fade"
+      data-aos-delay={200}
+      data-aos-duration={500}
+      className="grid w-full grid-cols-1 bg-white font-zaxe place-content-start place-items-center"
+    >
       <div className="grid w-full grid-cols-1 px-5 bg-white xl:px-9 lg:px-9 max-w-app place-content-start place-items-center py-28">
         <div className="grid w-full grid-cols-1 gap-1 xl:grid-cols-12 lg:grid-cols-12 place-content-start place-items-center">
           <div className="grid w-full h-full grid-cols-1 col-span-5 py-0 xl:py-3 lg:py-3 place-content-start place-items-start">
