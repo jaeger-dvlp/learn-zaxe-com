@@ -17,7 +17,12 @@ function TipsNTrips() {
   ]);
   const { t } = useTranslation();
   return (
-    <div className="w-full font-zaxe grid grid-cols-1 place-content-start place-items-center p-0 m-0 bg-[#232323]">
+    <div
+      data-aos="fade"
+      data-aos-delay={300}
+      data-aos-duration={500}
+      className="w-full font-zaxe grid grid-cols-1 place-content-start place-items-center p-0 m-0 bg-[#232323]"
+    >
       <div className="grid w-full grid-cols-1 p-5 py-28 max-w-app place-content-start place-items-center gap-7">
         <h1 className="text-2xl font-bold text-center text-zaxe xl:text-4xl lg:text-4xl">
           {t('components.tips-n-tricks.heading')}
