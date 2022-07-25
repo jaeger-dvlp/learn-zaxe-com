@@ -11,6 +11,7 @@ import QuickViewer from '../components/misc/QuickViewer';
 import WelcomeSection from '../components/homepage/WelcomeSection';
 import FrequentlyViewed from '../components/homepage/FrequentlyViewed';
 import DownloadDocuments from '../components/homepage/DownloadDocuments';
+import Loader from '../components/main/Loader';
 
 function Home() {
   const { t } = useTranslation();
@@ -58,6 +59,7 @@ function Home() {
           href="https://knowledge-base.zaxe.com/"
         />
       </Head>
+      <Loader />
       <Header />
       <WelcomeSection />
       <Products />

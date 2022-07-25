@@ -13,6 +13,7 @@ import ProductNav from '../../../components/productpage/productNav';
 import GetStarted from '../../../components/productpage/getStarted';
 import Categories from '../../../components/productpage/categories';
 import Downloads from '../../../components/productpage/downloads';
+import Loader from '../../../components/main/Loader';
 
 function Product({ product: stringProduct }) {
   const product = JSON.parse(stringProduct);
@@ -82,6 +83,7 @@ function Product({ product: stringProduct }) {
           href={`https://knowledge-base.zaxe.com${router.asPath}`}
         />
       </Head>
+      <Loader />
       <Header />
       {product && (
         <div className="grid w-full font-zaxe pt-[15vh] grid-cols-1 place-content-start place-items-center">
