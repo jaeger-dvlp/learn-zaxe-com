@@ -5,6 +5,9 @@ const Images = {
   logo: {
     zxkb: require('./misc/logo-zxkb.png'),
   },
+  loader: {
+    zxkb: require('./misc/zaxe-kb-loader.webp'),
+  },
   products: {
     'zaxe-z3': {
       main: require('./3dprinters/main/z3.webp'),
