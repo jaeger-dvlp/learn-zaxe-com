@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { AiOutlineSearch } from 'react-icons/ai';
+import Link from 'next/link';
 
 function ProductNav({ product }) {
   const { t } = useTranslation();
@@ -66,34 +67,37 @@ function ProductNav({ product }) {
         <Image src={product.images.main.img} alt={product.images.main.alt} />
       </div>
       <div className="h-full gap-4  xl:order-none lg:order-none order-2 grid xl:grid-cols-1 lg:grid-cols-1 grid-cols-2 place-content-end place-items-center w-full xl:max-w-[235px] lg:max-w-[235px] max-w-full">
-        <button
-          type="button"
-          className="w-full bg-[#F5F5F5] p-1 py-2.5 rounded-[20px] text-[#6F6F6F] transition-color
+        {product.content.navButtons.map((navButton) =>
+          // eslint-disable-next-line no-nested-ternary
+          navButton.isLink ? (
+            navButton.linkData.isExternal ? (
+              <a
+                className="w-full h-full grid grid-cols-1 place-content-center place-items-center text-center bg-[#F5F5F5] p-1 py-2.5 rounded-[20px] text-[#6F6F6F] transition-color
                 duration-150 hover:bg-zaxe hover:text-white xl:text-[22px] lg:text-[22px] text-lg min-h-[60px] ring-2 ring-transparent active:ring-sky-300 font-medium"
-        >
-          Printable Parts
-        </button>
-        <button
-          type="button"
-          className="w-full bg-[#F5F5F5] p-1 py-2.5 rounded-[20px] text-[#6F6F6F] transition-color
+                href={navButton.linkData.url}
+              >
+                {t(navButton.label)}
+              </a>
+            ) : (
+              <Link href={navButton.linkData.url}>
+                <a
+                  className="w-full h-full grid grid-cols-1 place-content-center place-items-center text-center bg-[#F5F5F5] p-1 py-2.5 rounded-[20px] text-[#6F6F6F] transition-color
                 duration-150 hover:bg-zaxe hover:text-white xl:text-[22px] lg:text-[22px] text-lg min-h-[60px] ring-2 ring-transparent active:ring-sky-300 font-medium"
-        >
-          Forum
-        </button>
-        <button
-          type="button"
-          className="w-full bg-[#F5F5F5] p-1 py-2.5 rounded-[20px] text-[#6F6F6F] transition-color
+                >
+                  {t(navButton.label)}
+                </a>
+              </Link>
+            )
+          ) : (
+            <button
+              type="button"
+              className="w-full h-full grid grid-cols-1 place-content-center place-items-center text-center bg-[#F5F5F5] p-1 py-2.5 rounded-[20px] text-[#6F6F6F] transition-color
                 duration-150 hover:bg-zaxe hover:text-white xl:text-[22px] lg:text-[22px] text-lg min-h-[60px] ring-2 ring-transparent active:ring-sky-300 font-medium"
-        >
-          Spare Parts
-        </button>
-        <button
-          type="button"
-          className="w-full bg-[#F5F5F5] p-1 py-2.5 rounded-[20px] text-[#6F6F6F] transition-color
-                duration-150 hover:bg-zaxe hover:text-white xl:text-[22px] lg:text-[22px] text-lg min-h-[60px] ring-2 ring-transparent active:ring-sky-300 font-medium"
-        >
-          Z3 Video
-        </button>
+            >
+              {t(navButton.label)}
+            </button>
+          )
+        )}
       </div>
       <div className="relative grid w-full h-full grid-cols-1 gap-0 place-content-end xl:place-items-start lg:place-items-start place-items-center">
         <span className="hidden text-3xl font-bold text-zaxe xl:block lg:block">
