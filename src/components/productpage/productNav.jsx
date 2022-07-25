@@ -1,8 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { AiOutlineSearch } from 'react-icons/ai';
-import Link from 'next/link';
 
 function ProductNav({ product }) {
   const { t } = useTranslation();
