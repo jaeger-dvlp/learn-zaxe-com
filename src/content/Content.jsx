@@ -20,6 +20,44 @@ const ProductCategories = [
 
 const ProductContents = [
   {
+    navButtons: [
+      {
+        label: 'content-zxz3:navButtons.0.label',
+        slug: 'printable-parts',
+        isLink: true,
+        linkData: {
+          isExternal: false,
+          url: '/',
+        },
+      },
+      {
+        label: 'content-zxz3:navButtons.1.label',
+        slug: 'forum',
+        isLink: true,
+        linkData: {
+          isExternal: true,
+          url: 'https://zaxe.com',
+        },
+      },
+      {
+        label: 'content-zxz3:navButtons.2.label',
+        slug: 'spare-parts',
+        isLink: true,
+        linkData: {
+          isExternal: true,
+          url: 'https://zaxe.com',
+        },
+      },
+      {
+        label: 'content-zxz3:navButtons.3.label',
+        slug: 'z3-video',
+        isLink: true,
+        linkData: {
+          isExternal: true,
+          url: 'https://zaxe.com',
+        },
+      },
+    ],
     starterVideos: [
       {
         label: 'content-zxz3:starterVideos.0.label',
@@ -98,6 +136,44 @@ const ProductContents = [
     ],
   },
   {
+    navButtons: [
+      {
+        label: 'content-zxx3:navButtons.0.label',
+        slug: 'printable-parts',
+        isLink: true,
+        linkData: {
+          isExternal: false,
+          url: '/',
+        },
+      },
+      {
+        label: 'content-zxx3:navButtons.1.label',
+        slug: 'forum',
+        isLink: true,
+        linkData: {
+          isExternal: true,
+          url: 'https://zaxe.com',
+        },
+      },
+      {
+        label: 'content-zxx3:navButtons.2.label',
+        slug: 'spare-parts',
+        isLink: true,
+        linkData: {
+          isExternal: true,
+          url: 'https://store.zaxe.com',
+        },
+      },
+      {
+        label: 'content-zxx3:navButtons.3.label',
+        slug: 'x3-video',
+        isLink: true,
+        linkData: {
+          isExternal: true,
+          url: 'https://zaxe.com',
+        },
+      },
+    ],
     starterVideos: [
       {
         label: 'content-zxx3:starterVideos.0.label',
@@ -176,6 +252,44 @@ const ProductContents = [
     ],
   },
   {
+    navButtons: [
+      {
+        label: 'content-zxxdesktop:navButtons.0.label',
+        slug: 'slicer-props',
+        isLink: true,
+        linkData: {
+          isExternal: false,
+          url: '/',
+        },
+      },
+      {
+        label: 'content-zxxdesktop:navButtons.1.label',
+        slug: 'forum',
+        isLink: true,
+        linkData: {
+          isExternal: true,
+          url: 'https://zaxe.com',
+        },
+      },
+      {
+        label: 'content-zxxdesktop:navButtons.2.label',
+        slug: '_3d-printings',
+        isLink: true,
+        linkData: {
+          isExternal: true,
+          url: 'https://zaxe.com',
+        },
+      },
+      {
+        label: 'content-zxxdesktop:navButtons.3.label',
+        slug: 'xdekstop-video',
+        isLink: true,
+        linkData: {
+          isExternal: true,
+          url: 'https://zaxe.com',
+        },
+      },
+    ],
     starterVideos: [
       {
         label: 'content-zxxdesktop:starterVideos.0.label',
