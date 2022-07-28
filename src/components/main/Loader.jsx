@@ -12,8 +12,8 @@ function Loader() {
   });
 
   const HideLoader = () => {
-    setTimeout(() => setLoader({ isActive: false, inHTML: true }), 1000);
-    setTimeout(() => setLoader({ isActive: false, inHTML: false }), 1500);
+    setTimeout(() => setLoader({ isActive: false, inHTML: true }), 1500);
+    setTimeout(() => setLoader({ isActive: false, inHTML: false }), 2000);
   };
 
   const StartLoader = () => {
@@ -38,8 +38,8 @@ function Loader() {
       >
         <div
           data-aos="zoom-out"
-          data-aos-delay={200}
-          data-aos-duration={500}
+          data-aos-delay={400}
+          data-aos-duration={750}
           className="w-full max-w-[5rem] p-0 m-0"
         >
           <Image src={Images.loader.zxkb} alt="Zaxe Knowledge Base" />
