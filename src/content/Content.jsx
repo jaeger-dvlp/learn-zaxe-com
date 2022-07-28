@@ -114,7 +114,7 @@ const ProductContents = [
         slug: 'z3-firmware',
         title: 'content-zxz3:downloads.0.title',
         updateDate: '2022-01-01',
-        link: 'https://',
+        link: 'https://zaxe.com',
         showLastUpdate: true,
       },
       {
@@ -122,7 +122,10 @@ const ProductContents = [
         title: 'content-zxz3:downloads.1.title',
         updateDate: '2022-01-01',
         platforms: ['win', 'mac'],
-        link: 'https://',
+        links: {
+          win: 'https://d.zaxe.com/xdesktopwin',
+          mac: 'https://d.zaxe.com/xdesktopmac',
+        },
         showLastUpdate: false,
       },
       {
@@ -130,7 +133,7 @@ const ProductContents = [
         title: 'content-zxz3:downloads.2.title',
         updateDate: '2022-01-01',
         type: 'PDF',
-        link: 'https://',
+        link: 'https://zaxe.com',
         showLastUpdate: true,
       },
     ],
@@ -230,7 +233,7 @@ const ProductContents = [
         slug: 'x3-firmware',
         title: 'content-zxx3:downloads.0.title',
         updateDate: '2022-01-01',
-        link: 'https://',
+        link: 'https://zaxe.com',
         showLastUpdate: true,
       },
       {
@@ -238,7 +241,10 @@ const ProductContents = [
         title: 'content-zxx3:downloads.1.title',
         updateDate: '2022-01-01',
         platforms: ['win', 'mac'],
-        link: 'https://',
+        links: {
+          win: 'https://d.zaxe.com/xdesktopwin',
+          mac: 'https://d.zaxe.com/xdesktopmac',
+        },
         showLastUpdate: false,
       },
       {
@@ -246,7 +252,7 @@ const ProductContents = [
         title: 'content-zxx3:downloads.2.title',
         updateDate: '2022-01-01',
         type: 'PDF',
-        link: 'https://',
+        link: 'https://zaxe.com',
         showLastUpdate: true,
       },
     ],
@@ -326,7 +332,10 @@ const ProductContents = [
         title: 'content-zxxdesktop:downloads.0.title',
         updateDate: '2022-01-01',
         platforms: ['win', 'mac'],
-        link: 'https://',
+        links: {
+          win: 'https://d.zaxe.com/xdesktopwin',
+          mac: 'https://d.zaxe.com/xdesktopmac',
+        },
         showLastUpdate: false,
       },
     ],
