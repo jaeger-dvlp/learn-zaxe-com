@@ -6,19 +6,20 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Images from '../../../images/Images';
 import Content from '../../../content/Content';
+import Loader from '../../../components/main/Loader';
 import Header from '../../../components/main/Header';
 import { i18n } from '../../../../next-i18next.config';
 import TipsNTrips from '../../../components/main/TipsNTrips';
+import Downloads from '../../../components/productpage/downloads';
 import ProductNav from '../../../components/productpage/productNav';
 import GetStarted from '../../../components/productpage/getStarted';
 import Categories from '../../../components/productpage/categories';
-import Downloads from '../../../components/productpage/downloads';
-import Loader from '../../../components/main/Loader';
 
 function Product({ product: stringProduct }) {
   const product = JSON.parse(stringProduct);
   const { t } = useTranslation();
   const router = useRouter();
+
   return (
     <>
       <Head>
