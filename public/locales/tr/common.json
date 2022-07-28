@@ -102,5 +102,14 @@
       "select-platform": "İşletim Sistemi Seçin",
       "download": "İndir"
     }
+  },
+  "popups": {
+    "notification-popup": {
+      "download-started": "İndirme başlatıldı.",
+      "select-platform": "Lütfen bir işletim sistemi seçin."
+    },
+    "buttons": {
+      "ok": "Tamam"
+    }
   }
 }
