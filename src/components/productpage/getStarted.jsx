@@ -2,11 +2,19 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { BsFillPlayFill } from 'react-icons/bs';
+import { useAppContext } from '../contexts/AppContext';
 
 function GetStarted({ product }) {
-  const { t } = useTranslation();
+  const { activateNotificationPopup } = useAppContext();
   const { starterVideos } = product.content || null;
-  const playVideo = ({ label, videoURL }) => alert(`${t(label)} - ${videoURL}`);
+  const { t } = useTranslation();
+
+  const playVideo = ({ label }) => {
+    activateNotificationPopup({
+      message: `Can't play this video right now : ${t(label)}`,
+      icon: 'hint',
+    });
+  };
 
   return (
     <div
