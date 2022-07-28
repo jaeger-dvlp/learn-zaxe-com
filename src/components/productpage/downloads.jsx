@@ -2,10 +2,12 @@
 import 'dayjs/locale/tr';
 import React from 'react';
 import dayjs from 'dayjs';
+
 import { useRouter } from 'next/router';
 import { BsDownload } from 'react-icons/bs';
 import { useTranslation } from 'next-i18next';
 import relativeTime from 'dayjs/plugin/relativeTime';
+import { useAppContext } from '../contexts/AppContext';
 import Content from '../../content/Content';
 
 function Downloads({ product }) {
@@ -14,6 +16,7 @@ function Downloads({ product }) {
   dayjs.locale(router.locale);
   const { t } = useTranslation();
   const downloads = product.content.downloads || null;
+  const { activateNotificationPopup } = useAppContext();
 
   const [sdp, setSDP] = React.useState({});
 
@@ -41,19 +44,21 @@ function Downloads({ product }) {
           <h1 className="text-4xl font-bold text-zaxe">
             {t('product-page-components.downloads.title')}
           </h1>
-          <div className="relative flex flex-wrap justify-center w-full gap-16 xl:h-full lg:h-full">
+          <div className="relative flex flex-wrap justify-center w-full gap-16">
             {downloads.map(
               ({
                 slug,
                 title,
                 updateDate,
                 type,
+                links,
+                link,
                 platforms,
                 showLastUpdate,
               }) => (
                 <div
                   key={slug}
-                  className="relative h-full grid w-full rounded-2xl min-h-[195px] max-w-xs grid-cols-1 gap-8 p-5 m-0 bg-white border shadow-xl group place-content-between border-zinc-100 place-items-center"
+                  className="relative h-full grid w-full rounded-2xl min-h-[235px] max-w-xs grid-cols-1 gap-8 p-5 m-0 bg-white border shadow-xl group place-content-between border-zinc-100 place-items-center"
                 >
                   <div className="grid w-full h-full grid-cols-1 gap-2 place-content-start place-items-center">
                     <h1 className="text-center grid grid-cols-1 place-content-start place-items-center text-[#6F6F6F] font-medium text-2xl">
@@ -111,13 +116,26 @@ function Downloads({ product }) {
                     onClick={() => {
                       if (platforms) {
                         if (sdp[slug] && sdp[slug].selectedPlatform) {
-                          alert(
-                            `Download Event for ${sdp[slug].selectedPlatform}`
+                          activateNotificationPopup({
+                            message:
+                              'popups.notification-popup.download-started',
+                            icon: 'success',
+                          });
+                          return window.open(
+                            links[sdp[slug].selectedPlatform],
+                            '_blank'
                           );
-                        } else {
-                          alert('Please select a platform');
                         }
+                        return activateNotificationPopup({
+                          message: 'popups.notification-popup.select-platform',
+                          icon: 'error',
+                        });
                       }
+                      activateNotificationPopup({
+                        message: 'popups.notification-popup.download-started',
+                        icon: 'success',
+                      });
+                      return window.open(link, '_blank');
                     }}
                     className="w-full gap-3 transition-all duration-200 flex justify-center items-center max-w-[14rem] p-2 text-sm text-white border-2 rounded-2xl bg-zaxe hover:bg-white hover:text-zaxe border-zaxe text-center"
                   >
