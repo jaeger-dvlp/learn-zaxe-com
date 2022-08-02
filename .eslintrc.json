@@ -11,6 +11,14 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "extensions": [".js", ".jsx"],
+        "map": [["@", "."]]
+      }
+    }
+  },
   "plugins": ["react"],
   "rules": {
     "react/prop-types": "off",
