@@ -36,6 +36,9 @@
     }
   },
   "searchbar": {
+    "categories": {
+      "heading": "How can we help you with?"
+    },
     "placeholders": [
       "How to replace Print Table?",
       "How can i change 0.4mm Nozzle?",

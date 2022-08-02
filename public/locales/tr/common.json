@@ -36,6 +36,9 @@
     }
   },
   "searchbar": {
+    "categories": {
+      "heading": "Size nasıl yardımcı olabiliriz?"
+    },
     "placeholders": [
       "Baskı tablası nasıl değiştirilir?",
       "0.4mm Nozül nasıl değiştirilir?",
