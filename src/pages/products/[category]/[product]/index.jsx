@@ -19,70 +19,73 @@ function Product({ product: stringProduct }) {
   const router = useRouter();
 
   return (
-    <>
-      <Head>
-        <title>
-          {t(`productmeta:${product.category.slug}.${product.slug}.title`)}
-        </title>
-        <meta name="description" content={t('meta.content.home')} />
-        <meta
-          name="title"
-          content={t(
-            `productmeta:${product.category.slug}.${product.slug}.title`
-          )}
-        />
-        <meta
-          name="keywords"
-          content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
-        />
-        <meta name="description" content={t('meta.content.home')} />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content={`https://knowledge-base.zaxe.com${router.asPath}`}
-        />
-        <meta
-          property="og:title"
-          content={t(
-            `productmeta:${product.category.slug}.${product.slug}.title`
-          )}
-        />
-        <meta property="og:description" content={t('meta.content.home')} />
-        <meta
-          property="og:keywords"
-          content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
-        />
-        <meta property="og:image" content={Images.og.home.default.src} />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:url"
-          content={`https://knowledge-base.zaxe.com${router.asPath}`}
-        />
-        <meta property="twitter:site" content="@Zaxe3D" />
-        <meta property="twitter:site:id" content="@Zaxe3D" />
-        <meta property="twitter:creator" content="@Zaxe3D" />
-        <meta property="twitter:creator:id" content="@Zaxe3D" />
-        <meta
-          property="twitter:title"
-          content={t(
-            `productmeta:${product.category.slug}.${product.slug}.title`
-          )}
-        />
-        <meta property="twitter:description" content={t('meta.content.home')} />
-        <meta property="twitter:image" content={Images.og.home.default.src} />
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <link
-          rel="alternate"
-          hrefLang="tr"
-          href={`https://knowledge-base.zaxe.com/tr${router.asPath}`}
-        />
-        <link
-          rel="alternate"
-          hrefLang="en"
-          href={`https://knowledge-base.zaxe.com${router.asPath}`}
-        />
-      </Head>
-      {product && (
+    product && (
+      <>
+        <Head>
+          <title>
+            {t(`productmeta:${product.category.slug}.${product.slug}.title`)}
+          </title>
+          <meta name="description" content={t('meta.content.home')} />
+          <meta
+            name="title"
+            content={t(
+              `productmeta:${product.category.slug}.${product.slug}.title`
+            )}
+          />
+          <meta
+            name="keywords"
+            content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
+          />
+          <meta name="description" content={t('meta.content.home')} />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:url"
+            content={`https://knowledge-base.zaxe.com${router.asPath}`}
+          />
+          <meta
+            property="og:title"
+            content={t(
+              `productmeta:${product.category.slug}.${product.slug}.title`
+            )}
+          />
+          <meta property="og:description" content={t('meta.content.home')} />
+          <meta
+            property="og:keywords"
+            content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
+          />
+          <meta property="og:image" content={Images.og.home.default.src} />
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta
+            property="twitter:url"
+            content={`https://knowledge-base.zaxe.com${router.asPath}`}
+          />
+          <meta property="twitter:site" content="@Zaxe3D" />
+          <meta property="twitter:site:id" content="@Zaxe3D" />
+          <meta property="twitter:creator" content="@Zaxe3D" />
+          <meta property="twitter:creator:id" content="@Zaxe3D" />
+          <meta
+            property="twitter:title"
+            content={t(
+              `productmeta:${product.category.slug}.${product.slug}.title`
+            )}
+          />
+          <meta
+            property="twitter:description"
+            content={t('meta.content.home')}
+          />
+          <meta property="twitter:image" content={Images.og.home.default.src} />
+          <link rel="icon" type="image/png" href="/favicon.png" />
+          <link
+            rel="alternate"
+            hrefLang="tr"
+            href={`https://knowledge-base.zaxe.com/tr${router.asPath}`}
+          />
+          <link
+            rel="alternate"
+            hrefLang="en"
+            href={`https://knowledge-base.zaxe.com${router.asPath}`}
+          />
+        </Head>
         <div className="grid w-full font-zaxe pt-[15vh] grid-cols-1 place-content-start place-items-center">
           <ProductNav product={product} />
           <GetStarted product={product} />
@@ -90,8 +93,8 @@ function Product({ product: stringProduct }) {
           <Downloads product={product} />
           <TipsNTrips />
         </div>
-      )}
-    </>
+      </>
+    )
   );
 }
 
@@ -121,13 +124,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ locale, params }) => ({
   props: {
     product: JSON.stringify(getProduct(params.product, params.category)),
-    ...(await serverSideTranslations(locale, [
-      'common',
-      'productmeta',
-      'content-zxz3',
-      'content-zxx3',
-      'content-zxxdesktop',
-    ])),
+    ...(await serverSideTranslations(locale, Content.translations)),
   },
 });
 
