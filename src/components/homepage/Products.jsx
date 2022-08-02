@@ -105,7 +105,7 @@ function Products() {
                     className={`w-full ${
                       index === activeSlide
                         ? 'scale-[1.8] opacity-100'
-                        : 'scale-[1] opacity-50'
+                        : 'scale-[1] hover:opacity-70 opacity-30'
                     } grid grid-cols-1 relative text-[#2C2C2C] place-content-center place-items-center h-full px-1 py-5 transition-all duration-300 rounded-3xl gap-2`}
                   >
                     <div
