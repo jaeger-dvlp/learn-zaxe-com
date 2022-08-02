@@ -6,8 +6,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Images from '../../../../images/Images';
 import Content from '../../../../content/Content';
-import Loader from '../../../../components/main/Loader';
-import Header from '../../../../components/main/Header';
 import { i18n } from '../../../../../next-i18next.config';
 import TipsNTrips from '../../../../components/main/TipsNTrips';
 import Downloads from '../../../../components/productpage/downloads';
@@ -84,8 +82,6 @@ function Product({ product: stringProduct }) {
           href={`https://knowledge-base.zaxe.com${router.asPath}`}
         />
       </Head>
-      <Loader />
-      <Header />
       {product && (
         <div className="grid w-full font-zaxe pt-[15vh] grid-cols-1 place-content-start place-items-center">
           <ProductNav product={product} />

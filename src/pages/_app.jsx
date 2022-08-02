@@ -7,6 +7,8 @@ import '../styles/fonts/fonts.css';
 import { appWithTranslation } from 'next-i18next';
 import nextI18nextConfig from '../../next-i18next.config';
 import AppWrapper from '../components/contexts/AppContext';
+import Header from '../components/main/Header';
+import Loader from '../components/main/Loader';
 import NotificationPopup from '../components/main/NotificationPopup';
 
 function MyApp({ Component, pageProps }) {
@@ -15,6 +17,8 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <AppWrapper>
+      <Header />
+      <Loader />
       <NotificationPopup />
       <Component {...pageProps} />
     </AppWrapper>

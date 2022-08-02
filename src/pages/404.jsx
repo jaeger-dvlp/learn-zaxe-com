@@ -4,8 +4,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 import { i18n } from '../../next-i18next.config';
-import Header from '../components/main/Header';
-import Loader from '../components/main/Loader';
 import SearchBar from '../components/misc/SearchBar';
 
 function NotFound() {
@@ -15,8 +13,6 @@ function NotFound() {
       <Head>
         <title>Zaxe | 404</title>
       </Head>
-      <Loader />
-      <Header />
       <div className="grid w-full min-h-screen grid-cols-1 bg-white font-zaxe place-content-center place-items-center">
         <div
           data-aos="zoom-in"
