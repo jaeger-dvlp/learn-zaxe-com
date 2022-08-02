@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 
-import Images from '../../images/Images';
+import Images from '@/src/images/Images';
 
 function Loader() {
   const Router = useRouter();

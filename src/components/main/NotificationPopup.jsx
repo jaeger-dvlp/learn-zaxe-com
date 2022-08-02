@@ -6,7 +6,7 @@ import {
   BiCheckCircle,
   BiLoaderAlt,
 } from 'react-icons/bi';
-import { useAppContext } from '../contexts/AppContext';
+import { useAppContext } from '@/src/components/contexts/AppContext';
 
 const Icons = {
   hint: (

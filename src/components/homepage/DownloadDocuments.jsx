@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { BsImage } from 'react-icons/bs';
 import { i18n, useTranslation } from 'next-i18next';
-import Content from '../../content/Content';
+import Content from '@/src/content/Content';
 
 function DownloadDocuments() {
   const { t } = useTranslation();

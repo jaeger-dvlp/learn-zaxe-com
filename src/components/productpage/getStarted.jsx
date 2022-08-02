@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { BsFillPlayFill } from 'react-icons/bs';
-import { useAppContext } from '../contexts/AppContext';
+import { useAppContext } from '@/src/components/contexts/AppContext';
 
 function GetStarted({ product }) {
   const { activateNotificationPopup } = useAppContext();

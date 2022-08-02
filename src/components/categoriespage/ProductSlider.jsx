@@ -9,7 +9,7 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import Content from '../../content/Content';
+import Content from '@/src/content/Content';
 
 function ProductSlider() {
   const [products] = React.useState([

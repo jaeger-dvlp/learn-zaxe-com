@@ -7,8 +7,8 @@ import { useRouter } from 'next/router';
 import { BsDownload } from 'react-icons/bs';
 import { useTranslation } from 'next-i18next';
 import relativeTime from 'dayjs/plugin/relativeTime';
-import { useAppContext } from '../contexts/AppContext';
-import Content from '../../content/Content';
+import { useAppContext } from '@/src/components/contexts/AppContext';
+import Content from '@/src/content/Content';
 
 function Downloads({ product }) {
   const router = useRouter();
