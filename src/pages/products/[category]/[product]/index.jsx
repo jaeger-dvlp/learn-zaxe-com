@@ -14,9 +14,9 @@ import GetStarted from '../../../../components/productpage/getStarted';
 import Categories from '../../../../components/productpage/categories';
 
 function Product({ product: stringProduct }) {
-  const product = JSON.parse(stringProduct);
+  const [product] = React.useState(JSON.parse(stringProduct) || null);
+  const { asPath } = useRouter();
   const { t } = useTranslation();
-  const router = useRouter();
 
   return (
     product && (
@@ -40,7 +40,7 @@ function Product({ product: stringProduct }) {
           <meta property="og:type" content="website" />
           <meta
             property="og:url"
-            content={`https://knowledge-base.zaxe.com${router.asPath}`}
+            content={`https://knowledge-base.zaxe.com${asPath}`}
           />
           <meta
             property="og:title"
@@ -57,7 +57,7 @@ function Product({ product: stringProduct }) {
           <meta property="twitter:card" content="summary_large_image" />
           <meta
             property="twitter:url"
-            content={`https://knowledge-base.zaxe.com${router.asPath}`}
+            content={`https://knowledge-base.zaxe.com${asPath}`}
           />
           <meta property="twitter:site" content="@Zaxe3D" />
           <meta property="twitter:site:id" content="@Zaxe3D" />
@@ -78,12 +78,12 @@ function Product({ product: stringProduct }) {
           <link
             rel="alternate"
             hrefLang="tr"
-            href={`https://knowledge-base.zaxe.com/tr${router.asPath}`}
+            href={`https://knowledge-base.zaxe.com/tr${asPath}`}
           />
           <link
             rel="alternate"
             hrefLang="en"
-            href={`https://knowledge-base.zaxe.com${router.asPath}`}
+            href={`https://knowledge-base.zaxe.com${asPath}`}
           />
         </Head>
         <div className="grid w-full font-zaxe pt-[15vh] grid-cols-1 place-content-start place-items-center">
@@ -98,10 +98,13 @@ function Product({ product: stringProduct }) {
   );
 }
 
-const getProduct = (pSlug, cSlug) =>
-  Content.products.find(
+const getProduct = (pSlug, cSlug) => {
+  const foundProduct = Content.products.find(
     ({ slug, category }) => slug === pSlug && category.slug === cSlug
-  ) || null;
+  );
+
+  return foundProduct || null;
+};
 
 export const getStaticPaths = async () => {
   const paths = Content.products
