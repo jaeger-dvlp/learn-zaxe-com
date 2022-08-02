@@ -3,13 +3,13 @@ import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import Images from '../images/Images';
-import Products from '../components/homepage/Products';
-import TipsNTrips from '../components/main/TipsNTrips';
-import QuickViewer from '../components/misc/QuickViewer';
-import WelcomeSection from '../components/homepage/WelcomeSection';
-import FrequentlyViewed from '../components/homepage/FrequentlyViewed';
-import DownloadDocuments from '../components/homepage/DownloadDocuments';
+import Images from '@/src/images/Images';
+import Products from '@/src/components/homepage/Products';
+import TipsNTrips from '@/src/components/main/TipsNTrips';
+import QuickViewer from '@/src/components/misc/QuickViewer';
+import WelcomeSection from '@/src/components/homepage/WelcomeSection';
+import FrequentlyViewed from '@/src/components/homepage/FrequentlyViewed';
+import DownloadDocuments from '@/src/components/homepage/DownloadDocuments';
 
 function Home() {
   const { t } = useTranslation();

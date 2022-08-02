@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import React from 'react';
 import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
@@ -7,10 +6,10 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
-import Content from '../../../../../content/Content';
-import { i18n } from '../../../../../../next-i18next.config';
-import SearchBar from '../../../../../components/categoriespage/SearchBar';
-import ProductSlider from '../../../../../components/categoriespage/ProductSlider';
+import Content from '@/src/content/Content';
+import { i18n } from '@/next-i18next.config';
+import SearchBar from '@/src/components/categoriespage/SearchBar';
+import ProductSlider from '@/src/components/categoriespage/ProductSlider';
 
 function Categories({ product: stringProduct }) {
   const [product] = React.useState(JSON.parse(stringProduct));

@@ -1,16 +1,16 @@
 import AOS from 'aos';
 import React from 'react';
 import 'aos/dist/aos.css';
-import '../styles/globals.css';
-import '../styles/animations.css';
-import '../styles/fonts/fonts.css';
+import '@/src/styles/globals.css';
+import '@/src/styles/animations.css';
+import '@/src/styles/fonts/fonts.css';
 import { appWithTranslation } from 'next-i18next';
 
-import Loader from '../components/main/Loader';
-import Header from '../components/main/Header';
-import nextI18nextConfig from '../../next-i18next.config';
-import AppWrapper from '../components/contexts/AppContext';
-import NotificationPopup from '../components/main/NotificationPopup';
+import Loader from '@/src/components/main/Loader';
+import Header from '@/src/components/main/Header';
+import nextI18nextConfig from '@/next-i18next.config';
+import AppWrapper from '@/src/components/contexts/AppContext';
+import NotificationPopup from '@/src/components/main/NotificationPopup';
 
 function MyApp({ Component, pageProps }) {
   React.useEffect(() => {

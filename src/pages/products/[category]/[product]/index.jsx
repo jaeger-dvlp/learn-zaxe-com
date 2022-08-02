@@ -4,14 +4,14 @@ import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import Images from '../../../../images/Images';
-import Content from '../../../../content/Content';
-import { i18n } from '../../../../../next-i18next.config';
-import TipsNTrips from '../../../../components/main/TipsNTrips';
-import Downloads from '../../../../components/productpage/downloads';
-import ProductNav from '../../../../components/productpage/productNav';
-import GetStarted from '../../../../components/productpage/getStarted';
-import Categories from '../../../../components/productpage/categories';
+import { i18n } from '@/next-i18next.config';
+import Images from '@/src/images/Images';
+import Content from '@/src/content/Content';
+import TipsNTrips from '@/src/components/main/TipsNTrips';
+import Downloads from '@/src/components/productpage/downloads';
+import ProductNav from '@/src/components/productpage/productNav';
+import GetStarted from '@/src/components/productpage/getStarted';
+import Categories from '@/src/components/productpage/categories';
 
 function Product({ product: stringProduct }) {
   const [product] = React.useState(JSON.parse(stringProduct) || null);
