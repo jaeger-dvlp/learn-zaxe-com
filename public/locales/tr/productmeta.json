@@ -1,15 +1,18 @@
 {
   "3dprinters": {
     "zaxe-z3": {
-      "title": "Zaxe Z3 | Zaxe Bilgi Merkezi"
+      "title": "Zaxe Z3 | Zaxe Bilgi Merkezi",
+      "categories-title": "Zaxe Z3 Kategorileri | Zaxe Bilgi Merkezi"
     },
     "zaxe-x3": {
-      "title": "Zaxe X3 | Zaxe Bilgi Merkezi"
+      "title": "Zaxe X3 | Zaxe Bilgi Merkezi",
+      "categories-title": "Zaxe X3 Kategorileri | Zaxe Bilgi Merkezi"
     }
   },
   "softwares": {
     "zaxe-xdesktop": {
-      "title": "Zaxe xDesktop | Zaxe Bilgi Merkezi"
+      "title": "Zaxe xDesktop | Zaxe Bilgi Merkezi",
+      "categories-title": "Zaxe xDesktop Kategorileri | Zaxe Bilgi Merkezi"
     }
   }
 }
