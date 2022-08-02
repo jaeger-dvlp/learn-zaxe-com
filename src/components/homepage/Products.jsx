@@ -38,7 +38,7 @@ function Products() {
           {products.map((product) => (
             <Link
               key={`route-product-${product.slug}`}
-              href={`products/${product.category.slug}/${product.slug}`}
+              href={`/products/${product.category.slug}/${product.slug}`}
               locale={i18n.language}
             >
               <a className="w-full grid grid-cols-1 text-[#2C2C2C] place-content-end place-items-center h-full max-w-[370px] px-1 py-5 bg-white shadow-none hover:shadow-xl hover:text-black hover:-translate-y-5 border border-transparent hover:border-zinc-100 transition-all duration-200 rounded-3xl gap-5">
@@ -98,7 +98,7 @@ function Products() {
                 } relative py-[3.5rem]`}
               >
                 <Link
-                  href={`products/${product.category.slug}/${product.slug}`}
+                  href={`/products/${product.category.slug}/${product.slug}`}
                   locale={i18n.language}
                 >
                   <a
