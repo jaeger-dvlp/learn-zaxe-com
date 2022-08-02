@@ -49,7 +49,7 @@ function SearchBar() {
   return (
     <div className="grid w-full grid-cols-1 place-content-start place-items-center gap-7">
       <h1 className="xl:text-4xl lg:text-4xl text-xl font-bold text-[#585858] text-center">
-        What can we help you with?
+        {t('searchbar.categories.heading')}
       </h1>
       <form
         className="relative flex items-center justify-center xl:min-h-[80px] lg:min-h-[80px]
