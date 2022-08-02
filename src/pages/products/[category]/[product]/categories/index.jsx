@@ -1,16 +1,23 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React from 'react';
-import { i18n } from '../../../../../../next-i18next.config';
+import Head from 'next/head';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import Content from '../../../../../content/Content';
+import { i18n } from '../../../../../../next-i18next.config';
 
 function Categories({ product: stringProduct }) {
   const product = JSON.parse(stringProduct);
 
   return (
     product && (
-      <div className="grid w-full grid-cols-1 place-content-start place-items-center pt-[15vh]">
-        categories for {product.name}
-      </div>
+      <>
+        <Head>
+          <title>Categories for {product.name}</title>
+        </Head>
+        <div className="grid w-full grid-cols-1 place-content-start place-items-center pt-[15vh]">
+          categories for {product.name}
+        </div>
+      </>
     )
   );
 }
