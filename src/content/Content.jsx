@@ -511,6 +511,13 @@ const DownloadDocuments = [
 ];
 
 const Content = {
+  translations: [
+    'common',
+    'productmeta',
+    'content-zxz3',
+    'content-zxx3',
+    'content-zxxdesktop',
+  ],
   products: Products,
   productCategories: ProductCategories,
   components: {
