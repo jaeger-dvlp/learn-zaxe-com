@@ -1,13 +1,20 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+
 import Content from '../../../../../content/Content';
 import { i18n } from '../../../../../../next-i18next.config';
+import SearchBar from '../../../../../components/categoriespage/SearchBar';
+import ProductSlider from '../../../../../components/categoriespage/ProductSlider';
 
 function Categories({ product: stringProduct }) {
   const [product] = React.useState(JSON.parse(stringProduct));
+  const { category, slug } = product;
   const { t } = useTranslation();
 
   return (
@@ -15,13 +22,14 @@ function Categories({ product: stringProduct }) {
       <>
         <Head>
           <title>
-            {t(
-              `productmeta:${product.category.slug}.${product.slug}.categories-title`
-            )}
+            {t(`productmeta:${category.slug}.${slug}.categories-title`)}
           </title>
         </Head>
-        <div className="grid w-full grid-cols-1 place-content-start place-items-center pt-[15vh]">
-          categories for {product.name}
+        <div className="grid font-zaxe w-full grid-cols-1 place-content-start place-items-center pt-[20vh]">
+          <div className="grid w-full grid-cols-1 p-5 gap-14 max-w-app place-content-start place-items-center">
+            <SearchBar />
+            <ProductSlider />
+          </div>
         </div>
       </>
     )
