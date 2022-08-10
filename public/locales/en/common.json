@@ -98,7 +98,9 @@
     "categories": {
       "title": "Categories",
       "gotopage-button": "Go to Page",
-      "see-all": "See All"
+      "see-all": "See All",
+      "all-categories": "All categories",
+      "select-category": "Select Categories"
     },
     "downloads": {
       "title": "Downloads",

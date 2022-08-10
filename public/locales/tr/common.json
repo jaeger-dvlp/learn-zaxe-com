@@ -98,7 +98,9 @@
     "categories": {
       "title": "Kategoriler",
       "gotopage-button": "Sayfaya Git",
-      "see-all": "Tümünü Gör"
+      "see-all": "Tümünü Gör",
+      "all-categories": "Tüm kategoriler",
+      "select-category": "Kategori seçin"
     },
     "downloads": {
       "title": "İndirilebilir",
