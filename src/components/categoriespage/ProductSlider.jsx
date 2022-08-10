@@ -19,7 +19,9 @@ function ProductSlider() {
     Content.products.find(({ slug }) => slug === 'zaxe-z3'),
     Content.products.find(({ slug }) => slug === 'zaxe-x3'),
   ]);
-  const [activeSlide, setActiveSlide] = React.useState(null);
+  const [activeSlide, setActiveSlide] = React.useState(
+    products.findIndex(({ slug }) => slug === router.query.product)
+  );
 
   return (
     <div className="w-full">
@@ -33,7 +35,9 @@ function ProductSlider() {
         }}
         modules={[Navigation]}
         slidesPerView={3}
-        initialSlide={1}
+        initialSlide={products.findIndex(
+          ({ slug }) => slug === router.query.product
+        )}
         spaceBetween={0}
         onSlideChangeTransitionEnd={() => {
           const currentProduct = products[activeSlide] || null;
