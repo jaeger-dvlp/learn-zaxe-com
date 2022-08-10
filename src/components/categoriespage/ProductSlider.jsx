@@ -14,13 +14,11 @@ import { useRouter } from 'next/router';
 
 function ProductSlider() {
   const router = useRouter();
-
   const [products] = React.useState([
     Content.products.find(({ slug }) => slug === 'zaxe-xdesktop'),
     Content.products.find(({ slug }) => slug === 'zaxe-z3'),
     Content.products.find(({ slug }) => slug === 'zaxe-x3'),
   ]);
-
   const [activeSlide, setActiveSlide] = React.useState(null);
 
   return (
