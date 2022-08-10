@@ -33,7 +33,7 @@ function Categories({ product: stringProduct }) {
             <SearchBar />
             <ProductSlider />
           </div>
-          <div className="flex items-start justify-center w-full gap-10 max-w-app">
+          <div className="flex flex-wrap items-start justify-center w-full gap-10 p-5 xl:flex-nowrap lg:flex-nowrap max-w-app">
             <CategoryBar product={product} />
             <ProductPosts product={product} />
           </div>
