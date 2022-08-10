@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 function Categories({ product }) {
   const { t } = useTranslation();
@@ -29,7 +29,6 @@ function Categories({ product }) {
                 <span className="text-2xl font-normal text-center xl:text-left lg:text-left group-hover:font-semibold text-zaxe">
                   {t(label)}
                 </span>
-
                 <span className="text-xl xl:block lg:block hidden font-normal text-[#E8E8E8] group-hover:text-[#9A9A9A]">
                   {t('product-page-components.categories.gotopage-button')}
                 </span>
