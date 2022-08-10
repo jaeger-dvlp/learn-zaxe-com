@@ -352,7 +352,7 @@ const ProductContents = [
         thumbnail: require('../images/softwares/content/xdesktop/xdesktop_shortcuts.webp'),
       },
     ],
-    categories: ProductPostCategories[2],
+    categories: ProductPostCategories[2].categories,
     downloads: [
       {
         slug: 'xdesktop',
@@ -407,7 +407,7 @@ const Products = [
         alt: 'Zaxe xDesktop',
       },
     },
-    content: ProductContents[2].categories,
+    content: ProductContents[2],
   },
 ];
 
