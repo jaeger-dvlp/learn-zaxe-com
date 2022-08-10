@@ -9,8 +9,8 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import Content from '@/src/content/Content';
 import { useRouter } from 'next/router';
+import Content from '@/src/content/Content';
 
 function ProductSlider() {
   const router = useRouter();
