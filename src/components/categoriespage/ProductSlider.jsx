@@ -10,8 +10,11 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import Content from '@/src/content/Content';
+import { useRouter } from 'next/router';
 
 function ProductSlider() {
+  const router = useRouter();
+
   const [products] = React.useState([
     Content.products.find(({ slug }) => slug === 'zaxe-xdesktop'),
     Content.products.find(({ slug }) => slug === 'zaxe-z3'),
@@ -34,6 +37,19 @@ function ProductSlider() {
         slidesPerView={3}
         initialSlide={1}
         spaceBetween={0}
+        onSlideChangeTransitionEnd={() => {
+          const currentProduct = products[activeSlide] || null;
+          const routeProduct = router.query.product || null;
+          if (
+            currentProduct &&
+            routeProduct &&
+            currentProduct.slug !== routeProduct
+          ) {
+            router.push(
+              `/products/${currentProduct.category.slug}/${currentProduct.slug}/categories`
+            );
+          }
+        }}
         centeredSlides
       >
         <button
@@ -60,7 +76,7 @@ function ProductSlider() {
             } relative py-[3.5rem]`}
           >
             <Link
-              href={`/products/${product.category.slug}/${product.slug}`}
+              href={`/products/${product.category.slug}/${product.slug}/categories`}
               locale={i18n.language}
             >
               <a
