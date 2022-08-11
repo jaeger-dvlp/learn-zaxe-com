@@ -7,16 +7,117 @@ const OSIcons = {
   mac: <BsApple />,
 };
 
-const ProductsPosts = [
-  {
-    product: 'zaxe-z3',
-    posts: [
-      {
-        title: 'Test',
-        category: 'start',
+const ProductPosts = [
+  [
+    {
+      title: {
+        tr: 'Hata giderme: GUI PCB Anakart Bağlantısı',
+        en: 'Troubleshooting: GUI PCB Motherboard Connection',
       },
-    ],
-  },
+      category: 'troubleshooting',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail5.webp'),
+    },
+    {
+      title: {
+        tr: 'Kurulum',
+        en: 'First Assembly',
+      },
+      category: 'start',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail1.webp'),
+    },
+    {
+      title: {
+        tr: 'Baskı Tablası Kablo Değişimi',
+        en: 'Heatbed Cable Replacement',
+      },
+      category: 'repair',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail2.webp'),
+    },
+    {
+      title: {
+        tr: 'Baskı kafasını yükseltme',
+        en: 'Upgrading the Printhead',
+      },
+      category: 'repair',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail8.webp'),
+    },
+    {
+      title: {
+        tr: 'Baskı kafasını fan değiştirme',
+        en: 'Printhead Fan Replacement',
+      },
+      category: 'repair',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail4.webp'),
+    },
+  ],
+  [
+    {
+      title: {
+        tr: 'Hata giderme: GUI PCB Anakart Bağlantısı',
+        en: 'Troubleshooting: GUI PCB Motherboard Connection',
+      },
+      category: 'troubleshooting',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail5.webp'),
+    },
+    {
+      title: {
+        tr: 'Kurulum',
+        en: 'First Assembly',
+      },
+      category: 'start',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail1.webp'),
+    },
+    {
+      title: {
+        tr: 'Baskı Tablası Kablo Değişimi',
+        en: 'Heatbed Cable Replacement',
+      },
+      category: 'repair',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail2.webp'),
+    },
+    {
+      title: {
+        tr: 'Baskı kafasını yükseltme',
+        en: 'Upgrading the Printhead',
+      },
+      category: 'repair',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail8.webp'),
+    },
+    {
+      title: {
+        tr: 'Baskı kafasını fan değiştirme',
+        en: 'Printhead Fan Replacement',
+      },
+      category: 'repair',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail4.webp'),
+    },
+  ],
+  [
+    {
+      title: {
+        tr: 'xDesktop Kurulumu',
+        en: 'Installation of xDesktop',
+      },
+      category: 'start',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail9.webp'),
+    },
+    {
+      title: {
+        tr: 'İlk Dilimleme',
+        en: 'First Slicing',
+      },
+      category: 'start',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail10.webp'),
+    },
+    {
+      title: {
+        tr: 'Doğru Destek Seçimi',
+        en: 'Choosing the Right Support',
+      },
+      category: 'tips-tricks',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail11.webp'),
+    },
+  ],
 ];
 
 const ProductPostCategories = [
@@ -186,6 +287,7 @@ const ProductContents = [
       },
     ],
     categories: ProductPostCategories[0].categories,
+    posts: ProductPosts[0],
     downloads: [
       {
         slug: 'z3-firmware',
@@ -272,6 +374,7 @@ const ProductContents = [
       },
     ],
     categories: ProductPostCategories[1].categories,
+    posts: ProductPosts[1],
     downloads: [
       {
         slug: 'x3-firmware',
@@ -353,6 +456,7 @@ const ProductContents = [
       },
     ],
     categories: ProductPostCategories[2].categories,
+    posts: ProductPosts[2],
     downloads: [
       {
         slug: 'xdesktop',
@@ -546,7 +650,7 @@ const Content = {
     'content-zxxdesktop',
   ],
   products: Products,
-  productPosts: ProductsPosts,
+  productPosts: ProductPosts,
   productCategories: ProductCategories,
   productPostCategories: ProductPostCategories,
   components: {
