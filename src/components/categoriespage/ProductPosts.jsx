@@ -75,6 +75,7 @@ function PostBlock({ props }) {
       <BiLinkExternal className="absolute z-[3] text-4xl bottom-2 right-2 text-zinc-200" />
       <div className="relative z-[2] w-full h-[10rem] max-w-xs overflow-hidden rounded-xl">
         <Image
+          placeholder="blur"
           src={postThumbnail}
           layout="fill"
           alt={postTitle.en}

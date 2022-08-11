@@ -12,6 +12,7 @@ function Header() {
         <Link href="/" locale={useRouter().locale}>
           <a className="w-full xl:max-w-[200px] lg:max-w-[200px] max-w-[100px] block">
             <Image
+              placeholder="blur"
               alt="Zaxe Knowledge Base Logo"
               src={Images.logo.zxkb}
               className="w-full h-full transition-all duration-150 hover:scale-90"

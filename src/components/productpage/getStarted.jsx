@@ -41,6 +41,7 @@ function GetStarted({ product }) {
                 <div className="w-full p-0 overflow-hidden cursor-pointer relative bg-white rounded-2xl h-[195px] shadow-xl grid grid-cols-1 place-content-center place-items-center gap-0">
                   <div className="relative block w-full overflow-hidden z-[1]">
                     <Image
+                      placeholder="blur"
                       src={thumbnail}
                       alt={label}
                       layout="responsive"

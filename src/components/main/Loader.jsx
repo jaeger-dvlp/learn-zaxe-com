@@ -42,7 +42,11 @@ function Loader() {
           data-aos-duration={750}
           className="w-full max-w-[5rem] p-0 m-0"
         >
-          <Image src={Images.loader.zxkb} alt="Zaxe Knowledge Base" />
+          <Image
+            placeholder="blur"
+            src={Images.loader.zxkb}
+            alt="Zaxe Knowledge Base"
+          />
         </div>
       </div>
     )
