@@ -29,6 +29,7 @@ function ProductPosts({ product }) {
             queryCategory ? (
               postCategory === queryCategory ? (
                 <PostBlock
+                  key={`${postCategory}-${postKey}-${productSlug}`}
                   props={{
                     postCategory,
                     postTitle,
@@ -42,6 +43,7 @@ function ProductPosts({ product }) {
               ) : null
             ) : (
               <PostBlock
+                key={`${postCategory}-${postKey}-${productSlug}`}
                 props={{
                   postCategory,
                   postTitle,
@@ -62,17 +64,14 @@ function PostBlock({ props }) {
   const {
     postCategory,
     postTitle,
-    postKey,
+
     postThumbnail,
-    productSlug,
+
     t,
     Categories,
   } = props;
   return (
-    <div
-      key={`${postCategory}-${postKey}-${productSlug}`}
-      className="relative grid w-full h-full max-w-xs grid-cols-1 overflow-hidden transition-all duration-200 bg-white shadow-xl cursor-pointer hover:-translate-y-3 hover:shadow-2xl place-content-start place-items-center rounded-xl"
-    >
+    <div className="relative grid w-full h-full max-w-xs grid-cols-1 overflow-hidden transition-all duration-200 bg-white shadow-xl cursor-pointer hover:-translate-y-3 hover:shadow-2xl place-content-start place-items-center rounded-xl">
       <BiLinkExternal className="absolute z-[3] text-4xl bottom-2 right-2 text-zinc-200" />
       <div className="relative z-[2] w-full h-[10rem] max-w-xs overflow-hidden rounded-xl">
         <Image
