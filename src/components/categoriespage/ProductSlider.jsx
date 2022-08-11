@@ -1,8 +1,6 @@
 /* eslint-disable import/no-unresolved */
-import React from 'react';
-import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { i18n } from 'next-i18next';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
@@ -14,6 +12,7 @@ import Content from '@/src/content/Content';
 
 function ProductSlider() {
   const router = useRouter();
+  const [productSlider, setProductSlider] = useState(null);
   const [products] = React.useState([
     Content.products.find(({ slug }) => slug === 'zaxe-xdesktop'),
     Content.products.find(({ slug }) => slug === 'zaxe-z3'),
@@ -22,6 +21,12 @@ function ProductSlider() {
   const [activeSlide, setActiveSlide] = React.useState(
     products.findIndex(({ slug }) => slug === router.query.product)
   );
+
+  useEffect(() => {
+    if (productSlider && productSlider.activeIndex !== activeSlide) {
+      productSlider.slideTo(activeSlide);
+    }
+  }, [activeSlide]);
 
   return (
     <div className="w-full">
@@ -35,9 +40,7 @@ function ProductSlider() {
         }}
         modules={[Navigation]}
         slidesPerView={3}
-        initialSlide={products.findIndex(
-          ({ slug }) => slug === router.query.product
-        )}
+        initialSlide={activeSlide}
         spaceBetween={0}
         onSlideChangeTransitionEnd={() => {
           const currentProduct = products[activeSlide] || null;
@@ -52,6 +55,7 @@ function ProductSlider() {
             );
           }
         }}
+        onInit={(swiper) => setProductSlider(swiper)}
         centeredSlides
       >
         <button
@@ -77,41 +81,40 @@ function ProductSlider() {
               index === activeSlide ? 'z-[2]' : 'z-[1]'
             } relative py-[3.5rem]`}
           >
-            <Link
-              href={`/products/${product.category.slug}/${product.slug}/categories`}
-              locale={i18n.language}
-            >
-              <a
-                className={`w-full ${
-                  index === activeSlide
-                    ? 'scale-[1.8] opacity-100'
-                    : 'scale-[1] hover:opacity-70 opacity-30'
-                } grid grid-cols-1 relative text-[#2C2C2C] place-content-center
+            <button
+              onClick={() => {
+                setActiveSlide(index);
+              }}
+              type="button"
+              className={`w-full ${
+                index === activeSlide
+                  ? 'scale-[1.8] opacity-100'
+                  : 'scale-[1] hover:opacity-70 opacity-30'
+              } grid grid-cols-1 relative text-[#2C2C2C] place-content-center
                 place-items-center h-full px-1 py-5 transition-all
                 duration-300 rounded-3xl gap-2`}
-              >
-                <div
-                  className={`w-full max-w-[360px]
+            >
+              <div
+                className={`w-full max-w-[360px]
                   ${
                     product.slug === 'zaxe-xdesktop' &&
                     'max-w-[80px] sm:max-w-[100px] md:max-w-[130px]'
                   }`}
-                >
-                  <Image
-                    src={product.images.main.img}
-                    alt={product.images.main.alt}
-                    layout="responsive"
-                  />
-                </div>
-                <h1
-                  className={`text-xs font-bold text-current opacity-0
+              >
+                <Image
+                  src={product.images.main.img}
+                  alt={product.images.main.alt}
+                  layout="responsive"
+                />
+              </div>
+              <h1
+                className={`text-xs font-bold text-current opacity-0
                   transition-all duration-200
                   ${index === activeSlide && '!opacity-100'}`}
-                >
-                  {product.model}
-                </h1>
-              </a>
-            </Link>
+              >
+                {product.model}
+              </h1>
+            </button>
           </SwiperSlide>
         ))}
       </Swiper>
