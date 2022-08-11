@@ -102,6 +102,7 @@ function ProductSlider() {
                   }`}
               >
                 <Image
+                  placeholder="blur"
                   src={product.images.main.img}
                   alt={product.images.main.alt}
                   layout="responsive"

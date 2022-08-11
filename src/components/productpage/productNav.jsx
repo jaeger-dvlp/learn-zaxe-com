@@ -64,7 +64,11 @@ function ProductNav({ product }) {
         </h1>
       </div>
       <div className="w-full xl:max-w-[400px] lg:max-w-[400px] max-w-full flex justify-center items-end">
-        <Image src={product.images.main.img} alt={product.images.main.alt} />
+        <Image
+          placeholder="blur"
+          src={product.images.main.img}
+          alt={product.images.main.alt}
+        />
       </div>
       <div className="h-full gap-4  xl:order-none lg:order-none order-2 grid xl:grid-cols-1 lg:grid-cols-1 grid-cols-2 place-content-end place-items-center w-full xl:max-w-[235px] lg:max-w-[235px] max-w-full">
         {product.content.navButtons.map(({ slug, isLink, linkData, label }) =>
