@@ -22,7 +22,7 @@ function CategoryBar({ product }) {
 
   return (
     product && (
-      <div className="grid w-full max-w-full grid-cols-1 xl:max-w-xs lg:max-w-xs place-content-start place-items-start">
+      <div className="grid p-5 w-full max-w-full grid-cols-1 xl:max-w-[18rem] lg:max-w-[18rem] place-content-start place-items-start">
         <div className="flex items-center justify-between w-full xl:hidden lg:hidden">
           <span
             className="!text-zaxe w-1/2 text-left !font-medium
@@ -110,7 +110,12 @@ function CategorySelectBox({ props }) {
       </option>
       {postCategories.map(
         ({ slug: prodCategorySlug, label: prodCategoryLabel }) => (
-          <option value={prodCategorySlug}>{t(prodCategoryLabel)}</option>
+          <option
+            key={`${prodCategorySlug}-mobile-selector`}
+            value={prodCategorySlug}
+          >
+            {t(prodCategoryLabel)}
+          </option>
         )
       )}
     </select>
