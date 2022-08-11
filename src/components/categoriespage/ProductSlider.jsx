@@ -50,9 +50,9 @@ function ProductSlider() {
             routeProduct &&
             currentProduct.slug !== routeProduct
           ) {
-            router.push(
-              `/products/${currentProduct.category.slug}/${currentProduct.slug}/categories`
-            );
+            router.push({
+              pathname: `/products/${currentProduct.category.slug}/${currentProduct.slug}/categories`,
+            });
           }
         }}
         onInit={(swiper) => setProductSlider(swiper)}
