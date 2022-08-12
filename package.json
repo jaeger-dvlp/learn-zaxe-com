@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.4",
     "aos": "^3.0.0-beta.6",
     "dayjs": "^1.11.4",
     "eslint-import-resolver-alias": "^1.1.2",
+    "gray-matter": "^4.0.3",
     "next": "12.2.0",
     "next-i18next": "^11.0.0",
+    "next-mdx-remote": "^4.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
