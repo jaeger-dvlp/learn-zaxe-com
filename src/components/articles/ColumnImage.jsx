@@ -7,11 +7,11 @@ function ColumnImage({ children, image }) {
       <section className="w-full xl:max-w-[40%] lg:max-w-[40%] max-w-full">
         {children}
       </section>
-      <section className="relative w-full overflow-hidden shadow-xl rounded-xl min-h-[20rem]">
+      <section className="relative p-0 !border-none w-full overflow-hidden shadow-xl rounded-xl min-h-[20rem]">
         <Image
           src={image}
           layout="fill"
-          className="object-cover object-center w-full h-full"
+          className="object-cover p-0 !border-none object-center w-full h-full"
         />
       </section>
     </section>
