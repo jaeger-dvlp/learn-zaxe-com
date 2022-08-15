@@ -20,7 +20,7 @@ function ColumnImage({ children, image: imagePath }) {
         <a
           href={imagePath}
           target="_blank"
-          className="absolute right-3 top-3 z-[3] text-2xl text-zinc-100 p-1 hover:bg-white/10 rounded-lg transition-all duration-200"
+          className="absolute right-3 top-3 z-[3] text-2xl text-zinc-100 p-1 hover:bg-white/30 bg-black/30 rounded-lg transition-all duration-200"
           rel="noreferrer"
         >
           <BiLinkExternal />
