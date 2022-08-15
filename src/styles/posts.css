@@ -3,14 +3,24 @@
 .zaxe-kb-post ol {
   @apply text-[#666666];
 }
-.zaxe-kb-post h1 {
+.zaxe-kb-post .article-heading h1 {
   @apply text-4xl font-bold text-center text-zaxe;
+}
+.zaxe-kb-post .article-heading h2 {
+  @apply text-xl font-bold text-center text-zaxe;
+}
+
+.zaxe-kb-post .post-column {
+  @apply my-20;
+}
+.zaxe-kb-post .post-column h3 {
+  @apply text-[#666666] text-2xl font-bold my-0 py-0;
 }
 
 .zaxe-kb-post p {
-  @apply my-7;
+  @apply my-5;
 }
 .zaxe-kb-post ol,
-ul {
+.zaxe-kb-post ul {
   @apply list-disc;
 }

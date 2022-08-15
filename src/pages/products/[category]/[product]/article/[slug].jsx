@@ -1,25 +1,35 @@
+import React from 'react';
+import Head from 'next/head';
 import { i18n } from '@/next.config';
-import { serialize } from 'next-mdx-remote/serialize';
+import Images from '@/src/images/Images';
 import { MDXRemote } from 'next-mdx-remote';
 import Content from '@/src/content/Content';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import React from 'react';
 import getPosts from '@/src/utils/getPosts';
+import { serialize } from 'next-mdx-remote/serialize';
+import ColumnImage from '@/src/components/articles/ColumnImage';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 function Post({ data, content }) {
   const { category: postCategory, title: postTitle } = data;
   return (
-    <div className="pt-[20vh] font-zaxe w-full grid grid-cols-1 place-content-start place-items-center">
-      <div className="w-full max-w-app">
-        <article className="p-5 zaxe-kb-post">
-          <div className="grid w-full grid-cols-1 gap-2 place-content-start place-items-center">
-            <h1>{postCategory}:</h1>
-            <h1>{postTitle}</h1>
-          </div>
-          <MDXRemote {...content} />
-        </article>
-      </div>
-    </div>
+    <>
+      <Head>
+        <title>{postTitle}</title>
+      </Head>
+      <main className="pt-[20vh] font-zaxe w-full grid grid-cols-1 place-content-start place-items-center">
+        <section className="w-full max-w-app">
+          <article className="p-5 zaxe-kb-post">
+            <section className="grid w-full grid-cols-1 gap-2 article-heading place-content-start place-items-center">
+              <h1>{postTitle}</h1>
+              <h2>{postCategory}</h2>
+            </section>
+            <section>
+              <MDXRemote {...content} components={{ Images, ColumnImage }} />
+            </section>
+          </article>
+        </section>
+      </main>
+    </>
   );
 }
 
