@@ -11,42 +11,6 @@ const ProductPosts = [
   [
     {
       title: {
-        tr: 'Hata giderme: GUI PCB Anakart Bağlantısı',
-        en: 'Troubleshooting: GUI PCB Motherboard Connection',
-      },
-      slug: 'gui-pcb-motherboard-connection',
-      category: 'troubleshooting',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail5.webp'),
-    },
-    {
-      title: {
-        tr: 'Kurulum',
-        en: 'First Assembly',
-      },
-      slug: 'first-assembly',
-      category: 'start',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail1.webp'),
-    },
-    {
-      title: {
-        tr: 'Baskı Tablası Kablo Değişimi',
-        en: 'Heatbed Cable Replacement',
-      },
-      slug: 'heatbed-cable-replacement',
-      category: 'repair',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail2.webp'),
-    },
-    {
-      title: {
-        tr: 'Baskı kafasını yükseltme',
-        en: 'Upgrading the Printhead',
-      },
-      slug: 'upgrading-the-printhead',
-      category: 'repair',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail8.webp'),
-    },
-    {
-      title: {
         tr: 'Baskı kafasını fan değiştirme',
         en: 'Printhead Fan Replacement',
       },
@@ -55,82 +19,8 @@ const ProductPosts = [
       thumbnail: require('@/src/images/mock/mockpostthumbnail4.webp'),
     },
   ],
-  [
-    {
-      title: {
-        tr: 'Hata giderme: GUI PCB Anakart Bağlantısı',
-        en: 'Troubleshooting: GUI PCB Motherboard Connection',
-      },
-      slug: 'gui-pcb-motherboard-connection',
-      category: 'troubleshooting',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail5.webp'),
-    },
-    {
-      title: {
-        tr: 'Kurulum',
-        en: 'First Assembly',
-      },
-      slug: 'first-assembly',
-      category: 'start',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail1.webp'),
-    },
-    {
-      title: {
-        tr: 'Baskı Tablası Kablo Değişimi',
-        en: 'Heatbed Cable Replacement',
-      },
-      slug: 'heatbed-cable-replacement',
-      category: 'repair',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail2.webp'),
-    },
-    {
-      title: {
-        tr: 'Baskı kafasını yükseltme',
-        en: 'Upgrading the Printhead',
-      },
-      slug: 'upgrading-the-printhead',
-      category: 'repair',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail8.webp'),
-    },
-    {
-      title: {
-        tr: 'Baskı kafasını fan değiştirme',
-        en: 'Printhead Fan Replacement',
-      },
-      slug: 'printhead-fan-replacement',
-      category: 'repair',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail4.webp'),
-    },
-  ],
-  [
-    {
-      title: {
-        tr: 'xDesktop Kurulumu',
-        en: 'Installation of xDesktop',
-      },
-      slug: 'installation-of-xdektop',
-      category: 'start',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail9.webp'),
-    },
-    {
-      title: {
-        tr: 'İlk Dilimleme',
-        en: 'First Slicing',
-      },
-      slug: 'first-slicing',
-      category: 'start',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail10.webp'),
-    },
-    {
-      title: {
-        tr: 'Doğru Destek Seçimi',
-        en: 'Choosing the Right Support',
-      },
-      slug: 'choosing-the-right-support',
-      category: 'tips-tricks',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail11.webp'),
-    },
-  ],
+  [],
+  [],
 ];
 
 const ProductPostCategories = [
