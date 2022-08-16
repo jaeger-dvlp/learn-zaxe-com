@@ -11,6 +11,7 @@ import ColumnImage from '@/src/components/articles/ColumnImage';
 import ColumnSlider from '@/src/components/articles/ColumnSlider';
 import AlertBox from '@/src/components/articles/AlertBox';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import ArticleVote from '@/src/components/articles/ArticleVote';
 
 function Post({ data, content }) {
   const { category: postCategory, title: postTitle } = data;
@@ -94,6 +95,7 @@ function Post({ data, content }) {
             </section>
           </article>
         </section>
+        <ArticleVote />
       </main>
     </>
   );
