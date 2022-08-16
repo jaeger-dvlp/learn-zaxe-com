@@ -116,5 +116,13 @@
     "buttons": {
       "ok": "Okay"
     }
+  },
+  "article": {
+    "vote-area": {
+      "header": "Was this article helpful?",
+      "vote-button-yes": "Yes",
+      "vote-button-no": "No",
+      "vote-message-thanks": "Thanks for your feedback!"
+    }
   }
 }
