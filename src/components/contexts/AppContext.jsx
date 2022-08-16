@@ -9,6 +9,12 @@ export default function AppWrapper({ children }) {
     message: '',
     icon: 'hint',
   });
+  const [fullScreenViewer, setFullScreenViewer] = React.useState({
+    inHTML: false,
+    visibility: false,
+    imageUrl: null,
+    viewMode: 'single',
+  });
 
   const deactivateNotificationPopup = () => {
     setNotificationPopup({
@@ -41,14 +47,49 @@ export default function AppWrapper({ children }) {
     }, 200);
   };
 
+  const activateFullScreenViewer = ({ imageURL }) => {
+    setFullScreenViewer({
+      ...fullScreenViewer,
+      inHTML: true,
+      visibility: false,
+    });
+    setTimeout(() => {
+      setFullScreenViewer({
+        inHTML: true,
+        visibility: true,
+        imageURL,
+        viewMode: 'single',
+      });
+    }, 150);
+  };
+
+  const deactivateFullScreenViewer = () => {
+    setFullScreenViewer({
+      ...fullScreenViewer,
+      inHTML: true,
+      visibility: false,
+    });
+    setTimeout(() => {
+      setFullScreenViewer({
+        inHTML: false,
+        visibility: false,
+        imageUrl: null,
+        viewMode: 'single',
+      });
+    }, 350);
+  };
+
   const ContextData = React.useMemo(
     () => ({
       notificationPopup,
       setNotificationPopup,
       deactivateNotificationPopup,
       activateNotificationPopup,
+      fullScreenViewer,
+      activateFullScreenViewer,
+      deactivateFullScreenViewer,
     }),
-    [notificationPopup]
+    [notificationPopup, fullScreenViewer]
   );
   return (
     <AppContext.Provider value={ContextData}>{children}</AppContext.Provider>
