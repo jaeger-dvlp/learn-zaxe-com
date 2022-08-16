@@ -120,7 +120,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ locale, params }) => {
   const { product: productSlug, slug } = params;
-  const post = await getPosts.getPost(slug, productSlug);
+  const post = await getPosts.getPost(slug, productSlug, locale);
   const mdxSource = await serialize(post.content);
   return {
     props: {
