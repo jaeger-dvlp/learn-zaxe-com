@@ -3,7 +3,11 @@
 import React from 'react';
 import Image from 'next/image';
 import { VscLinkExternal } from 'react-icons/vsc';
-import { BsArrowRight, BsArrowLeft, BsArrowsFullscreen } from 'react-icons/bs';
+import {
+  BsFillCaretRightFill,
+  BsFillCaretLeftFill,
+  BsArrowsFullscreen,
+} from 'react-icons/bs';
 import { useAppContext } from '../contexts/AppContext';
 
 function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
@@ -28,10 +32,10 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
             return false;
           }}
           disabled={activeSlide === 0}
-          className="absolute w-8 flex justify-center items-center h-8 text-xl disabled:invisible disabled:opacity-0 text-zinc-100 active:scale-75 p-0
-          hover:bg-white/30 bg-black/30 rounded-lg transition-all duration-200 z-[5] left-5 top-1/2 -translate-y-1/2 m-0"
+          className="absolute w-8 flex justify-center ring-0 active:ring-2 ring-sky-500/50 items-center h-8 text-xl disabled:invisible disabled:opacity-0 text-zinc-100 p-0 py-10
+          hover:bg-zaxe hover:text-white bg-black rounded-lg transition-all duration-200 z-[5] left-0 -translate-x-1/2 top-1/2 -translate-y-1/2 m-0"
         >
-          <BsArrowLeft className="p-0 m-0 pointer-events-none" />
+          <BsFillCaretLeftFill className="p-0 m-0 pointer-events-none" />
         </button>
         <button
           type="button"
@@ -42,10 +46,10 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
             return false;
           }}
           disabled={activeSlide === sliderSlides.length - 1}
-          className="absolute w-8 flex justify-center items-center h-8 text-xl disabled:invisible disabled:opacity-0 text-zinc-100 active:scale-75 p-0
-          hover:bg-white/30 bg-black/30 rounded-lg transition-all duration-200 z-[5] right-5 top-1/2 -translate-y-1/2 m-0"
+          className="absolute w-8 flex justify-center ring-0 active:ring-2 ring-sky-500/50 items-center h-8 text-xl disabled:invisible disabled:opacity-0 text-zinc-100 p-0 py-10
+          hover:bg-zaxe hover:text-white bg-black rounded-lg transition-all duration-200 z-[5] right-0 translate-x-1/2 top-1/2 -translate-y-1/2 m-0"
         >
-          <BsArrowRight className="p-0 m-0 pointer-events-none" />
+          <BsFillCaretRightFill className="p-0 m-0 pointer-events-none" />
         </button>
         {sliderImages.map(({ imageURL, imageALT }, index) => (
           <section
