@@ -1,4 +1,4 @@
-.zaxe-kb-post p,
+.zaxe-kb-post p:not(.alert-text p),
 .zaxe-kb-post ul,
 .zaxe-kb-post ol {
   @apply text-[#666666];
@@ -17,7 +17,7 @@
   @apply text-[#666666] text-2xl font-bold my-0 py-0;
 }
 
-.zaxe-kb-post p {
+.zaxe-kb-post p:not(.alert-text p) {
   @apply my-5;
 }
 .zaxe-kb-post ol,

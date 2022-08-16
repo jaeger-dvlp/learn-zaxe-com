@@ -9,6 +9,7 @@ import getPosts from '@/src/utils/getPosts';
 import { serialize } from 'next-mdx-remote/serialize';
 import ColumnImage from '@/src/components/articles/ColumnImage';
 import ColumnSlider from '@/src/components/articles/ColumnSlider';
+import AlertBox from '@/src/components/articles/AlertBox';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 function Post({ data, content }) {
@@ -88,7 +89,7 @@ function Post({ data, content }) {
             <section>
               <MDXRemote
                 {...content}
-                components={{ Images, ColumnImage, ColumnSlider }}
+                components={{ Images, ColumnImage, ColumnSlider, AlertBox }}
               />
             </section>
           </article>
