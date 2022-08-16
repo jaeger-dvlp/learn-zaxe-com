@@ -14,7 +14,7 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
         {children}
       </section>
       <section
-        className="relative bg-zinc-800 p-0 !border-none w-full overflow-hidden shadow-xl shadow-black/30
+        className="relative bg-zinc-800 p-0 !border-none w-full shadow-xl shadow-black/30
       rounded-xl xl:min-h-[20rem] lg:min-h-[20rem] min-h-[12.5rem]"
       >
         <button
@@ -71,7 +71,7 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
             </a>
           </section>
         ))}
-        <div className="slider-button-container absolute bottom-0 left-1/2 flex justify-center items-center gap-2 -translate-x-1/2 py-4 z-[6]">
+        <div className="slider-button-container absolute top-full left-1/2 flex justify-center items-center gap-2 -translate-x-1/2 py-4 z-[6]">
           {sliderImages.map((image, slideIndex) => (
             <button
               key={`${uniqueSubject}-slider-button-no-${slideIndex}`}
@@ -79,9 +79,9 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
               onClick={() => setActiveSlide(slideIndex)}
               className={`${
                 slideIndex === activeSlide
-                  ? 'bg-white scale-100'
-                  : ' bg-white/60 hover:bg-white/80 scale-75'
-              } w-4 h-4 slider-button transition-all duration-500 bg-white rounded-full border border-zinc-500`}
+                  ? 'bg-zaxe scale-100'
+                  : ' bg-zaxe/60 hover:bg-zaxe/80 scale-75'
+              } w-4 h-4 slider-button transition-all duration-500 bg-zaxe rounded-full border border-zaxe`}
             />
           ))}
         </div>
