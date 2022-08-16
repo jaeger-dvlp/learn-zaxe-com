@@ -1,5 +1,5 @@
 ---
-title: Baskı Kafası Fan Değiştirme
+title: Baskı Kafası Fan Değişimi
 author: Zaxe
 category: Onarım
 ---
@@ -10,13 +10,24 @@ Bazen, bu iki bileşen arasındaki veri aktarımı, anakart üzerindeki konektö
 Android-anakart iletişim sorunlarını gösteren işaretler şunları içerir:
 
 1. Hata #8 veya #19 ile bir bildirim,
-2. Yazıcı başlatıldığında veya yazdırma işlemi sırasında ekranda görüntülenen gri/beyaz/siyah arka plan,
+2. Yazıcı başlatıldığında veya yazdırma işlemi sırasında ekranda görünen gri/beyaz/siyah arka plan,
 3. eksik önyükleme işlemi – yazıcı başlatıldığında Zortrax'ın logosu ekrandan kaybolmuyor <br/>ve ana menüye erişilemiyor,
 4. Firmware güncellemesiyle ilgili sorunlar – tüm süreç donuyor ve tamamlanamıyor.
 
 Yazıcınızda bu sorunlardan biri olduğunda bu kılavuzdaki adımları izleyin.
 
-<ColumnImage image={'/kb-img/mockpostthumbnail1.webp'}>
+<ColumnSlider
+  images={[
+    {imageURL:'/kb-img/mockpostthumbnail4.webp',imageALT:"Demo slide 1"},
+    {imageURL:'/kb-img/mockpostthumbnail8.webp',imageALT:"Demo slide 2"},
+    {imageURL:'/kb-img/mockpostthumbnail1.webp',imageALT:"Demo slide 3"},
+  ]} uniqueSubject="demo">
+
+Resim, bir Android PCB-anakart iletişim sorununu gösteren bir üretici yazılımı mesajını göstermektedir. Bu bildirimi aldığınızda, bu kılavuzdaki adımları izleyin.
+
+</ColumnSlider>
+
+<ColumnImage image={{imageURL:'/kb-img/mockpostthumbnail7.webp',imageALT:"Demo Image 1"}}>
 
 ### Sinyal Adaptörünü Kaldırma
 
@@ -26,7 +37,7 @@ Yazıcınızda bir sinyal adaptörü varsa:
 Bu çözüm soruna yardımcı olmazsa, aşağıdaki adreste bulunan destek formu aracılığıyla Müşteri Desteği ile iletişime geçin:
 
 </ColumnImage>
-<ColumnImage image={'/kb-img/mockpostthumbnail5.webp'}>
+<ColumnImage image={{imageURL:'/kb-img/mockpostthumbnail5.webp',imageALT:"Demo Image 2"}}>
 
 ### Anakart Bağlantılarını Kontrol Etme
 
