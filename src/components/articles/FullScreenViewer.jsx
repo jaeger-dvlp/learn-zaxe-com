@@ -34,7 +34,7 @@ function FullScreenViewer() {
             src={imageURL || '/kb-img/placeholder.png'}
             layout="fill"
             alt="ZX Full Screen Viewer"
-            className="object-contain border bg-transparent bg-black !border-none object-center"
+            className="object-contain border bg-transparent !border-none object-center"
           />
         </div>
       </div>
