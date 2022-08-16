@@ -2,12 +2,12 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import Image from 'next/image';
-import { VscLinkExternal } from 'react-icons/vsc';
 import {
-  BsFillCaretRightFill,
-  BsFillCaretLeftFill,
   BsArrowsFullscreen,
+  BsFillCaretLeftFill,
+  BsFillCaretRightFill,
 } from 'react-icons/bs';
+import { VscLinkExternal } from 'react-icons/vsc';
 import { useAppContext } from '../contexts/AppContext';
 
 function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
