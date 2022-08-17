@@ -11,7 +11,7 @@ const ProductPosts = [
   [
     {
       title: {
-        tr: 'Baskı kafasını fan değiştirme',
+        tr: 'Baskı Kafası Fan Değişimi',
         en: 'Printhead Fan Replacement',
       },
       slug: 'printhead-fan-replacement',
@@ -19,8 +19,28 @@ const ProductPosts = [
       thumbnail: require('@/src/images/mock/mockpostthumbnail4.webp'),
     },
   ],
-  [],
-  [],
+  [
+    {
+      title: {
+        tr: 'Baskı Kafası Fan Değişimi',
+        en: 'Printhead Fan Replacement',
+      },
+      slug: 'printhead-fan-replacement',
+      category: 'repair',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail4.webp'),
+    },
+  ],
+  [
+    {
+      title: {
+        tr: 'xDesktop Kurulumu',
+        en: 'Installing xDesktop',
+      },
+      slug: 'installing-xdesktop',
+      category: 'start',
+      thumbnail: require('@/src/images/mock/mockpostthumbnail9.webp'),
+    },
+  ],
 ];
 
 const ProductPostCategories = [
