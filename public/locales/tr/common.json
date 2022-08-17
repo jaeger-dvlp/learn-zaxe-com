@@ -123,6 +123,10 @@
       "vote-button-yes": "Evet",
       "vote-button-no": "Hayır",
       "vote-message-thanks": "Geri bildiriminiz için teşekkürler!"
+    },
+    "related-posts": {
+      "header": "Benzer Makaleler",
+      "no-posts": "Bu makaleye benzer makaleler henüz yok."
     }
   }
 }

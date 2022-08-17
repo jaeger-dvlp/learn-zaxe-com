@@ -123,6 +123,10 @@
       "vote-button-yes": "Yes",
       "vote-button-no": "No",
       "vote-message-thanks": "Thanks for your feedback!"
+    },
+    "related-posts": {
+      "header": "Related Posts",
+      "no-posts": "There are no articles similar to this article yet."
     }
   }
 }
