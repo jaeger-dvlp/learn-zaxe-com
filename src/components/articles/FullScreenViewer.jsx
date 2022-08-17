@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
-import { BsX } from 'react-icons/bs';
+
+import { BsX, BsChevronRight, BsChevronLeft } from 'react-icons/bs';
 import { useAppContext } from '../contexts/AppContext';
 
 function FullScreenViewer() {
   const {
-    fullScreenViewer: { /* viewMode, */ imageURL, visibility, inHTML },
+    fullScreenViewer: {
+      viewMode,
+      imageURL,
+      visibility,
+      inHTML,
+      sliderImages,
+      activeSlide,
+    },
     deactivateFullScreenViewer,
   } = useAppContext();
+  const [currentSlide, setCurrentSlide] = React.useState(null);
 
-  // TODO - add viewMode to fullScreenViewer for Sliders
+  useEffect(() => setCurrentSlide(activeSlide), [activeSlide]);
 
   return (
     inHTML && (
@@ -21,8 +30,8 @@ function FullScreenViewer() {
       >
         <button
           type="button"
-          className="absolute hover:bg-white transition-all duration-150 top-0 z-[3]
-		  right-0 p-1 text-5xl text-white bg-zaxe hover:text-black"
+          className="absolute hover:bg-white transition-all duration-150 top-2 z-[3]
+		  right-2 shadow-xl rounded-lg p-1 text-5xl text-white bg-zaxe hover:text-black"
           onClick={() => {
             deactivateFullScreenViewer();
           }}
@@ -30,13 +39,57 @@ function FullScreenViewer() {
           <BsX />
         </button>
         <div className="w-full relative flex items-center justify-center h-full max-h-[90vh] z-[2]">
-          <Image
-            src={imageURL || '/kb-img/placeholder.png'}
-            layout="fill"
-            alt="ZX Full Screen Viewer"
-            className="object-contain border bg-transparent !border-none object-center"
-          />
+          {viewMode === 'slider' && sliderImages ? (
+            sliderImages.map(({ imageURL: slideImage }, index) => (
+              <Image
+                className={`${
+                  currentSlide === index
+                    ? 'opacity-100 visible '
+                    : 'opacity-0 invisible '
+                } object-contain transition-all duration-300 absolute left-0 top-0 border bg-transparent !border-none object-center`}
+                layout="fill"
+                alt="ZX Full Screen Viewer"
+                key={slideImage}
+                src={slideImage}
+              />
+            ))
+          ) : (
+            <Image
+              src={imageURL || '/kb-img/placeholder.png'}
+              layout="fill"
+              alt="ZX Full Screen Viewer"
+              className="object-contain border bg-transparent !border-none object-center"
+            />
+          )}
         </div>
+        {viewMode === 'slider' && (
+          <>
+            <button
+              type="button"
+              onClick={() => {
+                if (currentSlide < sliderImages.length - 1) {
+                  setCurrentSlide(currentSlide + 1);
+                }
+              }}
+              disabled={currentSlide === sliderImages.length - 1}
+              className="absolute rounded-lg z-[3] pointer-events-auto disabled:!pointer-events-none disabled:!bg-gray-600 disabled:!text-white right-2 p-1 text-3xl text-white transition-all duration-150 -translate-y-1/2 top-1/2 bg-zaxe hover:bg-white hover:text-black"
+            >
+              <BsChevronRight />
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                if (currentSlide > 0) {
+                  setCurrentSlide(currentSlide - 1);
+                }
+              }}
+              disabled={currentSlide === 0}
+              className="absolute rounded-lg z-[3] pointer-events-auto disabled:!pointer-events-none disabled:!bg-gray-600 disabled:!text-white left-2 p-1 text-3xl text-white transition-all duration-150 -translate-y-1/2 top-1/2 bg-zaxe hover:bg-white hover:text-black"
+            >
+              <BsChevronLeft />
+            </button>
+          </>
+        )}
       </div>
     )
   );
