@@ -18,6 +18,9 @@
     "message": "Bu sayfayı bulamadık.",
     "try-search": "Başka bir şeyi aramayı deneyin."
   },
+  "bread-crumbs": {
+    "knowledge-base": "Bilgi Merkezi"
+  },
   "homepage": {
     "banner": {
       "heading": "Hoşgeldin",
