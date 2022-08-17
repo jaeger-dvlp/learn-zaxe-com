@@ -9,10 +9,9 @@ import 'swiper/css/effect-fade';
 import Content from '@/src/content/Content';
 import { i18n } from '@/next-i18next.config';
 import SearchBar from '@/src/components/categoriespage/SearchBar';
-import ProductSlider from '@/src/components/categoriespage/ProductSlider';
 import CategoryBar from '@/src/components/categoriespage/CategoryBar';
 import ProductPosts from '@/src/components/categoriespage/ProductPosts';
-import TipsNTrips from '@/src/components/main/TipsNTrips';
+import ProductSlider from '@/src/components/categoriespage/ProductSlider';
 
 function Categories({ product: stringProduct }) {
   const { t } = useTranslation();
@@ -39,7 +38,6 @@ function Categories({ product: stringProduct }) {
             <ProductPosts product={product} />
           </div>
         </div>
-        <TipsNTrips />
       </>
     )
   );

@@ -8,7 +8,6 @@ import Products from '@/src/components/homepage/Products';
 import TipsNTrips from '@/src/components/main/TipsNTrips';
 import QuickViewer from '@/src/components/misc/QuickViewer';
 import WelcomeSection from '@/src/components/homepage/WelcomeSection';
-import FrequentlyViewed from '@/src/components/homepage/FrequentlyViewed';
 import DownloadDocuments from '@/src/components/homepage/DownloadDocuments';
 
 function Home() {
@@ -60,7 +59,6 @@ function Home() {
       <WelcomeSection />
       <Products />
       <QuickViewer />
-      <FrequentlyViewed />
       <TipsNTrips />
       <DownloadDocuments />
     </>
