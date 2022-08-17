@@ -2,18 +2,13 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import Image from 'next/image';
-import {
-  BsArrowsFullscreen,
-  BsFillCaretLeftFill,
-  BsFillCaretRightFill,
-} from 'react-icons/bs';
-import { VscLinkExternal } from 'react-icons/vsc';
-import { useAppContext } from '../contexts/AppContext';
+import ImageControl from '@/src/components/articles/ImageControls';
+import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs';
 
 function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
   const [sliderSlides] = React.useState(sliderImages);
   const [activeSlide, setActiveSlide] = React.useState(0);
-  const { activateFullScreenViewer } = useAppContext();
+
   return (
     <section className="flex flex-wrap-reverse w-full gap-10 my-5 post-column xl:flex-nowrap lg:flex-nowrap">
       <section className="w-full xl:max-w-[40%] lg:max-w-[40%] max-w-full">
@@ -67,29 +62,9 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
               alt={imageALT}
               className="object-cover slider-image absolute left-0 top-0 p-0 !border-none object-center w-full h-full"
             />
-            <div className="absolute flex items-center justify-center gap-3 right-3 top-3">
-              <button
-                type="button"
-                onClick={() =>
-                  activateFullScreenViewer({
-                    sliderImages,
-                    activeSlide,
-                    viewMode: 'slider',
-                  })
-                }
-                className="image-fullscreen-button z-[3] text-2xl text-zinc-100 p-1 hover:bg-zaxe bg-black/50 rounded-md transition-all duration-200"
-              >
-                <BsArrowsFullscreen className="p-0.5" />
-              </button>
-              <a
-                href={imageURL}
-                target="_blank"
-                className="image-button z-[3] text-2xl text-zinc-100 p-1 hover:bg-zaxe bg-black/50 rounded-md transition-all duration-200"
-                rel="noreferrer"
-              >
-                <VscLinkExternal className="p-0.5 m-0" />
-              </a>
-            </div>
+            <ImageControl
+              props={{ type: 'slider', sliderImages, activeSlide, imageURL }}
+            />
           </section>
         ))}
         <div className="slider-button-container absolute top-full left-1/2 flex justify-center items-center gap-2 -translate-x-1/2 py-4 z-[6]">
