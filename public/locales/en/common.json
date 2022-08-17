@@ -18,6 +18,9 @@
     "message": "The page you are looking for does not exist.",
     "try-search": "Try searching for something else."
   },
+  "bread-crumbs": {
+    "knowledge-base": "Knowledge Base"
+  },
   "homepage": {
     "banner": {
       "heading": "Welcome to",
