@@ -7,20 +7,25 @@ import { MDXRemote } from 'next-mdx-remote';
 import Content from '@/src/content/Content';
 import getPosts from '@/src/utils/getPosts';
 import { serialize } from 'next-mdx-remote/serialize';
+import AlertBox from '@/src/components/articles/AlertBox';
+import ArticleVote from '@/src/components/articles/ArticleVote';
 import ColumnImage from '@/src/components/articles/ColumnImage';
 import ColumnSlider from '@/src/components/articles/ColumnSlider';
-import AlertBox from '@/src/components/articles/AlertBox';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import ArticleVote from '@/src/components/articles/ArticleVote';
+import RelatedPosts from '@/src/components/articles/RelatedPosts';
 import FullScreenViewer from '@/src/components/articles/FullScreenViewer';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 function Post({ data, content }) {
-  const { category: postCategory, title: postTitle } = data;
   const router = useRouter();
   const {
+    title: postTitle,
+    category: postCategory,
+    'category-slug': postCategorySlug,
+  } = data;
+  const {
+    slug: postSlug,
     product: queryProductSlug,
     category: queryCategorySlug,
-    slugs: postSlug,
   } = router.query;
   const Product = Content.products.find(
     ({ slug }) => slug === queryProductSlug
@@ -97,6 +102,7 @@ function Post({ data, content }) {
           </article>
         </section>
         <ArticleVote />
+        <RelatedPosts relatedData={{ Product, postCategorySlug }} />
       </main>
       <FullScreenViewer />
     </>
