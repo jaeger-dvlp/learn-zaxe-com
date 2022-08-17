@@ -70,7 +70,13 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
             <div className="absolute flex items-center justify-center gap-3 right-3 top-3">
               <button
                 type="button"
-                onClick={() => activateFullScreenViewer({ imageURL })}
+                onClick={() =>
+                  activateFullScreenViewer({
+                    sliderImages,
+                    activeSlide,
+                    viewMode: 'slider',
+                  })
+                }
                 className="image-fullscreen-button z-[3] text-2xl text-zinc-300 p-1 hover:bg-white/30 bg-black/30 rounded-md transition-all duration-200"
               >
                 <BsArrowsFullscreen className="p-0.5" />
