@@ -81,8 +81,8 @@ function Post({ data, content }) {
           content={`https://knowledge-base.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
       </Head>
-      <main className="pt-[20vh] font-zaxe w-full grid grid-cols-1 place-content-start place-items-center">
-        <section className="w-full max-w-app">
+      <main className="pt-[20vh] font-zaxe w-full grid grid-cols-1 place-items-center place-content-center">
+        <section className="w-full max-w-xl xl:max-w-app lg:max-w-app">
           <article className="p-5 zaxe-kb-post">
             <section className="grid w-full grid-cols-1 gap-2 article-heading place-content-start place-items-center">
               <h1>{postTitle}</h1>
