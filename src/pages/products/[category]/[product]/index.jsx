@@ -7,7 +7,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { i18n } from '@/next-i18next.config';
 import Images from '@/src/images/Images';
 import Content from '@/src/content/Content';
-import TipsNTrips from '@/src/components/main/TipsNTrips';
 import Downloads from '@/src/components/productpage/downloads';
 import ProductNav from '@/src/components/productpage/productNav';
 import GetStarted from '@/src/components/productpage/getStarted';
@@ -91,7 +90,6 @@ function Product({ product: stringProduct }) {
           <GetStarted product={product} />
           <Categories product={product} />
           <Downloads product={product} />
-          <TipsNTrips />
         </div>
       </>
     )
