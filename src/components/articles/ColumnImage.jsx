@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import ImageControl from './ImageControls';
+import ImageControls from './ImageControls';
 
 function ColumnImage({ children, image: { imageURL, imageALT } }) {
   return (
@@ -18,7 +18,7 @@ function ColumnImage({ children, image: { imageURL, imageALT } }) {
           layout="fill"
           className="object-cover p-0 !border-none object-center w-full h-full"
         />
-        <ImageControl props={{ type: 'single', imageURL }} />
+        <ImageControls props={{ type: 'single', imageURL }} />
       </section>
     </section>
   );

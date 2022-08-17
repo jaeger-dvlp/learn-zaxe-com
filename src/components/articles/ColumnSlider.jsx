@@ -2,7 +2,7 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import Image from 'next/image';
-import ImageControl from '@/src/components/articles/ImageControls';
+import ImageControls from '@/src/components/articles/ImageControls';
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs';
 
 function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
@@ -62,7 +62,7 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
               alt={imageALT}
               className="object-cover slider-image absolute left-0 top-0 p-0 !border-none object-center w-full h-full"
             />
-            <ImageControl
+            <ImageControls
               props={{ type: 'slider', sliderImages, activeSlide, imageURL }}
             />
           </section>
