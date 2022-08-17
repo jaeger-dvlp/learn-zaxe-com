@@ -12,7 +12,7 @@ function ColumnImage({ children, image: { imageURL, imageALT } }) {
         {children}
       </section>
       <section
-        className="relative p-0 !border-none w-full overflow-hidden shadow-xl shadow-black/30
+        className="relative bg-zinc-800 border border-zinc-300 p-0 w-full overflow-hidden shadow-2xl shadow-black/25
       rounded-xl xl:h-[20rem] lg:h-[20rem] md:h-[17rem] h-[13rem]"
       >
         <Image
@@ -27,14 +27,14 @@ function ColumnImage({ children, image: { imageURL, imageALT } }) {
             onClick={() =>
               activateFullScreenViewer({ imageURL, viewMode: 'single' })
             }
-            className="image-fullscreen-button z-[3] text-2xl text-zinc-100 p-1 hover:bg-white/30 bg-black/30 rounded-md transition-all duration-200"
+            className="image-fullscreen-button z-[3] text-2xl text-zinc-100 p-1 hover:bg-zaxe bg-black/50 rounded-md transition-all duration-200"
           >
             <BsArrowsFullscreen className="p-0.5" />
           </button>
           <a
             href={imageURL}
             target="_blank"
-            className="image-external-link z-[3] text-2xl text-white p-1 hover:bg-white/30 bg-black/30 rounded-md transition-all duration-200"
+            className="image-button z-[3] text-2xl text-zinc-100 p-1 hover:bg-zaxe bg-black/50 rounded-md transition-all duration-200"
             rel="noreferrer"
           >
             <VscLinkExternal className="p-0.5 m-0" />
