@@ -14,6 +14,7 @@ import ColumnSlider from '@/src/components/articles/ColumnSlider';
 import RelatedPosts from '@/src/components/articles/RelatedPosts';
 import FullScreenViewer from '@/src/components/articles/FullScreenViewer';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Breadcrumbs from '@/src/components/articles/Breadcrumbs';
 
 function Post({ data, content }) {
   const router = useRouter();
@@ -87,6 +88,22 @@ function Post({ data, content }) {
         />
       </Head>
       <main className="pt-[20vh] font-zaxe w-full grid grid-cols-1 place-items-center place-content-center">
+        <Breadcrumbs
+          links={[
+            {
+              text: Product.name,
+              url: `/products/${Product.category.slug}/${Product.slug}`,
+            },
+            {
+              text: postCategory,
+              url: `/products/${Product.category.slug}/${Product.slug}/categories?c=${postCategorySlug}`,
+            },
+            {
+              text: postTitle,
+              url: `/products/${Product.category.slug}/${Product.slug}/article/${postSlug}`,
+            },
+          ]}
+        />
         <section className="w-full max-w-xl xl:max-w-app lg:max-w-app">
           <article className="p-5 zaxe-kb-post">
             <section className="grid w-full grid-cols-1 gap-2 article-heading place-content-start place-items-center">
