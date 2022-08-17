@@ -12,8 +12,10 @@ export default function AppWrapper({ children }) {
   const [fullScreenViewer, setFullScreenViewer] = React.useState({
     inHTML: false,
     visibility: false,
-    imageUrl: null,
+    imageURL: null,
     viewMode: 'single',
+    sliderImages: null,
+    activeSlide: null,
   });
 
   const deactivateNotificationPopup = () => {
@@ -47,20 +49,37 @@ export default function AppWrapper({ children }) {
     }, 200);
   };
 
-  const activateFullScreenViewer = ({ imageURL }) => {
+  const activateFullScreenViewer = ({
+    imageURL,
+    sliderImages,
+    viewMode,
+    activeSlide,
+  }) => {
     setFullScreenViewer({
       ...fullScreenViewer,
       inHTML: true,
       visibility: false,
     });
-    setTimeout(() => {
-      setFullScreenViewer({
-        inHTML: true,
-        visibility: true,
-        imageURL,
-        viewMode: 'single',
+    if (sliderImages && viewMode === 'slider') {
+      setTimeout(() => {
+        setFullScreenViewer({
+          inHTML: true,
+          visibility: true,
+          sliderImages,
+          activeSlide,
+          viewMode,
+        });
       });
-    }, 150);
+    } else {
+      setTimeout(() => {
+        setFullScreenViewer({
+          inHTML: true,
+          visibility: true,
+          imageURL,
+          viewMode,
+        });
+      }, 150);
+    }
   };
 
   const deactivateFullScreenViewer = () => {
@@ -71,9 +90,12 @@ export default function AppWrapper({ children }) {
     });
     setTimeout(() => {
       setFullScreenViewer({
+        ...fullScreenViewer,
         inHTML: false,
         visibility: false,
-        imageUrl: null,
+        imageURL: null,
+        sliderImages: null,
+        activeSlide: null,
         viewMode: 'single',
       });
     }, 350);
