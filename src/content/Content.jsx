@@ -193,13 +193,6 @@ const ProductContents = [
     posts: ProductPosts[0],
     downloads: [
       {
-        slug: 'z3-firmware',
-        title: 'content-zxz3:downloads.0.title',
-        updateDate: '2022-01-01',
-        link: 'https://zaxe.com',
-        showLastUpdate: true,
-      },
-      {
         slug: 'xdesktop',
         title: 'content-zxz3:downloads.1.title',
         updateDate: '2022-01-01',
