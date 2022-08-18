@@ -104,22 +104,20 @@ function Post({ data, content }) {
             },
           ]}
         />
-        <section className="w-full max-w-xl xl:max-w-app lg:max-w-app">
-          <article className="p-5 zaxe-kb-post">
-            <section className="grid w-full grid-cols-1 gap-2 article-heading place-content-start place-items-center">
-              <h1>{postTitle}</h1>
-              <h2>{postCategory}</h2>
-            </section>
-            <section>
-              <MDXRemote
-                {...content}
-                components={{ Images, ColumnImage, ColumnSlider, AlertBox }}
-              />
-            </section>
+        <section className="w-full max-w-xl p-5 xl:max-w-app lg:max-w-app zaxe-kb-post">
+          <section className="grid w-full grid-cols-1 gap-2 article-heading place-content-start place-items-center">
+            <h1>{postTitle}</h1>
+            <h2>{postCategory}</h2>
+          </section>
+          <article>
+            <MDXRemote
+              {...content}
+              components={{ Images, ColumnImage, ColumnSlider, AlertBox }}
+            />
           </article>
+          <ArticleVote />
+          <RelatedPosts relatedData={{ Product, postCategorySlug }} />
         </section>
-        <ArticleVote />
-        <RelatedPosts relatedData={{ Product, postCategorySlug }} />
       </main>
       <FullScreenViewer />
     </>
