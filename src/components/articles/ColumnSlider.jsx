@@ -1,13 +1,18 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
+import { v4 } from 'uuid';
 import Image from 'next/future/image';
 import ImageControls from '@/src/components/articles/ImageControls';
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs';
 
-function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
+function ColumnSlider({ children, images: sliderImages }) {
   const { CDNURL } = process.env;
-  const [sliderSlides] = React.useState(sliderImages);
+  const [sliderSlides] = React.useState(
+    sliderImages.map((sliderImage) => ({
+      ...sliderImage,
+      uniqueId: v4().replace(/-/g, ''),
+    }))
+  );
+
   const [activeSlide, setActiveSlide] = React.useState(0);
 
   return (
@@ -44,8 +49,9 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
         >
           <BsFillCaretRightFill className="p-0 m-0 pointer-events-none" />
         </button>
-        {sliderImages.map(({ imageURL, imageALT }, index) => (
+        {sliderSlides.map(({ imageURL, imageALT, uniqueId }, index) => (
           <figure
+            key={`slide-image-${uniqueId}`}
             className={`${
               index === activeSlide
                 ? 'opacity-100 visible pointer-events-auto'
@@ -53,7 +59,6 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
             } transition-all duration-700 absolute rounded-xl overflow-hidden left-0 top-0 flex items-center justify-center w-full h-full`}
           >
             <Image
-              key={`${uniqueSubject}-slider-no-${index}`}
               src={`${CDNURL}${imageURL}`}
               layout="fill"
               alt={imageALT}
@@ -64,15 +69,16 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
               } object-cover transition-all duration-700 rounded-xl overflow-hidden slider-image absolute left-0 top-0 p-0 !border-none object-center w-full h-full`}
             />
             <ImageControls
-              props={{ type: 'slider', sliderImages, activeSlide, imageURL }}
+              props={{ type: 'slider', sliderSlides, activeSlide, imageURL }}
             />
           </figure>
         ))}
         <section className="slider-button-container absolute top-full left-1/2 flex justify-center items-center gap-2 -translate-x-1/2 py-4 z-[6]">
-          {sliderImages.map((image, slideIndex) => (
+          {sliderSlides.map(({ uniqueId }, slideIndex) => (
             <button
-              key={`${uniqueSubject}-slider-button-no-${slideIndex}`}
+              aria-label={`Slide ${slideIndex + 1}`}
               type="button"
+              key={`slide-button-${uniqueId}`}
               onClick={() => setActiveSlide(slideIndex)}
               className={`${
                 slideIndex === activeSlide

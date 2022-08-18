@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
-
 import { BsX, BsChevronRight, BsChevronLeft } from 'react-icons/bs';
 import { useAppContext } from '../contexts/AppContext';
 
@@ -12,14 +11,14 @@ function FullScreenViewer() {
       imageURL,
       visibility,
       inHTML,
-      sliderImages,
+      sliderSlides,
       activeSlide,
     },
     deactivateFullScreenViewer,
   } = useAppContext();
   const [currentSlide, setCurrentSlide] = React.useState(null);
 
-  useEffect(() => setCurrentSlide(activeSlide), [activeSlide]);
+  React.useEffect(() => setCurrentSlide(activeSlide), [activeSlide]);
 
   return (
     inHTML && (
@@ -40,8 +39,8 @@ function FullScreenViewer() {
           <BsX />
         </button>
         <div className="w-full relative flex items-center justify-center h-full max-h-[90vh] z-[2]">
-          {viewMode === 'slider' && sliderImages ? (
-            sliderImages.map(({ imageURL: slideImage }, index) => (
+          {viewMode === 'slider' && sliderSlides ? (
+            sliderSlides.map(({ imageURL: slideImage, uniqueId }, index) => (
               <Image
                 className={`${
                   currentSlide === index
@@ -50,7 +49,7 @@ function FullScreenViewer() {
                 } object-contain transition-all duration-300 absolute left-0 top-0 border bg-transparent !border-none object-center`}
                 layout="fill"
                 alt="ZX Full Screen Viewer"
-                key={slideImage}
+                key={`fullscreen-slide-${uniqueId}`}
                 src={`${CDNURL}${slideImage}`}
               />
             ))
@@ -68,11 +67,11 @@ function FullScreenViewer() {
             <button
               type="button"
               onClick={() => {
-                if (currentSlide < sliderImages.length - 1) {
+                if (currentSlide < sliderSlides.length - 1) {
                   setCurrentSlide(currentSlide + 1);
                 }
               }}
-              disabled={currentSlide === sliderImages.length - 1}
+              disabled={currentSlide === sliderSlides.length - 1}
               className="absolute rounded-lg z-[3] pointer-events-auto disabled:!pointer-events-none disabled:!bg-gray-600 disabled:!text-white right-2 p-1 text-3xl text-white transition-all duration-150 -translate-y-1/2 top-1/2 bg-zaxe hover:bg-white hover:text-black"
             >
               <BsChevronRight />
