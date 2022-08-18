@@ -5,6 +5,7 @@ import { BsX, BsChevronRight, BsChevronLeft } from 'react-icons/bs';
 import { useAppContext } from '../contexts/AppContext';
 
 function FullScreenViewer() {
+  const { CDNURL } = process.env;
   const {
     fullScreenViewer: {
       viewMode,
@@ -50,12 +51,12 @@ function FullScreenViewer() {
                 layout="fill"
                 alt="ZX Full Screen Viewer"
                 key={slideImage}
-                src={slideImage}
+                src={`${CDNURL}${slideImage}`}
               />
             ))
           ) : (
             <Image
-              src={imageURL || '/kb-img/placeholder.png'}
+              src={`${CDNURL}${imageURL || 'img/placeholder.png'}`}
               layout="fill"
               alt="ZX Full Screen Viewer"
               className="object-contain border bg-transparent !border-none object-center"

@@ -6,6 +6,7 @@ import { i18n, useTranslation } from 'next-i18next';
 import { BiLinkExternal } from 'react-icons/bi';
 
 function PostBlock({ props }) {
+  const { CDNURL } = process.env;
   const {
     postSlug,
     postCategory,
@@ -27,8 +28,7 @@ function PostBlock({ props }) {
         <BiLinkExternal className="absolute z-[3] text-4xl bottom-2 right-2 text-zinc-200" />
         <div className="relative z-[2] w-full h-[10rem] max-w-xs overflow-hidden rounded-xl">
           <Image
-            placeholder="blur"
-            src={postThumbnail}
+            src={`${CDNURL}${postThumbnail}`}
             layout="fill"
             alt={postTitle.en}
             className="object-cover object-center w-full h-full"

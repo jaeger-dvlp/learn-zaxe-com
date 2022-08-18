@@ -16,7 +16,7 @@ const ProductPosts = [
       },
       slug: 'printhead-fan-replacement',
       category: 'repair',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail4.webp'),
+      thumbnail: 'img/mockpostthumbnail4.webp',
     },
   ],
   [
@@ -27,7 +27,7 @@ const ProductPosts = [
       },
       slug: 'printhead-fan-replacement',
       category: 'repair',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail4.webp'),
+      thumbnail: 'img/mockpostthumbnail4.webp',
     },
   ],
   [
@@ -38,7 +38,7 @@ const ProductPosts = [
       },
       slug: 'installing-xdesktop',
       category: 'start',
-      thumbnail: require('@/src/images/mock/mockpostthumbnail9.webp'),
+      thumbnail: 'img/mockpostthumbnail9.webp',
     },
   ],
 ];

@@ -6,6 +6,7 @@ import ImageControls from '@/src/components/articles/ImageControls';
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs';
 
 function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
+  const { CDNURL } = process.env;
   const [sliderSlides] = React.useState(sliderImages);
   const [activeSlide, setActiveSlide] = React.useState(0);
 
@@ -57,7 +58,7 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
             } transition-all duration-700 absolute rounded-xl overflow-hidden left-0 top-0 flex items-center justify-center w-full h-full`}
           >
             <Image
-              src={imageURL}
+              src={`${CDNURL}${imageURL}`}
               layout="fill"
               alt={imageALT}
               className="object-cover slider-image absolute left-0 top-0 p-0 !border-none object-center w-full h-full"

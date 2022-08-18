@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ImageControls from './ImageControls';
 
 function ColumnImage({ children, image: { imageURL, imageALT } }) {
+  const { CDNURL } = process.env;
   return (
     <section className="flex flex-wrap-reverse w-full gap-10 my-5 post-column xl:flex-nowrap lg:flex-nowrap">
       <section className="w-full xl:max-w-[40%] lg:max-w-[40%] max-w-full">
@@ -13,7 +14,7 @@ function ColumnImage({ children, image: { imageURL, imageALT } }) {
       rounded-xl xl:h-[20rem] lg:h-[20rem] md:h-[17rem] h-[13rem]"
       >
         <Image
-          src={imageURL}
+          src={`${CDNURL}${imageURL}`}
           alt={imageALT}
           layout="fill"
           className="object-cover p-0 !border-none object-center w-full h-full"
