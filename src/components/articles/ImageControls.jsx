@@ -4,7 +4,7 @@ import { BsArrowsFullscreen } from 'react-icons/bs';
 import { useAppContext } from '../contexts/AppContext';
 
 function ImageButtons({ props }) {
-  const { type, imageURL, sliderImages, activeSlide } = props;
+  const { type, imageURL, sliderSlides, activeSlide } = props;
   const { CDNURL } = process.env;
   const { activateFullScreenViewer } = useAppContext();
 
@@ -15,7 +15,7 @@ function ImageButtons({ props }) {
         onClick={() => {
           if (type === 'slider') {
             return activateFullScreenViewer({
-              sliderImages,
+              sliderSlides,
               activeSlide,
               viewMode: 'slider',
             });

@@ -14,7 +14,7 @@ export default function AppWrapper({ children }) {
     visibility: false,
     imageURL: null,
     viewMode: 'single',
-    sliderImages: null,
+    sliderSlides: null,
     activeSlide: null,
   });
 
@@ -51,7 +51,7 @@ export default function AppWrapper({ children }) {
 
   const activateFullScreenViewer = ({
     imageURL,
-    sliderImages,
+    sliderSlides,
     viewMode,
     activeSlide,
   }) => {
@@ -60,12 +60,12 @@ export default function AppWrapper({ children }) {
       inHTML: true,
       visibility: false,
     });
-    if (sliderImages && viewMode === 'slider') {
+    if (sliderSlides && viewMode === 'slider') {
       setTimeout(() => {
         setFullScreenViewer({
           inHTML: true,
           visibility: true,
-          sliderImages,
+          sliderSlides,
           activeSlide,
           viewMode,
         });
@@ -94,7 +94,7 @@ export default function AppWrapper({ children }) {
         inHTML: false,
         visibility: false,
         imageURL: null,
-        sliderImages: null,
+        sliderSlides: null,
         activeSlide: null,
         viewMode: 'single',
       });
