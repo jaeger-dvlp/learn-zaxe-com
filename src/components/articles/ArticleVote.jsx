@@ -6,8 +6,8 @@ function ArticleVote() {
   const [demoFeedback, setDemoFeedback] = React.useState(false);
   const { t } = useTranslation();
   return (
-    <div className="relative grid w-full grid-cols-1 gap-0 my-20 mt-10 place-content-start place-items-center">
-      <div
+    <section className="relative grid w-full grid-cols-1 gap-0 my-20 mt-10 place-content-start place-items-center">
+      <section
         className={`${
           demoFeedback
             ? 'scale-50 opacity-0 invisible'
@@ -17,7 +17,7 @@ function ArticleVote() {
         <h1 className="text-2xl font-semibold text-zaxe">
           {t('common:article.vote-area.header')}
         </h1>
-        <div className="flex items-center justify-center w-full gap-7">
+        <section className="flex items-center justify-center w-full gap-7">
           <button
             type="button"
             onClick={() => setDemoFeedback(true)}
@@ -32,9 +32,9 @@ function ArticleVote() {
           >
             {t('common:article.vote-area.vote-button-no')}
           </button>
-        </div>
-      </div>
-      <div
+        </section>
+      </section>
+      <section
         className={`${
           demoFeedback
             ? 'opacity-100 visible scale-100'
@@ -45,8 +45,8 @@ function ArticleVote() {
         <h1 className="text-lg font-semibold text-center text-zaxe">
           {t('common:article.vote-area.vote-message-thanks')}
         </h1>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }
 

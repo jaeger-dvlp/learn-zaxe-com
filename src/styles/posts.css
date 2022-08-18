@@ -10,7 +10,7 @@
   @apply text-xl font-bold text-center text-zaxe;
 }
 
-.zaxe-kb-post h2 {
+.zaxe-kb-post h2:not(.post-name, .article-heading h2) {
   @apply text-xl font-bold text-[#666666];
 }
 

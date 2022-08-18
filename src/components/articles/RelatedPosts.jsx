@@ -21,11 +21,11 @@ function RelatedPosts({ relatedData }) {
   const { t } = useTranslation();
 
   return (
-    <div className="grid w-full max-w-lg grid-cols-1 gap-10 p-3 place-content-start place-items-center my-14 xl:max-w-app lg:max-w-app">
+    <section className="grid w-full max-w-lg grid-cols-1 gap-10 p-3 place-content-start place-items-center my-14 xl:max-w-app lg:max-w-app">
       <h1 className=" text-2xl font-bold text-center text-[#666666] ">
         {t('common:article.related-posts.header')}
       </h1>
-      <div className="flex flex-wrap items-center justify-center w-full gap-14">
+      <nav className="flex flex-wrap items-center justify-center w-full gap-14">
         {relatedPosts ? (
           relatedPosts.map(
             ({
@@ -56,8 +56,8 @@ function RelatedPosts({ relatedData }) {
             {t('common:article.related-posts.no-posts')}
           </h1>
         )}
-      </div>
-    </div>
+      </nav>
+    </section>
   );
 }
 

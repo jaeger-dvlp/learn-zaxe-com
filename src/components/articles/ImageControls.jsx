@@ -5,7 +5,7 @@ import { useAppContext } from '../contexts/AppContext';
 
 function ImageButtons({ props }) {
   const { type, imageURL, sliderImages, activeSlide } = props;
-
+  const { CDNURL } = process.env;
   const { activateFullScreenViewer } = useAppContext();
 
   return (
@@ -29,7 +29,7 @@ function ImageButtons({ props }) {
         <BsArrowsFullscreen className="p-0.5" />
       </button>
       <a
-        href={imageURL}
+        href={`${CDNURL}${imageURL}`}
         target="_blank"
         className="image-button backdrop-blur-sm z-[3] text-2xl text-zinc-100 p-1 hover:bg-zaxe bg-black/50 rounded-md transition-all duration-200"
         rel="noreferrer"

@@ -12,6 +12,11 @@ const nextConfig = {
   images: {
     domains: [CDNURL_NEXTCONFIG],
   },
+  experimental: {
+    images: {
+      allowFutureImage: true,
+    },
+  },
   webpack: (config) => {
     const newConf = config;
     newConf.plugins = config.plugins || [];

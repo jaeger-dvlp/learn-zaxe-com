@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import ImageControls from '@/src/components/articles/ImageControls';
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs';
 
@@ -12,9 +12,6 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
 
   return (
     <section className="flex flex-wrap-reverse w-full gap-10 my-5 post-column xl:flex-nowrap lg:flex-nowrap">
-      <section className="w-full xl:max-w-[40%] lg:max-w-[40%] max-w-full">
-        {children}
-      </section>
       <section
         className="relative bg-zinc-800 border border-zinc-300 p-0 w-full shadow-2xl shadow-black/25
       rounded-xl xl:h-[20rem] lg:h-[20rem] md:h-[17rem] h-[13rem]"
@@ -48,9 +45,7 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
           <BsFillCaretRightFill className="p-0 m-0 pointer-events-none" />
         </button>
         {sliderImages.map(({ imageURL, imageALT }, index) => (
-          <section
-            // eslint-disable-next-line react/no-array-index-key
-            key={`${uniqueSubject}-slider-no-${index}`}
+          <figure
             className={`${
               index === activeSlide
                 ? 'opacity-100 visible pointer-events-auto'
@@ -58,17 +53,22 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
             } transition-all duration-700 absolute rounded-xl overflow-hidden left-0 top-0 flex items-center justify-center w-full h-full`}
           >
             <Image
+              key={`${uniqueSubject}-slider-no-${index}`}
               src={`${CDNURL}${imageURL}`}
               layout="fill"
               alt={imageALT}
-              className="object-cover slider-image absolute left-0 top-0 p-0 !border-none object-center w-full h-full"
+              className={` ${
+                index === activeSlide
+                  ? 'opacity-100 visible pointer-events-auto'
+                  : 'opacity-0 invisible pointer-events-none'
+              } object-cover transition-all duration-700 rounded-xl overflow-hidden slider-image absolute left-0 top-0 p-0 !border-none object-center w-full h-full`}
             />
             <ImageControls
               props={{ type: 'slider', sliderImages, activeSlide, imageURL }}
             />
-          </section>
+          </figure>
         ))}
-        <div className="slider-button-container absolute top-full left-1/2 flex justify-center items-center gap-2 -translate-x-1/2 py-4 z-[6]">
+        <section className="slider-button-container absolute top-full left-1/2 flex justify-center items-center gap-2 -translate-x-1/2 py-4 z-[6]">
           {sliderImages.map((image, slideIndex) => (
             <button
               key={`${uniqueSubject}-slider-button-no-${slideIndex}`}
@@ -81,8 +81,11 @@ function ColumnSlider({ children, images: sliderImages, uniqueSubject }) {
               } w-4 h-4 slider-button transition-all duration-500 bg-zaxe rounded-full border border-zaxe`}
             />
           ))}
-        </div>
+        </section>
       </section>
+      <article className="w-full -order-2 xl:max-w-[40%] lg:max-w-[40%] max-w-full">
+        {children}
+      </article>
     </section>
   );
 }
