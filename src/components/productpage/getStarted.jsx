@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import { useTranslation } from 'next-i18next';
 import { BsFillPlayFill } from 'react-icons/bs';
 import { useAppContext } from '@/src/components/contexts/AppContext';
@@ -9,9 +9,9 @@ function GetStarted({ product }) {
   const { starterVideos } = product.content || null;
   const { t } = useTranslation();
 
-  const playVideo = ({ label }) => {
+  const playVideo = ({ label, videoURL }) => {
     activateNotificationPopup({
-      message: `Can't play this video right now : ${t(label)}`,
+      message: `${t(label)}  |  ${videoURL}`,
       icon: 'hint',
     });
   };
@@ -41,14 +41,9 @@ function GetStarted({ product }) {
                 <div className="w-full p-0 overflow-hidden cursor-pointer relative bg-white rounded-2xl h-[195px] shadow-xl grid grid-cols-1 place-content-center place-items-center gap-0">
                   <div className="relative block w-full overflow-hidden z-[1]">
                     <Image
-                      placeholder="blur"
                       src={thumbnail}
                       alt={label}
-                      layout="responsive"
-                      objectFit="contain"
-                      objectPosition="center"
-                      height="100%"
-                      width="100%"
+                      className="object-cover w-full h-full"
                     />
                   </div>
                   <div className="w-full h-full bg-black/40 group-hover:bg-black/10 group-focus-within:bg-black/10 transition-all duration-200 absolute left-0 top-0 z-[3]" />
