@@ -2,6 +2,8 @@
 import { BsApple, BsWindows } from 'react-icons/bs';
 import { v4 as uuidV4 } from 'uuid';
 
+const { CDNURL } = process.env;
+
 const OSIcons = {
   win: <BsWindows />,
   mac: <BsApple />,
@@ -16,7 +18,7 @@ const ProductPosts = [
       },
       slug: 'printhead-fan-replacement',
       category: 'repair',
-      thumbnail: 'img/mockpostthumbnail4.webp',
+      thumbnail: `${CDNURL}img/mockpostthumbnail4.webp`,
     },
   ],
   [
@@ -27,7 +29,7 @@ const ProductPosts = [
       },
       slug: 'printhead-fan-replacement',
       category: 'repair',
-      thumbnail: 'img/mockpostthumbnail4.webp',
+      thumbnail: `${CDNURL}/img/mockpostthumbnail4.webp`,
     },
   ],
   [
@@ -38,7 +40,7 @@ const ProductPosts = [
       },
       slug: 'installing-xdesktop',
       category: 'start',
-      thumbnail: 'img/mockpostthumbnail9.webp',
+      thumbnail: `${CDNURL}/img/mockpostthumbnail9.webp`,
     },
   ],
 ];
@@ -195,18 +197,18 @@ const ProductContents = [
     starterVideos: [
       {
         label: 'content-zxz3:starterVideos.0.label',
-        videoURL: 'https://',
-        thumbnail: require('../images/3dprinters/content/z3/Z3_front.webp'),
+        videoURL: `${CDNURL}video/mock-video.mp4`,
+        thumbnail: `${CDNURL}img/thumbnail/Z3_front.webp`,
       },
       {
         label: 'content-zxz3:starterVideos.1.label',
-        videoURL: 'https://',
-        thumbnail: require('../images/3dprinters/content/z3/Z3_screen.webp'),
+        videoURL: `${CDNURL}video/mock-video.mp4`,
+        thumbnail: `${CDNURL}img/thumbnail/Z3_screen.webp`,
       },
       {
         label: 'content-zxz3:starterVideos.2.label',
-        videoURL: 'https://',
-        thumbnail: require('../images/3dprinters/content/z3/Z3_printtable.webp'),
+        videoURL: `${CDNURL}video/mock-video.mp4`,
+        thumbnail: `${CDNURL}img/thumbnail/Z3_printtable.webp`,
       },
     ],
     categories: ProductPostCategories[0].categories,
@@ -275,18 +277,18 @@ const ProductContents = [
     starterVideos: [
       {
         label: 'content-zxx3:starterVideos.0.label',
-        videoURL: 'https://',
-        thumbnail: require('../images/3dprinters/content/x3/X3_printtable.webp'),
+        videoURL: `${CDNURL}video/mock-video.mp4`,
+        thumbnail: `${CDNURL}img/thumbnail/X3_printtable.webp`,
       },
       {
         label: 'content-zxx3:starterVideos.1.label',
-        videoURL: 'https://',
-        thumbnail: require('../images/3dprinters/content/x3/X3_screen.webp'),
+        videoURL: `${CDNURL}video/mock-video.mp4`,
+        thumbnail: `${CDNURL}img/thumbnail/X3_screen.webp`,
       },
       {
         label: 'content-zxx3:starterVideos.2.label',
-        videoURL: 'https://',
-        thumbnail: require('../images/3dprinters/content/x3/X3_corexy.webp'),
+        videoURL: `${CDNURL}video/mock-video.mp4`,
+        thumbnail: `${CDNURL}img/thumbnail/X3_corexy.webp`,
       },
     ],
     categories: ProductPostCategories[1].categories,
@@ -362,13 +364,13 @@ const ProductContents = [
     starterVideos: [
       {
         label: 'content-zxxdesktop:starterVideos.0.label',
-        videoURL: 'https://',
-        thumbnail: require('../images/softwares/content/xdesktop/xdesktop_ui.webp'),
+        videoURL: `${CDNURL}video/mock-video.mp4`,
+        thumbnail: `${CDNURL}img/thumbnail/xdesktop_ui.webp`,
       },
       {
         label: 'content-zxxdesktop:starterVideos.1.label',
-        videoURL: 'https://',
-        thumbnail: require('../images/softwares/content/xdesktop/xdesktop_shortcuts.webp'),
+        videoURL: `${CDNURL}video/mock-video.mp4`,
+        thumbnail: `${CDNURL}img/thumbnail/xdesktop_shortcuts.webp`,
       },
     ],
     categories: ProductPostCategories[2].categories,
