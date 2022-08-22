@@ -10,8 +10,9 @@ import { appWithTranslation } from 'next-i18next';
 import Loader from '@/src/components/main/Loader';
 import Header from '@/src/components/main/Header';
 import nextI18nextConfig from '@/next-i18next.config';
+import VideoPopup from '@/src/components/popups/VideoPopup';
 import AppWrapper from '@/src/components/contexts/AppContext';
-import NotificationPopup from '@/src/components/main/NotificationPopup';
+import NotificationPopup from '@/src/components/popups/NotificationPopup';
 
 function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
@@ -22,6 +23,7 @@ function MyApp({ Component, pageProps }) {
       <Header />
       <Loader />
       <NotificationPopup />
+      <VideoPopup />
       <Component {...pageProps} />
     </AppWrapper>
   );

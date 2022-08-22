@@ -9,6 +9,15 @@ export default function AppWrapper({ children }) {
     message: '',
     icon: 'hint',
   });
+  const [videoPopup, setVideoPopup] = React.useState({
+    isActive: false,
+    inHTML: false,
+    video: {
+      url: null,
+      title: null,
+      poster: null,
+    },
+  });
   const [fullScreenViewer, setFullScreenViewer] = React.useState({
     inHTML: false,
     visibility: false,
@@ -45,6 +54,41 @@ export default function AppWrapper({ children }) {
         inHTML: true,
         message,
         icon,
+      });
+    }, 200);
+  };
+
+  const deactivateVideoPopup = () => {
+    setVideoPopup({
+      ...videoPopup,
+      isActive: false,
+    });
+    setTimeout(() => {
+      setVideoPopup({
+        ...videoPopup,
+        isActive: false,
+        inHTML: false,
+        video: {
+          url: null,
+          title: null,
+          poster: null,
+        },
+      });
+    }, 400);
+  };
+
+  const activateVideoPopup = ({ video }) => {
+    setVideoPopup({
+      ...videoPopup,
+      isActive: false,
+      inHTML: true,
+    });
+    setTimeout(() => {
+      setVideoPopup({
+        ...videoPopup,
+        isActive: true,
+        inHTML: true,
+        video,
       });
     }, 200);
   };
@@ -104,14 +148,16 @@ export default function AppWrapper({ children }) {
   const ContextData = React.useMemo(
     () => ({
       notificationPopup,
-      setNotificationPopup,
       deactivateNotificationPopup,
       activateNotificationPopup,
+      videoPopup,
+      deactivateVideoPopup,
+      activateVideoPopup,
       fullScreenViewer,
       activateFullScreenViewer,
       deactivateFullScreenViewer,
     }),
-    [notificationPopup, fullScreenViewer]
+    [notificationPopup, videoPopup, fullScreenViewer]
   );
   return (
     <AppContext.Provider value={ContextData}>{children}</AppContext.Provider>
