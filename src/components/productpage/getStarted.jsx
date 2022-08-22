@@ -5,14 +5,17 @@ import { BsFillPlayFill } from 'react-icons/bs';
 import { useAppContext } from '@/src/components/contexts/AppContext';
 
 function GetStarted({ product }) {
-  const { activateNotificationPopup } = useAppContext();
+  const { activateVideoPopup } = useAppContext();
   const { starterVideos } = product.content || null;
   const { t } = useTranslation();
 
-  const playVideo = ({ label, videoURL }) => {
-    activateNotificationPopup({
-      message: `${t(label)}  |  ${videoURL}`,
-      icon: 'hint',
+  const playVideo = ({ label, videoURL, poster }) => {
+    activateVideoPopup({
+      video: {
+        title: `${t(label)} | ${product.name}`,
+        url: videoURL,
+        poster,
+      },
     });
   };
 
@@ -29,11 +32,11 @@ function GetStarted({ product }) {
         </h1>
         <div className="flex flex-wrap items-center justify-center w-full gap-16">
           {starterVideos &&
-            starterVideos.map(({ label, thumbnail, videoURL }) => (
+            starterVideos.map(({ label, thumbnail: poster, videoURL }) => (
               <div
                 key={`${label}Video`}
-                onClick={() => playVideo({ label, videoURL })}
-                onKeyPress={() => playVideo({ label, videoURL })}
+                onClick={() => playVideo({ label, poster, videoURL })}
+                onKeyPress={() => playVideo({ label, poster, videoURL })}
                 role="button"
                 tabIndex={0}
                 className="relative grid w-full max-w-xs grid-cols-1 gap-0 p-0 m-0 group place-content-start place-items-center"
@@ -41,7 +44,7 @@ function GetStarted({ product }) {
                 <div className="w-full p-0 overflow-hidden cursor-pointer relative bg-white rounded-2xl h-[195px] shadow-xl grid grid-cols-1 place-content-center place-items-center gap-0">
                   <div className="relative block w-full overflow-hidden z-[1]">
                     <Image
-                      src={thumbnail}
+                      src={poster}
                       alt={label}
                       className="object-cover w-full h-full"
                     />
