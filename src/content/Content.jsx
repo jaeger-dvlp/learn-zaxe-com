@@ -364,12 +364,12 @@ const ProductContents = [
     starterVideos: [
       {
         label: 'content-zxxdesktop:starterVideos.0.label',
-        videoURL: `${CDNURL}video/mock-video.mp4`,
+        videoURL: `${CDNURL}video/mock-video-xdesktop.mp4`,
         thumbnail: `${CDNURL}img/thumbnail/xdesktop_ui.webp`,
       },
       {
         label: 'content-zxxdesktop:starterVideos.1.label',
-        videoURL: `${CDNURL}video/mock-video.mp4`,
+        videoURL: `${CDNURL}video/mock-video-xdesktop.mp4`,
         thumbnail: `${CDNURL}img/thumbnail/xdesktop_shortcuts.webp`,
       },
     ],
