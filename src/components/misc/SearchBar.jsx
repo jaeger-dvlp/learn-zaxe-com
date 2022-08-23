@@ -51,6 +51,7 @@ function SearchBar() {
         placeholder={searchBarPHs.placeHolders[searchBarPHs.active]}
         className=" bg-[#F5F5F5] xl:text-lg lg:text-lg text-sm placeholder-slate-300 outline-none p-2 px-4 pr-0 relative w-full h-full text-center"
         type="text"
+        required
       />
       <button
         type="submit"
