@@ -48,12 +48,7 @@ function SearchBar({ value }) {
       <h1 className="xl:text-4xl lg:text-4xl text-xl font-bold text-[#585858] text-center">
         {t('searchbar.categories.heading')}
       </h1>
-      <form
-        className="relative flex items-center justify-center xl:min-h-[80px] lg:min-h-[80px]
-    min-h-[60px] w-full xl:max-w-xl lg:max-w-xl max-w-sm overflow-hidden transition-all
-    duration-150 rounded-[20px] main-search-bar ring-2 ring-transparent focus-within:ring-zaxe
-    xl:h-12 lg:h-12 h-9"
-      >
+      <form className="relative flex items-center justify-center w-full max-w-md overflow-hidden transition-all duration-150 rounded-2xl main-search-bar ring-2 ring-transparent focus-within:ring-zaxe xl:h-[60px] lg:h-[60px] h-14">
         <input
           placeholder={searchBarPHs.placeHolders[searchBarPHs.active]}
           className=" bg-[#F5F5F5] xl:text-lg lg:text-lg text-sm placeholder-slate-300
