@@ -44,7 +44,7 @@ function SearchBar() {
   }, []);
 
   return (
-    <form className="relative flex items-center justify-center w-full max-w-md overflow-hidden transition-all duration-150 rounded-md main-search-bar ring-2 ring-transparent focus-within:ring-zaxe xl:h-12 lg:h-12 h-9">
+    <form className="relative flex items-center justify-center w-full max-w-md overflow-hidden transition-all duration-150 rounded-2xl main-search-bar ring-2 ring-transparent focus-within:ring-zaxe xl:h-[60px] lg:h-[60px] h-14">
       <input
         placeholder={searchBarPHs.placeHolders[searchBarPHs.active]}
         className=" bg-[#F5F5F5] xl:text-lg lg:text-lg text-sm placeholder-slate-300 outline-none p-2 px-4 pr-0 relative w-full h-full text-center"
