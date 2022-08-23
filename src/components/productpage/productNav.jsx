@@ -2,52 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
-import { AiOutlineSearch } from 'react-icons/ai';
+import SearchBar from '@/src/components/misc/SearchBar';
 
 function ProductNav({ product }) {
   const { t } = useTranslation();
-  const [searchBarPHs, setSearchBarPHs] = React.useState({
-    placeHolders: [
-      t('searchbar.placeholders.0'),
-      t('searchbar.placeholders.1'),
-      t('searchbar.placeholders.2'),
-      t('searchbar.placeholders.3'),
-      t('searchbar.placeholders.4'),
-      t('searchbar.placeholders.5'),
-    ],
-    active: 0,
-  });
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setSearchBarPHs({
-        ...searchBarPHs,
-        active:
-          searchBarPHs.placeHolders.length - 1 === searchBarPHs.active
-            ? 0
-            : searchBarPHs.active + 1,
-      });
-    }, 1500);
-    return () => clearInterval(interval);
-  }, [searchBarPHs]);
-
-  React.useEffect(() => {
-    const barForm = document.querySelector('form.main-search-bar');
-    const HandleSearch = (e) => {
-      e.preventDefault();
-      const searchInput = barForm.querySelector('input');
-      // eslint-disable-next-line no-alert
-      alert(
-        searchInput.value
-          ? `${t('searchbar.searching-for')} ${searchInput.value}`
-          : `${t('searchbar.searching-for')} Nothing`
-      );
-    };
-
-    barForm.addEventListener('submit', HandleSearch);
-
-    return () => barForm && barForm.removeEventListener('submit', HandleSearch);
-  }, []);
   return (
     <div
       data-aos="fade"
@@ -115,19 +74,7 @@ function ProductNav({ product }) {
         <p className="w-full xl:text-left lg:text-left text-center text-xl my-5 max-w-md font-medium text-[#666666]">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </p>
-        <form className="relative flex items-center justify-center min-h-[60px] w-full max-w-md overflow-hidden transition-all duration-150 rounded-[20px] main-search-bar ring-2 ring-transparent focus-within:ring-zaxe xl:h-12 lg:h-12 h-9">
-          <input
-            placeholder={searchBarPHs.placeHolders[searchBarPHs.active]}
-            className=" bg-[#F5F5F5] xl:text-md lg:text-md text-sm placeholder-slate-300 outline-none p-1 px-4 pr-0 relative w-full h-full text-center"
-            type="text"
-          />
-          <button
-            type="submit"
-            className="w-14 bg-[#F5F5F5] transition-all duration-100 hover:bg-zinc-200 active:bg-zaxe active:text-white text-zaxe h-full p-0 m-0 flex flex-wrap justify-center items-center"
-          >
-            <AiOutlineSearch className="text-2xl" />
-          </button>
-        </form>
+        <SearchBar />
       </div>
     </div>
   );
