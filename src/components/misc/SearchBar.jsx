@@ -1,8 +1,10 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 function SearchBar() {
+  const router = useRouter();
   const { t } = useTranslation();
   const [searchBarPHs, setSearchBarPHs] = React.useState({
     placeHolders: [
@@ -34,12 +36,9 @@ function SearchBar() {
     const HandleSearch = (e) => {
       e.preventDefault();
       const searchInput = barForm.querySelector('input');
-      // eslint-disable-next-line no-alert
-      alert(
-        searchInput.value
-          ? `${t('searchbar.searching-for')} ${searchInput.value}`
-          : `${t('searchbar.searching-for')} Nothing`
-      );
+      router.push(`/search?q=${searchInput.value}`, {
+        shallow: true,
+      });
     };
     barForm.addEventListener('submit', HandleSearch);
 
