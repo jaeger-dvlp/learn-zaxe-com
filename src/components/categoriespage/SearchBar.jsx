@@ -1,8 +1,10 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-function SearchBar() {
+function SearchBar({ value }) {
+  const router = useRouter();
   const { t } = useTranslation();
   const [searchBarPHs, setSearchBarPHs] = React.useState({
     placeHolders: [
@@ -34,12 +36,7 @@ function SearchBar() {
     const HandleSearch = (e) => {
       e.preventDefault();
       const searchInput = barForm.querySelector('input');
-      // eslint-disable-next-line no-alert
-      alert(
-        searchInput.value
-          ? `${t('searchbar.searching-for')} ${searchInput.value}`
-          : `${t('searchbar.searching-for')} Nothing`
-      );
+      router.push(`/search?q=${searchInput.value}`);
     };
 
     barForm.addEventListener('submit', HandleSearch);
@@ -62,6 +59,7 @@ function SearchBar() {
           className=" bg-[#F5F5F5] xl:text-lg lg:text-lg text-sm placeholder-slate-300
         outline-none p-1 px-4 pr-0 relative w-full h-full text-center"
           type="text"
+          defaultValue={value}
         />
         <button
           type="submit"
