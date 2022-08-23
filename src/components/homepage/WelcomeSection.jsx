@@ -26,7 +26,7 @@ function WelcomeSection() {
           </p>
         </div>
         <div className="relative grid w-full grid-cols-1 place-content-center place-items-center">
-          <SearchBar />
+          <SearchBar value={null} />
         </div>
       </div>
     </div>
