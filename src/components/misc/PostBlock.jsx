@@ -4,9 +4,9 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { i18n, useTranslation } from 'next-i18next';
 import { BiLinkExternal } from 'react-icons/bi';
+import Content from '@/src/content/Content';
 
 function PostBlock({ props }) {
-  const { CDNURL } = process.env;
   const {
     postSlug,
     postCategory,
@@ -19,6 +19,7 @@ function PostBlock({ props }) {
   const { t } = useTranslation();
   const router = useRouter();
   const { locale } = router;
+  const Product = Content.products.find(({ slug }) => queryProduct === slug);
   return (
     <Link
       href={`/products/${queryPCategory}/${queryProduct}/article/${postSlug}`}
@@ -27,8 +28,11 @@ function PostBlock({ props }) {
       <a className="relative grid w-full h-full max-w-[16rem] grid-cols-1 overflow-hidden transition-all duration-200 bg-white shadow-xl cursor-pointer hover:-translate-y-3 hover:shadow-2xl place-content-start place-items-center rounded-xl">
         <BiLinkExternal className="absolute z-[3] text-4xl bottom-2 right-2 text-zinc-200" />
         <figure className="relative z-[2] w-full h-[10rem] max-w-xs overflow-hidden rounded-xl">
+          <span className="absolute bottom-0 z-[3] m-3 p-1 px-2 text-white rounded-md bg-zaxe shadow-md text-xs">
+            {Product.model}
+          </span>
           <Image
-            src={`${CDNURL}${postThumbnail}`}
+            src={postThumbnail}
             layout="fill"
             alt={postTitle.en}
             className="object-cover object-center w-full h-full"

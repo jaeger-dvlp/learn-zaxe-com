@@ -21,6 +21,12 @@
   "bread-crumbs": {
     "knowledge-base": "Knowledge Base"
   },
+  "search": {
+    "articles": "Articles",
+    "videos": "Videos",
+    "downloads": "Downloads",
+    "no-query-content": "No content found for the search query."
+  },
   "homepage": {
     "banner": {
       "heading": "Welcome to",

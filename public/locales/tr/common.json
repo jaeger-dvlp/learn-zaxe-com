@@ -21,6 +21,12 @@
   "bread-crumbs": {
     "knowledge-base": "Bilgi Merkezi"
   },
+  "search": {
+    "articles": "Yazılar",
+    "videos": "Videolar",
+    "downloads": "İndirmeler",
+    "no-query-content": "Arama kriterlerini uygun içerik bulunamadı."
+  },
   "homepage": {
     "banner": {
       "heading": "Hoşgeldin",
