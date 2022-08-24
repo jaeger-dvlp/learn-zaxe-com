@@ -48,6 +48,8 @@ const ProductPosts = [
 const ProductVideos = [
   [
     {
+      product: 'zaxe-z3',
+      slug: 'zxz3-unboxing-z3',
       label: 'content-zxz3:starterVideos.0.label',
       videoURL: `${CDNURL}video/mock-video.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/Z3_front.webp`,
@@ -55,19 +57,23 @@ const ProductVideos = [
         'unbox',
         'unboxing',
         'z3',
-        'zaxe z3 unbox',
-        'zaxe z3 unboxing',
+        'z3 unbox',
+        'z3 unboxing',
         'kutu açılımı',
         'z3 kutu açılımı',
       ],
     },
     {
+      product: 'zaxe-z3',
+      slug: 'zxz3-meet-z3',
       label: 'content-zxz3:starterVideos.1.label',
       videoURL: `${CDNURL}video/mock-video.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/Z3_screen.webp`,
       tags: ['z3'],
     },
     {
+      product: 'zaxe-z3',
+      slug: 'zxz3-calibration-z3',
       label: 'content-zxz3:starterVideos.2.label',
       videoURL: `${CDNURL}video/mock-video.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/Z3_printtable.webp`,
@@ -83,6 +89,8 @@ const ProductVideos = [
   ],
   [
     {
+      product: 'zaxe-x3',
+      slug: 'zxx3-unboxing-x3',
       label: 'content-zxx3:starterVideos.0.label',
       videoURL: `${CDNURL}video/mock-video.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/X3_printtable.webp`,
@@ -90,19 +98,23 @@ const ProductVideos = [
         'unbox',
         'unboxing',
         'x3',
-        'zaxe x3 unbox',
-        'zaxe x3 unboxing',
+        'x3 unbox',
+        'x3 unboxing',
         'kutu açılımı',
         'x3 kutu açılımı',
       ],
     },
     {
+      product: 'zaxe-x3',
+      slug: 'zxx3-meet-x3',
       label: 'content-zxx3:starterVideos.1.label',
       videoURL: `${CDNURL}video/mock-video.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/X3_screen.webp`,
       tags: ['x3'],
     },
     {
+      product: 'zaxe-x3',
+      slug: 'zxx3-calibration-x3',
       label: 'content-zxx3:starterVideos.2.label',
       videoURL: `${CDNURL}video/mock-video.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/X3_corexy.webp`,
@@ -118,12 +130,16 @@ const ProductVideos = [
   ],
   [
     {
+      product: 'zaxe-xdesktop',
+      slug: 'zxxdesktop-userinterface-xdesktop',
       label: 'content-zxxdesktop:starterVideos.0.label',
       videoURL: `${CDNURL}video/mock-video-xdesktop.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/xdesktop_ui.webp`,
       tags: ['xdesktop', 'ui', 'user interface', 'kullanıcı arayüzü', 'arayüz'],
     },
     {
+      product: 'zaxe-xdesktop',
+      slug: 'zxxdesktop-shortcuts-xdesktop',
       label: 'content-zxxdesktop:starterVideos.1.label',
       videoURL: `${CDNURL}video/mock-video-xdesktop.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/xdesktop_shortcuts.webp`,
