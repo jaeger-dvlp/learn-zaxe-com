@@ -162,7 +162,7 @@ function Search({ posts: Posts }) {
       </Head>
       <section className="pt-[20vh] font-zaxe w-full flex flex-wrap justify-center items-start">
         <section className="grid w-full grid-cols-1 p-5 gap-14 max-w-app place-content-start place-items-center">
-          <SearchBar value={searchQuery || null} />
+          <SearchBar className="heading-search-bar" />
           <section className="grid w-full grid-cols-1 pb-10 gap-7 place-content-start place-items-center">
             <h2 className="flex items-center justify-center gap-2 p-1 px-4 text-xl font-semibold text-center text-white shadow-xl shadow-black/30 rounded-xl bg-zaxe">
               <MdArticle />
