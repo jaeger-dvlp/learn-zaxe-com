@@ -36,7 +36,7 @@ function SearchBar() {
     const HandleSearch = (e) => {
       e.preventDefault();
       const searchInput = barForm.querySelector('input');
-      router.push(`/search?q=${searchInput.value}`);
+      router.push(`/${router.locale}/search?q=${searchInput.value}`);
     };
     barForm.addEventListener('submit', HandleSearch);
 
