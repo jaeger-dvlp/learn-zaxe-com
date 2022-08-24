@@ -6,12 +6,12 @@ import { BiInfoCircle } from 'react-icons/bi';
 import { useTranslation } from 'next-i18next';
 import PostHandler from '@/src/utils/postHandler';
 import PostBlock from '@/src/components/misc/PostBlock';
+import VideoBlock from '@/src/components/misc/VideoBlock';
+import { MdArticle, MdVideoLibrary } from 'react-icons/md';
+import { BsFillFileEarmarkArrowDownFill } from 'react-icons/bs';
 import SearchBar from '@/src/components/categoriespage/SearchBar';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import { BsFillFileEarmarkArrowDownFill } from 'react-icons/bs';
-import { MdArticle, MdVideoLibrary } from 'react-icons/md';
-import VideoBlock from '../components/misc/VideoBlock';
 import Images from '../images/Images';
 
 function Search({ posts: Posts }) {
@@ -249,12 +249,7 @@ function NoContent() {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, [
-      'common',
-      'content-zxxdesktop',
-      'content-zxz3',
-      'content-zxx3',
-    ])),
+    ...(await serverSideTranslations(locale, Content.translations)),
     posts: await PostHandler.getAllPosts({ locale }),
   },
 });
