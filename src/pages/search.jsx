@@ -10,50 +10,101 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { BsFillFileEarmarkArrowDownFill } from 'react-icons/bs';
 import { MdArticle, MdVideoLibrary } from 'react-icons/md';
+import VideoBlock from '../components/misc/VideoBlock';
 
 function Search({ posts: Posts }) {
   const router = useRouter();
   const { t } = useTranslation();
   const [posts] = React.useState(Posts);
   const { q: searchQuery } = router.query;
-  const [filteredPosts, setFilteredPosts] = React.useState([]);
 
-  const GetQueriedPosts = async ({ queries }) => {
-    const queriedPosts = await queries
-      .map((query) =>
-        posts.filter(({ tags }) =>
-          tags.find(
-            (tag) =>
-              tag.toLowerCase() === query || tag.toLowerCase().includes(query)
+  const [filteredPosts, setFilteredPosts] = React.useState([]);
+  const [filteredVideos, setFilteredVideos] = React.useState([]);
+
+  const PostActions = {
+    GetQueriedPosts: async ({ queries }) => {
+      const queriedPosts = await queries
+        .map((query) =>
+          posts.filter(({ tags }) =>
+            tags.find(
+              (tag) =>
+                tag.toLowerCase() === query ||
+                (query.length > 2 &&
+                  tag.length > 2 &&
+                  tag.toLowerCase().includes(query))
+            )
           )
         )
-      )
-      .flat();
+        .flat();
 
-    return queriedPosts;
+      return queriedPosts;
+    },
+    ClearDuplicatedArray: async (DuplicatedArray) => {
+      const uniqueArray = [];
+      await DuplicatedArray.map((post) => {
+        if (uniqueArray.find(({ id }) => id === post.id) === undefined) {
+          return uniqueArray.push(post);
+        }
+        return null;
+      });
+
+      return uniqueArray;
+    },
+    FilterPostsByQuery: async (queries) => {
+      const QueriedPosts = await PostActions.GetQueriedPosts({ queries });
+      const ClearedPosts = await PostActions.ClearDuplicatedArray(QueriedPosts);
+      setFilteredPosts(ClearedPosts);
+    },
   };
 
-  const ClearDuplicatedArray = async (DuplicatedArray) => {
-    const uniqueArray = [];
-    await DuplicatedArray.map((post) => {
-      if (uniqueArray.find(({ id }) => id === post.id) === undefined) {
-        return uniqueArray.push(post);
-      }
-      return null;
-    });
+  const VideoActions = {
+    GetVideos: () => {
+      const allVideos = Content.productVideos.flat();
+      return allVideos;
+    },
+    ClearDuplicatedArray: (DuplicatedArray) => {
+      const uniqueArray = [];
+      DuplicatedArray.map((video) => {
+        if (uniqueArray.find(({ slug }) => slug === video.slug) === undefined) {
+          return uniqueArray.push(video);
+        }
+        return null;
+      });
 
-    return uniqueArray;
+      return uniqueArray;
+    },
+    GetQueriedVideos: ({ queries }) => {
+      const queriedVideos = queries
+        .map((query) =>
+          VideoActions.GetVideos().filter(({ tags }) =>
+            tags.find(
+              (tag) =>
+                tag.toLowerCase() === query ||
+                (query.length > 2 &&
+                  tag.length > 2 &&
+                  tag.toLowerCase().includes(query))
+            )
+          )
+        )
+        .flat();
+
+      return queriedVideos;
+    },
+    FilterVideosByQuery: async (queries) => {
+      const QueriedVideos = VideoActions.GetQueriedVideos({ queries });
+      const ClearedVideos = VideoActions.ClearDuplicatedArray(QueriedVideos);
+      setFilteredVideos(ClearedVideos);
+    },
   };
 
-  const FilterPostsByQuery = async (queries) => {
-    const QueriedPosts = await GetQueriedPosts({ queries });
-    const ClearedPosts = await ClearDuplicatedArray(QueriedPosts);
-    setFilteredPosts(ClearedPosts);
+  const FilterContent = () => {
+    PostActions.FilterPostsByQuery(searchQuery.toLowerCase().split(' '));
+    VideoActions.FilterVideosByQuery(searchQuery.toLowerCase().split(' '));
   };
 
   React.useEffect(() => {
     if (searchQuery) {
-      FilterPostsByQuery(searchQuery.toLowerCase().split(' '));
+      FilterContent();
     }
   }, [searchQuery, router]);
 
@@ -95,7 +146,25 @@ function Search({ posts: Posts }) {
             <span>{t('common:search.videos')}</span>
           </h2>
           <nav className="relative flex flex-wrap items-center justify-center w-full gap-14">
-            <NoContent />
+            {filteredVideos.length > 0 ? (
+              filteredVideos.map(
+                ({ label, slug, product, thumbnail: poster, videoURL }) => (
+                  <VideoBlock
+                    props={{
+                      label,
+                      poster,
+                      videoURL,
+                      productName: Content.products.find(
+                        ({ slug: pSlug }) => pSlug === product
+                      ).name,
+                    }}
+                    key={`video-${slug}`}
+                  />
+                )
+              )
+            ) : (
+              <NoContent />
+            )}
           </nav>
         </section>
         <section className="grid w-full grid-cols-1 pb-10 gap-7 place-content-start place-items-center">
