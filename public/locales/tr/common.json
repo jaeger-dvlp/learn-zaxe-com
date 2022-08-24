@@ -2,10 +2,12 @@
   "meta": {
     "title": {
       "home": "Zaxe | Bilgi Merkezi",
-      "product": " | Zaxe Bilgi Merkezi"
+      "product": " | Zaxe Bilgi Merkezi",
+      "search": "Ara | Zaxe Bilgi Merkezi"
     },
     "content": {
-      "home": "Zaxe Bilgi Merkezine Hoşgeldin. Zaxe ile başlamak için ihtiyacın olan tüm bilgilere buradan ulaşabilirsin."
+      "home": "Zaxe Bilgi Merkezine Hoşgeldin. Zaxe ile başlamak için ihtiyacın olan tüm bilgilere buradan ulaşabilirsin.",
+      "search": "Zaxe Bilgi Merkezine Hoşgeldin. Size nasıl yardımcı olabiliriz?"
     }
   },
   "links": {

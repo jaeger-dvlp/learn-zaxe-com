@@ -2,10 +2,12 @@
   "meta": {
     "title": {
       "home": "Zaxe | Knowledge Base",
-      "product": " | Zaxe Knowledge Base"
+      "product": " | Zaxe Knowledge Base",
+      "search": "Search | Zaxe Knowledge Base "
     },
     "content": {
-      "home": "Welcome to Zaxe Knowledge Base. Here you can find all the information you need to get started with Zaxe."
+      "home": "Welcome to Zaxe Knowledge Base. Here you can find all the information you need to get started with Zaxe.",
+      "search": "Welcome to Zaxe Knowledge Base. How can we help you?"
     }
   },
   "links": {
