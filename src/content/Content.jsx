@@ -613,6 +613,7 @@ const Content = {
   ],
   products: Products,
   productPosts: ProductPosts,
+  productVideos: ProductVideos,
   productCategories: ProductCategories,
   productPostCategories: ProductPostCategories,
   components: {
