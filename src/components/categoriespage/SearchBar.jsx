@@ -32,11 +32,11 @@ function SearchBar({ value }) {
   }, [searchBarPHs]);
 
   React.useEffect(() => {
-    const barForm = document.querySelector('form.main-search-bar');
+    const barForm = document.querySelector('form.heading-search-bar');
     const HandleSearch = (e) => {
       e.preventDefault();
       const searchInput = barForm.querySelector('input');
-      router.push(`/search?q=${searchInput.value}`);
+      router.push(`/${router.locale}/search?q=${searchInput.value}`);
     };
 
     barForm.addEventListener('submit', HandleSearch);
@@ -48,7 +48,7 @@ function SearchBar({ value }) {
       <h1 className="xl:text-4xl lg:text-4xl text-xl font-bold text-[#585858] text-center">
         {t('searchbar.categories.heading')}
       </h1>
-      <form className="relative flex items-center justify-center w-full max-w-md overflow-hidden transition-all duration-150 rounded-2xl main-search-bar ring-2 ring-transparent focus-within:ring-zaxe xl:h-[60px] lg:h-[60px] h-14">
+      <form className="relative flex items-center justify-center w-full max-w-md overflow-hidden transition-all duration-150 rounded-2xl heading-search-bar ring-2 ring-transparent focus-within:ring-zaxe xl:h-[60px] lg:h-[60px] h-14">
         <input
           placeholder={searchBarPHs.placeHolders[searchBarPHs.active]}
           className=" bg-[#F5F5F5] xl:text-lg lg:text-lg text-sm placeholder-slate-300
