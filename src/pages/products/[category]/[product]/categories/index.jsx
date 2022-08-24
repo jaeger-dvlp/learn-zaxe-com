@@ -30,7 +30,7 @@ function Categories({ product: stringProduct }) {
         </Head>
         <div className="grid font-zaxe w-full grid-cols-1 place-content-start place-items-center pt-[20vh]">
           <div className="grid w-full grid-cols-1 p-5 gap-14 max-w-app place-content-start place-items-center">
-            <SearchBar />
+            <SearchBar className="category-search-bar" />
             <ProductSlider />
           </div>
           <div className="flex flex-wrap items-start justify-center w-full gap-10 p-5 xl:flex-nowrap lg:flex-nowrap max-w-app">
