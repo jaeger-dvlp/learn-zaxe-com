@@ -3,9 +3,11 @@ import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-function SearchBar({ value }) {
+function SearchBar({ className }) {
   const router = useRouter();
   const { t } = useTranslation();
+  const [searchQuery, setSearchQuery] = React.useState('');
+
   const [searchBarPHs, setSearchBarPHs] = React.useState({
     placeHolders: [
       t('searchbar.placeholders.0'),
@@ -17,6 +19,15 @@ function SearchBar({ value }) {
     ],
     active: 0,
   });
+
+  React.useEffect(() => {
+    const { q } = router.query;
+    if (q) {
+      setSearchQuery(q);
+    } else {
+      setSearchQuery('');
+    }
+  }, [router, router.query, router.asPath]);
 
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -32,7 +43,7 @@ function SearchBar({ value }) {
   }, [searchBarPHs]);
 
   React.useEffect(() => {
-    const barForm = document.querySelector('form.heading-search-bar');
+    const barForm = document.querySelector(`form.${className}`);
     const HandleSearch = (e) => {
       e.preventDefault();
       const searchInput = barForm.querySelector('input');
@@ -48,14 +59,16 @@ function SearchBar({ value }) {
       <h1 className="xl:text-4xl lg:text-4xl text-xl font-bold text-[#585858] text-center">
         {t('searchbar.categories.heading')}
       </h1>
-      <form className="relative flex items-center justify-center w-full max-w-md overflow-hidden transition-all duration-150 rounded-2xl heading-search-bar ring-2 ring-transparent focus-within:ring-zaxe xl:h-[60px] lg:h-[60px] h-14">
+      <form
+        className={`relative flex items-center justify-center w-full max-w-md overflow-hidden transition-all duration-150 rounded-2xl ${className} ring-2 ring-transparent focus-within:ring-zaxe xl:h-[60px] lg:h-[60px] h-14`}
+      >
         <input
           placeholder={searchBarPHs.placeHolders[searchBarPHs.active]}
           className=" bg-[#F5F5F5] xl:text-lg lg:text-lg text-sm placeholder-slate-300
         outline-none p-1 px-4 pr-0 relative w-full h-full text-center"
           type="text"
           required
-          defaultValue={value}
+          defaultValue={searchQuery}
         />
         <button
           type="submit"
