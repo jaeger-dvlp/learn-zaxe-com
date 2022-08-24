@@ -45,6 +45,93 @@ const ProductPosts = [
   ],
 ];
 
+const ProductVideos = [
+  [
+    {
+      label: 'content-zxz3:starterVideos.0.label',
+      videoURL: `${CDNURL}video/mock-video.mp4`,
+      thumbnail: `${CDNURL}img/thumbnail/Z3_front.webp`,
+      tags: [
+        'unbox',
+        'unboxing',
+        'z3',
+        'zaxe z3 unbox',
+        'zaxe z3 unboxing',
+        'kutu açılımı',
+        'z3 kutu açılımı',
+      ],
+    },
+    {
+      label: 'content-zxz3:starterVideos.1.label',
+      videoURL: `${CDNURL}video/mock-video.mp4`,
+      thumbnail: `${CDNURL}img/thumbnail/Z3_screen.webp`,
+      tags: ['z3'],
+    },
+    {
+      label: 'content-zxz3:starterVideos.2.label',
+      videoURL: `${CDNURL}video/mock-video.mp4`,
+      thumbnail: `${CDNURL}img/thumbnail/Z3_printtable.webp`,
+      tags: [
+        'z3',
+        'calibration',
+        'calibrate',
+        'how to calibrate',
+        'kalibrasyon',
+        'kalibre',
+      ],
+    },
+  ],
+  [
+    {
+      label: 'content-zxx3:starterVideos.0.label',
+      videoURL: `${CDNURL}video/mock-video.mp4`,
+      thumbnail: `${CDNURL}img/thumbnail/X3_printtable.webp`,
+      tags: [
+        'unbox',
+        'unboxing',
+        'x3',
+        'zaxe x3 unbox',
+        'zaxe x3 unboxing',
+        'kutu açılımı',
+        'x3 kutu açılımı',
+      ],
+    },
+    {
+      label: 'content-zxx3:starterVideos.1.label',
+      videoURL: `${CDNURL}video/mock-video.mp4`,
+      thumbnail: `${CDNURL}img/thumbnail/X3_screen.webp`,
+      tags: ['x3'],
+    },
+    {
+      label: 'content-zxx3:starterVideos.2.label',
+      videoURL: `${CDNURL}video/mock-video.mp4`,
+      thumbnail: `${CDNURL}img/thumbnail/X3_corexy.webp`,
+      tags: [
+        'x3',
+        'calibration',
+        'calibrate',
+        'how to calibrate',
+        'kalibrasyon',
+        'kalibre',
+      ],
+    },
+  ],
+  [
+    {
+      label: 'content-zxxdesktop:starterVideos.0.label',
+      videoURL: `${CDNURL}video/mock-video-xdesktop.mp4`,
+      thumbnail: `${CDNURL}img/thumbnail/xdesktop_ui.webp`,
+      tags: ['xdesktop', 'ui', 'user interface', 'kullanıcı arayüzü', 'arayüz'],
+    },
+    {
+      label: 'content-zxxdesktop:starterVideos.1.label',
+      videoURL: `${CDNURL}video/mock-video-xdesktop.mp4`,
+      thumbnail: `${CDNURL}img/thumbnail/xdesktop_shortcuts.webp`,
+      tags: ['xdesktop', 'shortcuts', 'kısayollar'],
+    },
+  ],
+];
+
 const ProductPostCategories = [
   {
     product: 'zaxe-z3',
@@ -194,23 +281,7 @@ const ProductContents = [
         },
       },
     ],
-    starterVideos: [
-      {
-        label: 'content-zxz3:starterVideos.0.label',
-        videoURL: `${CDNURL}video/mock-video.mp4`,
-        thumbnail: `${CDNURL}img/thumbnail/Z3_front.webp`,
-      },
-      {
-        label: 'content-zxz3:starterVideos.1.label',
-        videoURL: `${CDNURL}video/mock-video.mp4`,
-        thumbnail: `${CDNURL}img/thumbnail/Z3_screen.webp`,
-      },
-      {
-        label: 'content-zxz3:starterVideos.2.label',
-        videoURL: `${CDNURL}video/mock-video.mp4`,
-        thumbnail: `${CDNURL}img/thumbnail/Z3_printtable.webp`,
-      },
-    ],
+    starterVideos: ProductVideos[0],
     categories: ProductPostCategories[0].categories,
     posts: ProductPosts[0],
     downloads: [
@@ -274,23 +345,7 @@ const ProductContents = [
         },
       },
     ],
-    starterVideos: [
-      {
-        label: 'content-zxx3:starterVideos.0.label',
-        videoURL: `${CDNURL}video/mock-video.mp4`,
-        thumbnail: `${CDNURL}img/thumbnail/X3_printtable.webp`,
-      },
-      {
-        label: 'content-zxx3:starterVideos.1.label',
-        videoURL: `${CDNURL}video/mock-video.mp4`,
-        thumbnail: `${CDNURL}img/thumbnail/X3_screen.webp`,
-      },
-      {
-        label: 'content-zxx3:starterVideos.2.label',
-        videoURL: `${CDNURL}video/mock-video.mp4`,
-        thumbnail: `${CDNURL}img/thumbnail/X3_corexy.webp`,
-      },
-    ],
+    starterVideos: ProductVideos[1],
     categories: ProductPostCategories[1].categories,
     posts: ProductPosts[1],
     downloads: [
@@ -361,18 +416,7 @@ const ProductContents = [
         },
       },
     ],
-    starterVideos: [
-      {
-        label: 'content-zxxdesktop:starterVideos.0.label',
-        videoURL: `${CDNURL}video/mock-video-xdesktop.mp4`,
-        thumbnail: `${CDNURL}img/thumbnail/xdesktop_ui.webp`,
-      },
-      {
-        label: 'content-zxxdesktop:starterVideos.1.label',
-        videoURL: `${CDNURL}video/mock-video-xdesktop.mp4`,
-        thumbnail: `${CDNURL}img/thumbnail/xdesktop_shortcuts.webp`,
-      },
-    ],
+    starterVideos: ProductVideos[2],
     categories: ProductPostCategories[2].categories,
     posts: ProductPosts[2],
     downloads: [
