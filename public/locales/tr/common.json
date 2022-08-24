@@ -10,6 +10,12 @@
       "search": "Zaxe Bilgi Merkezine Hoşgeldin. Size nasıl yardımcı olabiliriz?"
     }
   },
+  "header": {},
+  "footer": {
+    "products": {
+      "heading": "Ürünler"
+    }
+  },
   "links": {
     "home": "Anasayfa",
     "3d-printers": "3D Yazıcılar",

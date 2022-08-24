@@ -10,6 +10,12 @@
       "search": "Welcome to Zaxe Knowledge Base. How can we help you?"
     }
   },
+  "header": {},
+  "footer": {
+    "products": {
+      "heading": "Products"
+    }
+  },
   "links": {
     "home": "Home",
     "3d-printers": "3D Printers",
