@@ -180,7 +180,7 @@ function SearchBar({ className }) {
             suggestionBox.show
               ? 'opacity-100 visible scale-100'
               : 'opacity-0 invisible scale-75'
-          } w-full h-fit max-h-32 overflow-y-scroll shadow-xl bg-[#F5F5F5] rounded-2xl border-zaxe border-2 transition-all duration-200 absolute left-0 ${
+          } w-full h-fit max-h-32 hidden-scroll overflow-y-scroll shadow-xl bg-[#F5F5F5] rounded-2xl border-zaxe border-2 transition-all duration-200 absolute left-0 ${
             suggestionPos === 'top' ? 'bottom-full mb-5' : 'top-full mt-5'
           } z-[5]`}
         >
