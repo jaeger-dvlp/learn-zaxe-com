@@ -64,6 +64,8 @@
       "How to change the nozzle size?",
       "My screen of Zaxe X3 is frozen!"
     ],
+    "did-you-mean": "Did you mean;",
+    "type-something": "Type something...",
     "searching-for": "Searching Value :"
   },
   "components": {
