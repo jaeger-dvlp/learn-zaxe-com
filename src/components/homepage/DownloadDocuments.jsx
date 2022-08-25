@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { BsImage } from 'react-icons/bs';
 import Content from '@/src/content/Content';
@@ -25,17 +24,20 @@ function DownloadDocuments() {
             </h1>
             <ul className="grid w-full grid-cols-1 gap-3 place-content-start place-items-start">
               {documents.map(
-                ({ slug: docSlug, title: docTitle, link: docLink }) => (
+                ({
+                  slug: docSlug,
+                  title: docTitle,
+                  link: docLink,
+                  links: docLinks,
+                }) => (
                   <li key={docSlug}>
-                    <Link
-                      href={`/documents/${router.locale}/${docLink}`}
-                      locale={false}
+                    <a
+                      href={docLinks ? docLinks[router.locale] : docLink}
                       download
+                      className="text-xl font-medium transition-all duration-150 hover:text-black xl:text-2xl lg:text-lg text-zaxe"
                     >
-                      <a className="text-xl font-medium transition-all duration-150 hover:text-black xl:text-2xl lg:text-lg text-zaxe">
-                        {docTitle[router.locale]}
-                      </a>
-                    </Link>
+                      {docTitle[router.locale]}
+                    </a>
                   </li>
                 )
               )}
