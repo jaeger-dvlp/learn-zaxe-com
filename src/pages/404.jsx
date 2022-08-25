@@ -29,7 +29,7 @@ function NotFound() {
               {t('404.message')}
             </h2>
             <p className="mt-5 text-md text-zinc-500">{t('404.try-search')}</p>
-            <SearchBar />
+            <SearchBar className="error-search-bar" />
           </div>
           <div className="flex !text-sm flex-wrap items-center justify-center w-full gap-4 place-content-start place-items-center">
             <Link href="/" locale={i18n.language}>
