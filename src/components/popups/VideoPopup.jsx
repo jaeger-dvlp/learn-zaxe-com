@@ -50,7 +50,7 @@ function VideoPopup() {
             controls
           >
             <track kind="captions" />
-            <source src={videoUrl} type="video/mp4" />
+            {videoUrl && <source src={videoUrl} type="video/mp4" />}
           </video>
         </div>
       </div>
