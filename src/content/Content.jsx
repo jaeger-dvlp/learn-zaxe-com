@@ -157,14 +157,7 @@ const Downloadables = [
     link: 'https://zaxe.com',
     showLastUpdate: true,
     description: "Zaxe Z3's Handbook",
-  },
-  {
-    slug: 'x3-firmware',
-    title: 'content-zxx3:downloads.0.title',
-    updateDate: '2022-01-01',
-    link: 'https://zaxe.com',
-    showLastUpdate: true,
-    description: "Zaxe X3's Firmware",
+    tags: ['z3', 'handbook', 'kılavuz', 'kullanım'],
   },
   {
     slug: 'x3-handbook',
@@ -174,6 +167,16 @@ const Downloadables = [
     link: 'https://zaxe.com',
     showLastUpdate: true,
     description: "Zaxe X3's Handbook",
+    tags: ['x3', 'handbook', 'kılavuz', 'kullanım'],
+  },
+  {
+    slug: 'x3-firmware',
+    title: 'content-zxx3:downloads.0.title',
+    updateDate: '2022-01-01',
+    link: 'https://zaxe.com',
+    showLastUpdate: true,
+    description: "Zaxe X3's Firmware",
+    tags: ['x3', 'firmware', 'yazılım'],
   },
   {
     slug: 'xdesktop',
@@ -186,6 +189,7 @@ const Downloadables = [
     },
     showLastUpdate: false,
     description: 'Zaxe xDesktop Download',
+    tags: ['xdesktop'],
   },
   {
     slug: 'safety-and-technical-data-sheet',
@@ -197,6 +201,16 @@ const Downloadables = [
     link: 'doc.zaxe',
     showLastUpdate: false,
     description: 'Mock Download',
+    tags: [
+      'safety',
+      'technical',
+      'data',
+      'sheet',
+      'güvenlik',
+      'teknik',
+      'veri',
+      'sayfa',
+    ],
   },
   {
     slug: 'certificate-of-compliance',
@@ -208,6 +222,7 @@ const Downloadables = [
     link: 'doc.zaxe',
     showLastUpdate: false,
     description: 'Mock Download',
+    tags: ['certificate', 'compliance', 'uygunluk', 'serfitika'],
   },
   {
     slug: 'abs-profile-for-slicer',
@@ -219,6 +234,7 @@ const Downloadables = [
     link: 'doc.zaxe',
     showLastUpdate: false,
     description: 'Mock Download',
+    tags: ['abs', 'profile', 'slicer', 'dilimleyici', 'profil'],
   },
   {
     slug: 'multimaterial-compatibility',
@@ -230,6 +246,7 @@ const Downloadables = [
     link: 'doc.zaxe',
     showLastUpdate: false,
     description: 'Mock Download',
+    tags: ['multimaterial', 'compatibility', 'uyumluluk', 'malzeme'],
   },
   {
     slug: 'nfc-specs',
@@ -241,6 +258,7 @@ const Downloadables = [
     link: 'doc.zaxe',
     showLastUpdate: false,
     description: 'Mock Download',
+    tags: ['nfc', 'specs', 'özellikler'],
   },
 ];
 
