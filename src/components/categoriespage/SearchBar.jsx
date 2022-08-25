@@ -48,6 +48,7 @@ function SearchBar({ className }) {
 
   React.useEffect(() => {
     const { q } = router.query;
+    document.querySelector(`form.${className} input`).value = q || '';
     if (q) {
       setSearchQuery(q);
     } else {
@@ -164,7 +165,7 @@ function SearchBar({ className }) {
         outline-none p-1 px-4 pr-0 relative w-full h-full text-center"
             type="text"
             required
-            defaultValue={searchQuery}
+            defaultValue={searchQuery || ''}
           />
           <button
             type="submit"
