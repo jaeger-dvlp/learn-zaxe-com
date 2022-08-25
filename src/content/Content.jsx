@@ -29,7 +29,7 @@ const ProductPosts = [
       },
       slug: 'printhead-fan-replacement',
       category: 'repair',
-      thumbnail: `${CDNURL}/img/mockpostthumbnail4.webp`,
+      thumbnail: `${CDNURL}img/mockpostthumbnail4.webp`,
     },
   ],
   [
@@ -40,7 +40,7 @@ const ProductPosts = [
       },
       slug: 'installing-xdesktop',
       category: 'start',
-      thumbnail: `${CDNURL}/img/mockpostthumbnail9.webp`,
+      thumbnail: `${CDNURL}img/mockpostthumbnail9.webp`,
     },
   ],
 ];
@@ -146,6 +146,148 @@ const ProductVideos = [
       tags: ['xdesktop', 'shortcuts', 'kısayollar'],
     },
   ],
+];
+
+const Downloadables = [
+  {
+    slug: 'z3-handbook',
+    title: 'content-zxz3:downloads.2.title',
+    updateDate: '2022-01-01',
+    type: 'doc',
+    links: {
+      en: `${CDNURL}docs/en/mock-doc.pdf`,
+      tr: `${CDNURL}docs/tr/mock-doc.pdf`,
+    },
+    showLastUpdate: true,
+    description: "Zaxe Z3's Handbook",
+    tags: ['z3', 'handbook', 'kılavuz', 'kullanım'],
+  },
+  {
+    slug: 'x3-handbook',
+    title: 'content-zxx3:downloads.2.title',
+    updateDate: '2022-01-01',
+    type: 'doc',
+    links: {
+      en: `${CDNURL}docs/en/mock-doc.pdf`,
+      tr: `${CDNURL}docs/tr/mock-doc.pdf`,
+    },
+    showLastUpdate: true,
+    description: "Zaxe X3's Handbook",
+    tags: ['x3', 'handbook', 'kılavuz', 'kullanım'],
+  },
+  {
+    slug: 'x3-firmware',
+    title: 'content-zxx3:downloads.0.title',
+    updateDate: '2022-01-01',
+    type: 'firmware',
+    link: `${CDNURL}firmwares/mock-firmware.zip`,
+    showLastUpdate: true,
+    description: "Zaxe X3's Firmware",
+    tags: ['x3', 'firmware', 'yazılım'],
+  },
+  {
+    slug: 'xdesktop',
+    title: 'content-zxxdesktop:downloads.0.title',
+    updateDate: '2022-01-01',
+    type: 'app',
+    platforms: ['win', 'mac'],
+    links: {
+      win: 'https://d.zaxe.com/xdesktopwin',
+      mac: 'https://d.zaxe.com/xdesktopmac',
+    },
+    showLastUpdate: false,
+    description: 'Zaxe xDesktop Download',
+    tags: ['xdesktop'],
+  },
+  {
+    slug: 'safety-and-technical-data-sheet',
+    title: {
+      tr: 'Güvenlik ve Teknik Veri Sayfaları',
+      en: 'Safety and Technical Data Sheets',
+    },
+    updateDate: '2022-01-01',
+    type: 'doc',
+    links: {
+      en: `${CDNURL}docs/en/mock-doc.pdf`,
+      tr: `${CDNURL}docs/tr/mock-doc.pdf`,
+    },
+    showLastUpdate: false,
+    description: 'Mock Download',
+    tags: [
+      'safety',
+      'technical',
+      'data',
+      'sheet',
+      'güvenlik',
+      'teknik',
+      'veri',
+      'sayfa',
+    ],
+  },
+  {
+    slug: 'certificate-of-compliance',
+    title: {
+      tr: 'Uygunluk Belgesi',
+      en: 'Certificate of Compliance',
+    },
+    updateDate: '2022-01-01',
+    type: 'doc',
+    links: {
+      en: `${CDNURL}docs/en/mock-doc.pdf`,
+      tr: `${CDNURL}docs/tr/mock-doc.pdf`,
+    },
+    showLastUpdate: false,
+    description: 'Mock Download',
+    tags: ['certificate', 'compliance', 'uygunluk', 'serfitika'],
+  },
+  {
+    slug: 'abs-profile-for-slicer',
+    title: {
+      tr: 'Dilimleyici için ABS Profili',
+      en: 'ABS Profile for Slicer',
+    },
+    type: 'doc',
+    updateDate: '2022-01-01',
+    links: {
+      en: `${CDNURL}docs/en/mock-doc.pdf`,
+      tr: `${CDNURL}docs/tr/mock-doc.pdf`,
+    },
+    showLastUpdate: false,
+    description: 'Mock Download',
+    tags: ['abs', 'profile', 'slicer', 'dilimleyici', 'profil'],
+  },
+  {
+    slug: 'multimaterial-compatibility',
+    title: {
+      tr: 'Çoklu Malzeme Uyumluluğu',
+      en: 'Multimaterial Compatibility',
+    },
+    type: 'doc',
+    updateDate: '2022-01-01',
+    links: {
+      en: `${CDNURL}docs/en/mock-doc.pdf`,
+      tr: `${CDNURL}docs/tr/mock-doc.pdf`,
+    },
+    showLastUpdate: false,
+    description: 'Mock Download',
+    tags: ['multimaterial', 'compatibility', 'uyumluluk', 'malzeme'],
+  },
+  {
+    slug: 'nfc-specs',
+    title: {
+      tr: 'NFC Özellikleri',
+      en: 'NFC Specs',
+    },
+    type: 'doc',
+    updateDate: '2022-01-01',
+    links: {
+      en: `${CDNURL}docs/en/mock-doc.pdf`,
+      tr: `${CDNURL}docs/tr/mock-doc.pdf`,
+    },
+    showLastUpdate: false,
+    description: 'Mock Download',
+    tags: ['nfc', 'specs', 'özellikler'],
+  },
 ];
 
 const ProductPostCategories = [
@@ -301,25 +443,8 @@ const ProductContents = [
     categories: ProductPostCategories[0].categories,
     posts: ProductPosts[0],
     downloads: [
-      {
-        slug: 'xdesktop',
-        title: 'content-zxz3:downloads.1.title',
-        updateDate: '2022-01-01',
-        platforms: ['win', 'mac'],
-        links: {
-          win: 'https://d.zaxe.com/xdesktopwin',
-          mac: 'https://d.zaxe.com/xdesktopmac',
-        },
-        showLastUpdate: false,
-      },
-      {
-        slug: 'z3-handbook',
-        title: 'content-zxz3:downloads.2.title',
-        updateDate: '2022-01-01',
-        type: 'PDF',
-        link: 'https://zaxe.com',
-        showLastUpdate: true,
-      },
+      Downloadables.find(({ slug }) => slug === 'z3-handbook'),
+      Downloadables.find(({ slug }) => slug === 'xdesktop'),
     ],
   },
   {
@@ -365,32 +490,9 @@ const ProductContents = [
     categories: ProductPostCategories[1].categories,
     posts: ProductPosts[1],
     downloads: [
-      {
-        slug: 'x3-firmware',
-        title: 'content-zxx3:downloads.0.title',
-        updateDate: '2022-01-01',
-        link: 'https://zaxe.com',
-        showLastUpdate: true,
-      },
-      {
-        slug: 'xdesktop',
-        title: 'content-zxx3:downloads.1.title',
-        updateDate: '2022-01-01',
-        platforms: ['win', 'mac'],
-        links: {
-          win: 'https://d.zaxe.com/xdesktopwin',
-          mac: 'https://d.zaxe.com/xdesktopmac',
-        },
-        showLastUpdate: false,
-      },
-      {
-        slug: 'x3-handbook',
-        title: 'content-zxx3:downloads.2.title',
-        updateDate: '2022-01-01',
-        type: 'PDF',
-        link: 'https://zaxe.com',
-        showLastUpdate: true,
-      },
+      Downloadables.find(({ slug }) => slug === 'x3-handbook'),
+      Downloadables.find(({ slug }) => slug === 'x3-firmware'),
+      Downloadables.find(({ slug }) => slug === 'xdesktop'),
     ],
   },
   {
@@ -435,19 +537,7 @@ const ProductContents = [
     starterVideos: ProductVideos[2],
     categories: ProductPostCategories[2].categories,
     posts: ProductPosts[2],
-    downloads: [
-      {
-        slug: 'xdesktop',
-        title: 'content-zxxdesktop:downloads.0.title',
-        updateDate: '2022-01-01',
-        platforms: ['win', 'mac'],
-        links: {
-          win: 'https://d.zaxe.com/xdesktopwin',
-          mac: 'https://d.zaxe.com/xdesktopmac',
-        },
-        showLastUpdate: false,
-      },
-    ],
+    downloads: [Downloadables.find(({ slug }) => slug === 'xdesktop')],
   },
 ];
 
@@ -575,48 +665,11 @@ const QuickViewerContent = [
 ];
 
 const DownloadDocuments = [
-  {
-    name: {
-      tr: 'Güvenlik ve Teknik Veri Sayfaları',
-      en: 'Safety and Technical Data Sheets',
-    },
-    url: 'doc.zaxe',
-  },
-  {
-    name: {
-      tr: 'Uygunluk Belgesi',
-      en: 'Certificate of Compliance',
-    },
-    url: 'doc.zaxe',
-  },
-  {
-    name: {
-      tr: 'Dilimleyici için ABS Profili',
-      en: 'ABS Profile for Slicer',
-    },
-    url: 'doc.zaxe',
-  },
-  {
-    name: {
-      tr: "Dilimlemeyi xDesktop'a Aktarma",
-      en: 'How to Import Slicing to xDesktop',
-    },
-    url: 'doc.zaxe',
-  },
-  {
-    name: {
-      tr: 'Çoklu Malzeme Uyumluluğu',
-      en: 'Multimaterial Compatibility',
-    },
-    url: 'doc.zaxe',
-  },
-  {
-    name: {
-      tr: 'NFC Özellikleri',
-      en: 'NFC Specs',
-    },
-    url: 'doc.zaxe',
-  },
+  Downloadables.find(({ slug }) => slug === 'safety-and-technical-data-sheet'),
+  Downloadables.find(({ slug }) => slug === 'certificate-of-compliance'),
+  Downloadables.find(({ slug }) => slug === 'abs-profile-for-slicer'),
+  Downloadables.find(({ slug }) => slug === 'multimaterial-compatibility'),
+  Downloadables.find(({ slug }) => slug === 'nfc-specs'),
 ];
 
 const Content = {
@@ -627,6 +680,7 @@ const Content = {
     'content-zxx3',
     'content-zxxdesktop',
   ],
+
   products: Products,
   productPosts: ProductPosts,
   productVideos: ProductVideos,
@@ -636,6 +690,7 @@ const Content = {
     quickViewer: QuickViewerContent,
     downloadDocuments: DownloadDocuments,
   },
+  downloadables: Downloadables,
   OSIcons,
 };
 export default Content;

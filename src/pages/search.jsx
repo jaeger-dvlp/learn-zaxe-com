@@ -13,6 +13,7 @@ import SearchBar from '@/src/components/categoriespage/SearchBar';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Images from '../images/Images';
+import DownloadBlock from '../components/misc/DownloadBlock';
 
 function Search({ posts: Posts }) {
   const router = useRouter();
@@ -22,6 +23,7 @@ function Search({ posts: Posts }) {
 
   const [filteredPosts, setFilteredPosts] = React.useState([]);
   const [filteredVideos, setFilteredVideos] = React.useState([]);
+  const [filteredDownloads, setFilteredDownloads] = React.useState([]);
 
   const PostActions = {
     GetQueriedPosts: async ({ queries }) => {
@@ -99,9 +101,57 @@ function Search({ posts: Posts }) {
     },
   };
 
+  const DownloadsActions = {
+    GetDownloads: () => {
+      const allDownloads = Content.downloadables;
+      return allDownloads;
+    },
+    ClearDuplicatedArray: (DuplicatedArray) => {
+      const uniqueArray = [];
+      DuplicatedArray.map((download) => {
+        if (
+          uniqueArray.find(({ slug }) => slug === download.slug) === undefined
+        ) {
+          return uniqueArray.push(download);
+        }
+        return null;
+      });
+
+      return uniqueArray;
+    },
+    GetQueriedDownloads: ({ queries }) => {
+      const queriedDownloads = queries
+        .map((query) =>
+          DownloadsActions.GetDownloads().filter(({ tags }) =>
+            tags.find(
+              (tag) =>
+                tag.toLowerCase() === query ||
+                (query.length > 2 &&
+                  tag.length > 2 &&
+                  tag.toLowerCase().includes(query))
+            )
+          )
+        )
+        .flat();
+
+      return queriedDownloads;
+    },
+    FilterDownloadsByQuery: (queries) => {
+      const QueriedDownloads = DownloadsActions.GetQueriedDownloads({
+        queries,
+      });
+      const ClearedDownloads =
+        DownloadsActions.ClearDuplicatedArray(QueriedDownloads);
+      setFilteredDownloads(ClearedDownloads);
+    },
+  };
+
   const FilterContent = () => {
     PostActions.FilterPostsByQuery(searchQuery.toLowerCase().split(' '));
     VideoActions.FilterVideosByQuery(searchQuery.toLowerCase().split(' '));
+    DownloadsActions.FilterDownloadsByQuery(
+      searchQuery.toLowerCase().split(' ')
+    );
   };
 
   React.useEffect(() => {
@@ -224,7 +274,16 @@ function Search({ posts: Posts }) {
               <span>{t('common:search.downloads')}</span>
             </h2>
             <nav className="relative flex flex-wrap items-center justify-center w-full gap-14">
-              <NoContent />
+              {filteredDownloads.length > 0 ? (
+                filteredDownloads.map((download) => (
+                  <DownloadBlock
+                    key={`download-${download.slug}`}
+                    download={download}
+                  />
+                ))
+              ) : (
+                <NoContent />
+              )}
             </nav>
           </section>
         </section>

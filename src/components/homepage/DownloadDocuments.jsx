@@ -1,13 +1,14 @@
 import React from 'react';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { BsImage } from 'react-icons/bs';
-import { i18n, useTranslation } from 'next-i18next';
 import Content from '@/src/content/Content';
+import { useTranslation } from 'next-i18next';
 
 function DownloadDocuments() {
+  const router = useRouter();
   const { t } = useTranslation();
-
   const [documents] = React.useState(Content.components.downloadDocuments);
+
   return (
     <div
       data-aos="fade"
@@ -22,19 +23,24 @@ function DownloadDocuments() {
               {t('homepage.download-documents.heading')}
             </h1>
             <ul className="grid w-full grid-cols-1 gap-3 place-content-start place-items-start">
-              {documents.map((document) => (
-                <li key={document.name.en}>
-                  <Link
-                    href={`/documents/${i18n.language}/${document.url}`}
-                    locale={false}
-                    download
-                  >
-                    <a className="text-xl font-medium transition-all duration-150 hover:text-black xl:text-2xl lg:text-lg text-zaxe">
-                      {document.name[i18n.language]}
+              {documents.map(
+                ({
+                  slug: docSlug,
+                  title: docTitle,
+                  link: docLink,
+                  links: docLinks,
+                }) => (
+                  <li key={docSlug}>
+                    <a
+                      href={docLinks ? docLinks[router.locale] : docLink}
+                      download
+                      className="text-xl font-medium transition-all duration-150 hover:text-black xl:text-2xl lg:text-lg text-zaxe"
+                    >
+                      {docTitle[router.locale]}
                     </a>
-                  </Link>
-                </li>
-              ))}
+                  </li>
+                )
+              )}
             </ul>
           </div>
           <div className="items-center justify-center hidden w-full col-span-7 xl:flex lg:flex">
