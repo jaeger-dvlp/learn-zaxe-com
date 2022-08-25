@@ -74,7 +74,7 @@ function ProductNav({ product }) {
         <p className="w-full xl:text-left lg:text-left text-center text-xl my-5 max-w-md font-medium text-[#666666]">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </p>
-        <SearchBar />
+        <SearchBar className="product-nav-search-bar" />
       </div>
     </div>
   );
