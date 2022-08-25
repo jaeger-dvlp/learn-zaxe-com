@@ -150,30 +150,24 @@ const ProductVideos = [
 
 const Downloadables = [
   {
-    slug: 'z3-handbook',
+    slug: 'z3-user-manual',
     title: 'content-zxz3:downloads.2.title',
     updateDate: '2022-01-01',
     type: 'doc',
-    links: {
-      en: `${CDNURL}docs/en/mock-doc.pdf`,
-      tr: `${CDNURL}docs/tr/mock-doc.pdf`,
-    },
+    link: `${CDNURL}docs/global/zaxe-z3-user-manual.pdf`,
     showLastUpdate: true,
-    description: "Zaxe Z3's Handbook",
-    tags: ['z3', 'handbook', 'kılavuz', 'kullanım'],
+    description: "Zaxe Z3's User Manual",
+    tags: ['z3', 'handbook', 'user', 'manual', 'kılavuz', 'kullanım'],
   },
   {
-    slug: 'x3-handbook',
+    slug: 'x3-user-manual',
     title: 'content-zxx3:downloads.2.title',
     updateDate: '2022-01-01',
     type: 'doc',
-    links: {
-      en: `${CDNURL}docs/en/mock-doc.pdf`,
-      tr: `${CDNURL}docs/tr/mock-doc.pdf`,
-    },
+    link: `${CDNURL}docs/global/zaxe-x3-user-manual.pdf`,
     showLastUpdate: true,
     description: "Zaxe X3's Handbook",
-    tags: ['x3', 'handbook', 'kılavuz', 'kullanım'],
+    tags: ['x3', 'handbook', 'user', 'manual', 'kılavuz', 'kullanım'],
   },
   {
     slug: 'x3-firmware',
@@ -443,7 +437,7 @@ const ProductContents = [
     categories: ProductPostCategories[0].categories,
     posts: ProductPosts[0],
     downloads: [
-      Downloadables.find(({ slug }) => slug === 'z3-handbook'),
+      Downloadables.find(({ slug }) => slug === 'z3-user-manual'),
       Downloadables.find(({ slug }) => slug === 'xdesktop'),
     ],
   },
@@ -490,7 +484,7 @@ const ProductContents = [
     categories: ProductPostCategories[1].categories,
     posts: ProductPosts[1],
     downloads: [
-      Downloadables.find(({ slug }) => slug === 'x3-handbook'),
+      Downloadables.find(({ slug }) => slug === 'x3-user-manual'),
       Downloadables.find(({ slug }) => slug === 'x3-firmware'),
       Downloadables.find(({ slug }) => slug === 'xdesktop'),
     ],
