@@ -14,15 +14,31 @@ function SearchBar({ className }) {
   const [suggestions] = React.useState([
     {
       text: {
-        en: 'How to change Nozzle of Zaxe Z3?',
-        tr: 'Zaxe Z3 Nozül nasıl değiştirilir?',
+        en: 'How to replace fan of Zaxe X3 Printhead ?',
+        tr: 'Zaxe X3 Baskı kafası fanı nasıl değiştirilir ?',
+      },
+      keys: [
+        'fan',
+        'printhead',
+        'replace',
+        'change',
+        'x3',
+        'baskı',
+        'kafası',
+        'değiştir',
+      ],
+    },
+    {
+      text: {
+        en: 'How to change Nozzle of Zaxe Z3 ?',
+        tr: 'Zaxe Z3 Nozül nasıl değiştirilir ?',
       },
       keys: ['nozzle', 'change', 'z3', 'nozül', 'değiştir'],
     },
     {
       text: {
-        en: 'How to install Zaxe xDesktop?',
-        tr: 'Zaxe xDesktop nasıl kurulur?',
+        en: 'How to install Zaxe xDesktop ?',
+        tr: 'Zaxe xDesktop nasıl kurulur ?',
       },
       keys: ['xdesktop', 'install', 'kurulur', 'kur'],
     },
