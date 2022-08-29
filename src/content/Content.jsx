@@ -1,6 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { BsApple, BsWindows } from 'react-icons/bs';
-import { v4 as uuidV4 } from 'uuid';
+
+const { v4: uuidV4 } = require('uuid');
+const { BsApple, BsWindows } = require('react-icons/bs');
 
 const { CDNURL } = process.env;
 
@@ -687,4 +688,5 @@ const Content = {
   downloadables: Downloadables,
   OSIcons,
 };
-export default Content;
+
+module.exports = Content;
