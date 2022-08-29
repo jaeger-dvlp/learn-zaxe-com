@@ -1,8 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-import { v4 } from 'uuid';
-import matter from 'gray-matter';
-import Content from '../content/Content';
+const fs = require('fs');
+const path = require('path');
+const { v4 } = require('uuid');
+const matter = require('gray-matter');
+const Content = require('../content/Content');
 
 const getPost = async ({ postSlug, productSlug, locale }) => {
   const { data, content } = matter(
@@ -61,4 +61,4 @@ const getAllPosts = async ({ locale }) => {
   return AllPosts;
 };
 
-export default { getPost, getAllPosts };
+module.exports = { getPost, getAllPosts };
