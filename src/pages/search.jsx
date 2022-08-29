@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import Content from '@/src/content/Content';
 import { BiInfoCircle } from 'react-icons/bi';
 import { useTranslation } from 'next-i18next';
-import PostHandler from '@/src/utils/postHandler';
+import { getAllPosts } from '@/src/clients';
 import PostBlock from '@/src/components/misc/PostBlock';
 import VideoBlock from '@/src/components/misc/VideoBlock';
 import { MdArticle, MdVideoLibrary } from 'react-icons/md';
@@ -309,7 +309,7 @@ function NoContent() {
 export const getStaticProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale, Content.translations)),
-    posts: await PostHandler.getAllPosts({ locale }),
+    posts: await getAllPosts({ locale }),
   },
 });
 

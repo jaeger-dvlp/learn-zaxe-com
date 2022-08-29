@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import Images from '@/src/images/Images';
 import { MDXRemote } from 'next-mdx-remote';
 import Content from '@/src/content/Content';
-import PostHandler from '@/src/utils/postHandler';
+import { getPost } from '@/src/clients';
 import { serialize } from 'next-mdx-remote/serialize';
 import AlertBox from '@/src/components/articles/AlertBox';
 import ArticleVote from '@/src/components/articles/ArticleVote';
@@ -150,7 +150,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ locale, params }) => {
   const { product: productSlug, slug: postSlug } = params;
-  const post = await PostHandler.getPost({ postSlug, productSlug, locale });
+  const post = await getPost({ postSlug, productSlug, locale });
   const mdxSource = await serialize(post.content);
   return {
     props: {
