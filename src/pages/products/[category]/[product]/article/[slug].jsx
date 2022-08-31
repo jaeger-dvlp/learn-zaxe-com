@@ -1,20 +1,23 @@
 import React from 'react';
 import Head from 'next/head';
 import { i18n } from '@/next.config';
+import { getPost } from '@/src/clients';
 import { useRouter } from 'next/router';
 import Images from '@/src/images/Images';
 import { MDXRemote } from 'next-mdx-remote';
 import Content from '@/src/content/Content';
-import { getPost } from '@/src/clients';
+import rehypeHighlight from 'rehype-highlight';
 import { serialize } from 'next-mdx-remote/serialize';
+import FullCode from '@/src/components/articles/FullCode';
 import AlertBox from '@/src/components/articles/AlertBox';
+import ColumnCode from '@/src/components/articles/ColumnCode';
 import ArticleVote from '@/src/components/articles/ArticleVote';
 import ColumnImage from '@/src/components/articles/ColumnImage';
+import Breadcrumbs from '@/src/components/articles/Breadcrumbs';
 import ColumnSlider from '@/src/components/articles/ColumnSlider';
 import RelatedPosts from '@/src/components/articles/RelatedPosts';
 import FullScreenViewer from '@/src/components/articles/FullScreenViewer';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Breadcrumbs from '@/src/components/articles/Breadcrumbs';
 
 function Post({ data, content }) {
   const router = useRouter();
@@ -112,7 +115,14 @@ function Post({ data, content }) {
           <article>
             <MDXRemote
               {...content}
-              components={{ Images, ColumnImage, ColumnSlider, AlertBox }}
+              components={{
+                Images,
+                ColumnImage,
+                ColumnSlider,
+                ColumnCode,
+                AlertBox,
+                FullCode,
+              }}
             />
           </article>
           <ArticleVote />
@@ -151,7 +161,9 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ locale, params }) => {
   const { product: productSlug, slug: postSlug } = params;
   const post = await getPost({ postSlug, productSlug, locale });
-  const mdxSource = await serialize(post.content);
+  const mdxSource = await serialize(post.content, {
+    mdxOptions: { rehypePlugins: [rehypeHighlight] },
+  });
   return {
     props: {
       data: post.data,
