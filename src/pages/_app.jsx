@@ -1,8 +1,9 @@
 import AOS from 'aos';
 import React from 'react';
 import 'aos/dist/aos.css';
-import '@/src/styles/globals.css';
+import '@/src/styles/code.css';
 import '@/src/styles/posts.css';
+import '@/src/styles/globals.css';
 import '@/src/styles/animations.css';
 import '@/src/styles/fonts/fonts.css';
 import { appWithTranslation } from 'next-i18next';

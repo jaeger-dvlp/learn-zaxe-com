@@ -32,6 +32,15 @@ const ProductPosts = [
       category: 'repair',
       thumbnail: `${CDNURL}img/mockpostthumbnail4.webp`,
     },
+    {
+      title: {
+        tr: 'X3 Firmware Güncelleme',
+        en: 'X3 Firmware Update',
+      },
+      slug: 'firmware-update',
+      category: 'software',
+      thumbnail: `${CDNURL}img/mockpostthumbnail12.webp`,
+    },
   ],
   [
     {

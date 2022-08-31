@@ -14,7 +14,7 @@ function AlertBox({ children, alertType }) {
 
   return (
     <section
-      className={`flex xl:flex-nowrap lg:flex-nowrap flex-wrap border rounded-lg items-center justify-between w-full gap-3 p-3 relative top-5 ${AlertClass}`}
+      className={`flex xl:flex-nowrap lg:flex-nowrap alert-box flex-wrap border rounded-lg items-center justify-between w-fit gap-3 p-3 relative ${AlertClass}`}
     >
       <span className="flex items-center justify-center w-full xl:w-20 lg:w-20">
         <IoWarningOutline className="text-5xl text-center text-current relative z-[2]" />
