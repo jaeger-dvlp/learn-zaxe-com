@@ -38,5 +38,5 @@
   @apply w-full p-0 my-5 rounded-lg shadow-xl shadow-black/40;
 }
 .zaxe-kb-post pre code {
-  @apply p-5 overflow-auto text-xs rounded-lg;
+  @apply overflow-auto text-xs rounded-lg p-7;
 }
