@@ -23,13 +23,10 @@ function TipsNTrips() {
       data-aos-duration={500}
       className="w-full font-zaxe grid grid-cols-1 place-content-start place-items-center p-0 m-0 bg-[#232323]"
     >
-      <div className="grid w-full grid-cols-1 p-5 py-28 max-w-app place-content-start place-items-center gap-7">
+      <div className="grid w-full grid-cols-1 gap-20 p-5 py-28 max-w-app place-content-start place-items-center">
         <h1 className="text-2xl font-bold text-center text-zaxe xl:text-4xl lg:text-4xl">
           {t('components.tips-n-tricks.heading')}
         </h1>
-        <p className="text-[#DEDEDE] text-center xl:text-3xl lg:text-3xl text-xl font-medium w-full">
-          {t('components.tips-n-tricks.description')}
-        </p>
         <div className="flex flex-wrap items-center justify-center xl:gap-14 lg:gap-14 gap-7">
           {tips.map((value, index) => (
             <Link
