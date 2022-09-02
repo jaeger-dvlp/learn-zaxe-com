@@ -63,6 +63,7 @@ const ProductVideos = [
       label: 'content-zxz3:starterVideos.0.label',
       videoURL: `${CDNURL}video/mock-video.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/Z3_front.webp`,
+      category: 'tips-tricks',
       tags: [
         'unbox',
         'unboxing',
@@ -79,6 +80,7 @@ const ProductVideos = [
       label: 'content-zxz3:starterVideos.1.label',
       videoURL: `${CDNURL}video/mock-video.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/Z3_screen.webp`,
+      category: 'tips-tricks',
       tags: ['z3'],
     },
     {
@@ -87,6 +89,7 @@ const ProductVideos = [
       label: 'content-zxz3:starterVideos.2.label',
       videoURL: `${CDNURL}video/mock-video.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/Z3_printtable.webp`,
+      category: 'maintenance',
       tags: [
         'z3',
         'calibration',
@@ -104,6 +107,7 @@ const ProductVideos = [
       label: 'content-zxx3:starterVideos.0.label',
       videoURL: `${CDNURL}video/mock-video.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/X3_printtable.webp`,
+      category: 'tips-tricks',
       tags: [
         'unbox',
         'unboxing',
@@ -120,6 +124,7 @@ const ProductVideos = [
       label: 'content-zxx3:starterVideos.1.label',
       videoURL: `${CDNURL}video/mock-video.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/X3_screen.webp`,
+      category: 'tips-tricks',
       tags: ['x3'],
     },
     {
@@ -128,6 +133,7 @@ const ProductVideos = [
       label: 'content-zxx3:starterVideos.2.label',
       videoURL: `${CDNURL}video/mock-video.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/X3_corexy.webp`,
+      category: 'maintenance',
       tags: [
         'x3',
         'calibration',
@@ -145,6 +151,7 @@ const ProductVideos = [
       label: 'content-zxxdesktop:starterVideos.0.label',
       videoURL: `${CDNURL}video/mock-video-xdesktop.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/xdesktop_ui.webp`,
+      category: 'tips-tricks',
       tags: ['xdesktop', 'ui', 'user interface', 'kullanıcı arayüzü', 'arayüz'],
     },
     {
@@ -153,6 +160,7 @@ const ProductVideos = [
       label: 'content-zxxdesktop:starterVideos.1.label',
       videoURL: `${CDNURL}video/mock-video-xdesktop.mp4`,
       thumbnail: `${CDNURL}img/thumbnail/xdesktop_shortcuts.webp`,
+      category: 'tips-tricks',
       tags: ['xdesktop', 'shortcuts', 'kısayollar'],
     },
   ],
@@ -299,10 +307,6 @@ const ProductPostCategories = [
     product: 'zaxe-z3',
     categories: [
       {
-        label: 'content-zxz3:categories.0.label',
-        slug: 'start',
-      },
-      {
         label: 'content-zxz3:categories.1.label',
         slug: 'repair',
       },
@@ -314,10 +318,7 @@ const ProductPostCategories = [
         label: 'content-zxz3:categories.3.label',
         slug: 'tips-tricks',
       },
-      {
-        label: 'content-zxz3:categories.4.label',
-        slug: 'usingtheprinter',
-      },
+
       {
         label: 'content-zxz3:categories.5.label',
         slug: 'software',
@@ -326,19 +327,11 @@ const ProductPostCategories = [
         label: 'content-zxz3:categories.6.label',
         slug: 'troubleshooting',
       },
-      {
-        label: 'content-zxz3:categories.7.label',
-        slug: 'filaments',
-      },
     ],
   },
   {
     product: 'zaxe-x3',
     categories: [
-      {
-        label: 'content-zxx3:categories.0.label',
-        slug: 'start',
-      },
       {
         label: 'content-zxx3:categories.1.label',
         slug: 'repair',
@@ -351,10 +344,7 @@ const ProductPostCategories = [
         label: 'content-zxx3:categories.3.label',
         slug: 'tips-tricks',
       },
-      {
-        label: 'content-zxx3:categories.4.label',
-        slug: 'usingtheprinter',
-      },
+
       {
         label: 'content-zxx3:categories.5.label',
         slug: 'software',
@@ -362,10 +352,6 @@ const ProductPostCategories = [
       {
         label: 'content-zxx3:categories.6.label',
         slug: 'troubleshooting',
-      },
-      {
-        label: 'content-zxx3:categories.7.label',
-        slug: 'filaments',
       },
     ],
   },
@@ -379,10 +365,6 @@ const ProductPostCategories = [
       {
         label: 'content-zxxdesktop:categories.1.label',
         slug: 'tips-tricks',
-      },
-      {
-        label: 'content-zxxdesktop:categories.2.label',
-        slug: 'software',
       },
       {
         label: 'content-zxxdesktop:categories.3.label',
