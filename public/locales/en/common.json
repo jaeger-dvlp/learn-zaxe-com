@@ -116,6 +116,8 @@
     },
     "categories": {
       "title": "Categories",
+      "article": "Article",
+      "video": "Video",
       "gotopage-button": "Go to Page",
       "see-all": "See All",
       "all-categories": "All categories",

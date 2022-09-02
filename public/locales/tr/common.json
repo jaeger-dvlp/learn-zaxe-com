@@ -30,7 +30,7 @@
     "knowledge-base": "Bilgi Merkezi"
   },
   "search": {
-    "articles": "Yazılar",
+    "articles": "Makaleler",
     "videos": "Videolar",
     "downloads": "İndirmeler",
     "no-query-content": "Arama kriterlerine göre uygun içerik bulunamadı."
@@ -116,6 +116,8 @@
     },
     "categories": {
       "title": "Kategoriler",
+      "article": "Makale",
+      "video": "Video",
       "gotopage-button": "Sayfaya Git",
       "see-all": "Tümünü Gör",
       "all-categories": "Tüm kategoriler",
