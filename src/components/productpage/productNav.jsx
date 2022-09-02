@@ -1,23 +1,21 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import { useTranslation } from 'next-i18next';
 import SearchBar from '@/src/components/misc/SearchBar';
 
 function ProductNav({ product }) {
-  const { t } = useTranslation();
-
   return (
     <div
       data-aos="fade"
       data-aos-delay={200}
       data-aos-duration={500}
-      className="relative flex flex-wrap items-center justify-start w-full gap-5 p-5 xl:h-full lg:h-full xl:flex-nowrap lg:flex-nowrap xl:max-w-app lg:max-w-app md:max-w-md"
+      className="relative flex flex-wrap items-center justify-center w-full gap-5 p-5 xl:h-full lg:h-full xl:flex-nowrap lg:flex-nowrap xl:max-w-app lg:max-w-app md:max-w-md"
     >
       <div className="grid w-full grid-cols-1 xl:hidden lg:hidden place-content-start place-items-center">
-        <span className="text-3xl font-bold text-center text-zaxe">
+        {/*
+          <span className="text-3xl font-bold text-center text-zaxe">
           {t('product-page-components.product-nav.title')}
-        </span>
+          </span>
+          */}
         <h1 className="text-5xl font-bold text-center xl:text-7xl lg:text-7xl text-zaxe">
           {product.name}
         </h1>
@@ -29,6 +27,7 @@ function ProductNav({ product }) {
           alt={product.images.main.alt}
         />
       </div>
+      {/*
       <div className="h-full gap-4  xl:order-none lg:order-none order-2 grid xl:grid-cols-1 lg:grid-cols-1 grid-cols-2 place-content-end place-items-center w-full xl:max-w-[235px] lg:max-w-[235px] max-w-full">
         {product.content.navButtons.map(({ slug, isLink, linkData, label }) =>
           // eslint-disable-next-line no-nested-ternary
@@ -64,16 +63,21 @@ function ProductNav({ product }) {
           )
         )}
       </div>
-      <div className="relative grid w-full h-full grid-cols-1 gap-0 place-content-end xl:place-items-start lg:place-items-start place-items-center">
+      */}
+      <div className="relative xl:min-w-[28rem] lg:min-w-[28rem] min-w-full grid grid-cols-1 gap-5 place-content-end xl:place-items-start lg:place-items-start place-items-center">
+        {/*
         <span className="hidden text-3xl font-bold text-zaxe xl:block lg:block">
           {t('product-page-components.product-nav.title')}
         </span>
+        */}
         <h1 className="hidden font-bold text-7xl text-zaxe xl:block lg:block">
           {product.name}
         </h1>
+        {/*
         <p className="w-full xl:text-left lg:text-left text-center text-xl my-5 max-w-md font-medium text-[#666666]">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </p>
+        */}
         <SearchBar className="product-nav-search-bar" />
       </div>
     </div>
