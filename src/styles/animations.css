@@ -5,6 +5,13 @@
   animation-fill-mode: forwards;
 }
 
+.anim-fade-up-f {
+  animation-name: fadeInUpFast;
+  animation-duration: 0.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -13,5 +20,14 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpFast {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
