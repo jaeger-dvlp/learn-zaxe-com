@@ -13,19 +13,19 @@ function ColumnCode({ children: allChildren }) {
     } else {
       setChildren(allChildren);
     }
-  }, []);
+  }, [allChildren]);
 
   return (
     <section className="flex flex-wrap w-full gap-10 my-5 gap-y-5 post-column xl:flex-nowrap lg:flex-nowrap">
       {children && (
-        <article className="w-full relative -order-1 xl:w-[40%] lg:w-[40%] max-w-full">
+        <section className="w-full -order-1 xl:w-[40%] lg:w-[40%] max-w-full">
           {children}
-        </article>
+        </section>
       )}
       {codes && (
-        <section className="relative w-full xl:max-w-[60%] lg:max-w-[60%] p-0">
+        <article className="w-full xl:max-w-[60%] lg:max-w-[60%] p-0">
           {codes}
-        </section>
+        </article>
       )}
     </section>
   );
