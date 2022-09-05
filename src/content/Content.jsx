@@ -10,6 +10,18 @@ const OSIcons = {
   mac: <BsApple />,
 };
 
+const GlobalPosts = [
+  {
+    title: {
+      tr: 'Baskılarda Büzülmeyi Engelleme',
+      en: 'How to Fix Warping',
+    },
+    slug: 'how-to-fix-warping',
+    category: 'global',
+    thumbnail: `${CDNURL}img/mockpostthumbnail1.webp`,
+  },
+];
+
 const ProductPosts = [
   [
     {
@@ -672,6 +684,7 @@ const Content = {
   productVideos: ProductVideos,
   productCategories: ProductCategories,
   productPostCategories: ProductPostCategories,
+  globalPosts: GlobalPosts,
   components: {
     quickViewer: QuickViewerContent,
     downloadDocuments: DownloadDocuments,
