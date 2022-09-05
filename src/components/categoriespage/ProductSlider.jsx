@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,7 +12,7 @@ import Content from '@/src/content/Content';
 
 function ProductSlider() {
   const router = useRouter();
-  const [productSlider, setProductSlider] = useState(null);
+  const [productSlider, setProductSlider] = React.useState(null);
   const [products] = React.useState([
     Content.products.find(({ slug }) => slug === 'zaxe-xdesktop'),
     Content.products.find(({ slug }) => slug === 'zaxe-z3'),
@@ -22,7 +22,7 @@ function ProductSlider() {
     products.findIndex(({ slug }) => slug === router.query.product)
   );
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (productSlider && productSlider.activeIndex !== activeSlide) {
       productSlider.slideTo(activeSlide);
     }
