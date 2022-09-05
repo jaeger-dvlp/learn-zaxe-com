@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
+import Images from '@/src/images/Images';
 import Content from '@/src/content/Content';
 import { useTranslation } from 'next-i18next';
 import SearchBar from '@/src/components/categoriespage/SearchBar';
-import Image from 'next/image';
-import Images from '@/src/images/Images';
 
 function Footer() {
   const router = useRouter();
