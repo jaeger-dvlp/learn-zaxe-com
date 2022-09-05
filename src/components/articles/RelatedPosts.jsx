@@ -1,9 +1,10 @@
-import { useTranslation } from 'next-i18next';
-import { useRouter } from 'next/router';
 import React from 'react';
-import PostBlock from '../misc/PostBlock';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
+import PostBlock from '@/src/components/misc/PostBlock';
 
 function RelatedPosts({ relatedData }) {
+  const router = useRouter();
   const { Product, postCategorySlug: PostCategory } = relatedData;
   const {
     slug: productSlug,
@@ -14,7 +15,7 @@ function RelatedPosts({ relatedData }) {
       .filter(({ category }) => category === PostCategory.toLowerCase())
       .slice(0, 4)
   );
-  const router = useRouter();
+
   const {
     query: { product: queryProduct, category: queryPCategory },
   } = router;
