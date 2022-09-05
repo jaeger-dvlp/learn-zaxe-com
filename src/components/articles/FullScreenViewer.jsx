@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { BsX, BsChevronRight, BsChevronLeft } from 'react-icons/bs';
-import { useAppContext } from '../contexts/AppContext';
+import { useAppContext } from '@/src/components/contexts/AppContext';
 
 function FullScreenViewer() {
   const { CDNURL } = process.env;
