@@ -6,7 +6,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Images from '@/src/images/Images';
 import Products from '@/src/components/homepage/Products';
 import WelcomeSection from '@/src/components/homepage/WelcomeSection';
-import DownloadDocuments from '@/src/components/homepage/DownloadDocuments';
 
 function Home() {
   const { t } = useTranslation();
