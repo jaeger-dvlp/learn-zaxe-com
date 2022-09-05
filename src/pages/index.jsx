@@ -5,8 +5,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Images from '@/src/images/Images';
 import Products from '@/src/components/homepage/Products';
-import TipsNTrips from '@/src/components/main/TipsNTrips';
-import QuickViewer from '@/src/components/misc/QuickViewer';
 import WelcomeSection from '@/src/components/homepage/WelcomeSection';
 import DownloadDocuments from '@/src/components/homepage/DownloadDocuments';
 
@@ -58,8 +56,6 @@ function Home() {
       </Head>
       <WelcomeSection />
       <Products />
-      <QuickViewer />
-      <TipsNTrips />
       <DownloadDocuments />
     </>
   );
