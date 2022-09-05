@@ -56,7 +56,6 @@ function Home() {
       </Head>
       <WelcomeSection />
       <Products />
-      <DownloadDocuments />
     </>
   );
 }
