@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/future/image';
+import Content from '@/src/content/Content';
 import { useTranslation } from 'next-i18next';
 import { BsFillPlayFill } from 'react-icons/bs';
 import { useAppContext } from '@/src/components/contexts/AppContext';
-import Content from '@/src/content/Content';
 
 function VideoBlock({ props }) {
   const { label, videoURL, poster, productName } = props;
