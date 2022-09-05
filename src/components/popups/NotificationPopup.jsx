@@ -1,11 +1,11 @@
 import React from 'react';
-import { useTranslation } from 'next-i18next';
 import {
   BiErrorCircle,
   BiInfoCircle,
   BiCheckCircle,
   BiLoaderAlt,
 } from 'react-icons/bi';
+import { useTranslation } from 'next-i18next';
 import { useAppContext } from '@/src/components/contexts/AppContext';
 
 const Icons = {
