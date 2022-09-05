@@ -5,7 +5,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-
 import Content from '@/src/content/Content';
 import { i18n } from '@/next-i18next.config';
 import SearchBar from '@/src/components/categoriespage/SearchBar';

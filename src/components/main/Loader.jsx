@@ -1,7 +1,6 @@
+import React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
-
 import Images from '@/src/images/Images';
 
 function Loader() {
@@ -24,7 +23,7 @@ function Loader() {
     HideLoader();
   };
 
-  useEffect(() => StartLoader(), [Router.asPath]);
+  React.useEffect(() => StartLoader(), [Router.asPath]);
 
   return (
     loader.inHTML && (

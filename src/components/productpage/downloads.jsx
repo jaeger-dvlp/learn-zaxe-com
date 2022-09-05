@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-import DownloadBlock from '../misc/DownloadBlock';
+import DownloadBlock from '@/src/components/misc/DownloadBlock';
 
 function Downloads({ product }) {
   const { t } = useTranslation();

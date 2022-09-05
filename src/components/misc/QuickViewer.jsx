@@ -1,7 +1,7 @@
 import React from 'react';
 import { ImPlus } from 'react-icons/im';
-import { useTranslation } from 'next-i18next';
 import Content from '@/src/content/Content';
+import { useTranslation } from 'next-i18next';
 
 function QuickViewer() {
   const { t } = useTranslation();

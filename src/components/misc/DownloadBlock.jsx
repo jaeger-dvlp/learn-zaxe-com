@@ -2,11 +2,11 @@ import 'dayjs/locale/tr';
 import dayjs from 'dayjs';
 import React from 'react';
 import { useRouter } from 'next/router';
+import Content from '@/src/content/Content';
 import { BsDownload } from 'react-icons/bs';
 import { useTranslation } from 'next-i18next';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import { useAppContext } from '@/src/components/contexts/AppContext';
-import Content from '@/src/content/Content';
 
 function DownloadBlock({
   download: {

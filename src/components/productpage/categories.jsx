@@ -1,12 +1,13 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { i18n, useTranslation } from 'next-i18next';
-import { BiPrinter } from 'react-icons/bi';
-import { MdArticle, MdVideoLibrary } from 'react-icons/md';
 import Image from 'next/image';
-import { useAppContext } from '../contexts/AppContext';
+import { useRouter } from 'next/router';
+import { BiPrinter } from 'react-icons/bi';
+import { i18n, useTranslation } from 'next-i18next';
+import NoContent from '@/src/components/misc/NoContent';
+import { MdArticle, MdVideoLibrary } from 'react-icons/md';
+import { useAppContext } from '@/src/components/contexts/AppContext';
 
 function Categories({ product }) {
   const { t } = useTranslation();
@@ -126,7 +127,13 @@ function Categories({ product }) {
                     />
                   ))}
               </>
-            ) : (
+            ) : product.content.posts.filter(
+                ({ category }) => category === activeCategory
+              ).length +
+                product.content.starterVideos.filter(
+                  ({ category }) => category === activeCategory
+                ).length >
+              0 ? (
               <>
                 {product.content.posts
                   .filter(({ category }) => category === activeCategory)
@@ -169,6 +176,8 @@ function Categories({ product }) {
                     )
                   )}
               </>
+            ) : (
+              <NoContent />
             )}
             <GetSeeAllButton props={{ activeCategory, product, router }} />
           </div>

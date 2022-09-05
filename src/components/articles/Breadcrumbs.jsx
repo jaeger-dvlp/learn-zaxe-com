@@ -6,8 +6,9 @@ import { BsChevronRight } from 'react-icons/bs';
 
 function Breadcrumbs({ links }) {
   const router = useRouter();
-  const { t } = useTranslation();
   const { locale } = router;
+  const { t } = useTranslation();
+
   return (
     <section
       id="bread"

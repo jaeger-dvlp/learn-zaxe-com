@@ -1,6 +1,7 @@
-import { useTranslation } from 'next-i18next';
+import React from 'react';
 import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
+import { BiPrinter } from 'react-icons/bi';
+import { useTranslation } from 'next-i18next';
 
 function CategoryBar({ product }) {
   const router = useRouter();
@@ -14,7 +15,7 @@ function CategoryBar({ product }) {
     slug: productSlug,
   } = product;
 
-  useEffect(() => {
+  React.useEffect(() => {
     setSelectedProdCategory(
       postCategories.find(({ slug }) => slug === postCategory || null)
     );
@@ -37,11 +38,7 @@ function CategoryBar({ product }) {
           />
         </div>
         <ul className="hidden grid-cols-1 gap-3 xl:grid lg:grid place-content-start place-items-start">
-          <li
-            className={`${
-              !selectedProdCategory && '!text-zaxe !font-medium'
-            } text-2xl text-[#868686] hover:text-zaxe transition-all duration-200`}
-          >
+          <li className="text-2xl text-[#868686] w-full hover:text-zaxe transition-all duration-200">
             <button
               type="button"
               onClick={() => {
@@ -49,29 +46,39 @@ function CategoryBar({ product }) {
                   `/products/${productCategory.slug}/${product.slug}/categories`
                 );
               }}
+              className={`${
+                !selectedProdCategory && '!bg-zaxe !text-white !hover:bg-zaxe'
+              } flex items-center justify-start w-full gap-5 p-3 px-5 transition-all duration-150 bg-zaxe/10 text-zaxe hover:bg-zaxe/30 active:scale-90 rounded-xl`}
             >
-              {t('common:product-page-components.categories.all-categories')}
+              <BiPrinter className="text-3xl" />
+              <span className="text-xl font-semibold text-center xl:text-left lg:text-left group-hover:font-semibold">
+                {t('common:product-page-components.categories.all-categories')}
+              </span>
             </button>
           </li>
           {postCategories.map(
             ({ slug: prodCategorySlug, label: prodCategoryLabel }) => (
               <li
-                className={`${
-                  selectedProdCategory &&
-                  selectedProdCategory.slug === prodCategorySlug &&
-                  '!text-zaxe !font-medium'
-                } text-2xl text-[#868686] hover:text-zaxe transition-all duration-200`}
+                className="text-2xl text-[#868686] w-full hover:text-zaxe transition-all duration-200"
                 key={`${productSlug}-${prodCategorySlug}`}
               >
                 <button
                   type="button"
+                  className={`${
+                    selectedProdCategory &&
+                    selectedProdCategory.slug === prodCategorySlug &&
+                    '!bg-zaxe !text-white !hover:bg-zaxe'
+                  } flex items-center justify-start w-full gap-5 p-3 px-5 transition-all duration-150 bg-zaxe/10 text-zaxe hover:bg-zaxe/30 active:scale-90 rounded-xl`}
                   onClick={() => {
                     router.push(
                       `/products/${productCategory.slug}/${product.slug}/categories?c=${prodCategorySlug}`
                     );
                   }}
                 >
-                  {t(prodCategoryLabel)}
+                  <BiPrinter className="text-3xl" />
+                  <span className="text-xl font-semibold text-center xl:text-left lg:text-left group-hover:font-semibold">
+                    {t(prodCategoryLabel)}
+                  </span>
                 </button>
               </li>
             )

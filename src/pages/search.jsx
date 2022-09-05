@@ -1,19 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import Images from '@/src/images/Images';
 import Content from '@/src/content/Content';
-import { BiInfoCircle } from 'react-icons/bi';
-import { useTranslation } from 'next-i18next';
 import { getAllPosts } from '@/src/clients';
+import { useTranslation } from 'next-i18next';
 import PostBlock from '@/src/components/misc/PostBlock';
+import NoContent from '@/src/components/misc/NoContent';
 import VideoBlock from '@/src/components/misc/VideoBlock';
 import { MdArticle, MdVideoLibrary } from 'react-icons/md';
+import DownloadBlock from '@/src/components/misc/DownloadBlock';
 import { BsFillFileEarmarkArrowDownFill } from 'react-icons/bs';
 import SearchBar from '@/src/components/categoriespage/SearchBar';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
-import Images from '../images/Images';
-import DownloadBlock from '../components/misc/DownloadBlock';
 
 function Search({ posts: Posts }) {
   const router = useRouter();
@@ -289,20 +288,6 @@ function Search({ posts: Posts }) {
         </section>
       </section>
     </>
-  );
-}
-
-function NoContent() {
-  const { t } = useTranslation();
-  return (
-    <section className="flex flex-wrap items-start justify-center w-full py-5 font-zaxe">
-      <article className="grid grid-cols-1 gap-2 place-content-start place-items-center">
-        <BiInfoCircle className="w-10 h-10 p-2 rounded-full text-md text-zinc-400 bg-zinc-200" />
-        <p className="font-semibold text-center text-md text-zinc-400">
-          {t('common:search.no-query-content')}
-        </p>
-      </article>
-    </section>
   );
 }
 

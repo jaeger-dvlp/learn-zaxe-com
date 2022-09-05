@@ -2,16 +2,14 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
 import { Navigation } from 'swiper';
+import Content from '@/src/content/Content';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { i18n, useTranslation } from 'next-i18next';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-
-import Content from '../../content/Content';
 
 function Products() {
   const { t } = useTranslation();

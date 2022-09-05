@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-import SearchBar from '../misc/SearchBar';
+import SearchBar from '@/src/components/misc/SearchBar';
 
 function WelcomeSection() {
   const { t } = useTranslation();

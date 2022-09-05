@@ -1,6 +1,6 @@
-import { useTranslation } from 'next-i18next';
 import React from 'react';
 import { BsCheckLg } from 'react-icons/bs';
+import { useTranslation } from 'next-i18next';
 
 function ArticleVote() {
   const [demoFeedback, setDemoFeedback] = React.useState(false);
