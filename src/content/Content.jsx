@@ -1,7 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 const { v4: uuidV4 } = require('uuid');
-const { BsApple, BsWindows } = require('react-icons/bs');
+const { FaCompass, FaTools } = require('react-icons/fa');
+const {
+  BsApple,
+  BsWindows,
+  BsFillFileEarmarkArrowDownFill,
+} = require('react-icons/bs');
 
 const { CDNURL } = process.env;
 
@@ -670,6 +675,98 @@ const DownloadDocuments = [
   Downloadables.find(({ slug }) => slug === 'nfc-specs'),
 ];
 
+const QuickNavigationHome = [
+  {
+    title: 'Featured',
+    icon: <FaCompass className="text-3xl" />,
+    allURL: '#',
+    links: [
+      {
+        title: 'Metal Expansion Kit',
+        link: '#',
+      },
+      {
+        title: 'PVA Removal Station',
+        link: '#',
+      },
+      {
+        title: 'Print Cores',
+        link: '#',
+      },
+      {
+        title: 'Spare Parts',
+        link: '#',
+      },
+      {
+        title: 'Maintenance Kits',
+        link: '#',
+      },
+      {
+        title: 'Advanced 3D Printer Tips',
+        link: '#',
+      },
+    ],
+  },
+  {
+    title: 'Maintenance',
+    icon: <FaTools className="text-3xl" />,
+    allURL: '#',
+    links: [
+      {
+        title: 'How to fix warping',
+        link: '#',
+      },
+      {
+        title: 'How to fix stringing',
+        link: '#',
+      },
+      {
+        title: 'How to fix pillowing',
+        link: '#',
+      },
+      {
+        title: 'How to fix under-extrusion',
+        link: '#',
+      },
+      {
+        title: 'How to feed filament loader',
+        link: '#',
+      },
+      {
+        title: 'How to fix feed issues',
+        link: '#',
+      },
+    ],
+  },
+  {
+    title: 'Downloads',
+    icon: <BsFillFileEarmarkArrowDownFill className="text-3xl" />,
+    allURL: '#',
+    links: [
+      {
+        title: 'Z3 User Manual',
+        link: '#',
+      },
+      {
+        title: 'X3 User Manual',
+        link: '#',
+      },
+      {
+        title: 'X3 Firmware',
+        link: '#',
+      },
+      {
+        title: 'xlite Firmware',
+        link: '#',
+      },
+      {
+        title: 'xDesktop 2.3.16',
+        link: '#',
+      },
+    ],
+  },
+];
+
 const Content = {
   translations: [
     'common',
@@ -687,6 +784,7 @@ const Content = {
   globalPosts: GlobalPosts,
   components: {
     quickViewer: QuickViewerContent,
+    quickNavigation: QuickNavigationHome,
     downloadDocuments: DownloadDocuments,
   },
   downloadables: Downloadables,
