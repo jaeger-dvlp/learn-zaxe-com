@@ -2,8 +2,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Icon from '@/src/images/Icons';
+import { BsGrid } from 'react-icons/bs';
 import { useRouter } from 'next/router';
-import { BiPrinter } from 'react-icons/bi';
 import { i18n, useTranslation } from 'next-i18next';
 import NoContent from '@/src/components/misc/NoContent';
 import { MdArticle, MdVideoLibrary } from 'react-icons/md';
@@ -32,13 +33,13 @@ function Categories({ product }) {
           <div className="grid w-full max-w-sm grid-cols-1 gap-3 place-content-start place-items-center">
             <Link href={`${router.asPath}/categories`} locale={router.locale}>
               <a className="flex items-center w-full gap-5 p-3 px-5 transition-all duration-150 bg-zaxe/10 text-zaxe hover:bg-zaxe/30 active:scale-90 rounded-xl">
-                <BiPrinter className="text-3xl" />
+                <BsGrid className="w-10 h-10" />
                 <span className="text-xl font-semibold text-center xl:text-left lg:text-left group-hover:font-semibold">
                   {t('product-page-components.categories.all-categories')}
                 </span>
               </a>
             </Link>
-            {product.content.categories.map(({ label, slug }) => (
+            {product.content.categories.map(({ label, slug, icon }) => (
               <Link
                 key={`category-route-${slug}`}
                 href={`${router.asPath}/categories?c=${slug}`}
@@ -46,7 +47,9 @@ function Categories({ product }) {
                 locale={router.locale}
               >
                 <a className="flex items-center justify-start w-full gap-5 p-3 px-5 transition-all duration-150 bg-zaxe/10 text-zaxe hover:bg-zaxe/30 active:scale-90 rounded-xl">
-                  <BiPrinter className="text-3xl" />
+                  <span className="w-10 h-10 text-current">
+                    <Icon name={icon} />
+                  </span>
                   <span className="text-xl font-semibold text-center xl:text-left lg:text-left group-hover:font-semibold">
                     {t(label)}
                   </span>
@@ -66,23 +69,25 @@ function Categories({ product }) {
               } flex items-center active:scale-90 justify-start w-full gap-5 p-3 px-5 transition-all duration-150 rounded-xl `}
               type="button"
             >
-              <BiPrinter className="text-3xl" />
+              <BsGrid className="w-10 h-10" />
               <span className="text-xl font-semibold text-center xl:text-left lg:text-left group-hover:font-semibold">
                 {t('product-page-components.categories.all-categories')}
               </span>
             </button>
-            {product.content.categories.map(({ label, slug }) => (
+            {product.content.categories.map(({ label, slug, icon }) => (
               <button
                 key={`category-button-${slug}`}
                 onClick={() => setActiveCategory(slug)}
                 className={`${
                   slug === activeCategory
-                    ? 'bg-zaxe text-white hover:bg-zaxe'
-                    : 'bg-zaxe/10 text-zaxe hover:bg-zaxe/30'
+                    ? 'bg-zaxe !text-white hover:bg-zaxe'
+                    : 'bg-zaxe/10 !text-zaxe hover:bg-zaxe/30'
                 } flex items-center active:scale-90 justify-start w-full gap-5 p-3 px-5 transition-all duration-150 rounded-xl `}
                 type="button"
               >
-                <BiPrinter className="text-3xl" />
+                <span className="w-10 h-10 text-current">
+                  <Icon name={icon} className="text-current" />
+                </span>
                 <span className="text-xl font-semibold text-center xl:text-left lg:text-left group-hover:font-semibold">
                   {t(label)}
                 </span>
