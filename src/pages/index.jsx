@@ -6,6 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Images from '@/src/images/Images';
 import Products from '@/src/components/homepage/Products';
 import WelcomeSection from '@/src/components/homepage/WelcomeSection';
+import QuickNavigation from '@/src/components/homepage/QuickNavigation';
 
 function Home() {
   const { t } = useTranslation();
@@ -55,6 +56,7 @@ function Home() {
       </Head>
       <WelcomeSection />
       <Products />
+      <QuickNavigation />
     </>
   );
 }
