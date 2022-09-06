@@ -1,12 +1,12 @@
 const Images = {
-  og: {
-    home: require('./og/zaxe-knowledge-base.png'),
-  },
   logo: {
     zxkb: require('./misc/logo-zxkb.png'),
   },
   loader: {
     zxkb: require('./misc/zaxe-kb-loader.webp'),
+  },
+  og: {
+    home: require('./og/zaxe-knowledge-base.png'),
   },
   products: {
     'zaxe-z3': {
