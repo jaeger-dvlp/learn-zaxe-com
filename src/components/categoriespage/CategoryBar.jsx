@@ -1,6 +1,7 @@
 import React from 'react';
+import Icon from '@/src/images/Icons';
+import { BsGrid } from 'react-icons/bs';
 import { useRouter } from 'next/router';
-import { BiPrinter } from 'react-icons/bi';
 import { useTranslation } from 'next-i18next';
 
 function CategoryBar({ product }) {
@@ -50,14 +51,14 @@ function CategoryBar({ product }) {
                 !selectedProdCategory && '!bg-zaxe !text-white !hover:bg-zaxe'
               } flex items-center justify-start w-full gap-5 p-3 px-5 transition-all duration-150 bg-zaxe/10 text-zaxe hover:bg-zaxe/30 active:scale-90 rounded-xl`}
             >
-              <BiPrinter className="text-3xl" />
+              <BsGrid className="w-10 h-10" />
               <span className="text-xl font-semibold text-center xl:text-left lg:text-left group-hover:font-semibold">
                 {t('common:product-page-components.categories.all-categories')}
               </span>
             </button>
           </li>
           {postCategories.map(
-            ({ slug: prodCategorySlug, label: prodCategoryLabel }) => (
+            ({ slug: prodCategorySlug, label: prodCategoryLabel, icon }) => (
               <li
                 className="text-2xl text-[#868686] w-full hover:text-zaxe transition-all duration-200"
                 key={`${productSlug}-${prodCategorySlug}`}
@@ -75,7 +76,9 @@ function CategoryBar({ product }) {
                     );
                   }}
                 >
-                  <BiPrinter className="text-3xl" />
+                  <span className="w-10 h-10 text-current">
+                    <Icon name={icon} className="text-current" />
+                  </span>
                   <span className="text-xl font-semibold text-center xl:text-left lg:text-left group-hover:font-semibold">
                     {t(prodCategoryLabel)}
                   </span>
