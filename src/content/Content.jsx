@@ -326,23 +326,28 @@ const ProductPostCategories = [
       {
         label: 'content-zxz3:categories.1.label',
         slug: 'repair',
+        icon: 'repair',
       },
       {
         label: 'content-zxz3:categories.2.label',
         slug: 'maintenance',
+        icon: 'maintenance',
       },
       {
         label: 'content-zxz3:categories.3.label',
         slug: 'tips-tricks',
+        icon: 'tips-tricks',
       },
 
       {
         label: 'content-zxz3:categories.5.label',
         slug: 'software',
+        icon: 'software',
       },
       {
         label: 'content-zxz3:categories.6.label',
         slug: 'troubleshooting',
+        icon: 'printer-troubleshooting',
       },
     ],
   },
@@ -352,23 +357,27 @@ const ProductPostCategories = [
       {
         label: 'content-zxx3:categories.1.label',
         slug: 'repair',
+        icon: 'repair',
       },
       {
         label: 'content-zxx3:categories.2.label',
         slug: 'maintenance',
+        icon: 'maintenance',
       },
       {
         label: 'content-zxx3:categories.3.label',
         slug: 'tips-tricks',
+        icon: 'tips-tricks',
       },
-
       {
         label: 'content-zxx3:categories.5.label',
         slug: 'software',
+        icon: 'software',
       },
       {
         label: 'content-zxx3:categories.6.label',
         slug: 'troubleshooting',
+        icon: 'printer-troubleshooting',
       },
     ],
   },
@@ -378,14 +387,17 @@ const ProductPostCategories = [
       {
         label: 'content-zxxdesktop:categories.0.label',
         slug: 'start',
+        icon: 'start',
       },
       {
         label: 'content-zxxdesktop:categories.1.label',
         slug: 'tips-tricks',
+        icon: 'tips-tricks',
       },
       {
         label: 'content-zxxdesktop:categories.3.label',
         slug: 'troubleshooting',
+        icon: 'pc-troubleshooting',
       },
     ],
   },
