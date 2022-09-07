@@ -384,16 +384,6 @@ const PostCategories = [
     ],
   },
   {
-    for: 'general',
-    categories: [
-      {
-        label: 'content-global:categories.0.label',
-        slug: 'repair',
-        icon: 'repair',
-      },
-    ],
-  },
-  {
     for: 'product',
     product: 'zaxe-xdesktop',
     categories: [
@@ -411,6 +401,16 @@ const PostCategories = [
         label: 'content-zxxdesktop:categories.3.label',
         slug: 'troubleshooting',
         icon: 'pc-troubleshooting',
+      },
+    ],
+  },
+  {
+    for: 'general',
+    categories: [
+      {
+        label: 'content-global:categories.0.label',
+        slug: 'repair',
+        icon: 'repair',
       },
     ],
   },
