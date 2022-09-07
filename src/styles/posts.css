@@ -11,7 +11,10 @@
 }
 
 .zaxe-kb-post h2:not(.post-name, .article-heading h2) {
-  @apply text-2xl font-bold text-[#666666] mt-5;
+  @apply text-3xl font-bold text-[#666666] mt-5;
+}
+.zaxe-kb-post a:not(.image-button) {
+  @apply font-medium underline transition-all duration-100 text-zaxe underline-offset-2 hover:text-black;
 }
 
 .zaxe-kb-post .post-column {
@@ -19,7 +22,7 @@
 }
 
 .zaxe-kb-post h3 {
-  @apply text-[#666666] text-2xl font-bold mt-5 py-0;
+  @apply text-[#666666] text-xl font-bold mt-5 py-0;
 }
 
 .zaxe-kb-post .alert-box {

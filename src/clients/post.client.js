@@ -17,6 +17,19 @@ const getPost = async ({ postSlug, productSlug, locale }) => {
   };
 };
 
+const getGlobalPost = async ({ postSlug, locale }) => {
+  const { data, content } = matter(
+    fs.readFileSync(
+      path.join(`src/posts/global/${locale}/${postSlug}.mdx`),
+      'utf8'
+    )
+  );
+  return {
+    data,
+    content,
+  };
+};
+
 const getAllPosts = async ({ locale }) => {
   const Products = Content.products;
   const allPostsUnfiltered = await Promise.all(
@@ -61,4 +74,4 @@ const getAllPosts = async ({ locale }) => {
   return AllPosts;
 };
 
-module.exports = { getPost, getAllPosts };
+module.exports = { getPost, getGlobalPost, getAllPosts };

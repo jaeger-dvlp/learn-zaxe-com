@@ -17,7 +17,7 @@ function ArticleVote() {
         <h1 className="text-2xl font-semibold text-zaxe">
           {t('common:article.vote-area.header')}
         </h1>
-        <section className="flex items-center justify-center w-full gap-7">
+        <div className="flex items-center justify-center w-full gap-7">
           <button
             type="button"
             onClick={() => setDemoFeedback(true)}
@@ -32,7 +32,7 @@ function ArticleVote() {
           >
             {t('common:article.vote-area.vote-button-no')}
           </button>
-        </section>
+        </div>
       </div>
       <div
         className={`${

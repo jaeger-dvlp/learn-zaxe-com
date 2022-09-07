@@ -1,25 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
 import { i18n } from '@/next.config';
-import { getPost } from '@/src/clients';
-import { useRouter } from 'next/router';
-import Images from '@/src/images/Images';
-import { MDXRemote } from 'next-mdx-remote';
 import Content from '@/src/content/Content';
 import rehypeHighlight from 'rehype-highlight';
 import { serialize } from 'next-mdx-remote/serialize';
-import FullCode from '@/src/components/articles/FullCode';
-import AlertBox from '@/src/components/articles/AlertBox';
-import ColumnCode from '@/src/components/articles/ColumnCode';
-import ArticleVote from '@/src/components/articles/ArticleVote';
-import ColumnImage from '@/src/components/articles/ColumnImage';
-import Breadcrumbs from '@/src/components/articles/Breadcrumbs';
-import ColumnSlider from '@/src/components/articles/ColumnSlider';
-import RelatedPosts from '@/src/components/articles/RelatedPosts';
-import FullScreenViewer from '@/src/components/articles/FullScreenViewer';
+import { getGlobalPost } from '@/src/clients/post.client';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Head from 'next/head';
+import FullScreenViewer from '@/src/components/articles/FullScreenViewer';
+import ArticleVote from '@/src/components/articles/ArticleVote';
+import { MDXRemote } from 'next-mdx-remote';
+import Breadcrumbs from '@/src/components/articles/Breadcrumbs';
+import Images from '@/src/images/Images';
+import ColumnImage from '@/src/components/articles/ColumnImage';
+import ColumnSlider from '@/src/components/articles/ColumnSlider';
+import ColumnCode from '@/src/components/articles/ColumnCode';
+import AlertBox from '@/src/components/articles/AlertBox';
+import FullCode from '@/src/components/articles/FullCode';
+import { useRouter } from 'next/router';
 
-function Post({ data, content }) {
+function Article({ data, content }) {
   const router = useRouter();
   const {
     title: postTitle,
@@ -30,30 +29,24 @@ function Post({ data, content }) {
     product: queryProductSlug,
     category: queryCategorySlug,
   } = router.query;
-  const Product = Content.products.find(
-    ({ slug }) => slug === queryProductSlug
-  );
   return (
     <>
       <Head>
-        <title>{`${postTitle} - ${Product.name}`}</title>
-        <meta name="description" content={`${postTitle} - ${Product.name}`} />
-        <meta name="title" content={`${postTitle} - ${Product.name}`} />
+        <title>{`${postTitle}`}</title>
+        <meta name="description" content={`${postTitle}`} />
+        <meta name="title" content={`${postTitle}`} />
         <meta
           name="keywords"
           content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
         />
-        <meta name="description" content={`${postTitle} - ${Product.name}`} />
+        <meta name="description" content={`${postTitle}`} />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
           content={`https://knowledge-base.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
-        <meta property="og:title" content={`${postTitle} - ${Product.name}`} />
-        <meta
-          property="og:description"
-          content={`${postTitle} - ${Product.name}`}
-        />
+        <meta property="og:title" content={`${postTitle}`} />
+        <meta property="og:description" content={`${postTitle}`} />
         <meta
           property="og:keywords"
           content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
@@ -68,14 +61,8 @@ function Post({ data, content }) {
         <meta property="twitter:site:id" content="@Zaxe3D" />
         <meta property="twitter:creator" content="@Zaxe3D" />
         <meta property="twitter:creator:id" content="@Zaxe3D" />
-        <meta
-          property="twitter:title"
-          content={`${postTitle} - ${Product.name}`}
-        />
-        <meta
-          property="twitter:description"
-          content={`${postTitle} - ${Product.name}`}
-        />
+        <meta property="twitter:title" content={`${postTitle}`} />
+        <meta property="twitter:description" content={`${postTitle}`} />
         <meta property="twitter:image" content={Images.og.home.default.src} />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link
@@ -93,16 +80,8 @@ function Post({ data, content }) {
         <Breadcrumbs
           links={[
             {
-              text: Product.name,
-              url: `/products/${Product.category.slug}/${Product.slug}`,
-            },
-            {
-              text: postCategory,
-              url: `/products/${Product.category.slug}/${Product.slug}/categories?c=${postCategorySlug}`,
-            },
-            {
               text: postTitle,
-              url: `/products/${Product.category.slug}/${Product.slug}/article/${postSlug}`,
+              url: `/${router.locale}/articles/${postSlug}/`,
             },
           ]}
         />
@@ -126,7 +105,6 @@ function Post({ data, content }) {
           </div>
         </section>
         <ArticleVote />
-        <RelatedPosts relatedData={{ Product, postCategorySlug }} />
       </main>
       <FullScreenViewer />
     </>
@@ -134,20 +112,12 @@ function Post({ data, content }) {
 }
 
 export const getStaticPaths = async () => {
-  const paths = Content.products
-    .map((product) =>
-      i18n.locales
-        .map((locale) =>
-          product.content.posts.map((post) => ({
-            params: {
-              category: product.category.slug,
-              product: product.slug,
-              slug: post.slug,
-            },
-            locale,
-          }))
-        )
-        .flat()
+  const paths = Content.globalPosts
+    .map((post) =>
+      i18n.locales.map((locale) => ({
+        params: { slug: post.slug },
+        locale,
+      }))
     )
     .flat();
 
@@ -158,8 +128,9 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ locale, params }) => {
-  const { product: productSlug, slug: postSlug } = params;
-  const post = await getPost({ postSlug, productSlug, locale });
+  const { slug: postSlug } = params;
+
+  const post = await getGlobalPost({ postSlug, locale });
   const mdxSource = await serialize(post.content, {
     mdxOptions: { rehypePlugins: [rehypeHighlight] },
   });
@@ -172,4 +143,4 @@ export const getStaticProps = async ({ locale, params }) => {
   };
 };
 
-export default Post;
+export default Article;
