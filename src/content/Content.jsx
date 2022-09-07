@@ -22,7 +22,7 @@ const GlobalPosts = [
       en: 'How to Fix Warping',
     },
     slug: 'how-to-fix-warping',
-    category: 'global',
+    category: 'general',
     thumbnail: `${CDNURL}img/mockpostthumbnail1.webp`,
   },
 ];
@@ -319,8 +319,9 @@ const Downloadables = [
   },
 ];
 
-const ProductPostCategories = [
+const PostCategories = [
   {
+    for: 'product',
     product: 'zaxe-z3',
     categories: [
       {
@@ -352,6 +353,7 @@ const ProductPostCategories = [
     ],
   },
   {
+    for: 'product',
     product: 'zaxe-x3',
     categories: [
       {
@@ -382,6 +384,17 @@ const ProductPostCategories = [
     ],
   },
   {
+    for: 'general',
+    categories: [
+      {
+        label: 'content-global:categories.0.label',
+        slug: 'repair',
+        icon: 'repair',
+      },
+    ],
+  },
+  {
+    for: 'product',
     product: 'zaxe-xdesktop',
     categories: [
       {
@@ -455,7 +468,7 @@ const ProductContents = [
       },
     ],
     starterVideos: ProductVideos[0],
-    categories: ProductPostCategories[0].categories,
+    categories: PostCategories[0].categories,
     posts: ProductPosts[0],
     downloads: [
       Downloadables.find(({ slug }) => slug === 'z3-user-manual'),
@@ -502,7 +515,7 @@ const ProductContents = [
       },
     ],
     starterVideos: ProductVideos[1],
-    categories: ProductPostCategories[1].categories,
+    categories: PostCategories[1].categories,
     posts: ProductPosts[1],
     downloads: [
       Downloadables.find(({ slug }) => slug === 'x3-user-manual'),
@@ -550,7 +563,7 @@ const ProductContents = [
       },
     ],
     starterVideos: ProductVideos[2],
-    categories: ProductPostCategories[2].categories,
+    categories: PostCategories[2].categories,
     posts: ProductPosts[2],
     downloads: [Downloadables.find(({ slug }) => slug === 'xdesktop')],
   },
@@ -786,13 +799,14 @@ const Content = {
     'content-zxz3',
     'content-zxx3',
     'content-zxxdesktop',
+    'content-global',
   ],
 
   products: Products,
   productPosts: ProductPosts,
   productVideos: ProductVideos,
   productCategories: ProductCategories,
-  productPostCategories: ProductPostCategories,
+  productPostCategories: PostCategories,
   globalPosts: GlobalPosts,
   components: {
     quickViewer: QuickViewerContent,
