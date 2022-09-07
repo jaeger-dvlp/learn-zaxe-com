@@ -23,8 +23,7 @@ function Post({ data, content }) {
   const router = useRouter();
   const {
     title: postTitle,
-    category: postCategory,
-    'category-slug': postCategorySlug,
+    category: { slug: postCategorySlug, name: postCategory },
   } = data;
   const {
     slug: postSlug,
@@ -112,7 +111,7 @@ function Post({ data, content }) {
             <h1>{postTitle}</h1>
             <h2>{postCategory}</h2>
           </section>
-          <article>
+          <div>
             <MDXRemote
               {...content}
               components={{
@@ -124,10 +123,10 @@ function Post({ data, content }) {
                 FullCode,
               }}
             />
-          </article>
-          <ArticleVote />
-          <RelatedPosts relatedData={{ Product, postCategorySlug }} />
+          </div>
         </section>
+        <ArticleVote />
+        <RelatedPosts relatedData={{ Product, postCategorySlug }} />
       </main>
       <FullScreenViewer />
     </>
