@@ -17,9 +17,7 @@ function QuickNavigation() {
               className="relative grid w-full grid-cols-1 gap-3 place-content-start place-items-center"
             >
               <h1 className="relative w-full grid grid-cols-1 gap-3 p-0 text-2xl font-semibold text-[#111111] ">
-                <span className="absolute flex items-center justify-center w-10 h-10 -left-0 -translate-x-[120%] top-1/2 -translate-y-1/2 rounded-xl">
-                  {item.icon}
-                </span>
+                <item.Icon className="absolute w-8 h-8 -left-0 -translate-x-[130%] top-1/2 -translate-y-1/2" />
                 <span>{t(item.title)}</span>
               </h1>
               <ul className="grid w-full grid-cols-1 gap-2 place-content-start place-items-start">
