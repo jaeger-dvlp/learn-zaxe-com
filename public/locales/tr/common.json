@@ -69,6 +69,16 @@
     "searching-for": "Şu değer aranıyor :"
   },
   "components": {
+    "quick-navigation": {
+      "columns": [
+        { "heading": "Trendler" },
+        { "heading": "Bakım" },
+        { "heading": "İndirmeler" }
+      ],
+      "buttons": {
+        "view-all": "Tümünü Gör"
+      }
+    },
     "quick-viewer": {
       "subjects": ["İlk Bakış", "Dökümanlar", "Videolar"],
       "substances": [

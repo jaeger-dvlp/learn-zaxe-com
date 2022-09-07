@@ -69,6 +69,16 @@
     "searching-for": "Searching Value :"
   },
   "components": {
+    "quick-navigation": {
+      "columns": [
+        { "heading": "Trending" },
+        { "heading": "Maintenance" },
+        { "heading": "Downloads" }
+      ],
+      "buttons": {
+        "view-all": "View All"
+      }
+    },
     "quick-viewer": {
       "subjects": ["Quick View", "Documents", "Videos"],
       "substances": [
