@@ -2,9 +2,12 @@ import React from 'react';
 import Content from '@/src/content/Content';
 import { useTranslation } from 'next-i18next';
 import { BiLinkExternal } from 'react-icons/bi';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 function QuickNavigation() {
   const [quickNavItems] = React.useState(Content.components.quickNavigation);
+  const router = useRouter();
   const { t } = useTranslation();
 
   return (
@@ -34,14 +37,18 @@ function QuickNavigation() {
                     </a>
                   </li>
                 ))}
-                <li className="flex items-center justify-start">
-                  <a
-                    href={item.allURL}
-                    className="p-2 px-4 mt-5 font-semibold text-white transition-all duration-150 rounded-lg shadow-lg text-md shadow-black/30 bg-zaxe hover:bg-black hover:text-white"
-                  >
-                    {t('components.quick-navigation.buttons.view-all')}
-                  </a>
-                </li>
+                {item.allURL && (
+                  <li className="flex items-center justify-start">
+                    <Link href={item.allURL} locale={router.locale}>
+                      <a className="flex items-center justify-start gap-2 mt-2 text-md font-mormal text-zaxe hover:text-black">
+                        <span>
+                          {t('components.quick-navigation.buttons.view-all')}
+                        </span>
+                        <BiLinkExternal className="text-sm text-current transition-all duration-200" />
+                      </a>
+                    </Link>
+                  </li>
+                )}
               </ul>
             </div>
           ))}
