@@ -703,7 +703,7 @@ const DownloadDocuments = [
 const QuickNavigationHome = [
   {
     title: 'components.quick-navigation.columns.0.heading',
-    icon: <FaCompass className="text-3xl" />,
+    Icon: ({ className }) => <FaCompass className={`text-3xl ${className}`} />,
     allURL: '#',
     links: [
       {
@@ -734,7 +734,7 @@ const QuickNavigationHome = [
   },
   {
     title: 'components.quick-navigation.columns.1.heading',
-    icon: <FaTools className="text-3xl" />,
+    Icon: ({ className }) => <FaTools className={`text-3xl ${className}`} />,
     allURL: '#',
     links: [
       {
@@ -765,7 +765,9 @@ const QuickNavigationHome = [
   },
   {
     title: 'components.quick-navigation.columns.2.heading',
-    icon: <BsFillFileEarmarkArrowDownFill className="text-3xl" />,
+    Icon: ({ className }) => (
+      <BsFillFileEarmarkArrowDownFill className={`text-3xl ${className}`} />
+    ),
     allURL: '#',
     links: [
       {
