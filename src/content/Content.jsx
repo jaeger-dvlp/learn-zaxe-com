@@ -702,7 +702,7 @@ const DownloadDocuments = [
 
 const QuickNavigationHome = [
   {
-    title: 'Featured',
+    title: 'components.quick-navigation.columns.0.heading',
     icon: <FaCompass className="text-3xl" />,
     allURL: '#',
     links: [
@@ -733,7 +733,7 @@ const QuickNavigationHome = [
     ],
   },
   {
-    title: 'Maintenance',
+    title: 'components.quick-navigation.columns.1.heading',
     icon: <FaTools className="text-3xl" />,
     allURL: '#',
     links: [
@@ -764,7 +764,7 @@ const QuickNavigationHome = [
     ],
   },
   {
-    title: 'Downloads',
+    title: 'components.quick-navigation.columns.2.heading',
     icon: <BsFillFileEarmarkArrowDownFill className="text-3xl" />,
     allURL: '#',
     links: [
