@@ -704,7 +704,7 @@ const QuickNavigationHome = [
   {
     title: 'components.quick-navigation.columns.0.heading',
     Icon: ({ className }) => <FaCompass className={`text-3xl ${className}`} />,
-    allURL: '#',
+    allURL: null,
     links: [
       {
         title: 'Metal Expansion Kit',
@@ -735,7 +735,7 @@ const QuickNavigationHome = [
   {
     title: 'components.quick-navigation.columns.1.heading',
     Icon: ({ className }) => <FaTools className={`text-3xl ${className}`} />,
-    allURL: '#',
+    allURL: null,
     links: [
       {
         title: 'How to fix warping',
@@ -768,7 +768,7 @@ const QuickNavigationHome = [
     Icon: ({ className }) => (
       <BsFillFileEarmarkArrowDownFill className={`text-3xl ${className}`} />
     ),
-    allURL: '#',
+    allURL: '/downloads',
     links: [
       {
         title: 'Z3 User Manual',
