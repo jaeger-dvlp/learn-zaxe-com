@@ -7,8 +7,8 @@ import { useRouter } from 'next/router';
 
 function QuickNavigation() {
   const [quickNavItems] = React.useState(Content.components.quickNavigation);
-  const router = useRouter();
   const { t } = useTranslation();
+  const router = useRouter();
 
   return (
     <div className="grid w-full grid-cols-1 px-0 bg-white xl:px-5 lg:px-5 font-zaxe py-28 place-content-start place-items-center">
@@ -32,7 +32,7 @@ function QuickNavigation() {
                       href={link.link}
                       className="relative flex group justify-start items-center gap-2 transition-all duration-100 after:absolute after:-bottom-1 after:h-[1px] after:w-0 after:bg-zaxe after:left-0 hover:after:w-full after:transition-all after:duration-[300ms] decoration-gray-600 hover:text-zaxe"
                     >
-                      <span>{link.title}</span>
+                      <span>{t(link.title)}</span>
                       <BiLinkExternal className="text-sm transition-all duration-200 text-zinc-500 group-hover:text-current" />
                     </a>
                   </li>
