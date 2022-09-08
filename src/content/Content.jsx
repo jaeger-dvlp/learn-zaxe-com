@@ -209,7 +209,7 @@ const Downloadables = [
     title: 'content-zxx3:downloads.0.title',
     updateDate: '2022-01-01',
     type: 'firmware',
-    link: `${CDNURL}firmwares/mock-firmware.zip`,
+    link: `${CDNURL}docs/global/zaxe-x3-user-manual.pdf`,
     showLastUpdate: true,
     description: "Zaxe X3's Firmware",
     tags: ['x3', 'firmware', 'yazılım'],
@@ -800,7 +800,7 @@ const QuickNavigationHome = [
     links: [
       {
         title: 'How to fix warping',
-        link: '#',
+        link: '/articles/how-to-fix-warping',
       },
       {
         title: 'How to fix stringing',
@@ -832,24 +832,28 @@ const QuickNavigationHome = [
     allURL: '/downloads',
     links: [
       {
-        title: 'Z3 User Manual',
-        link: '#',
+        title: 'components.quick-navigation.columns.2.links.0',
+        link: `${CDNURL}docs/global/zaxe-z3-user-manual.pdf`,
       },
       {
-        title: 'X3 User Manual',
-        link: '#',
+        title: 'components.quick-navigation.columns.2.links.1',
+        link: `${CDNURL}docs/global/zaxe-x3-user-manual.pdf`,
       },
       {
-        title: 'X3 Firmware',
-        link: '#',
+        title: 'components.quick-navigation.columns.2.links.2',
+        link: `${CDNURL}docs/global/zaxe-x3-user-manual.pdf`,
       },
       {
-        title: 'xlite Firmware',
-        link: '#',
+        title: 'components.quick-navigation.columns.2.links.3',
+        link: `${CDNURL}docs/global/zaxe-x3-user-manual.pdf`,
       },
       {
-        title: 'xDesktop 2.3.16',
-        link: '#',
+        title: 'components.quick-navigation.columns.2.links.4',
+        link: 'https://d.zaxe.com/xdesktopwin',
+      },
+      {
+        title: 'components.quick-navigation.columns.2.links.5',
+        link: 'https://d.zaxe.com/xdesktopmac',
       },
     ],
   },
