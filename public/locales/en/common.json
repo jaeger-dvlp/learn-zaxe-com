@@ -148,6 +148,14 @@
       "ok": "Okay"
     }
   },
+  "downloads": {
+    "heading": "Downloads",
+    "hints": {
+      "app": "App",
+      "doc": "Document",
+      "firmware": "Firmware"
+    }
+  },
   "article": {
     "vote-area": {
       "header": "Was this article helpful?",
