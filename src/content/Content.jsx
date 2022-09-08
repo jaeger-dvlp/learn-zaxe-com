@@ -215,7 +215,7 @@ const Downloadables = [
     tags: ['x3', 'firmware', 'yazılım'],
   },
   {
-    slug: 'xdesktop',
+    slug: 'xdesktop-latest',
     title: 'content-zxxdesktop:downloads.0.title',
     updateDate: '2022-01-01',
     type: 'app',
@@ -223,6 +223,61 @@ const Downloadables = [
     links: {
       win: 'https://d.zaxe.com/xdesktopwin',
       mac: 'https://d.zaxe.com/xdesktopmac',
+    },
+    showLastUpdate: false,
+    description: 'Zaxe xDesktop Download',
+    tags: ['xdesktop'],
+  },
+  {
+    slug: 'xdesktop-2-1-6',
+    title: 'content-zxxdesktop:downloads.1.title',
+    updateDate: '2022-01-01',
+    type: 'app',
+    platforms: ['win', 'mac'],
+    links: {
+      win: 'https://zaxe-static.s3.eu-central-1.amazonaws.com/xdesktop/release/XDesktop-2.1.6-win64.exe',
+      mac: 'https://zaxe-static.s3.eu-central-1.amazonaws.com/xdesktop/release/XDesktop-2.1.6-Darwin.dmg',
+    },
+    showLastUpdate: false,
+    description: 'Zaxe xDesktop Download',
+    tags: ['xdesktop'],
+  },
+  {
+    slug: 'xdesktop-2-1-5',
+    title: 'content-zxxdesktop:downloads.2.title',
+    updateDate: '2022-01-01',
+    type: 'app',
+    platforms: ['win', 'mac'],
+    links: {
+      win: 'https://zaxe-static.s3.eu-central-1.amazonaws.com/xdesktop/release/XDesktop-2.1.5-win64.exe',
+      mac: 'https://zaxe-static.s3.eu-central-1.amazonaws.com/xdesktop/release/XDesktop-2.1.5-Darwin.dmg',
+    },
+    showLastUpdate: false,
+    description: 'Zaxe xDesktop Download',
+    tags: ['xdesktop'],
+  },
+  {
+    slug: 'xdesktop-2-1-4',
+    title: 'content-zxxdesktop:downloads.3.title',
+    updateDate: '2022-01-01',
+    type: 'app',
+    platforms: ['win', 'mac'],
+    links: {
+      win: 'https://zaxe-static.s3.eu-central-1.amazonaws.com/xdesktop/release/XDesktop-2.1.4-win64.exe',
+      mac: 'https://zaxe-static.s3.eu-central-1.amazonaws.com/xdesktop/release/XDesktop-2.1.4-Darwin.dmg',
+    },
+    showLastUpdate: false,
+    description: 'Zaxe xDesktop Download',
+    tags: ['xdesktop'],
+  },
+  {
+    slug: 'xdesktop-2-0-0',
+    title: 'content-zxxdesktop:downloads.4.title',
+    updateDate: '2022-01-01',
+    type: 'app',
+    platforms: ['win'],
+    links: {
+      win: 'https://www.dropbox.com/s/z0v4id8knotxdzs/XDesktop-2.0.0-win32.exe?dl=0',
     },
     showLastUpdate: false,
     description: 'Zaxe xDesktop Download',
@@ -472,7 +527,7 @@ const ProductContents = [
     posts: ProductPosts[0],
     downloads: [
       Downloadables.find(({ slug }) => slug === 'z3-user-manual'),
-      Downloadables.find(({ slug }) => slug === 'xdesktop'),
+      Downloadables.find(({ slug }) => slug === 'xdesktop-latest'),
     ],
   },
   {
@@ -520,7 +575,7 @@ const ProductContents = [
     downloads: [
       Downloadables.find(({ slug }) => slug === 'x3-user-manual'),
       Downloadables.find(({ slug }) => slug === 'x3-firmware'),
-      Downloadables.find(({ slug }) => slug === 'xdesktop'),
+      Downloadables.find(({ slug }) => slug === 'xdesktop-latest'),
     ],
   },
   {
@@ -565,7 +620,7 @@ const ProductContents = [
     starterVideos: ProductVideos[2],
     categories: PostCategories[2].categories,
     posts: ProductPosts[2],
-    downloads: [Downloadables.find(({ slug }) => slug === 'xdesktop')],
+    downloads: [Downloadables.find(({ slug }) => slug === 'xdesktop-latest')],
   },
 ];
 
