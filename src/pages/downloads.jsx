@@ -1,6 +1,8 @@
 import React from 'react';
+import Head from 'next/head';
 import Icon from '@/src/images/Icons';
 import { useRouter } from 'next/router';
+import Images from '@/src/images/Images';
 import Content from '@/src/content/Content';
 import { useTranslation } from 'next-i18next';
 import { BsApple, BsWindows } from 'react-icons/bs';
@@ -50,61 +52,111 @@ function Downloads() {
   };
 
   return (
-    <div className="grid font-zaxe w-full grid-cols-1 p-0 m-0 place-content-start place-items-center py-[20vh]">
-      <div className="grid w-full grid-cols-1 gap-10 p-5 max-w-app place-content-start place-items-start">
-        <div className="flex items-center justify-center w-full">
-          <Breadcrumbs
-            links={[
-              {
-                text: t('downloads.heading'),
-                url: `/${router.locale}/downloads`,
-              },
-            ]}
-          />
-        </div>
-        <div className="flex items-center justify-center w-full">
-          <h1 className="flex flex-wrap items-center justify-center gap-2 text-3xl font-bold xl:text-4xl lg:text-4xl text-zaxe">
-            <DownloadIcon className="text-3xl xl:text-5xl lg:text-5xl" />
-            <span>{t('downloads.heading')}</span>
-          </h1>
-        </div>
-        <div className="grid w-full grid-cols-1 gap-5 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 place-items-center">
-          <div className="grid w-full h-full grid-cols-1 gap-5 p-5 place-content-start place-items-center">
-            <div className="w-full gap-2 grid grid-cols-1 place-content-end place-items-center h-[200px]">
-              <Icon name="zaxez3" className="w-32 text-zaxe" />
-              <h1 className="font-semibold text-md text-zaxe">Z3</h1>
-            </div>
-            <div className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
-              {Downloadables.zaxez3.map((downloadable) =>
-                getDownloadComponent(downloadable)
-              )}
-            </div>
+    <>
+      <Head>
+        <title>{t('meta.title.downloads')}</title>
+        <meta name="description" content={t('meta.content.downloads')} />
+        <meta name="title" content={t('meta.title.downloads')} />
+        <meta
+          name="keywords"
+          content="Zaxe, Zaxe Knowledge Base, Downloads, xDesktop, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
+        />
+        <meta name="description" content={t('meta.content.downloads')} />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://knowledge-base.zaxe.com/downloads"
+        />
+        <meta property="og:title" content={t('meta.title.downloads')} />
+        <meta property="og:description" content={t('meta.content.downloads')} />
+        <meta
+          property="og:keywords"
+          content="Zaxe, Zaxe Knowledge Base, Downloads, xDesktop Zaxe 3D, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
+        />
+        <meta property="og:image" content={Images.og.home.default.src} />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://knowledge-base.zaxe.com/downloads"
+        />
+        <meta property="twitter:site" content="@Zaxe3D" />
+        <meta property="twitter:site:id" content="@Zaxe3D" />
+        <meta property="twitter:creator" content="@Zaxe3D" />
+        <meta property="twitter:creator:id" content="@Zaxe3D" />
+        <meta property="twitter:title" content={t('meta.title.downloads')} />
+        <meta
+          property="twitter:description"
+          content={t('meta.content.downloads')}
+        />
+        <meta property="twitter:image" content={Images.og.home.default.src} />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link
+          rel="alternate"
+          hrefLang="tr"
+          href="https://knowledge-base.zaxe.com/tr/downloads"
+        />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://knowledge-base.zaxe.com/downloads"
+        />
+      </Head>
+      <div className="grid font-zaxe w-full grid-cols-1 p-0 m-0 place-content-start place-items-center py-[20vh]">
+        <div className="grid w-full grid-cols-1 gap-10 p-5 max-w-app place-content-start place-items-start">
+          <div className="flex items-center justify-center w-full">
+            <Breadcrumbs
+              links={[
+                {
+                  text: t('downloads.heading'),
+                  url: `/${router.locale}/downloads`,
+                },
+              ]}
+            />
           </div>
-          <div className="grid w-full h-full grid-cols-1 gap-5 p-5 place-content-start place-items-center">
-            <div className="w-full gap-2 grid grid-cols-1 place-content-end place-items-center h-[200px]">
-              <Icon name="zaxex3" className="w-24 text-zaxe" />
-              <h1 className="font-semibold text-md text-zaxe">X3</h1>
-            </div>
-            <div className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
-              {Downloadables.zaxex3.map((downloadable) =>
-                getDownloadComponent(downloadable)
-              )}
-            </div>
+          <div className="flex items-center justify-center w-full">
+            <h1 className="flex flex-wrap items-center justify-center gap-2 text-3xl font-bold xl:text-4xl lg:text-4xl text-zaxe">
+              <DownloadIcon className="text-3xl xl:text-5xl lg:text-5xl" />
+              <span>{t('downloads.heading')}</span>
+            </h1>
           </div>
-          <div className="grid w-full h-full grid-cols-1 gap-5 p-5 place-content-start place-items-center">
-            <div className="w-full gap-2 grid grid-cols-1 place-content-end place-items-center h-[200px]">
-              <Icon name="zaxexdesktop" className="w-32 text-zaxe" />
-              <h1 className="font-semibold text-md text-zaxe">xDesktop</h1>
+          <div className="grid w-full grid-cols-1 gap-5 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 place-items-center">
+            <div className="grid w-full h-full grid-cols-1 gap-5 p-5 place-content-start place-items-center">
+              <div className="w-full gap-2 grid grid-cols-1 place-content-end place-items-center h-[200px]">
+                <Icon name="zaxez3" className="w-32 text-zaxe" />
+                <h1 className="font-semibold text-md text-zaxe">Z3</h1>
+              </div>
+              <div className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
+                {Downloadables.zaxez3.map((downloadable) =>
+                  getDownloadComponent(downloadable)
+                )}
+              </div>
             </div>
-            <div className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
-              {Downloadables.xdesktop.map((downloadable) =>
-                getDownloadComponent(downloadable)
-              )}
+            <div className="grid w-full h-full grid-cols-1 gap-5 p-5 place-content-start place-items-center">
+              <div className="w-full gap-2 grid grid-cols-1 place-content-end place-items-center h-[200px]">
+                <Icon name="zaxex3" className="w-24 text-zaxe" />
+                <h1 className="font-semibold text-md text-zaxe">X3</h1>
+              </div>
+              <div className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
+                {Downloadables.zaxex3.map((downloadable) =>
+                  getDownloadComponent(downloadable)
+                )}
+              </div>
+            </div>
+            <div className="grid w-full h-full grid-cols-1 gap-5 p-5 place-content-start place-items-center">
+              <div className="w-full gap-2 grid grid-cols-1 place-content-end place-items-center h-[200px]">
+                <Icon name="zaxexdesktop" className="w-32 text-zaxe" />
+                <h1 className="font-semibold text-md text-zaxe">xDesktop</h1>
+              </div>
+              <div className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
+                {Downloadables.xdesktop.map((downloadable) =>
+                  getDownloadComponent(downloadable)
+                )}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
