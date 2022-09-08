@@ -73,7 +73,17 @@
       "columns": [
         { "heading": "Trendler" },
         { "heading": "Bakım" },
-        { "heading": "İndirmeler" }
+        {
+          "heading": "İndirmeler",
+          "links": [
+            "Z3 Kullanım Kılavuzu",
+            "X3 Kullanım Kılavuzu",
+            "X3 Firmware",
+            "xlite Firmware",
+            "xDesktop Son Ver. Win",
+            "xDesktop Son Ver. Mac"
+          ]
+        }
       ],
       "buttons": {
         "view-all": "Tümünü Gör"

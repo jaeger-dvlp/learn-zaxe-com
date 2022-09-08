@@ -71,9 +71,19 @@
   "components": {
     "quick-navigation": {
       "columns": [
-        { "heading": "Trending" },
-        { "heading": "Maintenance" },
-        { "heading": "Downloads" }
+        { "heading": "Trending", "links": [] },
+        { "heading": "Maintenance", "links": [] },
+        {
+          "heading": "Downloads",
+          "links": [
+            "Z3 User Manual",
+            "X3 User Manual",
+            "X3 Firmware",
+            "xlite Firmware",
+            "xDesktop Latest Win",
+            "xDesktop Latest Mac"
+          ]
+        }
       ],
       "buttons": {
         "view-all": "View All"
