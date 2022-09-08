@@ -6,8 +6,9 @@ import FullCode from '@/src/components/articles/FullCode';
 import ColumnCode from '@/src/components/articles/ColumnCode';
 import Breadcrumbs from '@/src/components/articles/Breadcrumbs';
 import ColumnImage from '@/src/components/articles/ColumnImage';
-import ColumnSlider from '@/src/components/articles/ColumnSlider';
+import ColumnVideo from '@/src/components/articles/ColumnVideo';
 import ArticleVote from '@/src/components/articles/ArticleVote';
+import ColumnSlider from '@/src/components/articles/ColumnSlider';
 
 function ArticleContent({ props }) {
   const { postTitle, postCategory, content, breadcrumbs } = props;
@@ -24,11 +25,12 @@ function ArticleContent({ props }) {
             {...content}
             components={{
               Images,
-              ColumnImage,
-              ColumnSlider,
-              ColumnCode,
-              AlertBox,
               FullCode,
+              AlertBox,
+              ColumnCode,
+              ColumnImage,
+              ColumnVideo,
+              ColumnSlider,
             }}
           />
         </div>
