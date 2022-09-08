@@ -224,7 +224,7 @@ function Search({ posts: Posts }) {
                     key={`post-${post.id}`}
                     props={{
                       postSlug: post.slug,
-                      postCategory: post['category-slug'],
+                      postCategory: post.category,
                       postTitle: { [router.locale]: post.title },
                       postThumbnail: post.thumbnail,
                       queryProduct: post['product-slug'],
