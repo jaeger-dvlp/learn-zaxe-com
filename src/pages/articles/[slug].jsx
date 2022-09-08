@@ -22,6 +22,7 @@ function Article({ data, content }) {
   const router = useRouter();
   const {
     title: postTitle,
+    // eslint-disable-next-line no-unused-vars
     category: { slug: postCategorySlug, name: postCategory },
   } = data;
   const {
