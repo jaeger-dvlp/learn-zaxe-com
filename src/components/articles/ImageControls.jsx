@@ -1,6 +1,6 @@
 import React from 'react';
-import { VscLinkExternal } from 'react-icons/vsc';
-import { BsArrowsFullscreen } from 'react-icons/bs';
+
+import { BsArrowsFullscreen, BsLink45Deg } from 'react-icons/bs';
 import { useAppContext } from '../contexts/AppContext';
 
 function ImageButtons({ props }) {
@@ -24,17 +24,17 @@ function ImageButtons({ props }) {
             imageURL,
           });
         }}
-        className="image-fullscreen-button backdrop-blur-sm z-[3] text-2xl text-zinc-100 p-1 hover:bg-zaxe bg-black/50 rounded-md transition-all duration-200"
+        className="image-fullscreen-button backdrop-blur-sm z-[3] flex justify-center items-center text-zinc-100 p-2 hover:bg-zaxe bg-black/50 rounded-md transition-all duration-200"
       >
-        <BsArrowsFullscreen className="p-0.5" />
+        <BsArrowsFullscreen className="w-5 h-5" />
       </button>
       <a
         href={`${CDNURL}${imageURL}`}
         target="_blank"
-        className="image-button backdrop-blur-sm z-[3] text-2xl text-zinc-100 p-1 hover:bg-zaxe bg-black/50 rounded-md transition-all duration-200"
+        className="image-button backdrop-blur-sm z-[3] flex justify-center items-center text-zinc-100 p-2 hover:bg-zaxe bg-black/50 rounded-md transition-all duration-200"
         rel="noreferrer"
       >
-        <VscLinkExternal className="p-0.5 m-0" />
+        <BsLink45Deg className="w-5 h-5" />
       </a>
     </div>
   );
