@@ -7,6 +7,7 @@ import Images from '@/src/images/Images';
 import { MDXRemote } from 'next-mdx-remote';
 import Content from '@/src/content/Content';
 import rehypeHighlight from 'rehype-highlight';
+import { useTranslation } from 'next-i18next';
 import { serialize } from 'next-mdx-remote/serialize';
 import FullCode from '@/src/components/articles/FullCode';
 import AlertBox from '@/src/components/articles/AlertBox';
@@ -24,6 +25,7 @@ function Post({ data, content }) {
   const {
     title: postTitle,
     category: { slug: postCategorySlug, name: postCategory },
+    description,
   } = data;
   const {
     slug: postSlug,
@@ -33,27 +35,33 @@ function Post({ data, content }) {
   const Product = Content.products.find(
     ({ slug }) => slug === queryProductSlug
   );
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>{`${postTitle} - ${Product.name}`}</title>
-        <meta name="description" content={`${postTitle} - ${Product.name}`} />
-        <meta name="title" content={`${postTitle} - ${Product.name}`} />
+        <title>{`${postTitle} - ${Product.name}${t(
+          'meta.title.article'
+        )}`}</title>
+        <meta
+          name="title"
+          content={`${postTitle} - ${Product.name}${t('meta.title.article')}`}
+        />
+        <meta name="description" content={`${description}`} />
         <meta
           name="keywords"
           content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
         />
-        <meta name="description" content={`${postTitle} - ${Product.name}`} />
+        <meta name="description" content={`${description}`} />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
           content={`https://knowledge-base.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
-        <meta property="og:title" content={`${postTitle} - ${Product.name}`} />
         <meta
-          property="og:description"
-          content={`${postTitle} - ${Product.name}`}
+          property="og:title"
+          content={`${postTitle} - ${Product.name}${t('meta.title.article')}`}
         />
+        <meta property="og:description" content={`${description}`} />
         <meta
           property="og:keywords"
           content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
@@ -70,12 +78,9 @@ function Post({ data, content }) {
         <meta property="twitter:creator:id" content="@Zaxe3D" />
         <meta
           property="twitter:title"
-          content={`${postTitle} - ${Product.name}`}
+          content={`${postTitle} - ${Product.name}${t('meta.title.article')}`}
         />
-        <meta
-          property="twitter:description"
-          content={`${postTitle} - ${Product.name}`}
-        />
+        <meta property="twitter:description" content={`${description}`} />
         <meta property="twitter:image" content={Images.og.home.default.src} />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link

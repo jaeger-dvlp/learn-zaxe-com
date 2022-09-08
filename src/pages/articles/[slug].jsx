@@ -1,22 +1,23 @@
 import React from 'react';
+import Head from 'next/head';
 import { i18n } from '@/next.config';
+import { useRouter } from 'next/router';
+import Images from '@/src/images/Images';
 import Content from '@/src/content/Content';
+import { MDXRemote } from 'next-mdx-remote';
+import { useTranslation } from 'next-i18next';
 import rehypeHighlight from 'rehype-highlight';
 import { serialize } from 'next-mdx-remote/serialize';
-import { getGlobalPost } from '@/src/clients/post.client';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Head from 'next/head';
-import FullScreenViewer from '@/src/components/articles/FullScreenViewer';
-import ArticleVote from '@/src/components/articles/ArticleVote';
-import { MDXRemote } from 'next-mdx-remote';
-import Breadcrumbs from '@/src/components/articles/Breadcrumbs';
-import Images from '@/src/images/Images';
-import ColumnImage from '@/src/components/articles/ColumnImage';
-import ColumnSlider from '@/src/components/articles/ColumnSlider';
-import ColumnCode from '@/src/components/articles/ColumnCode';
 import AlertBox from '@/src/components/articles/AlertBox';
 import FullCode from '@/src/components/articles/FullCode';
-import { useRouter } from 'next/router';
+import { getGlobalPost } from '@/src/clients/post.client';
+import ColumnCode from '@/src/components/articles/ColumnCode';
+import ArticleVote from '@/src/components/articles/ArticleVote';
+import Breadcrumbs from '@/src/components/articles/Breadcrumbs';
+import ColumnImage from '@/src/components/articles/ColumnImage';
+import ColumnSlider from '@/src/components/articles/ColumnSlider';
+import FullScreenViewer from '@/src/components/articles/FullScreenViewer';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 function Article({ data, content }) {
   const router = useRouter();
@@ -24,30 +25,35 @@ function Article({ data, content }) {
     title: postTitle,
     // eslint-disable-next-line no-unused-vars
     category: { slug: postCategorySlug, name: postCategory },
+    description,
   } = data;
   const {
     slug: postSlug,
     product: queryProductSlug,
     category: queryCategorySlug,
   } = router.query;
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>{`${postTitle}`}</title>
-        <meta name="description" content={`${postTitle}`} />
-        <meta name="title" content={`${postTitle}`} />
+        <title>{`${postTitle}${t('meta.title.article')}`}</title>
+        <meta name="description" content={`${description}`} />
+        <meta name="title" content={`${postTitle}${t('meta.title.article')}`} />
         <meta
           name="keywords"
           content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
         />
-        <meta name="description" content={`${postTitle}`} />
+        <meta name="description" content={`${description}`} />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
           content={`https://knowledge-base.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
-        <meta property="og:title" content={`${postTitle}`} />
-        <meta property="og:description" content={`${postTitle}`} />
+        <meta
+          property="og:title"
+          content={`${postTitle}${t('meta.title.article')}`}
+        />
+        <meta property="og:description" content={`${description}`} />
         <meta
           property="og:keywords"
           content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
@@ -62,8 +68,11 @@ function Article({ data, content }) {
         <meta property="twitter:site:id" content="@Zaxe3D" />
         <meta property="twitter:creator" content="@Zaxe3D" />
         <meta property="twitter:creator:id" content="@Zaxe3D" />
-        <meta property="twitter:title" content={`${postTitle}`} />
-        <meta property="twitter:description" content={`${postTitle}`} />
+        <meta
+          property="twitter:title"
+          content={`${postTitle}${t('meta.title.article')}`}
+        />
+        <meta property="twitter:description" content={`${description}`} />
         <meta property="twitter:image" content={Images.og.home.default.src} />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link
