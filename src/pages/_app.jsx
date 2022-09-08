@@ -12,6 +12,7 @@ import Loader from '@/src/components/main/Loader';
 import Header from '@/src/components/main/Header';
 import Footer from '@/src/components/main/Footer';
 import nextI18nextConfig from '@/next-i18next.config';
+import ScrollTop from '@/src/components/misc/ScrollTop';
 import VideoPopup from '@/src/components/popups/VideoPopup';
 import AppWrapper from '@/src/components/contexts/AppContext';
 import NotificationPopup from '@/src/components/popups/NotificationPopup';
@@ -27,6 +28,7 @@ function MyApp({ Component, pageProps }) {
       <NotificationPopup />
       <VideoPopup />
       <Component {...pageProps} />
+      <ScrollTop />
       <Footer />
     </AppWrapper>
   );
