@@ -620,7 +620,13 @@ const ProductContents = [
     starterVideos: ProductVideos[2],
     categories: PostCategories[2].categories,
     posts: ProductPosts[2],
-    downloads: [Downloadables.find(({ slug }) => slug === 'xdesktop-latest')],
+    downloads: [
+      Downloadables.find(({ slug }) => slug === 'xdesktop-latest'),
+      Downloadables.find(({ slug }) => slug === 'xdesktop-2-1-6'),
+      Downloadables.find(({ slug }) => slug === 'xdesktop-2-1-5'),
+      Downloadables.find(({ slug }) => slug === 'xdesktop-2-1-4'),
+      Downloadables.find(({ slug }) => slug === 'xdesktop-2-0-0'),
+    ],
   },
 ];
 
