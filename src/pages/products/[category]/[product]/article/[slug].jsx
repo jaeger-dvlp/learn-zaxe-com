@@ -4,21 +4,13 @@ import { i18n } from '@/next.config';
 import { getPost } from '@/src/clients';
 import { useRouter } from 'next/router';
 import Images from '@/src/images/Images';
-import { MDXRemote } from 'next-mdx-remote';
 import Content from '@/src/content/Content';
 import rehypeHighlight from 'rehype-highlight';
 import { useTranslation } from 'next-i18next';
 import { serialize } from 'next-mdx-remote/serialize';
-import FullCode from '@/src/components/articles/FullCode';
-import AlertBox from '@/src/components/articles/AlertBox';
-import ColumnCode from '@/src/components/articles/ColumnCode';
-import ArticleVote from '@/src/components/articles/ArticleVote';
-import ColumnImage from '@/src/components/articles/ColumnImage';
-import Breadcrumbs from '@/src/components/articles/Breadcrumbs';
-import ColumnSlider from '@/src/components/articles/ColumnSlider';
-import RelatedPosts from '@/src/components/articles/RelatedPosts';
 import FullScreenViewer from '@/src/components/articles/FullScreenViewer';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import ArticleContent from '@/src/components/articles/ArticleContent';
 
 function Post({ data, content }) {
   const router = useRouter();
@@ -94,9 +86,12 @@ function Post({ data, content }) {
           content={`https://knowledge-base.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
       </Head>
-      <main className="pt-[20vh] font-zaxe w-full grid grid-cols-1 place-items-center place-content-center">
-        <Breadcrumbs
-          links={[
+      <ArticleContent
+        props={{
+          postTitle,
+          postCategory,
+          content,
+          breadcrumbs: [
             {
               text: Product.name,
               url: `/products/${Product.category.slug}/${Product.slug}`,
@@ -109,30 +104,9 @@ function Post({ data, content }) {
               text: postTitle,
               url: `/products/${Product.category.slug}/${Product.slug}/article/${postSlug}`,
             },
-          ]}
-        />
-        <section className="w-full max-w-xl p-5 xl:max-w-app lg:max-w-app zaxe-kb-post">
-          <section className="grid w-full grid-cols-1 gap-2 article-heading place-content-start place-items-center">
-            <h1>{postTitle}</h1>
-            <h2>{postCategory}</h2>
-          </section>
-          <div>
-            <MDXRemote
-              {...content}
-              components={{
-                Images,
-                ColumnImage,
-                ColumnSlider,
-                ColumnCode,
-                AlertBox,
-                FullCode,
-              }}
-            />
-          </div>
-        </section>
-        <ArticleVote />
-        <RelatedPosts relatedData={{ Product, postCategorySlug }} />
-      </main>
+          ],
+        }}
+      />
       <FullScreenViewer />
     </>
   );
