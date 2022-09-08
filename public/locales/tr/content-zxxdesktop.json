@@ -27,5 +27,12 @@
     {
       "label": "Hata Giderme"
     }
+  ],
+  "downloads": [
+    { "title": "xDesktop" },
+    { "title": "xDesktop 2.1.6" },
+    { "title": "xDesktop 2.1.5" },
+    { "title": "xDesktop 2.1.4" },
+    { "title": "xDesktop 2.0.0 32-Bit" }
   ]
 }

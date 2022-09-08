@@ -148,6 +148,14 @@
       "ok": "Tamam"
     }
   },
+  "downloads": {
+    "heading": "İndirmeler",
+    "hints": {
+      "app": "Uygulama",
+      "doc": "Döküman",
+      "firmware": "Yazılım"
+    }
+  },
   "article": {
     "vote-area": {
       "header": "Bu makale size yardımcı oldu mu?",

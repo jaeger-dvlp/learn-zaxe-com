@@ -41,7 +41,11 @@ function PostBlock({ props }) {
         <section className="relative z-[1] flex items-end justify-between w-full p-3 bg-white">
           <section className="grid w-[80%] gap-1 grid-cols-1 place-content-end place-items-start">
             <span className="text-xs text-[#868686]">
-              {t(Categories.find(({ slug }) => slug === postCategory).label) ||
+              {(Categories.find(({ slug }) => slug === postCategory.slug) &&
+                t(
+                  Categories.find(({ slug }) => slug === postCategory.slug)
+                    .label
+                )) ||
                 null}
             </span>
             <h2 className="text-sm post-name text-[#555555]">

@@ -2,9 +2,12 @@ import React from 'react';
 import Content from '@/src/content/Content';
 import { useTranslation } from 'next-i18next';
 import { BiLinkExternal } from 'react-icons/bi';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 function QuickNavigation() {
   const [quickNavItems] = React.useState(Content.components.quickNavigation);
+  const router = useRouter();
   const { t } = useTranslation();
 
   return (
@@ -17,9 +20,7 @@ function QuickNavigation() {
               className="relative grid w-full grid-cols-1 gap-3 place-content-start place-items-center"
             >
               <h1 className="relative w-full grid grid-cols-1 gap-3 p-0 text-2xl font-semibold text-[#111111] ">
-                <span className="absolute flex items-center justify-center w-10 h-10 -left-0 -translate-x-[120%] top-1/2 -translate-y-1/2 rounded-xl">
-                  {item.icon}
-                </span>
+                <item.Icon className="absolute w-8 h-8 -left-0 -translate-x-[130%] top-1/2 -translate-y-1/2" />
                 <span>{t(item.title)}</span>
               </h1>
               <ul className="grid w-full grid-cols-1 gap-2 place-content-start place-items-start">
@@ -36,14 +37,18 @@ function QuickNavigation() {
                     </a>
                   </li>
                 ))}
-                <li className="flex items-center justify-start">
-                  <a
-                    href={item.allURL}
-                    className="p-2 px-4 mt-5 font-semibold text-white transition-all duration-150 rounded-lg shadow-lg text-md shadow-black/30 bg-zaxe hover:bg-black hover:text-white"
-                  >
-                    {t('components.quick-navigation.buttons.view-all')}
-                  </a>
-                </li>
+                {item.allURL && (
+                  <li className="flex items-center justify-start">
+                    <Link href={item.allURL} locale={router.locale}>
+                      <a className="flex items-center justify-start gap-2 mt-2 text-md font-mormal text-zaxe hover:text-black">
+                        <span>
+                          {t('components.quick-navigation.buttons.view-all')}
+                        </span>
+                        <BiLinkExternal className="text-sm text-current transition-all duration-200" />
+                      </a>
+                    </Link>
+                  </li>
+                )}
               </ul>
             </div>
           ))}
