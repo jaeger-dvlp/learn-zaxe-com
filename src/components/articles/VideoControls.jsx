@@ -67,7 +67,7 @@ function VideoControls({ videoID, videoURL }) {
   }, [video]);
 
   return (
-    <div
+    <span
       key={`video-${videoID}`}
       className="z-[5] absolute flex items-center justify-center gap-3 right-3 top-3"
     >
@@ -108,7 +108,7 @@ function VideoControls({ videoID, videoURL }) {
       >
         <BsLink45Deg className="w-5 h-5" />
       </a>
-    </div>
+    </span>
   );
 }
 
