@@ -6,6 +6,7 @@ import Images from '@/src/images/Images';
 import Content from '@/src/content/Content';
 import { useTranslation } from 'next-i18next';
 import rehypeHighlight from 'rehype-highlight';
+import Schema from '@/src/components/articles/Schema';
 import { serialize } from 'next-mdx-remote/serialize';
 import { getGlobalPost } from '@/src/clients/post.client';
 import ArticleContent from '@/src/components/articles/ArticleContent';
@@ -79,6 +80,14 @@ function Article({ data, content }) {
           content={`https://knowledge-base.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
       </Head>
+      <Schema
+        props={{
+          postTitle,
+          postSlug,
+          queryProductSlug,
+          queryCategorySlug,
+        }}
+      />
       <ArticleContent
         props={{
           postTitle,
