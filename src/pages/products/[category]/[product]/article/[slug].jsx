@@ -5,12 +5,13 @@ import { getPost } from '@/src/clients';
 import { useRouter } from 'next/router';
 import Images from '@/src/images/Images';
 import Content from '@/src/content/Content';
-import rehypeHighlight from 'rehype-highlight';
 import { useTranslation } from 'next-i18next';
+import rehypeHighlight from 'rehype-highlight';
+import Schema from '@/src/components/articles/Schema';
 import { serialize } from 'next-mdx-remote/serialize';
+import ArticleContent from '@/src/components/articles/ArticleContent';
 import FullScreenViewer from '@/src/components/articles/FullScreenViewer';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import ArticleContent from '@/src/components/articles/ArticleContent';
 
 function Post({ data, content }) {
   const router = useRouter();
@@ -86,6 +87,15 @@ function Post({ data, content }) {
           content={`https://knowledge-base.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
       </Head>
+      <Schema
+        props={{
+          postTitle,
+          postSlug,
+          queryProductSlug,
+          queryCategorySlug,
+          productName: Product.name,
+        }}
+      />
       <ArticleContent
         props={{
           postTitle,
