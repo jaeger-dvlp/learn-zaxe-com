@@ -108,16 +108,14 @@ function Downloads() {
       </Head>
       <main className="grid font-zaxe w-full grid-cols-1 p-0 m-0 place-content-start place-items-center py-[20vh]">
         <article className="grid w-full grid-cols-1 gap-10 p-5 max-w-app place-content-start place-items-start">
-          <section className="flex items-center justify-center w-full">
-            <Breadcrumbs
-              links={[
-                {
-                  text: t('downloads.heading'),
-                  url: `/${router.locale}/downloads`,
-                },
-              ]}
-            />
-          </section>
+          <Breadcrumbs
+            links={[
+              {
+                text: t('downloads.heading'),
+                url: `/${router.locale}/downloads`,
+              },
+            ]}
+          />
           <hroup className="flex items-center justify-center w-full">
             <h1 className="flex flex-wrap items-center justify-center gap-2 text-3xl font-bold xl:text-4xl lg:text-4xl text-zaxe">
               <DownloadIcon className="text-3xl xl:text-5xl lg:text-5xl" />
