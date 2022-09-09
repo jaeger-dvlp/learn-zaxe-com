@@ -16,11 +16,11 @@ function ArticleContent({ props }) {
     <main className="pt-[20vh] font-zaxe w-full grid grid-cols-1 place-items-center place-content-center">
       <Breadcrumbs links={breadcrumbs} />
       <section className="w-full max-w-xl p-5 xl:max-w-app lg:max-w-app zaxe-kb-post">
-        <section className="grid w-full grid-cols-1 gap-2 article-heading place-content-start place-items-center">
-          <h1>{postTitle}</h1>
-          <h2>{postCategory}</h2>
-        </section>
-        <div>
+        <hgroup className="grid w-full grid-cols-1 gap-2 article-heading place-content-start place-items-center">
+          <h1 id="post-title">{postTitle}</h1>
+          <h2 id="post-category">{postCategory}</h2>
+        </hgroup>
+        <article id="post-content" className="w-full">
           <MDXRemote
             {...content}
             components={{
@@ -33,7 +33,7 @@ function ArticleContent({ props }) {
               ColumnSlider,
             }}
           />
-        </div>
+        </article>
       </section>
       <ArticleVote />
     </main>
