@@ -12,7 +12,7 @@ function QuickNavigation() {
 
   return (
     <div className="grid w-full grid-cols-1 px-0 bg-white xl:px-5 lg:px-5 font-zaxe py-28 place-content-start place-items-center">
-      <div className="grid w-full grid-cols-1 p-5 py-10 rounded-none xl:max-w-app lg:max-w-app md:max-w-xl bg-zinc-200 xl:p-20 lg:p-20 xl:py-20 lg:qu xl:rounded-2xl lg:rounded-2xl md:rounded-2xl place-content-start place-items-center">
+      <div className="grid w-full grid-cols-1 p-5 py-10 rounded-none xl:max-w-[1150px] lg:max-w-[1150px] md:max-w-xl bg-zinc-200 xl:p-20 lg:p-20 xl:py-20 lg:qu xl:rounded-2xl lg:rounded-2xl md:rounded-2xl place-content-start place-items-center">
         <div className="grid w-full grid-cols-1 pl-12 gap-14 place-content-start place-items-start xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2">
           {quickNavItems.map((item) => (
             <div
