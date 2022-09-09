@@ -18,9 +18,9 @@ function ColumnImage({ children, image: { imageURL, imageALT } }) {
         />
         <ImageControls props={{ type: 'single', imageURL }} />
       </figure>
-      <article className="w-full -order-1 xl:max-w-[40%] lg:max-w-[40%] max-w-full">
+      <section className="w-full -order-1 xl:max-w-[40%] lg:max-w-[40%] max-w-full">
         {children}
-      </article>
+      </section>
     </section>
   );
 }
