@@ -23,9 +23,9 @@ function ColumnCode({ children: allChildren }) {
         </section>
       )}
       {codes && (
-        <article className="w-full xl:max-w-[60%] lg:max-w-[60%] p-0">
+        <section className="w-full xl:max-w-[60%] lg:max-w-[60%] p-0">
           {codes}
-        </article>
+        </section>
       )}
     </div>
   );
