@@ -14,6 +14,11 @@ const OSIcons = {
   mac: ({ className }) => <BsApple className={className} />,
 };
 
+const OSNames = {
+  win: 'Windows',
+  mac: 'MacOS',
+};
+
 function Downloads() {
   const { Icon: DownloadIcon } = Content.components.quickNavigation[2];
   const { t } = useTranslation();
@@ -101,9 +106,9 @@ function Downloads() {
           href="https://knowledge-base.zaxe.com/downloads"
         />
       </Head>
-      <div className="grid font-zaxe w-full grid-cols-1 p-0 m-0 place-content-start place-items-center py-[20vh]">
-        <div className="grid w-full grid-cols-1 gap-10 p-5 max-w-app place-content-start place-items-start">
-          <div className="flex items-center justify-center w-full">
+      <main className="grid font-zaxe w-full grid-cols-1 p-0 m-0 place-content-start place-items-center py-[20vh]">
+        <article className="grid w-full grid-cols-1 gap-10 p-5 max-w-app place-content-start place-items-start">
+          <section className="flex items-center justify-center w-full">
             <Breadcrumbs
               links={[
                 {
@@ -112,50 +117,50 @@ function Downloads() {
                 },
               ]}
             />
-          </div>
-          <div className="flex items-center justify-center w-full">
+          </section>
+          <hroup className="flex items-center justify-center w-full">
             <h1 className="flex flex-wrap items-center justify-center gap-2 text-3xl font-bold xl:text-4xl lg:text-4xl text-zaxe">
               <DownloadIcon className="text-3xl xl:text-5xl lg:text-5xl" />
               <span>{t('downloads.heading')}</span>
             </h1>
-          </div>
-          <div className="grid w-full grid-cols-1 gap-5 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 place-items-center">
-            <div className="grid w-full h-full grid-cols-1 gap-5 p-5 place-content-start place-items-center">
-              <div className="w-full gap-2 grid grid-cols-1 place-content-end place-items-center h-[200px]">
+          </hroup>
+          <section className="grid w-full grid-cols-1 gap-5 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 place-items-center">
+            <section className="grid w-full h-full grid-cols-1 gap-5 p-5 place-content-start place-items-center">
+              <hroup className="w-full gap-2 grid grid-cols-1 place-content-end place-items-center h-[200px]">
                 <Icon name="zaxez3" className="w-32 text-zaxe" />
-                <h1 className="font-semibold text-md text-zaxe">Z3</h1>
-              </div>
-              <div className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
+                <h2 className="font-semibold text-md text-zaxe">Z3</h2>
+              </hroup>
+              <section className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
                 {Downloadables.zaxez3.map((downloadable) =>
                   getDownloadComponent(downloadable)
                 )}
-              </div>
-            </div>
-            <div className="grid w-full h-full grid-cols-1 gap-5 p-5 place-content-start place-items-center">
-              <div className="w-full gap-2 grid grid-cols-1 place-content-end place-items-center h-[200px]">
+              </section>
+            </section>
+            <section className="grid w-full h-full grid-cols-1 gap-5 p-5 place-content-start place-items-center">
+              <hroup className="w-full gap-2 grid grid-cols-1 place-content-end place-items-center h-[200px]">
                 <Icon name="zaxex3" className="w-24 text-zaxe" />
-                <h1 className="font-semibold text-md text-zaxe">X3</h1>
-              </div>
-              <div className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
+                <h2 className="font-semibold text-md text-zaxe">X3</h2>
+              </hroup>
+              <section className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
                 {Downloadables.zaxex3.map((downloadable) =>
                   getDownloadComponent(downloadable)
                 )}
-              </div>
-            </div>
-            <div className="grid w-full h-full grid-cols-1 gap-5 p-5 place-content-start place-items-center">
-              <div className="w-full gap-2 grid grid-cols-1 place-content-end place-items-center h-[200px]">
+              </section>
+            </section>
+            <section className="grid w-full h-full grid-cols-1 gap-5 p-5 place-content-start place-items-center">
+              <hroup className="w-full gap-2 grid grid-cols-1 place-content-end place-items-center h-[200px]">
                 <Icon name="zaxexdesktop" className="w-32 text-zaxe" />
-                <h1 className="font-semibold text-md text-zaxe">xDesktop</h1>
-              </div>
-              <div className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
+                <h2 className="font-semibold text-md text-zaxe">xDesktop</h2>
+              </hroup>
+              <section className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
                 {Downloadables.xdesktop.map((downloadable) =>
                   getDownloadComponent(downloadable)
                 )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              </section>
+            </section>
+          </section>
+        </article>
+      </main>
     </>
   );
 }
@@ -164,15 +169,15 @@ function DocDownloadBlock({ props }) {
   const { title, link, showLastUpdate, updateDate } = props;
   const { t } = useTranslation();
   return (
-    <div className="relative grid w-full grid-cols-1 p-5 border bg-zinc-100 rounded-xl place-content-start place-items-start border-zaxe">
-      <span className="absolute top-0 p-1 px-2 text-sm -translate-y-1/2 border rounded-md left-5 border-zaxe bg-zinc-100 text-zaxe">
+    <section className="relative grid w-full grid-cols-1 p-5 border bg-zinc-100 rounded-xl place-content-start place-items-start border-zaxe">
+      <aside className="absolute top-0 p-1 px-2 text-sm -translate-y-1/2 border rounded-md left-5 border-zaxe bg-zinc-100 text-zaxe">
         {t('downloads.hints.doc')}
-      </span>
-      <h1 className="text-xl font-semibold text-zinc-600">{t(title)}</h1>
+      </aside>
+      <h3 className="text-xl font-semibold text-zinc-600">{t(title)}</h3>
       {showLastUpdate && (
         <p className="text-sm text-zinc-500">Last updated at {updateDate}.</p>
       )}
-      <div className="grid grid-cols-1 gap-1 mt-3 place-content-start place-items-start">
+      <section className="grid grid-cols-1 gap-1 mt-3 place-content-start place-items-start">
         <a
           target="_blank"
           rel="noreferrer"
@@ -181,8 +186,8 @@ function DocDownloadBlock({ props }) {
         >
           Download
         </a>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }
 
@@ -190,15 +195,15 @@ function FirmwareDownloadBlock({ props }) {
   const { title, link, showLastUpdate, updateDate } = props;
   const { t } = useTranslation();
   return (
-    <div className="relative grid w-full grid-cols-1 p-5 border bg-zinc-100 rounded-xl place-content-start place-items-start border-zaxe">
-      <span className="absolute top-0 p-1 px-2 text-sm -translate-y-1/2 border rounded-md left-5 border-zaxe bg-zinc-100 text-zaxe">
+    <section className="relative grid w-full grid-cols-1 p-5 border bg-zinc-100 rounded-xl place-content-start place-items-start border-zaxe">
+      <aside className="absolute top-0 p-1 px-2 text-sm -translate-y-1/2 border rounded-md left-5 border-zaxe bg-zinc-100 text-zaxe">
         {t('downloads.hints.firmware')}
-      </span>
-      <h1 className="text-xl font-semibold text-zinc-600">{t(title)}</h1>
+      </aside>
+      <h3 className="text-xl font-semibold text-zinc-600">{t(title)}</h3>
       {showLastUpdate && (
         <p className="text-sm text-zinc-500">Last updated at {updateDate}.</p>
       )}
-      <div className="grid grid-cols-1 gap-1 mt-3 place-content-start place-items-start">
+      <section className="grid grid-cols-1 gap-1 mt-3 place-content-start place-items-start">
         <a
           target="_blank"
           rel="noreferrer"
@@ -207,8 +212,8 @@ function FirmwareDownloadBlock({ props }) {
         >
           Download
         </a>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }
 
@@ -216,12 +221,12 @@ function AppDownloadBlock({ props }) {
   const { title, slug, platforms, links } = props;
   const { t } = useTranslation();
   return (
-    <div className="relative grid w-full grid-cols-1 p-5 border bg-zinc-100 rounded-xl place-content-start place-items-start border-zaxe">
-      <span className="absolute top-0 p-1 px-2 text-sm -translate-y-1/2 border rounded-md left-5 border-zaxe bg-zinc-100 text-zaxe">
+    <section className="relative grid w-full grid-cols-1 p-5 border bg-zinc-100 rounded-xl place-content-start place-items-start border-zaxe">
+      <aside className="absolute top-0 p-1 px-2 text-sm -translate-y-1/2 border rounded-md left-5 border-zaxe bg-zinc-100 text-zaxe">
         {t('downloads.hints.app')}
-      </span>
-      <h1 className="text-xl font-semibold text-zinc-600">{t(title)}</h1>
-      <div className="grid grid-cols-1 gap-1 mt-3 place-content-start place-items-start">
+      </aside>
+      <h3 className="text-xl font-semibold text-zinc-600">{t(title)}</h3>
+      <section className="grid grid-cols-1 gap-1 mt-3 place-content-start place-items-start">
         {platforms.map((platform) => {
           const DownloadIcon = OSIcons[platform];
           return (
@@ -232,13 +237,15 @@ function AppDownloadBlock({ props }) {
               href={links[platform]}
               className="flex items-center justify-start w-full gap-2 p-1 px-2 text-sm text-white rounded-md items bg-zaxe hover:bg-sky-700"
             >
-              <span>Download for</span>
               <DownloadIcon />
+              <p>
+                Download for <b>{OSNames[platform]}</b>
+              </p>
             </a>
           );
         })}
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }
 
