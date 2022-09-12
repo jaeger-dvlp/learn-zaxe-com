@@ -44,7 +44,7 @@ function Loader() {
           <Image
             placeholder="blur"
             src={Images.loader.zxkb}
-            alt="Zaxe Knowledge Base"
+            alt="Zaxe Knowledge Base Loader"
           />
         </div>
       </div>

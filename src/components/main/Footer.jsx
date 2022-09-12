@@ -47,6 +47,7 @@ function Footer() {
             <Image
               className="object-contain w-full h-full"
               src={Images.logo.zxkb}
+              alt="Zaxe Knowledge Base Logo"
             />
           </a>
         </Link>
