@@ -46,17 +46,17 @@ function Home() {
         <link
           rel="alternate"
           hrefLang="tr"
-          href="https://knowledge-base.zaxe.com/tr/"
+          href="https://knowledge-base.zaxe.com/tr"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://knowledge-base.zaxe.com/en/"
+          href="https://knowledge-base.zaxe.com/en"
         />
         <link
           rel="alternate"
-          hrefLang="en"
-          href="https://knowledge-base.zaxe.com/"
+          hrefLang="x-default"
+          href="https://knowledge-base.zaxe.com"
         />
       </Head>
       <WelcomeSection />

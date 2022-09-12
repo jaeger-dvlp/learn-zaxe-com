@@ -210,7 +210,7 @@ function Search({ posts: Posts }) {
         />
         <link
           rel="alternate"
-          hrefLang="en"
+          hrefLang="x-default"
           href="https://knowledge-base.zaxe.com/search"
         />
       </Head>

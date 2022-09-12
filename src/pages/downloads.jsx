@@ -107,7 +107,7 @@ function Downloads() {
         />
         <link
           rel="alternate"
-          hrefLang="en"
+          hrefLang="x-default"
           href="https://knowledge-base.zaxe.com/downloads"
         />
       </Head>

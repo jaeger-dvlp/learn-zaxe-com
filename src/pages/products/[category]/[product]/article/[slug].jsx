@@ -88,7 +88,7 @@ function Post({ data, content }) {
         />
         <link
           rel="alternate"
-          hrefLang="en"
+          hrefLang="x-default"
           content={`https://knowledge-base.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
       </Head>
