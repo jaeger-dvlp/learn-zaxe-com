@@ -79,17 +79,17 @@ function Post({ data, content }) {
         <link
           rel="alternate"
           hrefLang="tr"
-          content={`https://knowledge-base.zaxe.com/tr/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
+          content={`${window.origin}/tr/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
         <link
           rel="alternate"
           hrefLang="en"
-          content={`https://knowledge-base.zaxe.com/en/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
+          content={`${window.origin}/en/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
         <link
           rel="alternate"
           hrefLang="x-default"
-          content={`https://knowledge-base.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
+          content={`${window.origin}/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
       </Head>
       <Schema

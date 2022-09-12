@@ -201,17 +201,17 @@ function Search({ posts: Posts }) {
         <link
           rel="alternate"
           hrefLang="tr"
-          href="https://knowledge-base.zaxe.com/tr/search"
+          href={`${window.origin}/tr/search`}
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://knowledge-base.zaxe.com/en/search"
+          href={`${window.origin}/en/search`}
         />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href="https://knowledge-base.zaxe.com/search"
+          href={`${window.origin}/search`}
         />
       </Head>
       <section className="pt-[20vh] font-zaxe w-full flex flex-wrap justify-center items-start">

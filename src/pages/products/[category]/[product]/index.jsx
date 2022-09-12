@@ -77,17 +77,17 @@ function Product({ product: stringProduct }) {
           <link
             rel="alternate"
             hrefLang="tr"
-            href={`https://knowledge-base.zaxe.com/tr${asPath}`}
+            href={`${window.origin}/tr${asPath}`}
           />
           <link
             rel="alternate"
             hrefLang="en"
-            href={`https://knowledge-base.zaxe.com/en${asPath}`}
+            href={`${window.origin}/en${asPath}`}
           />
           <link
             rel="alternate"
             hrefLang="x-default"
-            href={`https://knowledge-base.zaxe.com${asPath}`}
+            href={`${window.origin}${asPath}`}
           />
         </Head>
         <div className="grid w-full font-zaxe pt-[15vh] grid-cols-1 place-content-start place-items-center">

@@ -98,17 +98,17 @@ function Downloads() {
         <link
           rel="alternate"
           hrefLang="tr"
-          href="https://knowledge-base.zaxe.com/tr/downloads"
+          href={`${window.origin}/tr/downloads`}
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://knowledge-base.zaxe.com/en/downloads"
+          href={`${window.origin}/en/downloads`}
         />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href="https://knowledge-base.zaxe.com/downloads"
+          href={`${window.origin}/downloads`}
         />
       </Head>
       <main className="grid font-zaxe w-full grid-cols-1 p-0 m-0 place-content-start place-items-center py-[20vh]">
