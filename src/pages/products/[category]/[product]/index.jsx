@@ -82,6 +82,11 @@ function Product({ product: stringProduct }) {
           <link
             rel="alternate"
             hrefLang="en"
+            href={`https://knowledge-base.zaxe.com/en${asPath}`}
+          />
+          <link
+            rel="alternate"
+            hrefLang="en"
             href={`https://knowledge-base.zaxe.com${asPath}`}
           />
         </Head>

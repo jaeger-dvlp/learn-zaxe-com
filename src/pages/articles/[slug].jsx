@@ -77,6 +77,11 @@ function Article({ data, content }) {
         <link
           rel="alternate"
           hrefLang="en"
+          content={`https://knowledge-base.zaxe.com/en/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
+        />
+        <link
+          rel="alternate"
+          hrefLang="en"
           content={`https://knowledge-base.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
       </Head>

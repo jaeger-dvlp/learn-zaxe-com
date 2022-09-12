@@ -103,6 +103,11 @@ function Downloads() {
         <link
           rel="alternate"
           hrefLang="en"
+          href="https://knowledge-base.zaxe.com/en/downloads"
+        />
+        <link
+          rel="alternate"
+          hrefLang="en"
           href="https://knowledge-base.zaxe.com/downloads"
         />
       </Head>

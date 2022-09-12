@@ -206,6 +206,11 @@ function Search({ posts: Posts }) {
         <link
           rel="alternate"
           hrefLang="en"
+          href="https://knowledge-base.zaxe.com/en/search"
+        />
+        <link
+          rel="alternate"
+          hrefLang="en"
           href="https://knowledge-base.zaxe.com/search"
         />
       </Head>

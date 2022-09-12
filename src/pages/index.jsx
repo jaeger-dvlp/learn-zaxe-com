@@ -51,6 +51,11 @@ function Home() {
         <link
           rel="alternate"
           hrefLang="en"
+          href="https://knowledge-base.zaxe.com/en/"
+        />
+        <link
+          rel="alternate"
+          hrefLang="en"
           href="https://knowledge-base.zaxe.com/"
         />
       </Head>
