@@ -11,14 +11,24 @@
 }
 
 .zaxe-kb-post h2:not(.post-name, .article-heading h2) {
-  @apply text-3xl font-bold text-[#666666] mt-5;
+  @apply text-3xl font-bold text-[#666666] mt-5 text-left;
 }
+
+.zaxe-kb-post .post-column h2,
+.zaxe-kb-post .post-column h3 {
+  @apply !mt-0;
+}
+
+.zaxe-kb-post h2:not(.post-name, .article-heading h2, .post-column h2) {
+  @apply text-3xl font-bold text-[#666666] mt-14 text-left;
+}
+
 .zaxe-kb-post a:not(.image-button) {
   @apply font-medium underline transition-all duration-100 text-zaxe underline-offset-2 hover:text-black;
 }
 
 .zaxe-kb-post .post-column {
-  @apply my-20;
+  @apply mt-10 mb-0;
 }
 
 .zaxe-kb-post h3 {
@@ -30,7 +40,7 @@
 }
 
 .zaxe-kb-post p:not(.alert-text p) {
-  @apply my-5;
+  @apply py-0 my-2;
 }
 .zaxe-kb-post ol,
 .zaxe-kb-post ul {
