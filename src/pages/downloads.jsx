@@ -180,9 +180,9 @@ function DocDownloadBlock({ props }) {
           target="_blank"
           rel="noreferrer"
           href={link}
-          className="flex items-center justify-start gap-2 p-1 px-2 text-sm text-white rounded-md items bg-zaxe hover:bg-sky-700"
+          className="flex min-w-[5rem] text-center items-center justify-center w-full gap-2 p-1 px-3 text-sm text-white rounded-md items bg-zaxe hover:bg-sky-700"
         >
-          Download
+          {t('downloads.buttons.download')}
         </a>
       </section>
     </section>
@@ -206,9 +206,9 @@ function FirmwareDownloadBlock({ props }) {
           target="_blank"
           rel="noreferrer"
           href={link}
-          className="flex items-center justify-start w-full gap-2 p-1 px-2 text-sm text-white rounded-md items bg-zaxe hover:bg-sky-700"
+          className="flex min-w-[5rem] text-center items-center justify-center w-full gap-2 p-1 px-3 text-sm text-white rounded-md items bg-zaxe hover:bg-sky-700"
         >
-          Download
+          {t('downloads.buttons.download')}
         </a>
       </section>
     </section>
@@ -237,7 +237,8 @@ function AppDownloadBlock({ props }) {
             >
               <DownloadIcon />
               <p>
-                Download for <b>{OSNames[platform]}</b>
+                {t('downloads.buttons.download-for')}
+                <b>{OSNames[platform]}</b>
               </p>
             </a>
           );
