@@ -167,6 +167,10 @@
       "app": "App",
       "doc": "Document",
       "firmware": "Firmware"
+    },
+    "buttons": {
+      "download": "Download",
+      "download-for": "Download for "
     }
   },
   "article": {

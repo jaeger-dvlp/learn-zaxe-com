@@ -167,6 +167,10 @@
       "app": "Uygulama",
       "doc": "Döküman",
       "firmware": "Yazılım"
+    },
+    "buttons": {
+      "download": "İndir",
+      "download-for": "Şunun için indir "
     }
   },
   "article": {
