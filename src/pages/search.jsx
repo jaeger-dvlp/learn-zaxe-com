@@ -201,17 +201,17 @@ function Search({ posts: Posts }) {
         <link
           rel="alternate"
           hrefLang="tr"
-          href={`${window.origin}/tr/search`}
+          href="https://zaxe-knowledge-base.vercel.app/tr/search"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href={`${window.origin}/en/search`}
+          href="https://zaxe-knowledge-base.vercel.app/en/search"
         />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href={`${window.origin}/search`}
+          href="https://zaxe-knowledge-base.vercel.app/search"
         />
       </Head>
       <section className="pt-[20vh] font-zaxe w-full flex flex-wrap justify-center items-start">

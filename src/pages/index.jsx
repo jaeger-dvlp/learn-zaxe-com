@@ -43,9 +43,21 @@ function Home() {
         <meta property="twitter:description" content={t('meta.content.home')} />
         <meta property="twitter:image" content={Images.og.home.default.src} />
         <link rel="icon" type="image/png" href="/favicon.png" />
-        <link rel="alternate" hrefLang="tr" href={`${window.origin}/tr`} />
-        <link rel="alternate" hrefLang="en" href={`${window.origin}/en`} />
-        <link rel="alternate" hrefLang="x-default" href={`${window.origin}`} />
+        <link
+          rel="alternate"
+          hrefLang="tr"
+          href="https://zaxe-knowledge-base.vercel.app/tr"
+        />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://zaxe-knowledge-base.vercel.app/en"
+        />
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://zaxe-knowledge-base.vercel.app"
+        />
       </Head>
       <WelcomeSection />
       <Products />

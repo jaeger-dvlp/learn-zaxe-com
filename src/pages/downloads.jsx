@@ -98,17 +98,17 @@ function Downloads() {
         <link
           rel="alternate"
           hrefLang="tr"
-          href={`${window.origin}/tr/downloads`}
+          href="https://zaxe-knowledge-base.vercel.app/tr/downloads"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href={`${window.origin}/en/downloads`}
+          href="https://zaxe-knowledge-base.vercel.app/en/downloads"
         />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href={`${window.origin}/downloads`}
+          href="https://zaxe-knowledge-base.vercel.app/downloads"
         />
       </Head>
       <main className="grid font-zaxe w-full grid-cols-1 p-0 m-0 place-content-start place-items-center py-[20vh]">

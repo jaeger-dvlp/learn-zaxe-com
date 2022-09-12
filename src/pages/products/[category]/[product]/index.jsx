@@ -77,17 +77,17 @@ function Product({ product: stringProduct }) {
           <link
             rel="alternate"
             hrefLang="tr"
-            href={`${window.origin}/tr${asPath}`}
+            href={`https://zaxe-knowledge-base.vercel.app/tr${asPath}`}
           />
           <link
             rel="alternate"
             hrefLang="en"
-            href={`${window.origin}/en${asPath}`}
+            href={`https://zaxe-knowledge-base.vercel.app/en${asPath}`}
           />
           <link
             rel="alternate"
             hrefLang="x-default"
-            href={`${window.origin}${asPath}`}
+            href={`https://zaxe-knowledge-base.vercel.app${asPath}`}
           />
         </Head>
         <div className="grid w-full font-zaxe pt-[15vh] grid-cols-1 place-content-start place-items-center">

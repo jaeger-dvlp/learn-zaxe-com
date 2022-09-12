@@ -79,17 +79,17 @@ function Post({ data, content }) {
         <link
           rel="alternate"
           hrefLang="tr"
-          content={`${window.origin}/tr/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
+          content={`https://zaxe-knowledge-base.vercel.app/tr/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
         <link
           rel="alternate"
           hrefLang="en"
-          content={`${window.origin}/en/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
+          content={`https://zaxe-knowledge-base.vercel.app/en/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
         <link
           rel="alternate"
           hrefLang="x-default"
-          content={`${window.origin}/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
+          content={`https://zaxe-knowledge-base.vercel.app/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
       </Head>
       <Schema
