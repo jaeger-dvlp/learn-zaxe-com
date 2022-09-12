@@ -31,18 +31,18 @@ const ProductPosts = [
   [
     {
       title: {
-        tr: 'Baskı Kafası Fan Değişimi',
-        en: 'Printhead Fan Replacement',
+        tr: "Zaxe Z3'ünüzü Temiz Tutmak",
+        en: 'Keeping Your Zaxe Z3 Clean',
       },
-      slug: 'printhead-fan-replacement',
-      category: 'repair',
-      thumbnail: `${CDNURL}img/mockpostthumbnail4.webp`,
+      slug: 'keeping-your-zaxe-z3-clean',
+      category: 'maintenance',
+      thumbnail: `${CDNURL}posts/keeping-your-zaxe-z3-clean/zaxe-z3-cleaning-printing-table.webp`,
     },
   ],
   [
     {
       title: {
-        tr: "Zaxe X3'ünüz Temiz Tutmak",
+        tr: "Zaxe X3'ünüzü Temiz Tutmak",
         en: 'Keeping Your Zaxe X3 Clean',
       },
       slug: 'keeping-your-zaxe-x3-clean',
