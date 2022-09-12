@@ -62,12 +62,12 @@ const ProductPosts = [
   [
     {
       title: {
-        tr: 'xDesktop Kurulumu',
-        en: 'Installing xDesktop',
+        tr: 'xDesktop Hakkında',
+        en: 'About xDesktop',
       },
-      slug: 'installing-xdesktop',
+      slug: 'about-xdesktop',
       category: 'start',
-      thumbnail: `${CDNURL}img/mockpostthumbnail9.webp`,
+      thumbnail: `${CDNURL}posts/about-xdesktop/img/zaxe-xdesktop-ui.webp`,
     },
   ],
 ];
