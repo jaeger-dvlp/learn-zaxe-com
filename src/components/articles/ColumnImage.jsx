@@ -5,9 +5,9 @@ import ImageControls from './ImageControls';
 function ColumnImage({ children, image: { imageURL, imageALT } }) {
   const { CDNURL } = process.env;
   return (
-    <section className="flex flex-wrap-reverse w-full gap-10 my-5 post-column xl:flex-nowrap lg:flex-nowrap">
+    <section className="flex flex-wrap-reverse items-center w-full h-full gap-5 xl:gap-10 lg:gap-10 xl:flex-nowrap lg:flex-nowrap post-column">
       <figure
-        className="relative bg-zinc-800 border border-zinc-300 p-0 w-full overflow-hidden shadow-2xl shadow-black/25
+        className="bg-zinc-800 relative border border-zinc-300 p-0 w-full overflow-hidden shadow-lg shadow-black/25
       rounded-xl xl:h-[20rem] lg:h-[20rem] md:h-[17rem] h-[13rem]"
       >
         <Image
@@ -18,9 +18,9 @@ function ColumnImage({ children, image: { imageURL, imageALT } }) {
         />
         <ImageControls props={{ type: 'single', imageURL }} />
       </figure>
-      <section className="w-full -order-1 xl:max-w-[40%] lg:max-w-[40%] max-w-full">
+      <aside className="w-full text-justify -order-1 xl:max-w-[40%] lg:max-w-[40%] max-w-full">
         {children}
-      </section>
+      </aside>
     </section>
   );
 }
