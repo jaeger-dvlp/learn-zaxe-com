@@ -19,9 +19,9 @@ function Footer() {
         </section>
         <section className="flex-wrap items-center justify-start hidden w-full gap-5">
           <section className="grid grid-cols-1 gap-1 place-content-start place-items-start">
-            <h1 className="text-2xl font-bold text-zinc-700">
+            <h2 className="text-2xl font-bold text-zinc-700">
               {t('footer.products.heading')}
-            </h1>
+            </h2>
             <nav>
               <ul className="text-sm">
                 {Content.products.map(

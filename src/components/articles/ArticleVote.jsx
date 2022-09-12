@@ -14,9 +14,9 @@ function ArticleVote() {
             : 'scale-100 opacity-100 visible'
         } transition-all duration-500 grid grid-cols-1 place-content-start place-items-center gap-10`}
       >
-        <h1 className="text-2xl font-semibold text-zaxe">
+        <h2 className="text-2xl font-semibold text-zaxe">
           {t('common:article.vote-area.header')}
-        </h1>
+        </h2>
         <div className="flex items-center justify-center w-full gap-7">
           <button
             type="button"
@@ -42,9 +42,9 @@ function ArticleVote() {
         } transition-all absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none bg-white duration-500 grid grid-cols-1 gap-5 place-content-start place-items-center`}
       >
         <BsCheckLg className="text-lg text-zaxe" />
-        <h1 className="text-lg font-semibold text-center text-zaxe">
+        <h2 className="text-lg font-semibold text-center text-zaxe">
           {t('common:article.vote-area.vote-message-thanks')}
-        </h1>
+        </h2>
       </div>
     </div>
   );
