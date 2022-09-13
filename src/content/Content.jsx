@@ -38,7 +38,17 @@ const ProductPosts = [
       category: 'maintenance',
       thumbnail: `${CDNURL}posts/keeping-your-zaxe-z3-clean/zaxe-z3-cleaning-printing-table.webp`,
     },
+    {
+      title: {
+        tr: 'Zaxe Z3 3D Yazıcınız ile İlk Kalibrasyonunuz',
+        en: 'Your First Bed Calibration with Zaxe Z3 3D Printer',
+      },
+      slug: 'your-first-bed-calibration-with-zaxe-z3-3d-printer',
+      category: 'maintenance',
+      thumbnail: `${CDNURL}posts/your-first-bed-calibration-with-zaxe-z3-3d-printer/zaxe-z3-calibration-lines.webp`,
+    },
   ],
+
   [
     {
       title: {
