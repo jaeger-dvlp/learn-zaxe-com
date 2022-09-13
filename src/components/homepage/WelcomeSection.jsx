@@ -13,10 +13,10 @@ function WelcomeSection() {
         className="grid w-full grid-cols-1 p-5 pb-10 max-w-app pt-7 place-content-start place-items-center"
       >
         <div className="grid grid-cols-1 gap-0 place-content-center place-items-center">
+          <p className="xl:text-6xl lg:text-6xl text-xl text-center font-bold text-[#515151]">
+            {t('homepage.banner.heading')}{' '}
+          </p>
           <h1 className="grid grid-cols-1 place-content-start place-items-center">
-            <span className="xl:text-6xl lg:text-6xl text-xl text-center font-bold text-[#515151]">
-              {t('homepage.banner.heading')}
-            </span>
             <span className="text-xl font-bold text-center xl:text-6xl lg:text-6xl text-zaxe">
               {t('homepage.banner.second-heading')}
             </span>
