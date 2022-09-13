@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://zaxe-knowledge-base.vercel.app
+
+# Sitemaps
+Sitemap: https://zaxe-knowledge-base.vercel.app/sitemap.xml
