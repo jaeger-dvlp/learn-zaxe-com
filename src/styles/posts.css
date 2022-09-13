@@ -3,6 +3,11 @@
 .zaxe-kb-post ol {
   @apply text-[#666666];
 }
+.zaxe-kb-post ol,
+.zaxe-kb-post ul {
+  @apply list-disc;
+}
+
 .zaxe-kb-post .article-heading h1 {
   @apply text-4xl font-bold text-center text-zaxe;
 }
@@ -10,29 +15,32 @@
   @apply text-xl font-bold text-center text-zaxe;
 }
 
-.zaxe-kb-post h2:not(.post-name, .article-heading h2) {
-  @apply text-3xl font-bold text-[#666666] mt-5 text-left;
+.zaxe-kb-post h2 {
+  @apply text-3xl font-bold text-[#666666];
+}
+
+.zaxe-kb-post h3 {
+  @apply text-xl font-bold text-[#666666];
 }
 
 .zaxe-kb-post .post-column h2,
-.zaxe-kb-post .post-column h3 {
+.zaxe-kb-post .post-column h3,
+.zaxe-kb-post .post-column h4,
+.zaxe-kb-post .post-column h5,
+.zaxe-kb-post .post-column h6 {
   @apply !mt-0;
 }
 
 .zaxe-kb-post h2:not(.post-name, .article-heading h2, .post-column h2) {
-  @apply text-3xl font-bold text-[#666666] mt-14 text-left;
+  @apply text-left mt-14;
 }
 
-.zaxe-kb-post a:not(.image-button) {
-  @apply font-medium underline transition-all duration-100 text-zaxe underline-offset-2 hover:text-black;
+.zaxe-kb-post h2:not(.post-name, .article-heading h2) {
+  @apply mt-5 text-left;
 }
 
 .zaxe-kb-post .post-column {
   @apply mt-10 mb-0;
-}
-
-.zaxe-kb-post h3 {
-  @apply text-[#666666] text-xl font-bold mt-5 py-0;
 }
 
 .zaxe-kb-post .alert-box {
@@ -42,14 +50,15 @@
 .zaxe-kb-post p:not(.alert-text p) {
   @apply py-0 my-2;
 }
-.zaxe-kb-post ol,
-.zaxe-kb-post ul {
-  @apply list-disc;
+
+.zaxe-kb-post a:not(.image-button) {
+  @apply font-medium underline transition-all duration-100 text-zaxe underline-offset-2 hover:text-black;
 }
 
 .zaxe-kb-post pre {
   @apply w-full p-0 my-5 rounded-lg shadow-xl shadow-black/40;
 }
+
 .zaxe-kb-post pre code {
   @apply overflow-auto text-xs rounded-lg p-7;
 }
