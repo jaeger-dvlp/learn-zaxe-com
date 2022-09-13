@@ -10,7 +10,7 @@ function ColumnImage({ children, image: { imageURL, imageALT } }) {
 
   return (
     <section className="flex flex-wrap-reverse items-center w-full h-full gap-5 xl:gap-10 lg:gap-10 xl:flex-nowrap lg:flex-nowrap post-column">
-      <figure className="bg-zinc-300 relative border border-zinc-300 p-0 w-full overflow-hidden shadow-lg  rounded-xl xl:h-[20rem] lg:h-[20rem] md:h-[17rem] h-[13rem]">
+      <figure className="bg-zinc-300 relative border border-zinc-300 p-0 w-full overflow-hidden shadow-lg rounded-xl xl:h-[20rem] lg:h-[20rem] md:h-[17rem] h-[13rem]">
         <Image
           src={ImageSourceURL}
           alt={imageALT}

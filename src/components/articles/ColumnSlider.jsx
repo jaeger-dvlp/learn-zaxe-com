@@ -17,10 +17,7 @@ function ColumnSlider({ children, images: sliderImages }) {
 
   return (
     <section className="flex flex-wrap-reverse w-full gap-10 my-5 post-column xl:flex-nowrap lg:flex-nowrap">
-      <section
-        className="relative bg-zinc-800 border border-zinc-300 p-0 w-full shadow-2xl shadow-black/25
-      rounded-xl xl:h-[20rem] lg:h-[20rem] md:h-[17rem] h-[13rem]"
-      >
+      <section className="relative bg-zinc-300 border border-zinc-300 p-0 w-full shadow-lg rounded-xl xl:h-[20rem] lg:h-[20rem] md:h-[17rem] h-[13rem]">
         <button
           type="button"
           onClick={() => {
