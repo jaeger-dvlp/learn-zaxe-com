@@ -95,6 +95,7 @@ function Downloads() {
         />
         <meta property="twitter:image" content={Images.og.home.default.src} />
         <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <link
           rel="alternate"
           hrefLang="tr"
