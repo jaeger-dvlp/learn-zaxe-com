@@ -1,11 +1,15 @@
 .zaxe-kb-post p:not(.alert-text p),
 .zaxe-kb-post ul,
 .zaxe-kb-post ol {
-  @apply text-[#666666];
+  @apply text-[#666666] font-light;
 }
 .zaxe-kb-post ol,
 .zaxe-kb-post ul {
   @apply list-disc;
+}
+
+.zaxe-kb-post .article-heading {
+  @apply my-10;
 }
 
 .zaxe-kb-post .article-heading h1 {
@@ -16,7 +20,7 @@
 }
 
 .zaxe-kb-post h2 {
-  @apply text-3xl font-bold text-[#666666];
+  @apply text-2xl font-bold text-[#666666];
 }
 
 .zaxe-kb-post h3 {
@@ -32,7 +36,7 @@
 }
 
 .zaxe-kb-post h2:not(.post-name, .article-heading h2, .post-column h2) {
-  @apply text-left mt-14;
+  @apply !mt-14 text-left;
 }
 
 .zaxe-kb-post h2:not(.post-name, .article-heading h2) {
@@ -61,4 +65,9 @@
 
 .zaxe-kb-post pre code {
   @apply overflow-auto text-xs rounded-lg p-7;
+}
+
+.zaxe-kb-post b,
+.zaxe-kb-post strong {
+  @apply !font-bold;
 }
