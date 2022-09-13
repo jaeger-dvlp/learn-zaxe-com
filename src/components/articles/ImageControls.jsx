@@ -24,14 +24,14 @@ function ImageButtons({ props }) {
             imageURL,
           });
         }}
-        className="image-fullscreen-button backdrop-blur-sm z-[3] flex justify-center items-center text-zinc-100 p-2 hover:bg-zaxe bg-black/50 rounded-md transition-all duration-200"
+        className="image-fullscreen-button backdrop-blur-sm z-[3] flex justify-center items-center text-zinc-100 p-2 hover:bg-zaxe bg-black/50 shadow-md shadow-black/25 rounded-md transition-all duration-200"
       >
         <BsArrowsFullscreen className="w-5 h-5" />
       </button>
       <a
         href={`${CDNURL}${imageURL}`}
         target="_blank"
-        className="image-button backdrop-blur-sm z-[3] flex justify-center items-center text-zinc-100 p-2 hover:bg-zaxe bg-black/50 rounded-md transition-all duration-200"
+        className="image-button backdrop-blur-sm z-[3] flex justify-center items-center text-zinc-100 p-2 hover:bg-zaxe bg-black/50 rounded-md shadow-md shadow-black/25 transition-all duration-200"
         rel="noreferrer"
       >
         <BsLink45Deg className="w-5 h-5" />

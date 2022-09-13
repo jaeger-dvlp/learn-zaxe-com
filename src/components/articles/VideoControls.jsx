@@ -68,12 +68,12 @@ function VideoControls({ videoID, videoURL }) {
 
   return (
     <span
-      key={`video-${videoID}`}
+      key={`video-controller-${videoID}`}
       className="z-[5] absolute flex items-center justify-center gap-3 right-3 top-3"
     >
       <button
         onClick={() => HandleVideoState(!videoState)}
-        className="flex items-center justify-center p-2 m-0 text-white transition-all duration-150 rounded-md hover:bg-zaxe bg-black/50 backdrop-blur-sm "
+        className="flex items-center justify-center p-2 m-0 text-white transition-all duration-150 rounded-md shadow-md hover:bg-zaxe shadow-black/25 bg-black/50 backdrop-blur-sm "
         type="button"
       >
         {videoState ? (
@@ -84,7 +84,7 @@ function VideoControls({ videoID, videoURL }) {
       </button>
       <button
         onClick={() => HandleVideoSound(!videoSound)}
-        className="flex items-center justify-center p-2 m-0 text-white transition-all duration-150 rounded-md hover:bg-zaxe bg-black/50 backdrop-blur-sm "
+        className="flex items-center justify-center p-2 m-0 text-white transition-all duration-150 rounded-md shadow-md hover:bg-zaxe shadow-black/25 bg-black/50 backdrop-blur-sm "
         type="button"
       >
         {videoSound ? (
@@ -94,14 +94,14 @@ function VideoControls({ videoID, videoURL }) {
         )}
       </button>
       <button
-        className="flex items-center justify-center p-2 m-0 text-white transition-all duration-150 rounded-md hover:bg-zaxe bg-black/50 backdrop-blur-sm "
+        className="flex items-center justify-center p-2 m-0 text-white transition-all duration-150 rounded-md shadow-md hover:bg-zaxe shadow-black/25 bg-black/50 backdrop-blur-sm "
         type="button"
         onClick={() => RequestFullScreen()}
       >
         <BsArrowsFullscreen className="w-5 h-5" />
       </button>
       <a
-        className="flex items-center justify-center p-2 m-0 text-white transition-all duration-150 rounded-md image-button hover:bg-zaxe bg-black/50 backdrop-blur-sm "
+        className="flex items-center justify-center p-2 m-0 text-white transition-all duration-150 rounded-md shadow-md image-button hover:bg-zaxe shadow-black/25 bg-black/50 backdrop-blur-sm "
         rel="noreferrer"
         href={videoURL}
         target="_blank"
