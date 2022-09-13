@@ -51,8 +51,8 @@ function ColumnSlider({ children, images: sliderImages }) {
             key={`slide-image-${uniqueId}`}
             className={`${
               index === activeSlide
-                ? 'opacity-100 visible pointer-events-auto'
-                : 'opacity-0 invisible pointer-events-none'
+                ? 'opacity-100 visible z-[1]'
+                : 'opacity-0 invisible z-[0]'
             } transition-all duration-700 absolute rounded-xl overflow-hidden left-0 top-0 flex items-center justify-center w-full h-full`}
           >
             <Image
