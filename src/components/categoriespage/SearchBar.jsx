@@ -185,6 +185,7 @@ function SearchBar({ className }) {
           />
           <button
             type="submit"
+            aria-label="Search"
             className="w-14 bg-[#F5F5F5] transition-all duration-100 hover:bg-zinc-200
         active:bg-zaxe active:text-white text-zaxe h-full p-0 m-0 flex flex-wrap
         justify-center items-center"
@@ -212,6 +213,7 @@ function SearchBar({ className }) {
                 {toSuggest.map(({ text }) => (
                   <li className="w-full">
                     <button
+                      aria-label="Search this"
                       onClick={() => {
                         router.push(
                           `/${router.locale}/search?q=${text[router.locale]}`

@@ -75,6 +75,7 @@ function Products() {
           >
             <button
               type="button"
+              aria-label="Previous"
               className="absolute z-[5] disabled:opacity-50 left-0 top-1/2 -translate-y-1/2 swiper-button-prev
               active:bg-zinc-300 transition-all duration-200 active:scale-75 rounded-xl"
               disabled={activeSlide === 0}
@@ -83,6 +84,7 @@ function Products() {
             </button>
             <button
               type="button"
+              aria-label="Next"
               className="absolute z-[5] disabled:opacity-50  right-0 top-1/2 -translate-y-1/2 swiper-button-next
               active:bg-zinc-300 transition-all duration-200 active:scale-75 rounded-xl"
               disabled={activeSlide === products.length - 1}
