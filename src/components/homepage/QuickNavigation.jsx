@@ -19,10 +19,10 @@ function QuickNavigation() {
               key={`quick-nav-${item.title.toLowerCase()}`}
               className="relative grid w-full grid-cols-1 gap-3 place-content-start place-items-center"
             >
-              <h1 className="relative w-full grid grid-cols-1 gap-3 p-0 text-2xl font-semibold text-[#111111] ">
+              <h2 className="relative w-full grid grid-cols-1 gap-3 p-0 text-2xl font-semibold text-[#111111] ">
                 <item.Icon className="absolute w-8 h-8 -left-0 -translate-x-[130%] top-1/2 -translate-y-1/2" />
                 <span>{t(item.title)}</span>
-              </h1>
+              </h2>
               <ul className="grid w-full grid-cols-1 gap-2 place-content-start place-items-start">
                 {item.links.map((link) => (
                   <li

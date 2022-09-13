@@ -29,9 +29,9 @@ function Products() {
         data-aos-duration={500}
         className="grid w-full grid-cols-1 gap-10 px-5 py-10 bg-white max-w-app place-content-start place-items-center"
       >
-        <h1 className="text-2xl z-[2] font-bold text-zaxe xl:text-6xl lg:text-6xl">
+        <h2 className="text-2xl z-[2] font-bold text-zaxe xl:text-6xl lg:text-6xl">
           {t('homepage.products.heading')}
-        </h1>
+        </h2>
         <div className="xl:grid lg:grid hidden z-[1] w-full grid-cols-1 gap-10 xl:grid-cols-3 lg:grid-cols-3 place-content-start place-items-center">
           {products.map((product) => (
             <Link
@@ -52,9 +52,9 @@ function Products() {
                     layout="responsive"
                   />
                 </div>
-                <h1 className="text-3xl font-bold text-current">
+                <h2 className="text-3xl font-bold text-current">
                   {product.model}
-                </h1>
+                </h2>
               </a>
             </Link>
           ))}
@@ -120,13 +120,13 @@ function Products() {
                         layout="responsive"
                       />
                     </div>
-                    <h1
+                    <h2
                       className={`text-xs font-bold text-current opacity-0 transition-all duration-200 ${
                         index === activeSlide && '!opacity-100'
                       }`}
                     >
                       {product.model}
-                    </h1>
+                    </h2>
                   </a>
                 </Link>
               </SwiperSlide>
