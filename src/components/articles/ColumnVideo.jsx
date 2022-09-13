@@ -11,10 +11,7 @@ function ColumnVideo({ children, video: { url: videoURL } }) {
 
   return (
     <section className="flex flex-wrap-reverse w-full gap-10 my-5 post-column xl:flex-nowrap lg:flex-nowrap">
-      <section
-        className="relative bg-zinc-800 border border-zinc-300 p-0 w-full overflow-hidden shadow-lg
-        shadow-black/25 rounded-xl xl:h-[20rem] lg:h-[20rem] md:h-[17rem] h-[13rem]"
-      >
+      <figure className="bg-zinc-300 relative border border-zinc-300 p-0 w-full overflow-hidden shadow-lg  rounded-xl xl:h-[20rem] lg:h-[20rem] md:h-[17rem] h-[13rem]">
         <video
           className="object-cover z-[3] w-full h-full"
           id={`video-${videoID}`}
@@ -30,7 +27,7 @@ function ColumnVideo({ children, video: { url: videoURL } }) {
           <source src={videoURL} type="video/mp4" />
         </video>
         <VideoControls videoID={videoID} videoURL={videoURL} />
-      </section>
+      </figure>
       <aside className="w-full -order-1 xl:max-w-[40%] lg:max-w-[40%] max-w-full">
         {children}
       </aside>
