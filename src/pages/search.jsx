@@ -225,22 +225,39 @@ function Search({ posts: Posts }) {
             </h2>
             <nav className="relative flex flex-wrap items-center justify-center w-full gap-14">
               {filteredPosts.length > 0 ? (
-                filteredPosts.map((post) => (
-                  <PostBlock
-                    key={`post-${post.id}`}
-                    props={{
-                      postSlug: post.slug,
-                      postCategory: post.category,
-                      postTitle: { [router.locale]: post.title },
-                      postThumbnail: post.thumbnail,
-                      queryProduct: post['product-slug'],
-                      queryPCategory: post['product-category'],
-                      Categories: Content.products.find(
-                        ({ slug }) => slug === post['product-slug']
-                      ).content.categories,
-                    }}
-                  />
-                ))
+                filteredPosts.map((post) => {
+                  if (post['post-type'] === 'global') {
+                    return (
+                      <PostBlock
+                        key={`post-${post.id}`}
+                        props={{
+                          type: 'global',
+                          postSlug: post.slug,
+                          postCategory: post.category,
+                          postTitle: { [router.locale]: post.title },
+                          postThumbnail: post.thumbnail,
+                        }}
+                      />
+                    );
+                  }
+                  return (
+                    <PostBlock
+                      key={`post-${post.id}`}
+                      props={{
+                        type: 'product',
+                        postSlug: post.slug,
+                        postCategory: post.category,
+                        postTitle: { [router.locale]: post.title },
+                        postThumbnail: post.thumbnail,
+                        queryProduct: post['product-slug'],
+                        queryPCategory: post['product-category'],
+                        Categories: Content.products.find(
+                          ({ slug }) => slug === post['product-slug']
+                        ).content.categories,
+                      }}
+                    />
+                  );
+                })
               ) : (
                 <NoContent />
               )}
