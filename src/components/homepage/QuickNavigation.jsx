@@ -1,14 +1,21 @@
 import React from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Content from '@/src/content/Content';
 import { useTranslation } from 'next-i18next';
 import { BiLinkExternal } from 'react-icons/bi';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 function QuickNavigation() {
   const [quickNavItems] = React.useState(Content.components.quickNavigation);
   const { t } = useTranslation();
   const router = useRouter();
+
+  const getLinkButton = (item, link) => (
+    <LinkButton
+      key={`quick-nav-${item.title.toLowerCase()}-${link.title.toLowerCase()}`}
+      link={link}
+    />
+  );
 
   return (
     <div className="grid w-full grid-cols-1 px-0 bg-white xl:px-5 lg:px-5 font-zaxe py-28 place-content-start place-items-center">
@@ -24,19 +31,7 @@ function QuickNavigation() {
                 <span>{t(item.title)}</span>
               </h2>
               <ul className="grid w-full grid-cols-1 gap-2 place-content-start place-items-start">
-                {item.links.map((link) => (
-                  <li
-                    key={`quick-nav-${item.title.toLowerCase()}-${link.title.toLowerCase()}`}
-                  >
-                    <a
-                      href={link.link}
-                      className="relative flex group justify-start items-center gap-2 transition-all duration-100 after:absolute after:-bottom-1 after:h-[1px] after:w-0 after:bg-zaxe after:left-0 hover:after:w-full after:transition-all after:duration-[300ms] decoration-gray-600 hover:text-zaxe"
-                    >
-                      <span>{t(link.title)}</span>
-                      <BiLinkExternal className="text-sm transition-all duration-200 text-zinc-500 group-hover:text-current" />
-                    </a>
-                  </li>
-                ))}
+                {item.links.map((link) => getLinkButton(item, link))}
                 {item.allURL && (
                   <li className="flex items-center justify-start">
                     <Link href={item.allURL} locale={router.locale}>
@@ -55,6 +50,36 @@ function QuickNavigation() {
         </div>
       </div>
     </div>
+  );
+}
+
+function LinkButton({ link }) {
+  const { isExternal, link: url, title: linkTitle } = link;
+
+  const router = useRouter();
+  const { t } = useTranslation();
+  if (isExternal) {
+    return (
+      <li>
+        <a
+          href={url}
+          className="relative flex group justify-start items-center gap-2 transition-all duration-100 after:absolute after:-bottom-1 after:h-[1px] after:w-0 after:bg-zaxe after:left-0 hover:after:w-full after:transition-all after:duration-[300ms] decoration-gray-600 hover:text-zaxe"
+        >
+          <span>{t(linkTitle)}</span>
+          <BiLinkExternal className="text-sm transition-all duration-200 text-zinc-500 group-hover:text-current" />
+        </a>
+      </li>
+    );
+  }
+  return (
+    <li>
+      <Link href={url} locale={router.locale}>
+        <a className="relative flex group justify-start items-center gap-2 transition-all duration-100 after:absolute after:-bottom-1 after:h-[1px] after:w-0 after:bg-zaxe after:left-0 hover:after:w-full after:transition-all after:duration-[300ms] decoration-gray-600 hover:text-zaxe">
+          <span>{t(linkTitle)}</span>
+          <BiLinkExternal className="text-sm transition-all duration-200 text-zinc-500 group-hover:text-current" />
+        </a>
+      </Link>
+    </li>
   );
 }
 
