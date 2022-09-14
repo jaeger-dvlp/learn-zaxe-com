@@ -23,7 +23,7 @@ const GlobalPosts = [
     },
     slug: 'basic-3d-printing-safety',
     category: 'general',
-    thumbnail: `${CDNURL}img/mockpostthumbnail1.webp`,
+    thumbnail: `${CDNURL}posts/basic-3d-printing-safety/img/zaxe-3d-printing-safety-moving-parts.webp`,
   },
 ];
 
