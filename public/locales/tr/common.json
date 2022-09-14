@@ -74,8 +74,8 @@
   "components": {
     "quick-navigation": {
       "columns": [
-        { "heading": "Trendler" },
-        { "heading": "Bakım" },
+        { "heading": "Trendler", "links": [] },
+        { "heading": "Bakım", "links": ["Temel 3D Baskı Güvenliği"] },
         {
           "heading": "İndirmeler",
           "links": [
