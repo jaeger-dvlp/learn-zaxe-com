@@ -31,45 +31,69 @@ const getGlobalPost = async ({ postSlug, locale }) => {
 };
 
 const getAllPosts = async ({ locale }) => {
-  const Products = Content.products;
-  const allPostsUnfiltered = await Promise.all(
-    Products.map(
-      async ({
-        slug: productSlug,
-        content: { posts },
-        category: { slug: productCategory },
-      }) =>
-        Promise.all(
-          posts
-            .map(async ({ slug: postSlug, thumbnail }) => {
-              const { data } = matter(
-                fs.readFileSync(
-                  path.join(
-                    `src/posts/${productSlug}/${locale}/${postSlug}.mdx`
-                  ),
-                  'utf8'
-                )
-              );
-              return {
-                data: {
-                  ...data,
-                  slug: postSlug,
-                  id: v4().replace(/-/g, ''),
-                  url: `/${locale}/products/${productCategory}/${productSlug}/article/${postSlug}`,
-                  thumbnail,
-                  'product-slug': productSlug,
-                  'product-category': productCategory,
-                },
-              };
-            })
-            .flat()
+  const { products, globalPosts } = Content;
+  const allGlobalPosts = await Promise.all(
+    globalPosts.map(async ({ slug: postSlug, thumbnail }) => {
+      const { data } = matter(
+        fs.readFileSync(
+          path.join(`src/posts/global/${locale}/${postSlug}.mdx`),
+          'utf8'
         )
-    ).flat()
+      );
+      return {
+        data: {
+          ...data,
+          slug: postSlug,
+          id: v4().replace(/-/g, ''),
+          url: `/${locale}/articles/${postSlug}`,
+          thumbnail,
+          'post-type': 'global',
+        },
+      };
+    })
+  );
+  const allProductPosts = await Promise.all(
+    products
+      .map(
+        async ({
+          slug: productSlug,
+          content: { posts },
+          category: { slug: productCategory },
+        }) =>
+          Promise.all(
+            posts
+              .map(async ({ slug: postSlug, thumbnail }) => {
+                const { data } = matter(
+                  fs.readFileSync(
+                    path.join(
+                      `src/posts/${productSlug}/${locale}/${postSlug}.mdx`
+                    ),
+                    'utf8'
+                  )
+                );
+                return {
+                  data: {
+                    ...data,
+                    slug: postSlug,
+                    id: v4().replace(/-/g, ''),
+                    url: `/${locale}/products/${productCategory}/${productSlug}/article/${postSlug}`,
+                    thumbnail,
+                    'product-slug': productSlug,
+                    'product-category': productCategory,
+                    'post-type': 'product',
+                  },
+                };
+              })
+              .flat()
+          )
+      )
+      .flat()
   );
 
-  const AllPosts = allPostsUnfiltered
-    .map((posts) => posts.map((postF) => postF.data))
-    .flat();
+  const AllPosts = allGlobalPosts
+    .concat(allProductPosts)
+    .flat()
+    .map((post) => post.data);
 
   return AllPosts;
 };
