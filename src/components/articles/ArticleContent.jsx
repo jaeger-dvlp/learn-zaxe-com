@@ -1,6 +1,7 @@
 import React from 'react';
 import Images from '@/src/images/Images';
 import { MDXRemote } from 'next-mdx-remote';
+import Aligned from '@/src/components/articles/Aligned';
 import AlertBox from '@/src/components/articles/AlertBox';
 import FullCode from '@/src/components/articles/FullCode';
 import ColumnCode from '@/src/components/articles/ColumnCode';
@@ -28,6 +29,7 @@ function ArticleContent({ props }) {
             {...content}
             components={{
               Images,
+              Aligned,
               FullCode,
               AlertBox,
               ColumnCode,
