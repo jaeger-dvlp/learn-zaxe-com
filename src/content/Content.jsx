@@ -18,10 +18,10 @@ const OSIcons = {
 const GlobalPosts = [
   {
     title: {
-      tr: 'Baskılarda Büzülmeyi Engelleme',
-      en: 'How to Fix Warping',
+      tr: 'Temel 3D Baskı Güvenliği',
+      en: 'Basic 3D Printing Safety',
     },
-    slug: 'how-to-fix-warping',
+    slug: 'basic-3d-printing-safety',
     category: 'general',
     thumbnail: `${CDNURL}img/mockpostthumbnail1.webp`,
   },
@@ -771,26 +771,32 @@ const QuickNavigationHome = [
       {
         title: 'Metal Expansion Kit',
         link: '#',
+        isExternal: false,
       },
       {
         title: 'PVA Removal Station',
         link: '#',
+        isExternal: false,
       },
       {
         title: 'Print Cores',
         link: '#',
+        isExternal: false,
       },
       {
         title: 'Spare Parts',
         link: '#',
+        isExternal: false,
       },
       {
         title: 'Maintenance Kits',
         link: '#',
+        isExternal: false,
       },
       {
         title: 'Advanced 3D Printer Tips',
         link: '#',
+        isExternal: false,
       },
     ],
   },
@@ -800,28 +806,34 @@ const QuickNavigationHome = [
     allURL: null,
     links: [
       {
-        title: 'How to fix warping',
-        link: '/articles/how-to-fix-warping',
+        title: 'components.quick-navigation.columns.1.links.0',
+        link: '/articles/basic-3d-printing-safety',
+        isExternal: false,
       },
       {
         title: 'How to fix stringing',
         link: '#',
+        isExternal: false,
       },
       {
         title: 'How to fix pillowing',
         link: '#',
+        isExternal: false,
       },
       {
         title: 'How to fix under-extrusion',
         link: '#',
+        isExternal: false,
       },
       {
         title: 'How to feed filament loader',
         link: '#',
+        isExternal: false,
       },
       {
         title: 'How to fix feed issues',
         link: '#',
+        isExternal: false,
       },
     ],
   },
@@ -835,26 +847,32 @@ const QuickNavigationHome = [
       {
         title: 'components.quick-navigation.columns.2.links.0',
         link: `${CDNURL}docs/global/zaxe-z3-user-manual.pdf`,
+        isExternal: true,
       },
       {
         title: 'components.quick-navigation.columns.2.links.1',
         link: `${CDNURL}docs/global/zaxe-x3-user-manual.pdf`,
+        isExternal: true,
       },
       {
         title: 'components.quick-navigation.columns.2.links.2',
         link: `${CDNURL}docs/global/zaxe-x3-user-manual.pdf`,
+        isExternal: true,
       },
       {
         title: 'components.quick-navigation.columns.2.links.3',
         link: `${CDNURL}docs/global/zaxe-x3-user-manual.pdf`,
+        isExternal: true,
       },
       {
         title: 'components.quick-navigation.columns.2.links.4',
         link: 'https://d.zaxe.com/xdesktopwin',
+        isExternal: true,
       },
       {
         title: 'components.quick-navigation.columns.2.links.5',
         link: 'https://d.zaxe.com/xdesktopmac',
+        isExternal: true,
       },
     ],
   },
