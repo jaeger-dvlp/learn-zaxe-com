@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { AiOutlineSearch } from 'react-icons/ai';
+import Content from '@/src/content/Content';
 
 function SearchBar({ className }) {
   const router = useRouter();
@@ -10,38 +11,7 @@ function SearchBar({ className }) {
   const [suggestionBox, setSuggestionBox] = React.useState({
     show: false,
   });
-  const [suggestions] = React.useState([
-    {
-      text: {
-        en: 'How to replace fan of Zaxe X3 Printhead ?',
-        tr: 'Zaxe X3 Baskı kafası fanı nasıl değiştirilir ?',
-      },
-      keys: [
-        'fan',
-        'printhead',
-        'replace',
-        'change',
-        'x3',
-        'baskı',
-        'kafası',
-        'değiştir',
-      ],
-    },
-    {
-      text: {
-        en: 'How to change Nozzle of Zaxe Z3 ?',
-        tr: 'Zaxe Z3 Nozül nasıl değiştirilir ?',
-      },
-      keys: ['nozzle', 'change', 'z3', 'nozül', 'değiştir'],
-    },
-    {
-      text: {
-        en: 'How to install Zaxe xDesktop ?',
-        tr: 'Zaxe xDesktop nasıl kurulur ?',
-      },
-      keys: ['xdesktop', 'install', 'kurulur', 'kur'],
-    },
-  ]);
+  const [suggestions] = React.useState(Content.suggestions);
   const [toSuggest, setToSuggest] = React.useState([]);
 
   const [searchBarPHs, setSearchBarPHs] = React.useState({
