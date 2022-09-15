@@ -15,6 +15,30 @@ const OSIcons = {
   mac: <BsApple />,
 };
 
+const Suggestions = [
+  {
+    text: {
+      en: 'Basic 3D Printing Safety',
+      tr: 'Temel 3D Baskı Güvenliği',
+    },
+    keys: ['safety', 'basic', 'güvenlik', 'temel'],
+  },
+  {
+    text: {
+      en: 'Keeping Your Zaxe Z3 Clean',
+      tr: "Zaxe Z3'ünüzü Temiz Tutma",
+    },
+    keys: ['clean', 'temiz', 'temizlemek', 'cleaning'],
+  },
+  {
+    text: {
+      en: 'Keeping Your Zaxe X3 Clean',
+      tr: "Zaxe X3'ünüzü Temiz Tutma",
+    },
+    keys: ['clean', 'temiz', 'temizlemek', 'cleaning'],
+  },
+];
+
 const GlobalPosts = [
   {
     title: {
@@ -899,6 +923,7 @@ const Content = {
     quickNavigation: QuickNavigationHome,
     downloadDocuments: DownloadDocuments,
   },
+  suggestions: Suggestions,
   downloadables: Downloadables,
   OSIcons,
 };
