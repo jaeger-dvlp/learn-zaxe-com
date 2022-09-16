@@ -75,7 +75,13 @@
     "quick-navigation": {
       "columns": [
         { "heading": "Trending", "links": [] },
-        { "heading": "Maintenance", "links": ["Basic 3D Printing Safety"] },
+        {
+          "heading": "Maintenance",
+          "links": [
+            "Basic 3D Printing Safety",
+            "Useful 3D Printing Tools and Accessories"
+          ]
+        },
         {
           "heading": "Downloads",
           "links": [

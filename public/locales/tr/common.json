@@ -75,7 +75,13 @@
     "quick-navigation": {
       "columns": [
         { "heading": "Trendler", "links": [] },
-        { "heading": "Bakım", "links": ["Temel 3D Baskı Güvenliği"] },
+        {
+          "heading": "Bakım",
+          "links": [
+            "Temel 3D Baskı Güvenliği",
+            "Kullanışlı 3D Baskı Araçları ve Aksesuarları"
+          ]
+        },
         {
           "heading": "İndirmeler",
           "links": [
