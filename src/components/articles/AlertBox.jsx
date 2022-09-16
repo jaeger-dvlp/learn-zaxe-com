@@ -13,7 +13,7 @@ function AlertBox({ children, alertType }) {
   );
 
   return (
-    <blockquote
+    <article
       className={`flex xl:flex-nowrap lg:flex-nowrap alert-box flex-wrap border rounded-lg items-center justify-between w-fit gap-3 p-3 relative ${AlertClass}`}
     >
       <span className="flex items-center justify-center w-full xl:w-20 lg:w-20">
@@ -28,7 +28,7 @@ function AlertBox({ children, alertType }) {
           <span className="w-2 h-2 bg-current rounded-full" />
         </span>
       </span>
-    </blockquote>
+    </article>
   );
 }
 
