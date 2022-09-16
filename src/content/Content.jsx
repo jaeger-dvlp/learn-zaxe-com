@@ -49,6 +49,15 @@ const GlobalPosts = [
     category: 'general',
     thumbnail: `${CDNURL}posts/basic-3d-printing-safety/img/zaxe-3d-printing-safety-moving-parts.webp`,
   },
+  {
+    title: {
+      tr: 'Kullanışlı 3D Baskı Araçları ve Aksesuarları',
+      en: 'Useful 3D Printing Tools and Accessories',
+    },
+    slug: 'useful-3d-printing-tools-and-accessories',
+    category: 'general',
+    thumbnail: `${CDNURL}posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp`,
+  },
 ];
 
 const ProductPosts = [
