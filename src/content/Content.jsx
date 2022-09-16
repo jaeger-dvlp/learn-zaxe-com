@@ -844,8 +844,8 @@ const QuickNavigationHome = [
         isExternal: false,
       },
       {
-        title: 'How to fix stringing',
-        link: '#',
+        title: 'components.quick-navigation.columns.1.links.1',
+        link: '/articles/useful-3d-printing-tools-and-accessories',
         isExternal: false,
       },
       {
