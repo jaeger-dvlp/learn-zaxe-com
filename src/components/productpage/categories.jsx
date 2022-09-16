@@ -99,6 +99,7 @@ function Categories({ product }) {
               <>
                 {product.content.posts.map(
                   ({
+                    type,
                     slug: postSlug,
                     category: postCategory,
                     title: postTitle,
@@ -107,6 +108,7 @@ function Categories({ product }) {
                     <PostBlock
                       key={Math.floor(Math.random() * 100000)}
                       props={{
+                        type,
                         postSlug,
                         postCategory,
                         postTitle,
@@ -145,6 +147,7 @@ function Categories({ product }) {
                   .slice(0, 2)
                   .map(
                     ({
+                      type,
                       slug: postSlug,
                       category: postCategory,
                       title: postTitle,
@@ -153,6 +156,7 @@ function Categories({ product }) {
                       <PostBlock
                         key={Math.floor(Math.random() * 100000)}
                         props={{
+                          type,
                           postSlug,
                           postCategory,
                           postTitle,

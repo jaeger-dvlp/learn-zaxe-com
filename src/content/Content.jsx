@@ -48,6 +48,7 @@ const GlobalPosts = [
     slug: 'basic-3d-printing-safety',
     category: 'general',
     thumbnail: `${CDNURL}posts/basic-3d-printing-safety/img/zaxe-3d-printing-safety-moving-parts.webp`,
+    type: 'global',
   },
   {
     title: {
@@ -57,6 +58,7 @@ const GlobalPosts = [
     slug: 'useful-3d-printing-tools-and-accessories',
     category: 'general',
     thumbnail: `${CDNURL}posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp`,
+    type: 'global',
   },
 ];
 
@@ -70,6 +72,7 @@ const ProductPosts = [
       slug: 'keeping-your-zaxe-z3-clean',
       category: 'maintenance',
       thumbnail: `${CDNURL}posts/keeping-your-zaxe-z3-clean/img/zaxe-z3-cleaning-printing-table.webp`,
+      type: 'product',
     },
     {
       title: {
@@ -79,6 +82,7 @@ const ProductPosts = [
       slug: 'your-first-bed-calibration-with-zaxe-z3-3d-printer',
       category: 'maintenance',
       thumbnail: `${CDNURL}posts/your-first-bed-calibration-with-zaxe-z3-3d-printer/img/zaxe-z3-calibration-lines.webp`,
+      type: 'product',
     },
   ],
 
@@ -91,6 +95,7 @@ const ProductPosts = [
       slug: 'keeping-your-zaxe-x3-clean',
       category: 'maintenance',
       thumbnail: `${CDNURL}posts/keeping-your-zaxe-x3-clean/img/zaxe-x3-cleaning-printing-table.webp`,
+      type: 'product',
     },
   ],
   [
@@ -102,6 +107,7 @@ const ProductPosts = [
       slug: 'about-xdesktop',
       category: 'start',
       thumbnail: `${CDNURL}posts/about-xdesktop/img/zaxe-xdesktop-ui.webp`,
+      type: 'product',
     },
     {
       title: {
@@ -111,6 +117,7 @@ const ProductPosts = [
       slug: 'guide-to-getting-your-first-print-using-xdesktop',
       category: 'start',
       thumbnail: `${CDNURL}posts/guide-to-getting-your-first-print-using-xdesktop/img/zaxe-xdesktop-first-print-model-orientation.webp`,
+      type: 'product',
     },
   ],
 ];

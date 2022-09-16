@@ -38,6 +38,7 @@ function ProductPosts({ product }) {
             0 ? (
               Posts.map(
                 ({
+                  type,
                   category: postCategory,
                   title: postTitle,
                   title: { en: postKey },
@@ -47,6 +48,7 @@ function ProductPosts({ product }) {
                   <PostBlock
                     key={`${postCategory}-${postKey}-${productSlug}`}
                     props={{
+                      type,
                       postSlug,
                       postCategory,
                       postTitle,
@@ -64,6 +66,7 @@ function ProductPosts({ product }) {
           ) : (
             Posts.map(
               ({
+                type,
                 category: postCategory,
                 title: postTitle,
                 title: { en: postKey },
@@ -73,6 +76,7 @@ function ProductPosts({ product }) {
                 <PostBlock
                   key={`${postCategory}-${postKey}-${productSlug}`}
                   props={{
+                    type,
                     postSlug,
                     postCategory,
                     postTitle,
