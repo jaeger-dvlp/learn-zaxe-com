@@ -48,7 +48,7 @@
 }
 
 .zaxe-kb-post .alert-box {
-  @apply !mb-10;
+  @apply !mb-10 my-5;
 }
 
 .zaxe-kb-post p:not(.alert-text p) {
