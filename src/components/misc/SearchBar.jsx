@@ -162,7 +162,7 @@ function SearchBar({ className }) {
                 </span>
               </li>
               {toSuggest.map(({ text }) => (
-                <li className="w-full">
+                <li key={text[router.locale]} className="w-full">
                   <button
                     aria-label="Search this"
                     onClick={() => {

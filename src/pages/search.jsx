@@ -24,26 +24,57 @@ function Search({ posts: Posts }) {
   const [filteredVideos, setFilteredVideos] = React.useState([]);
   const [filteredDownloads, setFilteredDownloads] = React.useState([]);
 
+  const updateSearchPoints = (post, points) => {
+    const tempPost = post;
+    if (tempPost.searchPoints >= 0) {
+      tempPost.searchPoints += points;
+    } else {
+      tempPost.searchPoints = points;
+    }
+    return post;
+  };
+
+  const sortByPoints = (arr) =>
+    arr.sort((a, b) => b.searchPoints - a.searchPoints);
+
   const PostActions = {
-    GetQueriedPosts: async ({ queries }) => {
-      const queriedPosts = await queries
-        .map((query) =>
-          posts.filter(({ tags }) =>
-            tags.find(
-              (tag) =>
-                tag.toLowerCase() === query ||
-                (query.length > 2 &&
-                  tag.length > 2 &&
-                  tag.toLowerCase().includes(query))
-            )
-          )
-        )
+    GetQueriedPosts: ({ queries }) => {
+      const queriedPosts = queries
+        .map((query) => {
+          const foundPosts = posts.map((post) => {
+            let currentPost = post;
+            currentPost.searchPoints = 0;
+
+            if (post.tags.find((tag) => tag.toLowerCase() === query)) {
+              currentPost = updateSearchPoints(currentPost, 5);
+            }
+
+            if (
+              query.length > 2 &&
+              post.tags.find((tag) => tag.toLowerCase().includes(query))
+            ) {
+              currentPost = updateSearchPoints(currentPost, 2);
+            }
+
+            if (query.length > 2 && post.title.includes(query)) {
+              currentPost = updateSearchPoints(currentPost, 1);
+            }
+
+            if (currentPost.searchPoints > 0) {
+              return currentPost;
+            }
+            return null;
+          });
+
+          return foundPosts.filter((obj) => obj !== null);
+        })
         .flat();
 
       return queriedPosts;
     },
     ClearDuplicatedArray: async (DuplicatedArray) => {
-      const uniqueArray = [];
+      let uniqueArray = [];
+
       await DuplicatedArray.map((post) => {
         if (uniqueArray.find(({ id }) => id === post.id) === undefined) {
           return uniqueArray.push(post);
@@ -51,12 +82,16 @@ function Search({ posts: Posts }) {
         return null;
       });
 
+      uniqueArray = sortByPoints(uniqueArray);
+
       return uniqueArray;
     },
     FilterPostsByQuery: async (queries) => {
       const QueriedPosts = await PostActions.GetQueriedPosts({ queries });
-      const ClearedPosts = await PostActions.ClearDuplicatedArray(QueriedPosts);
-      setFilteredPosts(ClearedPosts);
+      const ClearedPosts = await PostActions.ClearDuplicatedArray(
+        await QueriedPosts
+      );
+      setFilteredPosts(await ClearedPosts);
     },
   };
 
@@ -146,14 +181,22 @@ function Search({ posts: Posts }) {
   };
 
   const FilterContent = () => {
-    PostActions.FilterPostsByQuery(searchQuery.toLowerCase().split(' '));
-    VideoActions.FilterVideosByQuery(searchQuery.toLowerCase().split(' '));
-    DownloadsActions.FilterDownloadsByQuery(
-      searchQuery.toLowerCase().split(' ')
-    );
+    if (searchQuery) {
+      const queries = searchQuery.toLowerCase().split(' ');
+      PostActions.FilterPostsByQuery(queries);
+      VideoActions.FilterVideosByQuery(queries);
+      DownloadsActions.FilterDownloadsByQuery(queries);
+    }
+  };
+
+  const ResetContent = () => {
+    setFilteredPosts([]);
+    setFilteredVideos([]);
+    setFilteredDownloads([]);
   };
 
   React.useEffect(() => {
+    ResetContent();
     if (searchQuery) {
       FilterContent();
     }
