@@ -103,6 +103,15 @@ const ProductPosts = [
       category: 'start',
       thumbnail: `${CDNURL}posts/about-xdesktop/img/zaxe-xdesktop-ui.webp`,
     },
+    {
+      title: {
+        tr: 'xDesktop Kullanarak İlk Baskınızı Alma Kılavuzu',
+        en: 'Guide to Getting Your First Print Using xDesktop',
+      },
+      slug: 'guide-to-getting-your-first-print-using-xdesktop',
+      category: 'start',
+      thumbnail: `${CDNURL}posts/guide-to-getting-your-first-print-using-xdesktop/img/zaxe-xdesktop-first-print-model-orientation.webp`,
+    },
   ],
 ];
 
