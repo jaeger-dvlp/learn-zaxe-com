@@ -45,18 +45,25 @@ function Search({ posts: Posts }) {
             let currentPost = post;
             currentPost.searchPoints = 0;
 
-            if (post.tags.find((tag) => tag.toLowerCase() === query)) {
+            if (
+              post.tags.find((tag) => tag.toLowerCase() === query.toLowerCase())
+            ) {
               currentPost = updateSearchPoints(currentPost, 5);
             }
 
             if (
               query.length > 2 &&
-              post.tags.find((tag) => tag.toLowerCase().includes(query))
+              post.tags.find((tag) =>
+                tag.toLowerCase().includes(query.toLowerCase())
+              )
             ) {
               currentPost = updateSearchPoints(currentPost, 2);
             }
 
-            if (query.length > 2 && post.title.includes(query)) {
+            if (
+              query.length > 2 &&
+              post.title.toLowerCase().includes(query.toLowerCase())
+            ) {
               currentPost = updateSearchPoints(currentPost, 1);
             }
 
