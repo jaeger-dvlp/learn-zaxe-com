@@ -39,7 +39,7 @@ function QuickNavigation() {
                         <span>
                           {t('components.quick-navigation.buttons.view-all')}
                         </span>
-                        <BiLinkExternal className="text-sm text-current transition-all duration-200" />
+                        <BiLinkExternal className="w-4 h-4 text-current transition-all duration-200" />
                       </a>
                     </Link>
                   </li>
@@ -65,8 +65,8 @@ function LinkButton({ link }) {
           href={url}
           className="relative flex group justify-start items-center gap-2 transition-all duration-100 after:absolute after:-bottom-1 after:h-[1px] after:w-0 after:bg-zaxe after:left-0 hover:after:w-full after:transition-all after:duration-[300ms] decoration-gray-600 hover:text-zaxe"
         >
-          <span>{t(linkTitle)}</span>
-          <BiLinkExternal className="text-sm transition-all duration-200 text-zinc-500 group-hover:text-current" />
+          <span className="w-full">{t(linkTitle)}</span>
+          <BiLinkExternal className="w-4 h-4 transition-all duration-200 text-zinc-500 group-hover:text-current" />
         </a>
       </li>
     );
@@ -75,8 +75,8 @@ function LinkButton({ link }) {
     <li>
       <Link href={url} locale={router.locale}>
         <a className="relative flex group justify-start items-center gap-2 transition-all duration-100 after:absolute after:-bottom-1 after:h-[1px] after:w-0 after:bg-zaxe after:left-0 hover:after:w-full after:transition-all after:duration-[300ms] decoration-gray-600 hover:text-zaxe">
-          <span>{t(linkTitle)}</span>
-          <BiLinkExternal className="text-sm transition-all duration-200 text-zinc-500 group-hover:text-current" />
+          <span className="w-full">{t(linkTitle)}</span>
+          <BiLinkExternal className="w-4 h-4 transition-all duration-200 text-zinc-500 group-hover:text-current" />
         </a>
       </Link>
     </li>
