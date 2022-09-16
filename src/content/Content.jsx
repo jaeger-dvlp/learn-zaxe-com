@@ -69,7 +69,7 @@ const ProductPosts = [
       },
       slug: 'keeping-your-zaxe-z3-clean',
       category: 'maintenance',
-      thumbnail: `${CDNURL}posts/keeping-your-zaxe-z3-clean/zaxe-z3-cleaning-printing-table.webp`,
+      thumbnail: `${CDNURL}posts/keeping-your-zaxe-z3-clean/img/zaxe-z3-cleaning-printing-table.webp`,
     },
     {
       title: {
@@ -78,7 +78,7 @@ const ProductPosts = [
       },
       slug: 'your-first-bed-calibration-with-zaxe-z3-3d-printer',
       category: 'maintenance',
-      thumbnail: `${CDNURL}posts/your-first-bed-calibration-with-zaxe-z3-3d-printer/zaxe-z3-calibration-lines.webp`,
+      thumbnail: `${CDNURL}posts/your-first-bed-calibration-with-zaxe-z3-3d-printer/img/zaxe-z3-calibration-lines.webp`,
     },
   ],
 
@@ -90,7 +90,7 @@ const ProductPosts = [
       },
       slug: 'keeping-your-zaxe-x3-clean',
       category: 'maintenance',
-      thumbnail: `${CDNURL}posts/keeping-your-zaxe-x3-clean/zaxe-x3-cleaning-printing-table.webp`,
+      thumbnail: `${CDNURL}posts/keeping-your-zaxe-x3-clean/img/zaxe-x3-cleaning-printing-table.webp`,
     },
   ],
   [
