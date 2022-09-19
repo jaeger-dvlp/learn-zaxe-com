@@ -86,6 +86,26 @@ const ProductPosts = [
   [
     {
       title: {
+        tr: 'Zaxe Z3 3D Yazıcınızda Temel Bakım Yapımı',
+        en: 'Doing Basic Maintenance on Your Zaxe Z3 3D Printer',
+      },
+      slug: 'doing-basic-maintenance-on-your-zaxe-z3-3d-printer',
+      category: 'maintenance',
+      thumbnail: `${CDNURL}posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-nozzle.webp`,
+      type: 'product',
+    },
+    {
+      title: {
+        tr: "Zaxe Z3'de Nasıl Filament Değiştirilir?",
+        en: 'How to Change Filament on Your Zaxe Z3',
+      },
+      slug: 'how-to-change-filament-on-your-zaxe-z3',
+      category: 'maintenance',
+      thumbnail: `${CDNURL}posts/how-to-change-filament-zaxe-z3/img/zaxe-z3-filament-ready.webp`,
+      type: 'product',
+    },
+    {
+      title: {
         tr: "Zaxe Z3'ünüzü Temiz Tutmak",
         en: 'Keeping Your Zaxe Z3 Clean',
       },
@@ -104,38 +124,8 @@ const ProductPosts = [
       thumbnail: `${CDNURL}posts/your-first-bed-calibration-with-zaxe-z3-3d-printer/img/zaxe-z3-calibration-lines.webp`,
       type: 'product',
     },
-    {
-      title: {
-        tr: "Zaxe Z3'de Nasıl Filament Değiştirilir?",
-        en: 'How to Change Filament on Your Zaxe Z3',
-      },
-      slug: 'how-to-change-filament-on-your-zaxe-z3',
-      category: 'maintenance',
-      thumbnail: `${CDNURL}posts/how-to-change-filament-zaxe-z3/img/zaxe-z3-filament-ready.webp`,
-      type: 'product',
-    },
-    {
-      title: {
-        tr: 'Zaxe Z3 3D Yazıcınızda Temel Bakım Yapımı',
-        en: 'Doing Basic Maintenance on Your Zaxe Z3 3D Printer',
-      },
-      slug: 'doing-basic-maintenance-on-your-zaxe-z3-3d-printer',
-      category: 'maintenance',
-      thumbnail: `${CDNURL}posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-nozzle.webp`,
-      type: 'product',
-    },
   ],
   [
-    {
-      title: {
-        tr: "Zaxe X3'ünüzü Temiz Tutmak",
-        en: 'Keeping Your Zaxe X3 Clean',
-      },
-      slug: 'keeping-your-zaxe-x3-clean',
-      category: 'maintenance',
-      thumbnail: `${CDNURL}posts/keeping-your-zaxe-x3-clean/img/zaxe-x3-cleaning-printing-table.webp`,
-      type: 'product',
-    },
     {
       title: {
         tr: "Zaxe X3'de Nasıl Filament Değiştirilir?",
@@ -144,6 +134,16 @@ const ProductPosts = [
       slug: 'how-to-change-filament-on-your-zaxe-x3',
       category: 'maintenance',
       thumbnail: `${CDNURL}posts/how-to-change-filament-zaxe-z3/img/zaxe-z3-filament-ready.webp`,
+      type: 'product',
+    },
+    {
+      title: {
+        tr: "Zaxe X3'ünüzü Temiz Tutmak",
+        en: 'Keeping Your Zaxe X3 Clean',
+      },
+      slug: 'keeping-your-zaxe-x3-clean',
+      category: 'maintenance',
+      thumbnail: `${CDNURL}posts/keeping-your-zaxe-x3-clean/img/zaxe-x3-cleaning-printing-table.webp`,
       type: 'product',
     },
   ],
