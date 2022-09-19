@@ -5,7 +5,7 @@
 }
 .zaxe-kb-post ol,
 .zaxe-kb-post ul {
-  @apply list-disc;
+  @apply pl-5 list-disc;
 }
 
 .zaxe-kb-post .list-number {
