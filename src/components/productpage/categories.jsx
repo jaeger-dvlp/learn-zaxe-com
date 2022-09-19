@@ -97,29 +97,31 @@ function Categories({ product }) {
           <div className="flex flex-wrap items-start justify-start w-full max-w-xl gap-10">
             {activeCategory === null ? (
               <>
-                {product.content.posts.map(
-                  ({
-                    type,
-                    slug: postSlug,
-                    category: postCategory,
-                    title: postTitle,
-                    thumbnail: postThumbnail,
-                  }) => (
-                    <PostBlock
-                      key={Math.floor(Math.random() * 100000)}
-                      props={{
-                        type,
-                        postSlug,
-                        postCategory,
-                        postTitle,
-                        postThumbnail,
-                        queryProduct,
-                        queryPCategory,
-                        Categories: product.content.categories,
-                      }}
-                    />
-                  )
-                )}
+                {product.content.posts
+                  .slice(0, 2)
+                  .map(
+                    ({
+                      type,
+                      slug: postSlug,
+                      category: postCategory,
+                      title: postTitle,
+                      thumbnail: postThumbnail,
+                    }) => (
+                      <PostBlock
+                        key={Math.floor(Math.random() * 100000)}
+                        props={{
+                          type,
+                          postSlug,
+                          postCategory,
+                          postTitle,
+                          postThumbnail,
+                          queryProduct,
+                          queryPCategory,
+                          Categories: product.content.categories,
+                        }}
+                      />
+                    )
+                  )}
                 {product.content.starterVideos
                   .slice(0, 2)
                   .map(({ label, videoURL, thumbnail }) => (
