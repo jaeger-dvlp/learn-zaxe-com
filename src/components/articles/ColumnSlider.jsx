@@ -86,9 +86,9 @@ function ColumnSlider({ children, images: sliderImages }) {
           ))}
         </section>
       </section>
-      <article className="w-full -order-2 xl:max-w-[45%] lg:max-w-[45%] max-w-full">
+      <aside className="w-full -order-2 xl:max-w-[45%] lg:max-w-[45%] max-w-full">
         {children}
-      </article>
+      </aside>
     </section>
   );
 }
