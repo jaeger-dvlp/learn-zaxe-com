@@ -117,6 +117,16 @@ const ProductPosts = [
       thumbnail: `${CDNURL}posts/keeping-your-zaxe-x3-clean/img/zaxe-x3-cleaning-printing-table.webp`,
       type: 'product',
     },
+    {
+      title: {
+        tr: "Zaxe X3'de Nasıl Filament Değiştirilir?",
+        en: 'How to Change Filament on Your Zaxe X3',
+      },
+      slug: 'how-to-change-filament-on-your-zaxe-x3',
+      category: 'maintenance',
+      thumbnail: `${CDNURL}posts/keeping-your-zaxe-x3-clean/img/zaxe-x3-cleaning-printing-table.webp`,
+      type: 'product',
+    },
   ],
   [
     {
