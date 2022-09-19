@@ -8,6 +8,11 @@
   @apply list-disc;
 }
 
+.zaxe-kb-post .list-number {
+  font-size: larger;
+  @apply font-bold text-zaxe;
+}
+
 .zaxe-kb-post .article-heading {
   @apply my-10;
 }
