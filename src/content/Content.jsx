@@ -70,6 +70,16 @@ const GlobalPosts = [
     thumbnail: `${CDNURL}posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp`,
     type: 'global',
   },
+  {
+    title: {
+      tr: 'OctoPi 3D Baskıyı sizin için nasıl daha iyi hale getirir?',
+      en: 'How OctoPi Can Make 3D Printing Better for You',
+    },
+    slug: 'how-octopi-can-make-3d-printing-better-for-you',
+    category: 'general',
+    thumbnail: `${CDNURL}posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp`,
+    type: 'global',
+  },
 ];
 
 const ProductPosts = [
@@ -877,6 +887,11 @@ const QuickNavigationHome = [
       {
         title: 'components.quick-navigation.columns.1.links.2',
         link: '/articles/what-is-klipper-and-how-it-makes-your-zaxe-3d-printer-better',
+        isExternal: false,
+      },
+      {
+        title: 'components.quick-navigation.columns.1.links.3',
+        link: '/articles/how-octopi-can-make-3d-printing-better-for-you',
         isExternal: false,
       },
       {
