@@ -104,8 +104,17 @@ const ProductPosts = [
       thumbnail: `${CDNURL}posts/your-first-bed-calibration-with-zaxe-z3-3d-printer/img/zaxe-z3-calibration-lines.webp`,
       type: 'product',
     },
+    {
+      title: {
+        tr: "Zaxe Z3'de Nasıl Filament Değiştirilir?",
+        en: 'How to Change Filament on Your Zaxe Z3',
+      },
+      slug: 'how-to-change-filament-on-your-zaxe-z3',
+      category: 'maintenance',
+      thumbnail: `${CDNURL}posts/your-first-bed-calibration-with-zaxe-z3-3d-printer/img/zaxe-z3-calibration-lines.webp`,
+      type: 'product',
+    },
   ],
-
   [
     {
       title: {
