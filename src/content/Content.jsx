@@ -60,6 +60,16 @@ const GlobalPosts = [
     thumbnail: `${CDNURL}posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp`,
     type: 'global',
   },
+  {
+    title: {
+      tr: 'Klipper Nedir ve Zaxe 3D Yazıcınızı Nasıl Daha İyi Hale Getirir?',
+      en: 'What is Klipper and How It Makes Your Zaxe 3D Printer Better?',
+    },
+    slug: 'what-is-klipper-and-how-it-makes-your-zaxe-3d-printer-better',
+    category: 'general',
+    thumbnail: `${CDNURL}posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp`,
+    type: 'global',
+  },
 ];
 
 const ProductPosts = [
@@ -865,8 +875,8 @@ const QuickNavigationHome = [
         isExternal: false,
       },
       {
-        title: 'How to fix pillowing',
-        link: '#',
+        title: 'components.quick-navigation.columns.1.links.2',
+        link: '/articles/what-is-klipper-and-how-it-makes-your-zaxe-3d-printer-better',
         isExternal: false,
       },
       {
