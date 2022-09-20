@@ -128,6 +128,16 @@ const ProductPosts = [
   [
     {
       title: {
+        tr: 'Zaxe X3 3D Yazıcınızda Temel Bakım Yapımı',
+        en: 'Doing Basic Maintenance on Your Zaxe X3 3D Printer',
+      },
+      slug: 'doing-basic-maintenance-on-your-zaxe-x3-3d-printer',
+      category: 'maintenance',
+      thumbnail: `${CDNURL}posts/basic-maintenance-zaxe-x3/img/zaxe-x3-changing-nozzle.webp`,
+      type: 'product',
+    },
+    {
+      title: {
         tr: "Zaxe X3'de Nasıl Filament Değiştirilir?",
         en: 'How to Change Filament on Your Zaxe X3',
       },
