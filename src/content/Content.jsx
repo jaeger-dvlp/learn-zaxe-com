@@ -106,6 +106,16 @@ const ProductPosts = [
     },
     {
       title: {
+        tr: 'Zaxe Z3 3D Yazıcınızı Tanıyın',
+        en: 'Know Your Zaxe Z3 3D Printer',
+      },
+      slug: 'know-your-zaxe-z3-3d-printer',
+      category: 'maintenance',
+      thumbnail: `${CDNURL}posts/how-to-change-filament-zaxe-z3/img/zaxe-z3-filament-ready.webp`,
+      type: 'product',
+    },
+    {
+      title: {
         tr: "Zaxe Z3'ünüzü Temiz Tutmak",
         en: 'Keeping Your Zaxe Z3 Clean',
       },
