@@ -80,6 +80,16 @@ const GlobalPosts = [
     thumbnail: `${CDNURL}posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp`,
     type: 'global',
   },
+  {
+    title: {
+      tr: '3D Baskı İçin Nasıl Dijital Model Oluşturulur',
+      en: 'How to Create a Digital Model for 3D Printing',
+    },
+    slug: 'how-to-create-a-digital-model-for-3d-printing',
+    category: 'general',
+    thumbnail: `${CDNURL}posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp`,
+    type: 'global',
+  },
 ];
 
 const ProductPosts = [
