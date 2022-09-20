@@ -35,7 +35,7 @@ function VideoBlock({ props }) {
         <div className="relative block w-full overflow-hidden z-[1]">
           <Image
             src={poster}
-            alt={label}
+            alt={t(label)}
             className="object-cover w-full h-full"
           />
         </div>
