@@ -964,8 +964,8 @@ const QuickNavigationHome = [
         isExternal: false,
       },
       {
-        title: 'How to fix under-extrusion',
-        link: '#',
+        title: 'components.quick-navigation.columns.1.links.4',
+        link: '/articles/how-to-create-a-digital-model-for-3d-printing',
         isExternal: false,
       },
       {
