@@ -90,6 +90,16 @@ const GlobalPosts = [
     thumbnail: `${CDNURL}posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp`,
     type: 'global',
   },
+  {
+    title: {
+      tr: '3D Baskılı Parçaları Daha Dayanıklı ve Daha Güçlü Hale Getirme',
+      en: 'How to Make 3D Printed Parts More Durable and Stronger',
+    },
+    slug: 'how-to-make-3d-printed-parts-more-durable-and-stronger',
+    category: 'general',
+    thumbnail: `${CDNURL}posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp`,
+    type: 'global',
+  },
 ];
 
 const ProductPosts = [
@@ -969,8 +979,8 @@ const QuickNavigationHome = [
         isExternal: false,
       },
       {
-        title: 'How to feed filament loader',
-        link: '#',
+        title: 'components.quick-navigation.columns.1.links.5',
+        link: '/articles/how-to-make-3d-printed-parts-more-durable-and-stronger',
         isExternal: false,
       },
       {
