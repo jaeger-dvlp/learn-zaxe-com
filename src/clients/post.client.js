@@ -62,34 +62,38 @@ const getAllPosts = async ({ locale }) => {
         }) =>
           Promise.all(
             posts
-              .map(async ({ slug: postSlug, thumbnail }) => {
-                const { data } = matter(
-                  fs.readFileSync(
-                    path.join(
-                      `src/posts/${productSlug}/${locale}/${postSlug}.mdx`
-                    ),
-                    'utf8'
-                  )
-                );
-                return {
-                  data: {
-                    ...data,
-                    slug: postSlug,
-                    id: v4().replace(/-/g, ''),
-                    url: `/${locale}/products/${productCategory}/${productSlug}/article/${postSlug}`,
-                    thumbnail,
-                    'product-slug': productSlug,
-                    'product-category': productCategory,
-                    'post-type': 'product',
-                  },
-                };
+              .map(async ({ slug: postSlug, thumbnail, type }) => {
+                if (type !== 'global') {
+                  const { data } = matter(
+                    fs.readFileSync(
+                      path.join(
+                        `src/posts/${productSlug}/${locale}/${postSlug}.mdx`
+                      ),
+                      'utf8'
+                    )
+                  );
+                  return {
+                    data: {
+                      ...data,
+                      slug: postSlug,
+                      id: v4().replace(/-/g, ''),
+                      url: `/${locale}/products/${productCategory}/${productSlug}/article/${postSlug}`,
+                      thumbnail,
+                      'product-slug': productSlug,
+                      'product-category': productCategory,
+                      'post-type': 'product',
+                    },
+                  };
+                }
+                return null;
               })
               .flat()
+              .filter((post) => post.data)
           )
       )
+
       .flat()
   );
-
   const AllPosts = allGlobalPosts
     .concat(allProductPosts)
     .flat()
