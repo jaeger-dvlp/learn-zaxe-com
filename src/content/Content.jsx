@@ -810,6 +810,11 @@ const QuickNavigationHome = [
         link: '/articles/guide-to-infill-settings-in-3d-printing',
         isExternal: false,
       },
+      {
+        title: 'components.quick-navigation.columns.1.links.7',
+        link: '/articles/how-to-achieve-better-dimensional-accuracy-in-your-3d-prints',
+        isExternal: false,
+      },
     ],
   },
   {
