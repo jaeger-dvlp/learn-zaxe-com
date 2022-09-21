@@ -248,16 +248,26 @@ function SeeAllButton({ props }) {
 }
 
 function PostBlock({ props }) {
-  const { postSlug, postTitle, postThumbnail, queryProduct, queryPCategory } =
-    props;
+  const {
+    postSlug,
+    postTitle,
+    postThumbnail,
+    queryProduct,
+    queryPCategory,
+    type,
+  } = props;
   const router = useRouter();
   const { t } = useTranslation();
 
+  const getPostLink = () => {
+    if (type === 'global') {
+      return `/articles/${postSlug}`;
+    }
+    return `/products/${queryPCategory}/${queryProduct}/article/${postSlug}`;
+  };
+
   return (
-    <Link
-      href={`/products/${queryPCategory}/${queryProduct}/article/${postSlug}`}
-      locale={router.locale}
-    >
+    <Link href={getPostLink()} locale={router.locale}>
       <a
         className="text-black group hover:-translate-y-3 hover:bg-zinc-100 hover:border-zaxe/70 transition-all duration-200 anim-fade-up-f max-w-[16rem] w-full grid-cols-1 place-content-start
       place-items-start bg-white shadow-lg border rounded-xl overflow-hidden"
