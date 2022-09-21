@@ -22,7 +22,7 @@ function ProductPosts({ product }) {
       category: queryPCategory,
     },
   } = router;
-
+  console.log(Posts.filter(({ category }) => category === queryCategory));
   return (
     product && (
       <div className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
@@ -36,7 +36,7 @@ function ProductPosts({ product }) {
           {queryCategory ? (
             Posts.filter(({ category }) => category === queryCategory).length >
             0 ? (
-              Posts.map(
+              Posts.filter(({ category }) => category === queryCategory).map(
                 ({
                   type,
                   category: postCategory,
@@ -100,7 +100,7 @@ function ProductPosts({ product }) {
           {queryCategory ? (
             Videos.filter(({ category }) => category === queryCategory).length >
             0 ? (
-              Videos.map(
+              Videos.filter(({ category }) => category === queryCategory).map(
                 ({
                   category: videoCategory,
                   label,
