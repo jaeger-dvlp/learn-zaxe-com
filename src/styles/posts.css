@@ -13,7 +13,11 @@
   @apply font-bold text-zaxe;
 }
 
-.zaxe-kb-post .aligned figure {
+.zaxe-kb-post .aligned .article-col-image figure {
+  @apply xl:!h-[16rem] lg:!h-[16rem] md:!h-[15rem] !h-[14rem];
+}
+
+.zaxe-kb-post .aligned .article-slider .slider-image-container {
   @apply xl:!h-[16rem] lg:!h-[16rem] md:!h-[15rem] !h-[14rem];
 }
 
