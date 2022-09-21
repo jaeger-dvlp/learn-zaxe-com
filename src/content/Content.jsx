@@ -1004,8 +1004,8 @@ const QuickNavigationHome = [
         isExternal: false,
       },
       {
-        title: 'How to fix feed issues',
-        link: '#',
+        title: 'components.quick-navigation.columns.1.links.6',
+        link: '/articles/guide-to-infill-settings-in-3d-printing',
         isExternal: false,
       },
     ],
