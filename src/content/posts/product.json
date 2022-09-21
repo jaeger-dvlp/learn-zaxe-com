@@ -52,6 +52,16 @@
     },
     {
       "title": {
+        "tr": "Zaxe Z3 Yazıcınızda OctoPi Nasıl Kullanılır",
+        "en": "How to Use OctoPi on Your Zaxe Z3 Printer"
+      },
+      "slug": "how-to-use-octopi-on-your-zaxe-z3-printer",
+      "category": "software",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/your-first-bed-calibration-with-zaxe-z3-3d-printer/img/zaxe-z3-calibration-lines.webp",
+      "type": "product"
+    },
+    {
+      "title": {
         "tr": "xCloud Hakkında",
         "en": "About xCloud"
       },
