@@ -22,7 +22,6 @@ function ProductPosts({ product }) {
       category: queryPCategory,
     },
   } = router;
-  console.log(Posts.filter(({ category }) => category === queryCategory));
   return (
     product && (
       <div className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
