@@ -100,6 +100,16 @@ const GlobalPosts = [
     thumbnail: `${CDNURL}posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp`,
     type: 'global',
   },
+  {
+    title: {
+      tr: '3D Baskıda Dolgu Ayarları Rehberi',
+      en: 'Guide to Infill Settings in 3D Printing',
+    },
+    slug: 'guide-to-infill-settings-in-3d-printing',
+    category: 'general',
+    thumbnail: `${CDNURL}posts/guide-to-infill-settings-in-3d-printing/img/zaxe-infill-guide-infill-weight.webp`,
+    type: 'global',
+  },
 ];
 
 const ProductPosts = [
