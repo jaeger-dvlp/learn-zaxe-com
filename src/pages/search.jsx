@@ -52,7 +52,7 @@ function Search({ posts: Posts }) {
             }
 
             if (
-              query.length > 2 &&
+              query.length > 1 &&
               post.tags.find((tag) =>
                 tag.toLowerCase().includes(query.toLowerCase())
               )
@@ -61,7 +61,7 @@ function Search({ posts: Posts }) {
             }
 
             if (
-              query.length > 2 &&
+              query.length > 1 &&
               post.title.toLowerCase().includes(query.toLowerCase())
             ) {
               currentPost = updateSearchPoints(currentPost, 1);
