@@ -88,14 +88,13 @@ const getAllPosts = async ({ locale }) => {
                 return null;
               })
               .flat()
-              .filter((post) => post.data)
           )
       )
-
       .flat()
   );
+
   const AllPosts = allGlobalPosts
-    .concat(allProductPosts)
+    .concat(allProductPosts.map((post) => post.filter((p) => p !== null)))
     .flat()
     .map((post) => post.data);
 
