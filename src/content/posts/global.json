@@ -81,6 +81,16 @@
   },
   {
     "title": {
+      "tr": "xDesktop Hakkında",
+      "en": "About xDesktop"
+    },
+    "slug": "about-xdesktop",
+    "category": "start",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/about-xdesktop/img/zaxe-xdesktop-ui.webp",
+    "type": "global"
+  },
+  {
+    "title": {
       "tr": "xCloud Hakkında",
       "en": "About xCloud"
     },

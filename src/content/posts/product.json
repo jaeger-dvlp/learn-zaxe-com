@@ -59,6 +59,16 @@
       "category": "software",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/guide-to-infill-settings-in-3d-printing/img/zaxe-infill-guide-infill-weight.webp",
       "type": "global"
+    },
+    {
+      "title": {
+        "tr": "xDesktop Hakkında",
+        "en": "About xDesktop"
+      },
+      "slug": "about-xdesktop",
+      "category": "software",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/about-xdesktop/img/zaxe-xdesktop-ui.webp",
+      "type": "global"
     }
   ],
   [
@@ -121,6 +131,16 @@
       "category": "software",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/guide-to-infill-settings-in-3d-printing/img/zaxe-infill-guide-infill-weight.webp",
       "type": "global"
+    },
+    {
+      "title": {
+        "tr": "xDesktop Hakkında",
+        "en": "About xDesktop"
+      },
+      "slug": "about-xdesktop",
+      "category": "software",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/about-xdesktop/img/zaxe-xdesktop-ui.webp",
+      "type": "global"
     }
   ],
   [
@@ -132,7 +152,7 @@
       "slug": "about-xdesktop",
       "category": "start",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/about-xdesktop/img/zaxe-xdesktop-ui.webp",
-      "type": "product"
+      "type": "global"
     },
     {
       "title": {
