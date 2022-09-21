@@ -133,16 +133,22 @@ export const getStaticPaths = async () => {
     .map((product) =>
       i18n.locales
         .map((locale) =>
-          product.content.posts.map((post) => ({
-            params: {
-              category: product.category.slug,
-              product: product.slug,
-              slug: post.slug,
-            },
-            locale,
-          }))
+          product.content.posts.map((post) => {
+            if (post.type !== 'global') {
+              return {
+                params: {
+                  category: product.category.slug,
+                  product: product.slug,
+                  slug: post.slug,
+                },
+                locale,
+              };
+            }
+            return null;
+          })
         )
         .flat()
+        .filter((path) => path !== null)
     )
     .flat();
 
