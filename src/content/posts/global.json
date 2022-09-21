@@ -78,5 +78,15 @@
     "category": "general",
     "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/guide-to-infill-settings-in-3d-printing/img/zaxe-infill-guide-infill-weight.webp",
     "type": "global"
+  },
+  {
+    "title": {
+      "tr": "xCloud Hakkında",
+      "en": "About xCloud"
+    },
+    "slug": "about-xcloud",
+    "category": "general",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/guide-to-infill-settings-in-3d-printing/img/zaxe-infill-guide-infill-weight.webp",
+    "type": "global"
   }
 ]

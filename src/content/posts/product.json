@@ -49,6 +49,16 @@
       "category": "maintenance",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/your-first-bed-calibration-with-zaxe-z3-3d-printer/img/zaxe-z3-calibration-lines.webp",
       "type": "product"
+    },
+    {
+      "title": {
+        "tr": "xCloud Hakkında",
+        "en": "About xCloud"
+      },
+      "slug": "about-xcloud",
+      "category": "software",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/guide-to-infill-settings-in-3d-printing/img/zaxe-infill-guide-infill-weight.webp",
+      "type": "global"
     }
   ],
   [
@@ -101,6 +111,16 @@
       "category": "maintenance",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/your-first-bed-calibration-with-zaxe-x3-3d-printer/img/zaxe-x3-calibration.webp",
       "type": "product"
+    },
+    {
+      "title": {
+        "tr": "xCloud Hakkında",
+        "en": "About xCloud"
+      },
+      "slug": "about-xcloud",
+      "category": "software",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/guide-to-infill-settings-in-3d-printing/img/zaxe-infill-guide-infill-weight.webp",
+      "type": "global"
     }
   ],
   [
