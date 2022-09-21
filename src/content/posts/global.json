@@ -1,0 +1,72 @@
+[
+  {
+    "title": {
+      "tr": "Temel 3D Baskı Güvenliği",
+      "en": "Basic 3D Printing Safety"
+    },
+    "slug": "basic-3d-printing-safety",
+    "category": "general",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-3d-printing-safety/img/zaxe-3d-printing-safety-moving-parts.webp",
+    "type": "global"
+  },
+  {
+    "title": {
+      "tr": "Kullanışlı 3D Baskı Araçları ve Aksesuarları",
+      "en": "Useful 3D Printing Tools and Accessories"
+    },
+    "slug": "useful-3d-printing-tools-and-accessories",
+    "category": "general",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp",
+    "type": "global"
+  },
+  {
+    "title": {
+      "tr": "Klipper Nedir ve Zaxe 3D Yazıcınızı Nasıl Daha İyi Hale Getirir?",
+      "en": "What is Klipper and How It Makes Your Zaxe 3D Printer Better?"
+    },
+    "slug": "what-is-klipper-and-how-it-makes-your-zaxe-3d-printer-better",
+    "category": "general",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp",
+    "type": "global"
+  },
+  {
+    "title": {
+      "tr": "OctoPi 3D Baskıyı sizin için nasıl daha iyi hale getirir?",
+      "en": "How OctoPi Can Make 3D Printing Better for You"
+    },
+    "slug": "how-octopi-can-make-3d-printing-better-for-you",
+    "category": "general",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp",
+    "type": "global"
+  },
+  {
+    "title": {
+      "tr": "3D Baskı İçin Nasıl Dijital Model Oluşturulur",
+      "en": "How to Create a Digital Model for 3D Printing"
+    },
+    "slug": "how-to-create-a-digital-model-for-3d-printing",
+    "category": "general",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp",
+    "type": "global"
+  },
+  {
+    "title": {
+      "tr": "3D Baskılı Parçaları Daha Dayanıklı ve Daha Güçlü Hale Getirme",
+      "en": "How to Make 3D Printed Parts More Durable and Stronger"
+    },
+    "slug": "how-to-make-3d-printed-parts-more-durable-and-stronger",
+    "category": "general",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/useful-3d-printing-tools-and-accessories/img/useful-3d-printing-tools-screwdriver-set.webp",
+    "type": "global"
+  },
+  {
+    "title": {
+      "tr": "3D Baskıda Dolgu Ayarları Rehberi",
+      "en": "Guide to Infill Settings in 3D Printing"
+    },
+    "slug": "guide-to-infill-settings-in-3d-printing",
+    "category": "general",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/guide-to-infill-settings-in-3d-printing/img/zaxe-infill-guide-infill-weight.webp",
+    "type": "global"
+  }
+]
