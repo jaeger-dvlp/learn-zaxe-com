@@ -13,6 +13,10 @@
   @apply font-bold text-zaxe;
 }
 
+.zaxe-kb-post .aligned figure {
+  @apply xl:!h-[16rem] lg:!h-[16rem] md:!h-[15rem] !h-[14rem];
+}
+
 .zaxe-kb-post .article-heading {
   @apply my-10;
 }
