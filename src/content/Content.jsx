@@ -196,6 +196,16 @@ const ProductPosts = [
       thumbnail: `${CDNURL}posts/keeping-your-zaxe-x3-clean/img/zaxe-x3-cleaning-printing-table.webp`,
       type: 'product',
     },
+    {
+      title: {
+        tr: 'Zaxe X3 3D Yazıcınız ile İlk Kalibrasyonunuz',
+        en: 'Your First Bed Calibration with Zaxe X3 3D Printer',
+      },
+      slug: 'your-first-bed-calibration-with-zaxe-x3-3d-printer',
+      category: 'maintenance',
+      thumbnail: `${CDNURL}posts/your-first-bed-calibration-with-zaxe-x3-3d-printer/img/zaxe-x3-calibration.webp`,
+      type: 'product',
+    },
   ],
   [
     {
