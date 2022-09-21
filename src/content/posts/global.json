@@ -68,5 +68,15 @@
     "category": "general",
     "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/guide-to-infill-settings-in-3d-printing/img/zaxe-infill-guide-infill-weight.webp",
     "type": "global"
+  },
+  {
+    "title": {
+      "tr": "3D Baskılarınızda Daha İyi Boyutsal Doğruluk Nasıl Elde Edilir",
+      "en": "How to Achieve Better Dimensional Accuracy in Your 3D Prints"
+    },
+    "slug": "how-to-achieve-better-dimensional-accuracy-in-your-3d-prints",
+    "category": "general",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/guide-to-infill-settings-in-3d-printing/img/zaxe-infill-guide-infill-weight.webp",
+    "type": "global"
   }
 ]
