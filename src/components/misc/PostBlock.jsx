@@ -42,10 +42,8 @@ function PostBlock({ props }) {
 
   const getPostCategory = () => {
     if (type === 'product') {
-      if (Categories.find(({ slug }) => slug === postCategory.slug)) {
-        return t(
-          Categories.find(({ slug }) => slug === postCategory.slug).label
-        );
+      if (Categories.find(({ slug }) => slug === postCategory)) {
+        return t(Categories.find(({ slug }) => slug === postCategory).label);
       }
     }
     return t('content-global:categories.0.label');
