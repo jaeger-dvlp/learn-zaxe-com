@@ -62,6 +62,16 @@
     },
     {
       "title": {
+        "tr": "Zaxe Z3'ünüzle Nasıl Daha Hızlı Baskı Alınır",
+        "en": "How to Get Faster Prints with Your Zaxe Z3"
+      },
+      "slug": "how-to-get-faster-prints-with-your-zaxe-z3",
+      "category": "tips-tricks",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/how-to-get-faster-prints-with-your-zaxe-z3/img/how-to-get-faster-prints-change-print-speed.webp",
+      "type": "product"
+    },
+    {
+      "title": {
         "tr": "xCloud Hakkında",
         "en": "About xCloud"
       },
@@ -130,6 +140,16 @@
       "slug": "your-first-bed-calibration-with-zaxe-x3-3d-printer",
       "category": "maintenance",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/your-first-bed-calibration-with-zaxe-x3-3d-printer/img/zaxe-x3-calibration.webp",
+      "type": "product"
+    },
+    {
+      "title": {
+        "tr": "Zaxe X3'ünüzle Nasıl Daha Hızlı Baskı Alınır",
+        "en": "How to Get Faster Prints with Your Zaxe X3"
+      },
+      "slug": "how-to-get-faster-prints-with-your-zaxe-x3",
+      "category": "tips-tricks",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/how-to-get-faster-prints-with-your-zaxe-x3/img/how-to-get-faster-prints-change-print-speed.webp",
       "type": "product"
     },
     {
