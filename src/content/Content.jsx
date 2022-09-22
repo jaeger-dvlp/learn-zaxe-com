@@ -46,6 +46,20 @@ const Suggestions = [
   },
   {
     text: {
+      en: 'Your First Bed Calibration with Zaxe Z3 3D Printer',
+      tr: 'Zaxe Z3 3D Yazıcınız ile İlk Kalibrasyonunuz',
+    },
+    keys: ['calibration', 'kalibrasyon'],
+  },
+  {
+    text: {
+      en: 'Your First Bed Calibration with Zaxe X3 3D Printer',
+      tr: 'Zaxe X3 3D Yazıcınız ile İlk Kalibrasyonunuz',
+    },
+    keys: ['calibration', 'kalibrasyon'],
+  },
+  {
+    text: {
       en: 'Common 3D Printing Problems and How to Troubleshoot Them',
       tr: 'Yaygın 3D Baskı Sorunları ve Nasıl Giderilir',
     },
