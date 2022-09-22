@@ -1,0 +1,105 @@
+---
+title: Yaygın 3D Baskı Sorunları ve Nasıl Giderilir
+description: Creating an ecosystem that provides a trouble-free 3D printing experience has always been one of our main goals as Zaxe. But 3D printing is a complex process that has a lot of different factors which means there is always a chance of something going wrong.
+author: Zaxe
+category: {"name":"Troubleshooting","slug":"printer-troubleshooting"}
+tags: ["büzüşme","büzülme","nozzle","nozül","tıkandı","tıkanmış","tıkanma","ipliklenme","iplenme","katman ayrımı","ghosting","overhang","layer shifting","katman kaydırma","kayıyor","shifting"]
+---
+
+Creating an ecosystem that provides a trouble-free 3D printing experience has always been one of our main goals as Zaxe. But 3D printing is a complex process that has a lot of different factors which means there is always a chance of something going wrong. That’s why it's always good to be educated on common problems and have an idea of how to fix them. 
+
+Here is a guide to common 3D printing problems and some tips to solve them.
+
+<ColumnImage image={{imageURL:"posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/warping.webp",imageALT:"Warping"}}>
+## Warping
+
+If you frequently print with ABS or ASA, you will probably be familiar with warping. When some filaments cool off and solidify way too quickly than they are supposed to, they can shrink to a certain degree. You will know that your print experienced warping if you see that the bottom corners of the print have detached from the printbed. This will especially be a huge problem for parts that will have mechanical functions and work together with other components. 
+
+How to Avoid:
+
+- Use a heated printbed to keep the bottom parts of your print warm through the printing process. 
+- Disable the fans to keep the temperatures high to keep the print from cooling off too fast. 
+- Use an enclosure or a heated chamber to keep the printing area warm and temperatures consistent if it is available to you. 
+</ColumnImage>
+
+<ColumnImage image={{imageURL:"posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/delamination-or-layer-seperation.webp",imageALT:"Delamination or Layer Seperation"}}>
+## Delamination or Layer Separation
+
+In FDM 3D printing, your model is printed by hundreds of layers being extruded on top of each other. Every layer sticks to the one under it while they are still in liquid form, which is called adhesion, and creates a solid object. When the layers don’t stick together for one reason or another you will notice a separation in different parts of your print. This will completely ruin the structural integrity of your print and should be avoided.
+
+How to Avoid:
+
+- Increase the extruder temperature to keep the flow of filament more consistent and allow the material to melt and solidify together with other layers.
+- Decreasing the printing speed gives the hotend more time to melt the filament which makes bonding between layers better. 
+- A clogged nozzle can also cause separation by decreasing the filament flow rate. Cleaning your nozzle every once in a while should help.
+</ColumnImage>
+
+<ColumnImage image={{imageURL:"posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/extrusion-stopped-mid-print.webp",imageALT:"Extrusion Stopped Mid Print"}}>
+## Extrusion Stopped Mid Print
+
+Sometimes you will take your eyes off of your print for a minute and the next time you look you will notice that there is no filament coming out of the nozzle. If the print started out fine and something went wrong mid-print, the problem likely has something to do with either the extruder, the filament feeder or the filament itself. 
+
+How to Avoid:
+
+- Always check your spool before printing to make sure there is enough filament to finish the print. It might sound redundant but for people who use multiple 3D printers daily, it is best to make a habit of checking the spool before printing. 
+- Cleaning your nozzle regularly might prevent this issue because your nozzle might get clogged if you don’t. 
+- This problem can sometimes occur when the filament gets tangled up within itself on its spool. To avoid this issue, make sure that the filament on the spool is not loose. 
+</ColumnImage>
+
+<ColumnImage image={{imageURL:"posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/stringing.webp",imageALT:"Stringing"}}>
+## Stringing
+
+If you see very thin strings between the gaps of different parts of your print, you might be experiencing stringing. While stringing will not really ruin the structural integrity of your print, it might still cause your surfaces to have imperfections. The problem itself is the result of extra oozing or leakage that comes from the nozzle in-between spaces where your extruder is supposed to stop extruding.
+
+How to Avoid:
+
+- If your 3D printer has a retraction option, you should definitely turn it on to prevent stringing. When you enable retraction, your extruder pulls the filament away from the orifice whenever your printhead is over a space where the extruder is supposed to stop. 
+- You can decrease the printhead temperature to a point where the filament doesn’t get too liquified which causes the material to leak out of the nozzle. 
+- You can also increase the printing speed so the nozzle has less time to ooze any unwanted material. 
+</ColumnImage>
+
+<ColumnImage image={{imageURL:"posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/clogged-extruder.webp",imageALT:"Clogged Extruder"}}>
+## Clogged Extruder 
+
+A wide variety of materials will get liquified, extruded and eventually get solidified through your printhead in a 3D printer's lifetime. Mixing of different filaments, sticky materials that are hard to clean, and dust building up in your nozzle may eventually cause your extruder to get clogged if you are not careful with your 3D printers' maintenance.       
+
+How to Avoid:
+
+- The most obvious solution would be to clean your nozzle thoroughly. Using a piece of cloth that is damp with alcohol would be a good start to clean the entrance of the nozzle. You can clean the inside with a nozzle cleaning needle while the printhead is still warm.   
+- Try not to print with different types of filaments in different temperatures without first cleaning the nozzle.
+</ColumnImage>
+
+<ColumnImage image={{imageURL:"posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/ghosting.webp",imageALT:"Ghosting"}}>
+## Ghosting 
+
+Ghosting is known by many names in the 3D printing community including ringing and rippling. It is caused by excessive vibrations during the printing process so it is very likely to be a stability issue. It is one of those problems that mostly affect the visual appeal of the print rather than the structural integrity.
+
+How to Avoid:
+
+- If the belts on your 3D printer are loose, this can make the printhead shake more than usual. Make sure to tighten them up and see if that solves the problem.
+- Putting your 3D printer on a stable base would be a good idea to reduce vibrations and ghosting.
+- Decreasing the printing speed will also reduce ghosting and make the surfaces of your prints smoother.
+</ColumnImage>
+
+<ColumnImage image={{imageURL:"posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/layer-shifting.webp",imageALT:"Layer Shifting"}}>
+## Layer Shifting 
+
+You will know you are experiencing a layer shifting problem with your print when individual layers of the model are being printed in different places and making your print look like it was sliced horizontally. It will completely ruin your print both visually and functionally which means it should be avoided at all costs. 
+
+How to Avoid:
+
+- Layer shifting can happen for many reasons and it is sometimes hard to pinpoint what caused it. So, the best way to troubleshoot for layer shifting is usually to do some maintenance on your 3D printer. Calibrate it properly, clean the nozzle, make sure everything is okay with the slicer and move on from there. 
+- Like many other 3D printing problems, decreasing the printing speed can also solve this issue. If you are printing at a speed higher than what the stepper motors can handle, shifting might occur.
+- Make sure that there is nothing wrong with your extruder or printbed and they can move freely without getting stuck.
+</ColumnImage>
+
+<ColumnImage image={{imageURL:"posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/bad-overhang.webp",imageALT:"Bad Overhang"}}>
+## Bad Overhang
+
+An FDM 3D printer makes an object by putting layers on top of each other. If there is nothing underneath a part, it makes up for it by building a support. An overhang is an outgoing section that has nothing to support it underneath. When the angle of your becomes too sharp for your setup, your print might get stringy and droopy. This can be solved by printing the model with supports but sometimes that is not an option or you don’t want to do it that way.
+
+- You can play it safe and adhere to the 45-degree rule, which is a general 3D printing rule of thumb that dictates the angle of a supportless overhand shouldn’t exceed 45 degrees. 
+- This might also be a cooling issue. Maybe your fans are not keeping the printing area cool enough for the filament or your material is getting too droopy because of the high temperatures. Make sure that your fans are working properly and try increasing the fan speed on your 3D printer. 
+- As in a lot of cases, decreasing the printing speed also seems to solve this problem for a lot of users as a slower printing speed will allow the printed material to cool better.
+</ColumnImage>
+
