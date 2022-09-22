@@ -60,6 +60,13 @@ const Suggestions = [
   },
   {
     text: {
+      en: 'How to Create a Digital Model for 3D Printing',
+      tr: '3D Baskı İçin Nasıl Dijital Model Oluşturulur',
+    },
+    keys: ['digital', 'dijital', 'model', 'oluşturmak', 'oluşturulur'],
+  },
+  {
+    text: {
       en: 'Common 3D Printing Problems and How to Troubleshoot Them',
       tr: 'Yaygın 3D Baskı Sorunları ve Nasıl Giderilir',
     },
@@ -890,11 +897,6 @@ const QuickNavigationHome = [
       },
       {
         title: 'components.quick-navigation.columns.2.links.2',
-        link: `${CDNURL}docs/global/zaxe-x3-user-manual.pdf`,
-        isExternal: true,
-      },
-      {
-        title: 'components.quick-navigation.columns.2.links.3',
         link: `${CDNURL}docs/global/zaxe-x3-user-manual.pdf`,
         isExternal: true,
       },
