@@ -81,6 +81,16 @@
   },
   {
     "title": {
+      "tr": "Yaygın 3D Baskı Sorunları ve Nasıl Giderilir",
+      "en": "Common 3D Printing Problems and How to Troubleshoot Them"
+    },
+    "slug": "common-3d-printing-problems-and-how-to-troubleshoot-them",
+    "category": "printer-troubleshooting",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/layer-shifting.webp",
+    "type": "global"
+  },
+  {
+    "title": {
       "tr": "xDesktop Hakkında",
       "en": "About xDesktop"
     },
