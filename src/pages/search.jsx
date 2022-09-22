@@ -24,6 +24,8 @@ function Search({ posts: Posts }) {
   const [filteredVideos, setFilteredVideos] = React.useState([]);
   const [filteredDownloads, setFilteredDownloads] = React.useState([]);
 
+  const BannedWords = ['your', 'you', 'zaxe'];
+
   const updateSearchPoints = (post, points) => {
     const tempPost = post;
     if (tempPost.searchPoints >= 0) {
@@ -46,13 +48,15 @@ function Search({ posts: Posts }) {
             currentPost.searchPoints = 0;
 
             if (
+              !BannedWords.includes(query.toLowerCase()) &&
               post.tags.find((tag) => tag.toLowerCase() === query.toLowerCase())
             ) {
               currentPost = updateSearchPoints(currentPost, 5);
             }
 
             if (
-              query.length > 1 &&
+              query.length >= 2 &&
+              !BannedWords.includes(query.toLowerCase()) &&
               post.tags.find((tag) =>
                 tag.toLowerCase().includes(query.toLowerCase())
               )
@@ -62,6 +66,7 @@ function Search({ posts: Posts }) {
 
             if (
               query.length > 1 &&
+              !BannedWords.includes(query.toLowerCase()) &&
               post.title.toLowerCase().includes(query.toLowerCase())
             ) {
               currentPost = updateSearchPoints(currentPost, 1);
