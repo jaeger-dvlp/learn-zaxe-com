@@ -22,7 +22,6 @@ function SearchBar({ className }) {
       t('searchbar.placeholders.2'),
       t('searchbar.placeholders.3'),
       t('searchbar.placeholders.4'),
-      t('searchbar.placeholders.5'),
     ],
     active: 0,
   });
