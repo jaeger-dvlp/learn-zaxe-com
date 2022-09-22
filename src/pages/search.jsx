@@ -194,7 +194,7 @@ function Search({ posts: Posts }) {
 
   const FilterContent = () => {
     if (searchQuery) {
-      const queries = searchQuery.toLowerCase().split(' ');
+      const queries = searchQuery.toString().toLowerCase().split(' ');
       PostActions.FilterPostsByQuery(queries);
       VideoActions.FilterVideosByQuery(queries);
       DownloadsActions.FilterDownloadsByQuery(queries);
