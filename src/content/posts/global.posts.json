@@ -91,6 +91,16 @@
   },
   {
     "title": {
+      "tr": "Temel Filamentler Kılavuzu",
+      "en": "Basic Filaments Guide"
+    },
+    "slug": "basic-filaments-guide",
+    "category": "tips-tricks",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-filaments-guide/img/zaxe-basic-filament-guide.webp",
+    "type": "global"
+  },
+  {
+    "title": {
       "tr": "xDesktop Hakkında",
       "en": "About xDesktop"
     },

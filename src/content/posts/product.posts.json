@@ -72,6 +72,16 @@
     },
     {
       "title": {
+        "tr": "Temel Filamentler Kılavuzu",
+        "en": "Basic Filaments Guide"
+      },
+      "slug": "basic-filaments-guide",
+      "category": "tips-tricks",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-filaments-guide/img/zaxe-basic-filament-guide.webp",
+      "type": "global"
+    },
+    {
+      "title": {
         "tr": "xCloud Hakkında",
         "en": "About xCloud"
       },
@@ -151,6 +161,16 @@
       "category": "tips-tricks",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/how-to-get-faster-prints-with-your-zaxe-x3/img/how-to-get-faster-prints-change-print-speed.webp",
       "type": "product"
+    },
+    {
+      "title": {
+        "tr": "Temel Filamentler Kılavuzu",
+        "en": "Basic Filaments Guide"
+      },
+      "slug": "basic-filaments-guide",
+      "category": "tips-tricks",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-filaments-guide/img/zaxe-basic-filament-guide.webp",
+      "type": "global"
     },
     {
       "title": {
