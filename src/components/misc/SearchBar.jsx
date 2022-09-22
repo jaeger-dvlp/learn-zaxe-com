@@ -97,8 +97,8 @@ function SearchBar({ className }) {
             keys.find(
               (key) =>
                 query.length > 1 &&
-                (key.toLowerCase().includes(query) ||
-                  key.toLowerCase() === query)
+                (key.toLowerCase().includes(query.toLowerCase()) ||
+                  key.toLowerCase() === query.toLowerCase())
             )
           )
         )
