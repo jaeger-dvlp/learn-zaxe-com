@@ -72,9 +72,9 @@ const Suggestions = [
   },
 ];
 
-const GlobalPosts = require('@/src/content/posts/global.json');
+const GlobalPosts = require('@/src/content/posts/global.posts.json');
 
-const ProductPosts = require('@/src/content/posts/product.json');
+const ProductPosts = require('@/src/content/posts/product.posts.json');
 
 const ProductVideos = [
   [
