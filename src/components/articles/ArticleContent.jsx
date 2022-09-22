@@ -11,6 +11,7 @@ import ColumnVideo from '@/src/components/articles/ColumnVideo';
 import ArticleVote from '@/src/components/articles/ArticleVote';
 import ColumnSlider from '@/src/components/articles/ColumnSlider';
 import ArticleImage from '@/src/components/articles/ArticleImage';
+import ProsConsTable from '@/src/components/articles/ProsConsTable';
 
 function ArticleContent({ props }) {
   const { postTitle, postCategory, content, breadcrumbs } = props;
@@ -38,6 +39,7 @@ function ArticleContent({ props }) {
               ColumnVideo,
               ColumnSlider,
               ArticleImage,
+              ProsConsTable,
             }}
           />
         </article>
