@@ -25,6 +25,13 @@ const Suggestions = [
   },
   {
     text: {
+      en: 'Basic Filaments Guide',
+      tr: 'Temel Filamentler Kılavuzu',
+    },
+    keys: ['filament', 'filaments', 'guide'],
+  },
+  {
+    text: {
       en: 'How to Change Filament on Your Zaxe Z3',
       tr: "Zaxe Z3'de Nasıl Filament Değiştirilir?",
     },
