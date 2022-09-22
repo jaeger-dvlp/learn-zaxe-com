@@ -60,12 +60,11 @@
       "heading": "How can we help you with?"
     },
     "placeholders": [
-      "How to replace Print Table?",
-      "How can i change 0.4mm Nozzle?",
-      "Migrating from X2..",
-      "is there a way to change the nozzle size?",
-      "How to change the nozzle size?",
-      "My screen of Zaxe X3 is frozen!"
+      "How to change your nozzle?",
+      "How to fix warping?",
+      "Zaxe Z3 nozzle clogged.",
+      "What is the best infill pattern?",
+      "Cleaning Zaxe X3."
     ],
     "did-you-mean": "Did you mean;",
     "type-something": "Type something...",
