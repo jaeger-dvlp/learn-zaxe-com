@@ -39,6 +39,13 @@ const Suggestions = [
   },
   {
     text: {
+      en: 'How to Use OctoPi on Your Zaxe Z3 Printer',
+      tr: 'Zaxe Z3 Yazıcınızda OctoPi Nasıl Kullanılır',
+    },
+    keys: ['octo', 'pi', 'octopi', 'use', 'kullanmak', 'kullanılır', 'açılır'],
+  },
+  {
+    text: {
       en: 'Common 3D Printing Problems and How to Troubleshoot Them',
       tr: 'Yaygın 3D Baskı Sorunları ve Nasıl Giderilir',
     },
