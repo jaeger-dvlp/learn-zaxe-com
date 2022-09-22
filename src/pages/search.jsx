@@ -24,7 +24,7 @@ function Search({ posts: Posts }) {
   const [filteredVideos, setFilteredVideos] = React.useState([]);
   const [filteredDownloads, setFilteredDownloads] = React.useState([]);
 
-  const BannedWords = ['your', 'you', 'zaxe'];
+  const BannedWords = ['your', 'you', 'zaxe', 'on', 'in'];
 
   const updateSearchPoints = (post, points) => {
     const tempPost = post;
