@@ -25,6 +25,20 @@ const Suggestions = [
   },
   {
     text: {
+      en: 'How to Change Filament on Your Zaxe Z3',
+      tr: "Zaxe Z3'de Nasıl Filament Değiştirilir?",
+    },
+    keys: ['filament', 'change'],
+  },
+  {
+    text: {
+      en: 'How to Change Filament on Your Zaxe X3',
+      tr: "Zaxe X3'de Nasıl Filament Değiştirilir?",
+    },
+    keys: ['filament', 'change'],
+  },
+  {
+    text: {
       en: 'Keeping Your Zaxe Z3 Clean',
       tr: "Zaxe Z3'ünüzü Temiz Tutma",
     },
