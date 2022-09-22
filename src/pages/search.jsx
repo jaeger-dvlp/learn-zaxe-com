@@ -39,42 +39,44 @@ function Search({ posts: Posts }) {
   const sortByPoints = (arr) =>
     arr.sort((a, b) => b.searchPoints - a.searchPoints);
 
+  const getPostTitle = (title) => title.replaceAll(' ', '').toLowerCase();
+
   const PostActions = {
     GetQueriedPosts: ({ queries }) => {
       const queriedPosts = queries
         .map((query) => {
           const foundPosts = posts.map((post) => {
             let currentPost = post;
+            const theQuery = query.toLowerCase();
+            const postTitle = getPostTitle(post.title);
+
             currentPost.searchPoints = 0;
 
-            if (
-              !BannedWords.includes(query.toLowerCase()) &&
-              post.tags.find((tag) => tag.toLowerCase() === query.toLowerCase())
-            ) {
-              currentPost = updateSearchPoints(currentPost, 5);
+            if (BannedWords.includes(theQuery) === false) {
+              if (
+                post.tags.find(
+                  (tag) => tag.toLowerCase() === query.toLowerCase()
+                )
+              ) {
+                currentPost = updateSearchPoints(currentPost, 5);
+              }
+
+              if (
+                query.length >= 2 &&
+                post.tags.find((tag) => tag.toLowerCase().includes(theQuery))
+              ) {
+                currentPost = updateSearchPoints(currentPost, 2);
+              }
+
+              if (query.length >= 2 && postTitle.includes(theQuery)) {
+                currentPost = updateSearchPoints(currentPost, 1);
+              }
             }
 
-            if (
-              query.length >= 2 &&
-              !BannedWords.includes(query.toLowerCase()) &&
-              post.tags.find((tag) =>
-                tag.toLowerCase().includes(query.toLowerCase())
-              )
-            ) {
-              currentPost = updateSearchPoints(currentPost, 2);
-            }
-
-            if (
-              query.length > 1 &&
-              !BannedWords.includes(query.toLowerCase()) &&
-              post.title.toLowerCase().includes(query.toLowerCase())
-            ) {
-              currentPost = updateSearchPoints(currentPost, 1);
-            }
-
-            if (currentPost.searchPoints > 0) {
+            if (currentPost.searchPoints > 1) {
               return currentPost;
             }
+
             return null;
           });
 
