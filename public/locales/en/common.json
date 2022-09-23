@@ -172,10 +172,25 @@
   "popups": {
     "notification-popup": {
       "download-started": "Download is started.",
-      "select-platform": "Please select a platform."
+      "select-platform": "Please select a platform.",
+      "something-went-wrong": "Something went wrong, please try again.",
+      "feedback-sending": "Sending feedback...",
+      "feedback-sent": "We received your message, thank you for your feedback!"
     },
     "buttons": {
       "ok": "Okay"
+    }
+  },
+  "forms": {
+    "feedback": {
+      "header": "Sorry.",
+      "description": "Would you like to describe your problem?",
+      "inputs": {
+        "fullname": "Full Name",
+        "emailaddress": "Email Address",
+        "description": "Description",
+        "send": "Send"
+      }
     }
   },
   "downloads": {
@@ -195,7 +210,7 @@
       "header": "Was this article helpful?",
       "vote-button-yes": "Yes",
       "vote-button-no": "No",
-      "vote-message-thanks": "Thanks for your feedback!"
+      "vote-message-thanks": "Thank you for your feedback!"
     },
     "related-posts": {
       "header": "Related Posts",

@@ -172,10 +172,25 @@
   "popups": {
     "notification-popup": {
       "download-started": "İndirme başlatıldı.",
-      "select-platform": "Lütfen bir işletim sistemi seçin."
+      "select-platform": "Lütfen bir işletim sistemi seçin.",
+      "something-went-wrong": "Bir şeyler yanlış gitti, lütfen tekrar deneyin.",
+      "feedback-sending": "Mesajınız gönderiliyor...",
+      "feedback-sent": "Mesajınız bize ulaştı, geri dönüşünüz için teşekkürler!"
     },
     "buttons": {
       "ok": "Tamam"
+    }
+  },
+  "forms": {
+    "feedback": {
+      "header": "Üzgünüz.",
+      "description": "Probleminizi açıklamak ister misiniz?",
+      "inputs": {
+        "fullname": "Ad Soyad",
+        "emailaddress": "E-Posta Adresi",
+        "description": "Açıklama",
+        "send": "Gönder"
+      }
     }
   },
   "downloads": {
