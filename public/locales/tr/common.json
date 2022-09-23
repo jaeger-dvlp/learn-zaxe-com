@@ -73,18 +73,24 @@
   "components": {
     "quick-navigation": {
       "columns": [
-        { "heading": "Trendler", "links": [] },
+        {
+          "heading": "Trendler",
+          "links": [
+            "Daha Hızlı Baskı Almak",
+            "Baskı Problemleri",
+            "Z3 Temizleme",
+            "Z3 ile İlk Kalibrasyon",
+            "3 Boyutlu Yazıcı Güvenliği"
+          ]
+        },
         {
           "heading": "Bakım",
           "links": [
-            "Temel 3D Baskı Güvenliği",
-            "Kullanışlı 3D Baskı Araçları...",
-            "Klipper Nedir ve Zaxe 3D...",
-            "OctoPi 3D Baskıyı sizin...",
-            "3D Baskı için Nasıl Dijital...",
-            "3D Baskılı Parçaları Daha...",
-            "3D Baskıda Dolgu Ayarları...",
-            "3D Baskılarınızda Daha İyi..."
+            "Baskı Alet ve Edevatları",
+            "X3 ile İlk Kalibrasyon",
+            "X3 Temizleme",
+            "Z3 Temel Bakım",
+            "Z3 Filament Yükleme"
           ]
         },
         {

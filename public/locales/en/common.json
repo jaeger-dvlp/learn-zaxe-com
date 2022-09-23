@@ -73,18 +73,24 @@
   "components": {
     "quick-navigation": {
       "columns": [
-        { "heading": "Trending", "links": [] },
+        {
+          "heading": "Trending",
+          "links": [
+            "How to Reduce Print Times",
+            "Troubleshooting Failed Prints",
+            "Cleaning Your Z3",
+            "First Calibration with Z3",
+            "Basic 3D Printing Safety"
+          ]
+        },
         {
           "heading": "Maintenance",
           "links": [
-            "Basic 3D Printing Safety",
-            "Useful 3D Printing Tools...",
-            "What is Klipper and How...",
-            "How OctoPi Can Make 3D...",
-            "How to Create a Digital...",
-            "How to Make 3D Printed...",
-            "Guide to Infill Settings...",
-            "How to Achieve Better Di..."
+            "Essential 3D Printing Tools",
+            "First Calibration with X3",
+            "Cleaning Your X3",
+            "Basic Maintenance Z3",
+            "Z3 How to Install Filament"
           ]
         },
         {
