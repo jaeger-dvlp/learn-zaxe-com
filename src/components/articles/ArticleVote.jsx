@@ -38,7 +38,7 @@ function ArticleVote({ postTitle }) {
     const HandleHelpForm = async (e) => {
       e.preventDefault();
       activateNotificationPopup({
-        message: 'Sending your feedback..',
+        message: t('popups.notification-popup.feedback-sending'),
         icon: 'loading',
       });
 
@@ -47,13 +47,13 @@ function ArticleVote({ postTitle }) {
           sendForm(helpForm, setFeedBack)
             .then(() =>
               activateNotificationPopup({
-                message: 'Your feedback is sent, thanks for your feedback.',
+                message: t('popups.notification-popup.feedback-sent'),
                 icon: 'success',
               })
             )
             .catch(() =>
               activateNotificationPopup({
-                message: 'Something went wrong, please try again.',
+                message: t('popups.notification-popup.something-went-wrong'),
                 icon: 'error',
               })
             ),
@@ -137,10 +137,10 @@ function ArticleVote({ postTitle }) {
         >
           <div className="grid w-full grid-cols-1 gap-2 place-content-start place-items-center">
             <h2 className="text-lg font-semibold text-center text-zaxe">
-              Sorry.
+              <span>{t('forms.feedback.header')}</span>
             </h2>
             <p className="font-normal text-center text-md text-zaxe">
-              Would you describe your problem please?
+              <span>{t('forms.feedback.description')}</span>
             </p>
           </div>
           <form className="grid w-full max-w-lg grid-cols-1 gap-5 p-5 bg-white border shadow-xl zaxe-help-form place-content-start place-items-center rounded-xl border-zinc-100">
@@ -160,7 +160,7 @@ function ArticleVote({ postTitle }) {
                 className={defaultZaxeInput}
               />
               <label htmlFor="help-form-email" className={defaultZaxeLabel}>
-                <span>E-Mail</span>
+                <span>{t('forms.feedback.inputs.emailaddress')}</span>
                 <span className="!text-red-300">*</span>
               </label>
             </div>
@@ -179,7 +179,7 @@ function ArticleVote({ postTitle }) {
                 className={defaultZaxeInput}
               />
               <label htmlFor="help-form-fullname" className={defaultZaxeLabel}>
-                <span>Full Name</span>
+                <span>{t('forms.feedback.inputs.fullname')}</span>
                 <span className="!text-red-300">*</span>
               </label>
             </div>
@@ -198,7 +198,7 @@ function ArticleVote({ postTitle }) {
                 className={`${defaultZaxeInput} min-h-[10rem]`}
               />
               <label htmlFor="help-form-email" className={defaultZaxeLabel}>
-                <span>Description</span>
+                <span>{t('forms.feedback.inputs.description')}</span>
                 <span className="!text-red-300">*</span>
               </label>
             </div>
@@ -207,7 +207,7 @@ function ArticleVote({ postTitle }) {
                 type="submit"
                 className="p-2 px-4 w-full max-w-[7rem] font-normal text-white transition-all duration-200 rounded-md ring-2 ring-transparent active:ring-sky-300 hover:bg-sky-700 text-md bg-zaxe"
               >
-                Send
+                <span>{t('forms.feedback.inputs.send')}</span>
               </button>
             </div>
           </form>
