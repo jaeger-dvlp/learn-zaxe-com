@@ -821,33 +821,28 @@ const QuickNavigationHome = [
     allURL: null,
     links: [
       {
-        title: 'Metal Expansion Kit',
-        link: '#',
+        title: 'components.quick-navigation.columns.0.links.0',
+        link: '/products/3dprinters/zaxe-z3/article/how-to-get-faster-prints-with-your-zaxe-z3',
         isExternal: false,
       },
       {
-        title: 'PVA Removal Station',
-        link: '#',
+        title: 'components.quick-navigation.columns.0.links.1',
+        link: '/articles/common-3d-printing-problems-and-how-to-troubleshoot-them',
         isExternal: false,
       },
       {
-        title: 'Print Cores',
-        link: '#',
+        title: 'components.quick-navigation.columns.0.links.2',
+        link: '/products/3dprinters/zaxe-z3/article/keeping-your-zaxe-z3-clean',
         isExternal: false,
       },
       {
-        title: 'Spare Parts',
-        link: '#',
+        title: 'components.quick-navigation.columns.0.links.3',
+        link: '/products/3dprinters/zaxe-z3/article/your-first-bed-calibration-with-zaxe-z3-3d-printer',
         isExternal: false,
       },
       {
-        title: 'Maintenance Kits',
-        link: '#',
-        isExternal: false,
-      },
-      {
-        title: 'Advanced 3D Printer Tips',
-        link: '#',
+        title: 'components.quick-navigation.columns.0.links.4',
+        link: '/articles/basic-3d-printing-safety',
         isExternal: false,
       },
     ],
@@ -859,42 +854,27 @@ const QuickNavigationHome = [
     links: [
       {
         title: 'components.quick-navigation.columns.1.links.0',
-        link: '/articles/basic-3d-printing-safety',
-        isExternal: false,
-      },
-      {
-        title: 'components.quick-navigation.columns.1.links.1',
         link: '/articles/useful-3d-printing-tools-and-accessories',
         isExternal: false,
       },
       {
+        title: 'components.quick-navigation.columns.1.links.1',
+        link: '/products/3dprinters/zaxe-x3/article/your-first-bed-calibration-with-zaxe-x3-3d-printer',
+        isExternal: false,
+      },
+      {
         title: 'components.quick-navigation.columns.1.links.2',
-        link: '/articles/what-is-klipper-and-how-it-makes-your-zaxe-3d-printer-better',
+        link: '/products/3dprinters/zaxe-x3/article/keeping-your-zaxe-x3-clean',
         isExternal: false,
       },
       {
         title: 'components.quick-navigation.columns.1.links.3',
-        link: '/articles/how-octopi-can-make-3d-printing-better-for-you',
+        link: '/products/3dprinters/zaxe-z3/article/doing-basic-maintenance-on-your-zaxe-z3-3d-printer',
         isExternal: false,
       },
       {
         title: 'components.quick-navigation.columns.1.links.4',
-        link: '/articles/how-to-create-a-digital-model-for-3d-printing',
-        isExternal: false,
-      },
-      {
-        title: 'components.quick-navigation.columns.1.links.5',
-        link: '/articles/how-to-make-3d-printed-parts-more-durable-and-stronger',
-        isExternal: false,
-      },
-      {
-        title: 'components.quick-navigation.columns.1.links.6',
-        link: '/articles/guide-to-infill-settings-in-3d-printing',
-        isExternal: false,
-      },
-      {
-        title: 'components.quick-navigation.columns.1.links.7',
-        link: '/articles/how-to-achieve-better-dimensional-accuracy-in-your-3d-prints',
+        link: '/products/3dprinters/zaxe-z3/article/how-to-change-filament-on-your-zaxe-z3',
         isExternal: false,
       },
     ],
