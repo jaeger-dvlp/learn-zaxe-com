@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const { CDNURL_NEXTCONFIG, CDNURL } = process.env;
+const { CDNURL_NEXTCONFIG, CDNURL, APIURL } = process.env;
 const path = require('path');
 const { i18n } = require('./next-i18next.config');
 
@@ -8,6 +8,7 @@ const nextConfig = {
   i18n,
   env: {
     CDNURL,
+    APIURL,
   },
   images: {
     domains: [CDNURL_NEXTCONFIG],
