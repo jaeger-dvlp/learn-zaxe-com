@@ -44,7 +44,7 @@ function ArticleContent({ props }) {
           />
         </article>
       </section>
-      <ArticleVote />
+      <ArticleVote postTitle={postTitle} />
     </main>
   );
 }
