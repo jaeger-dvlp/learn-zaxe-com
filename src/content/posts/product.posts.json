@@ -122,6 +122,16 @@
     },
     {
       "title": {
+        "tr": "Tıkalı Nozül Nasıl Açılır",
+        "en": "How to Fix Clogged Nozzle"
+      },
+      "slug": "how-to-fix-clogged-nozzle",
+      "category": "troubleshooting",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/clogged-extruder.webp",
+      "type": "global"
+    },
+    {
+      "title": {
         "tr": "xCloud Hakkında",
         "en": "About xCloud"
       },
@@ -250,6 +260,16 @@
       "slug": "how-to-fix-stringing",
       "category": "troubleshooting",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/stringing.webp",
+      "type": "global"
+    },
+    {
+      "title": {
+        "tr": "Tıkalı Nozül Nasıl Açılır",
+        "en": "How to Fix Clogged Nozzle"
+      },
+      "slug": "how-to-fix-clogged-nozzle",
+      "category": "troubleshooting",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/clogged-extruder.webp",
       "type": "global"
     },
     {
