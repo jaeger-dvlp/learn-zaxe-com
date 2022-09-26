@@ -178,7 +178,8 @@
       "feedback-sent": "Mesajınız bize ulaştı, geri dönüşünüz için teşekkürler!"
     },
     "buttons": {
-      "ok": "Tamam"
+      "ok": "Tamam",
+      "close": "Kapat"
     }
   },
   "forms": {

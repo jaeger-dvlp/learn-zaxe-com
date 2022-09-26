@@ -178,7 +178,8 @@
       "feedback-sent": "We received your message, thank you for your feedback!"
     },
     "buttons": {
-      "ok": "Okay"
+      "ok": "Okay",
+      "close": "Close"
     }
   },
   "forms": {
