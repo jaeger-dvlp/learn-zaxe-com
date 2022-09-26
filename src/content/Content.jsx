@@ -132,7 +132,7 @@ const ProductVideos = [
       slug: 'zxz3-unboxing-z3',
       label: 'content-zxz3:starterVideos.0.label',
       videoURL: `${CDNURL}videos/zaxe-z3/unboxing.mp4`,
-      thumbnail: `${CDNURL}img/thumbnail/Z3_front.webp`,
+      thumbnail: `${CDNURL}videos/zaxe-z3/thumbnails/unboxing.webp`,
       category: 'tips-tricks',
       tags: [
         'unbox',
@@ -149,7 +149,7 @@ const ProductVideos = [
       slug: 'zxz3-explore-z3',
       label: 'content-zxz3:starterVideos.1.label',
       videoURL: `${CDNURL}videos/zaxe-z3/explore.mp4`,
-      thumbnail: `${CDNURL}img/thumbnail/Z3_screen.webp`,
+      thumbnail: `${CDNURL}videos/zaxe-z3/thumbnails/explore.webp`,
       category: 'tips-tricks',
       tags: ['z3'],
     },
@@ -158,7 +158,7 @@ const ProductVideos = [
       slug: 'zxz3-calibration-z3',
       label: 'content-zxz3:starterVideos.2.label',
       videoURL: `${CDNURL}videos/zaxe-z3/calibration.mp4`,
-      thumbnail: `${CDNURL}img/thumbnail/Z3_printtable.webp`,
+      thumbnail: `${CDNURL}videos/zaxe-z3/thumbnails/calibration.webp`,
       category: 'maintenance',
       tags: [
         'z3',
