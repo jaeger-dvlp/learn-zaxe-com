@@ -373,6 +373,16 @@
       "category": "start",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/guide-to-getting-your-first-print-using-xdesktop/img/zaxe-xdesktop-first-print-model-orientation.webp",
       "type": "product"
+    },
+    {
+      "title": {
+        "tr": "Yeni xDesktop 2.3.14 Versiyonu Yayında!",
+        "en": "The New xDesktop 2.3.14 Version is Live!"
+      },
+      "slug": "the-new-xdesktop-2-3-14-version-is-live",
+      "category": "tips-tricks",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/the-new-xdesktop-2-3-14-version-is-live/img/thumbnail-zaxe-xdesktop-update-2-3-14.webp",
+      "type": "product"
     }
   ]
 ]
