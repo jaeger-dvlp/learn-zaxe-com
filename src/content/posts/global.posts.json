@@ -85,7 +85,7 @@
       "en": "Common 3D Printing Problems and How to Troubleshoot Them"
     },
     "slug": "common-3d-printing-problems-and-how-to-troubleshoot-them",
-    "category": "printer-troubleshooting",
+    "category": "troubleshooting",
     "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/layer-shifting.webp",
     "type": "global"
   },
@@ -97,6 +97,16 @@
     "slug": "basic-filaments-guide",
     "category": "tips-tricks",
     "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-filaments-guide/img/zaxe-basic-filament-guide.webp",
+    "type": "global"
+  },
+  {
+    "title": {
+      "tr": "Büzülme Sorunu Nasıl Çözülür",
+      "en": "How to Fix Warping"
+    },
+    "slug": "how-to-fix-warping",
+    "category": "troubleshooting",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/warping.webp",
     "type": "global"
   },
   {

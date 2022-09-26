@@ -82,6 +82,16 @@
     },
     {
       "title": {
+        "tr": "Büzülme Sorunu Nasıl Çözülür",
+        "en": "How to Fix Warping"
+      },
+      "slug": "how-to-fix-warping",
+      "category": "troubleshooting",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/warping.webp",
+      "type": "global"
+    },
+    {
+      "title": {
         "tr": "xCloud Hakkında",
         "en": "About xCloud"
       },
@@ -170,6 +180,16 @@
       "slug": "basic-filaments-guide",
       "category": "tips-tricks",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-filaments-guide/img/zaxe-basic-filament-guide.webp",
+      "type": "global"
+    },
+    {
+      "title": {
+        "tr": "Büzülme Sorunu Nasıl Çözülür",
+        "en": "How to Fix Warping"
+      },
+      "slug": "how-to-fix-warping",
+      "category": "troubleshooting",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/warping.webp",
       "type": "global"
     },
     {
