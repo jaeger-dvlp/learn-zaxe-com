@@ -34,14 +34,14 @@ function DownloadBlock({
       className="relative h-full grid w-full rounded-2xl min-h-[235px] max-w-xs grid-cols-1 gap-8 p-5 m-0 bg-white border shadow-xl group place-content-between border-zinc-100 place-items-center"
     >
       <div className="grid w-full h-full grid-cols-1 gap-2 place-content-start place-items-center">
-        <h1 className="text-center grid grid-cols-1 place-content-start place-items-center text-[#6F6F6F] font-medium text-2xl">
+        <h2 className="text-center grid grid-cols-1 place-content-start place-items-center text-[#6F6F6F] font-medium text-2xl">
           <span>{title.en ? title[router.locale] : t(title)}</span>
           {type === 'doc' && (
             <span className="text-lg font-medium text-center text-zaxe">
               (PDF)
             </span>
           )}
-        </h1>
+        </h2>
         {showLastUpdate && (
           <span className="text-md font-normal text-center text-[#6f6f6f7a]">
             {router.locale === 'tr'
