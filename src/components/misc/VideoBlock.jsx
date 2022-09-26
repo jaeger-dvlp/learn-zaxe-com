@@ -27,12 +27,12 @@ function VideoBlock({ props }) {
       tabIndex={0}
       className="relative grid w-full max-w-xs grid-cols-1 gap-0 p-0 m-0 group place-content-start place-items-center"
     >
-      <div className="w-full p-0 overflow-hidden cursor-pointer relative bg-white rounded-2xl h-[195px] shadow-xl grid grid-cols-1 place-content-center place-items-center gap-0">
+      <div className="w-full p-0 overflow-hidden cursor-pointer relative bg-white rounded-2xl h-[195px] shadow-xl flex justify-center items-center gap-0">
         <span className="absolute pointer-events-none bottom-0 left-0 z-[4] m-3 p-1 px-2 text-white rounded-md bg-zaxe shadow-md text-xs">
           {Content.products.find(({ name }) => name === productName).model ||
             'Video'}
         </span>
-        <div className="relative block w-full overflow-hidden z-[1]">
+        <div className="relative block w-full h-full overflow-hidden z-[1]">
           <Image
             src={poster}
             alt={t(label)}
