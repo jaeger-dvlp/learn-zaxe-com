@@ -111,12 +111,22 @@
   },
   {
     "title": {
-      "tr": "Delaminasyon veya Katman Ayrılması Nasıl Düzeltilir",
+      "tr": "Delaminasyon veya Katman Ayrılması Nasıl Çözülür",
       "en": "How to Fix Delamination or Layer Separation"
     },
     "slug": "how-to-fix-delamination-or-layer-separation",
     "category": "troubleshooting",
     "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/delamination-or-layer-separation.webp",
+    "type": "global"
+  },
+  {
+    "title": {
+      "tr": "Ekstrüzyon Durdu Sorunu Nasıl Çözülür",
+      "en": "How to Fix No Extrusion"
+    },
+    "slug": "how-to-fix-no-extrusion",
+    "category": "troubleshooting",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/extrusion-stopped-mid-print.webp",
     "type": "global"
   },
   {
