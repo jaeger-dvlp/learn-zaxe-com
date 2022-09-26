@@ -16,6 +16,7 @@ import ScrollTop from '@/src/components/misc/ScrollTop';
 import VideoPopup from '@/src/components/popups/VideoPopup';
 import AppWrapper from '@/src/components/contexts/AppContext';
 import NotificationPopup from '@/src/components/popups/NotificationPopup';
+import DownloadListPopup from '@/src/components/popups/DownloadListPopup';
 
 function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }) {
       <Header />
       <Loader />
       <NotificationPopup />
+      <DownloadListPopup />
       <VideoPopup />
       <Component {...pageProps} />
       <ScrollTop />
