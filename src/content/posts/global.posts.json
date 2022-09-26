@@ -171,6 +171,16 @@
   },
   {
     "title": {
+      "tr": "Çıkıntı Sorunları Nasıl Çözülür",
+      "en": "How to Fix Bad Overhangs"
+    },
+    "slug": "how-to-fix-bad-overhangs",
+    "category": "troubleshooting",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/bad-overhang.webp",
+    "type": "global"
+  },
+  {
+    "title": {
       "tr": "xDesktop Hakkında",
       "en": "About xDesktop"
     },
