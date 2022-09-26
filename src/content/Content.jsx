@@ -231,7 +231,8 @@ const Downloadables = [
     },
     showLastUpdate: false,
     description: 'Zaxe xDesktop Download',
-    tags: ['xdesktop'],
+    version: '2.1.6',
+    tags: ['xdesktop', 'older-version'],
   },
   {
     slug: 'xdesktop-2-1-5',
@@ -245,7 +246,8 @@ const Downloadables = [
     },
     showLastUpdate: false,
     description: 'Zaxe xDesktop Download',
-    tags: ['xdesktop'],
+    version: '2.1.5',
+    tags: ['xdesktop', 'older-version'],
   },
   {
     slug: 'xdesktop-2-1-4',
@@ -259,7 +261,8 @@ const Downloadables = [
     },
     showLastUpdate: false,
     description: 'Zaxe xDesktop Download',
-    tags: ['xdesktop'],
+    version: '2.1.4',
+    tags: ['xdesktop', 'older-version'],
   },
   {
     slug: 'xdesktop-2-0-0',
@@ -272,7 +275,8 @@ const Downloadables = [
     },
     showLastUpdate: false,
     description: 'Zaxe xDesktop Download',
-    tags: ['xdesktop'],
+    version: '2.0.0-win32',
+    tags: ['xdesktop', 'older-version'],
   },
   {
     slug: 'safety-and-technical-data-sheet',
