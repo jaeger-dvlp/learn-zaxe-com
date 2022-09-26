@@ -92,6 +92,16 @@
     },
     {
       "title": {
+        "tr": "Delaminasyon veya Katman Ayrılması Nasıl Düzeltilir",
+        "en": "How to Fix Delamination or Layer Separation"
+      },
+      "slug": "how-to-fix-delamination-or-layer-separation",
+      "category": "troubleshooting",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/delamination-or-layer-separation.webp",
+      "type": "global"
+    },
+    {
+      "title": {
         "tr": "xCloud Hakkında",
         "en": "About xCloud"
       },
@@ -190,6 +200,16 @@
       "slug": "how-to-fix-warping",
       "category": "troubleshooting",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/warping.webp",
+      "type": "global"
+    },
+    {
+      "title": {
+        "tr": "Delaminasyon veya Katman Ayrılması Nasıl Düzeltilir",
+        "en": "How to Fix Delamination or Layer Separation"
+      },
+      "slug": "how-to-fix-delamination-or-layer-separation",
+      "category": "troubleshooting",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/delamination-or-layer-separation.webp",
       "type": "global"
     },
     {
