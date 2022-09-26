@@ -181,6 +181,46 @@
   },
   {
     "title": {
+      "tr": "Raylar Nasıl Yağlanır",
+      "en": "How to Grease the Rails"
+    },
+    "slug": "how-to-grease-the-rails",
+    "category": "maintenance",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-rail-oiling.webp",
+    "type": "global"
+  },
+  {
+    "title": {
+      "tr": "Kemer Gerginliği Nasıl Ayarlanır",
+      "en": "How to Adjust Belt Tension"
+    },
+    "slug": "how-to-adjust-belt-tension",
+    "category": "maintenance",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-adjusting-belt-tension.webp",
+    "type": "global"
+  },
+  {
+    "title": {
+      "tr": "Nozül Nasıl Değiştirilir",
+      "en": "How to Change Your Nozzle"
+    },
+    "slug": "how-to-change-your-nozzle",
+    "category": "maintenance",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-nozzle.webp",
+    "type": "global"
+  },
+  {
+    "title": {
+      "tr": "HEPA Filtre Değişimi",
+      "en": "Replacing the HEPA Filter"
+    },
+    "slug": "replacing-the-hepa-filter",
+    "category": "maintenance",
+    "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-hepa-filter.webp",
+    "type": "global"
+  },
+  {
+    "title": {
       "tr": "xDesktop Hakkında",
       "en": "About xDesktop"
     },
