@@ -19,6 +19,7 @@ function ArticleVote({ postTitle }) {
     post: {
       title: postTitle,
       language: router.locale === 'tr' ? 'Turkish' : 'English',
+      url: null,
     },
   });
   const [feedback, setFeedBack] = React.useState({
@@ -80,6 +81,19 @@ function ArticleVote({ postTitle }) {
     );
     return upper.join(' ');
   };
+
+  React.useEffect(
+    () =>
+      window &&
+      setHelpForm({
+        ...helpForm,
+        post: {
+          ...helpForm.post,
+          url: window.location.href,
+        },
+      }),
+    []
+  );
 
   return (
     <div className="relative min-h-[10rem] grid w-full grid-cols-1 gap-0 my-20 mt-10 place-content-start place-items-center">
