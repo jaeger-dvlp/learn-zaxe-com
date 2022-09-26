@@ -112,6 +112,16 @@
     },
     {
       "title": {
+        "tr": "İpliklenme Nasıl Çözülür",
+        "en": "How to Fix Stringing"
+      },
+      "slug": "how-to-fix-stringing",
+      "category": "troubleshooting",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/stringing.webp",
+      "type": "global"
+    },
+    {
+      "title": {
         "tr": "xCloud Hakkında",
         "en": "About xCloud"
       },
@@ -230,6 +240,16 @@
       "slug": "how-to-fix-no-extrusion",
       "category": "troubleshooting",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/extrusion-stopped-mid-print.webp",
+      "type": "global"
+    },
+    {
+      "title": {
+        "tr": "İpliklenme Nasıl Çözülür",
+        "en": "How to Fix Stringing"
+      },
+      "slug": "how-to-fix-stringing",
+      "category": "troubleshooting",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/stringing.webp",
       "type": "global"
     },
     {
