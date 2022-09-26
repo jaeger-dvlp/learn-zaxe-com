@@ -3,9 +3,17 @@
 .zaxe-kb-post ol {
   @apply text-[#666666] font-light;
 }
-.zaxe-kb-post ol,
+
 .zaxe-kb-post ul {
   @apply pl-5 list-disc;
+}
+
+.zaxe-kb-post ol {
+  @apply !list-none;
+}
+
+.zaxe-kb-post ol .list-number {
+  @apply pr-1;
 }
 
 .zaxe-kb-post .list-number {
