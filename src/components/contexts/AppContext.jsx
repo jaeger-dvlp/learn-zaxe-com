@@ -4,14 +4,21 @@ const AppContext = React.createContext();
 
 export default function AppWrapper({ children }) {
   const [notificationPopup, setNotificationPopup] = React.useState({
-    isActive: false,
-    inHTML: false,
     message: '',
     icon: 'hint',
-  });
-  const [videoPopup, setVideoPopup] = React.useState({
-    isActive: false,
     inHTML: false,
+    isActive: false,
+  });
+
+  const [downloadListPopup, setDownloadListPopup] = React.useState({
+    inHTML: false,
+    isActive: false,
+    downloads: null,
+  });
+
+  const [videoPopup, setVideoPopup] = React.useState({
+    inHTML: false,
+    isActive: false,
     video: {
       url: null,
       title: null,
@@ -20,11 +27,11 @@ export default function AppWrapper({ children }) {
   });
   const [fullScreenViewer, setFullScreenViewer] = React.useState({
     inHTML: false,
-    visibility: false,
     imageURL: null,
+    activeSlide: null,
+    visibility: false,
     viewMode: 'single',
     sliderSlides: null,
-    activeSlide: null,
   });
 
   const deactivateNotificationPopup = () => {
@@ -54,6 +61,36 @@ export default function AppWrapper({ children }) {
         inHTML: true,
         message,
         icon,
+      });
+    }, 200);
+  };
+
+  const deactivateDownloadListPopup = () => {
+    setDownloadListPopup({
+      ...downloadListPopup,
+      isActive: false,
+    });
+    setTimeout(() => {
+      setDownloadListPopup({
+        ...downloadListPopup,
+        isActive: false,
+        inHTML: false,
+        downloads: null,
+      });
+    }, 400);
+  };
+
+  const activateDownloadListPopup = (downloads) => {
+    setDownloadListPopup({
+      isActive: false,
+      inHTML: true,
+      downloads,
+    });
+    setTimeout(() => {
+      setDownloadListPopup({
+        isActive: true,
+        inHTML: true,
+        downloads,
       });
     }, 200);
   };
@@ -150,6 +187,9 @@ export default function AppWrapper({ children }) {
       notificationPopup,
       deactivateNotificationPopup,
       activateNotificationPopup,
+      downloadListPopup,
+      deactivateDownloadListPopup,
+      activateDownloadListPopup,
       videoPopup,
       deactivateVideoPopup,
       activateVideoPopup,
@@ -157,7 +197,7 @@ export default function AppWrapper({ children }) {
       activateFullScreenViewer,
       deactivateFullScreenViewer,
     }),
-    [notificationPopup, videoPopup, fullScreenViewer]
+    [notificationPopup, videoPopup, fullScreenViewer, downloadListPopup]
   );
   return (
     <AppContext.Provider value={ContextData}>{children}</AppContext.Provider>
