@@ -2,6 +2,13 @@
   "name": "zaxe-knowledge-base",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "JAEGER",
+    "email": "omer.kayalar0101@icloud.com",
+    "url": "https://jaeger-dvlp.dev",
+    "twitter": "7AEGER_",
+    "github": "jaeger-dvlp"
+  },
   "scripts": {
     "dev": "next dev",
     "dev-local": "cross-env APIURL=http://localhost:3005/internal/api next dev",
