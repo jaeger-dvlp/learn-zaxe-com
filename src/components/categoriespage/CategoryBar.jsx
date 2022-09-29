@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Icon from '@/src/images/Icons';
 import { BsGrid } from 'react-icons/bs';
 import { useRouter } from 'next/router';
@@ -40,22 +41,23 @@ function CategoryBar({ product }) {
         </div>
         <ul className="hidden grid-cols-1 gap-3 xl:grid lg:grid place-content-start place-items-start">
           <li className="text-2xl text-[#868686] w-full hover:text-zaxe transition-all duration-200">
-            <button
-              type="button"
-              onClick={() => {
-                router.push(
-                  `/products/${productCategory.slug}/${product.slug}/categories`
-                );
-              }}
-              className={`${
-                !selectedProdCategory && '!bg-zaxe !text-white !hover:bg-zaxe'
-              } flex items-center justify-start w-full gap-5 p-3 px-5 transition-all duration-150 bg-zaxe/10 text-zaxe hover:bg-zaxe/30 active:scale-90 rounded-xl`}
+            <Link
+              href={`/products/${productCategory.slug}/${product.slug}/categories`}
+              locale={router.locale}
             >
-              <BsGrid className="w-10 h-10" />
-              <span className="text-xl font-semibold text-center xl:text-left lg:text-left group-hover:font-semibold">
-                {t('common:product-page-components.categories.all-categories')}
-              </span>
-            </button>
+              <a
+                className={`${
+                  !selectedProdCategory && '!bg-zaxe !text-white !hover:bg-zaxe'
+                } flex items-center justify-start w-full gap-5 p-3 px-5 transition-all duration-150 bg-zaxe/10 text-zaxe hover:bg-zaxe/30 active:scale-90 rounded-xl`}
+              >
+                <BsGrid className="w-10 h-10" />
+                <span className="text-xl font-semibold text-center xl:text-left lg:text-left group-hover:font-semibold">
+                  {t(
+                    'common:product-page-components.categories.all-categories'
+                  )}
+                </span>
+              </a>
+            </Link>
           </li>
           {postCategories.map(
             ({ slug: prodCategorySlug, label: prodCategoryLabel, icon }) => (
@@ -63,26 +65,24 @@ function CategoryBar({ product }) {
                 className="text-2xl text-[#868686] w-full hover:text-zaxe transition-all duration-200"
                 key={`${productSlug}-${prodCategorySlug}`}
               >
-                <button
-                  type="button"
-                  className={`${
-                    selectedProdCategory &&
-                    selectedProdCategory.slug === prodCategorySlug &&
-                    '!bg-zaxe !text-white !hover:bg-zaxe'
-                  } flex items-center justify-start w-full gap-5 p-3 px-5 transition-all duration-150 bg-zaxe/10 text-zaxe hover:bg-zaxe/30 active:scale-90 rounded-xl`}
-                  onClick={() => {
-                    router.push(
-                      `/products/${productCategory.slug}/${product.slug}/categories?c=${prodCategorySlug}`
-                    );
-                  }}
+                <Link
+                  href={`/products/${productCategory.slug}/${product.slug}/categories?c=${prodCategorySlug}`}
                 >
-                  <span className="w-10 h-10 text-current">
-                    <Icon name={icon} className="text-current" />
-                  </span>
-                  <span className="text-xl font-semibold text-center xl:text-left lg:text-left group-hover:font-semibold">
-                    {t(prodCategoryLabel)}
-                  </span>
-                </button>
+                  <a
+                    className={`${
+                      selectedProdCategory &&
+                      selectedProdCategory.slug === prodCategorySlug &&
+                      '!bg-zaxe !text-white !hover:bg-zaxe'
+                    } flex items-center justify-start w-full gap-5 p-3 px-5 transition-all duration-150 bg-zaxe/10 text-zaxe hover:bg-zaxe/30 active:scale-90 rounded-xl`}
+                  >
+                    <span className="w-10 h-10 text-current">
+                      <Icon name={icon} className="text-current" />
+                    </span>
+                    <span className="text-xl font-semibold text-center xl:text-left lg:text-left group-hover:font-semibold">
+                      {t(prodCategoryLabel)}
+                    </span>
+                  </a>
+                </Link>
               </li>
             )
           )}
