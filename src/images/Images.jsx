@@ -2,6 +2,7 @@ const Images = {
   logo: {
     zxkb: require('./misc/logo-zxkb.png'),
   },
+  placeholder: require('./misc/zaxe-placeholder.webp'),
   loader: {
     zxkb: require('./misc/zaxe-kb-loader.webp'),
   },
