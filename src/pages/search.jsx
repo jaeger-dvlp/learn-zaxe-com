@@ -295,7 +295,7 @@ function Search({ posts: Posts }) {
               <MdArticle />
               <span>{t('common:search.articles')}</span>
             </h2>
-            <nav className="relative flex flex-wrap items-center justify-center w-full gap-14">
+            <nav className="relative flex flex-wrap items-start justify-center w-full gap-14">
               {filteredPosts.length > 0 ? (
                 filteredPosts.map((post) => {
                   if (post['post-type'] === 'global') {
@@ -340,7 +340,7 @@ function Search({ posts: Posts }) {
               <MdVideoLibrary />
               <span>{t('common:search.videos')}</span>
             </h2>
-            <nav className="relative flex flex-wrap items-center justify-center w-full gap-14">
+            <nav className="relative flex flex-wrap items-start justify-center w-full gap-14">
               {filteredVideos.length > 0 ? (
                 filteredVideos.map(
                   ({ label, slug, product, thumbnail: poster, videoURL }) => (
@@ -367,7 +367,7 @@ function Search({ posts: Posts }) {
               <BsFillFileEarmarkArrowDownFill />
               <span>{t('common:search.downloads')}</span>
             </h2>
-            <nav className="relative flex flex-wrap items-center justify-center w-full gap-14">
+            <nav className="relative flex flex-wrap items-start justify-center w-full gap-14">
               {filteredDownloads.length > 0 ? (
                 filteredDownloads.map((download) => (
                   <DownloadBlock
