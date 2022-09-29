@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { i18n } from '@/next.config';
-import { getPost } from '@/src/clients';
+import { getPost } from '@/src/clients/post.client';
 import { useRouter } from 'next/router';
 import Images from '@/src/images/Images';
 import Content from '@/src/content/Content';
