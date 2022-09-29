@@ -24,7 +24,7 @@ function CategoryBar({ product }) {
 
   return (
     product && (
-      <div className="grid p-5 w-full max-w-full grid-cols-1 xl:max-w-[18rem] lg:max-w-[18rem] place-content-start place-items-start">
+      <div className="grid xl:sticky lg:sticky xl:top-2 lg:top-2 p-5 w-full max-w-full grid-cols-1 xl:max-w-[18rem] lg:max-w-[18rem] place-content-start place-items-start">
         <div className="flex items-center justify-between w-full xl:hidden lg:hidden">
           <span
             className="!text-zaxe w-1/2 text-left !font-medium
