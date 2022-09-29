@@ -179,7 +179,9 @@ function DocDownloadBlock({ props }) {
       </aside>
       <h3 className="text-xl font-semibold text-zinc-600">{t(title)}</h3>
       {showLastUpdate && (
-        <p className="text-sm text-zinc-500">Last updated at {updateDate}.</p>
+        <p className="text-sm text-zinc-500">
+          <b>{t('common:downloads.component.last-update')}</b> {updateDate}
+        </p>
       )}
       <section className="grid grid-cols-1 gap-1 mt-3 place-content-start place-items-start">
         <a
@@ -205,7 +207,9 @@ function FirmwareDownloadBlock({ props }) {
       </aside>
       <h3 className="text-xl font-semibold text-zinc-600">{t(title)}</h3>
       {showLastUpdate && (
-        <p className="text-sm text-zinc-500">Last updated at {updateDate}.</p>
+        <p className="text-sm text-zinc-500">
+          <b>{t('common:downloads.component.last-update')}</b> {updateDate}
+        </p>
       )}
       <section className="grid grid-cols-1 gap-1 mt-3 place-content-start place-items-start">
         <a
