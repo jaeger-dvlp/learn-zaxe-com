@@ -145,7 +145,7 @@
       "en": "How to Fix Clogged Nozzle"
     },
     "slug": "how-to-fix-clogged-nozzle",
-    "category": "troubleshooting",
+    "category": "repair",
     "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/clogged-extruder.webp",
     "type": "global"
   },
@@ -205,7 +205,7 @@
       "en": "How to Change Your Nozzle"
     },
     "slug": "how-to-change-your-nozzle",
-    "category": "maintenance",
+    "category": "repair",
     "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-nozzle.webp",
     "type": "global"
   },

@@ -126,7 +126,7 @@
         "en": "How to Fix Clogged Nozzle"
       },
       "slug": "how-to-fix-clogged-nozzle",
-      "category": "troubleshooting",
+      "category": "repair",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/clogged-extruder.webp",
       "type": "global"
     },
@@ -186,7 +186,7 @@
         "en": "How to Change Your Nozzle"
       },
       "slug": "how-to-change-your-nozzle",
-      "category": "maintenance",
+      "category": "repair",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-nozzle.webp",
       "type": "global"
     },
@@ -338,7 +338,7 @@
         "en": "How to Fix Clogged Nozzle"
       },
       "slug": "how-to-fix-clogged-nozzle",
-      "category": "troubleshooting",
+      "category": "repair",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/clogged-extruder.webp",
       "type": "global"
     },
@@ -398,7 +398,7 @@
         "en": "How to Change Your Nozzle"
       },
       "slug": "how-to-change-your-nozzle",
-      "category": "maintenance",
+      "category": "repair",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-nozzle.webp",
       "type": "global"
     },
@@ -463,6 +463,16 @@
       "category": "tips-tricks",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/the-new-xdesktop-2-3-14-version-is-live/img/thumbnail-zaxe-xdesktop-update-2-3-14.webp",
       "type": "product"
+    },
+    {
+      "title": {
+        "tr": "3D Baskıda Dolgu Ayarları Rehberi",
+        "en": "Guide to Infill Settings in 3D Printing"
+      },
+      "slug": "guide-to-infill-settings-in-3d-printing",
+      "category": "tips-tricks",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/guide-to-infill-settings-in-3d-printing/img/zaxe-infill-guide-infill-weight.webp",
+      "type": "global"
     }
   ]
 ]
