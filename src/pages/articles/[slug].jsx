@@ -20,6 +20,7 @@ function Article({ data, content }) {
     // eslint-disable-next-line no-unused-vars
     category: { slug: postCategorySlug, name: postCategory },
     description,
+    thumbnail: postThumbnail,
   } = data;
   const {
     slug: postSlug,
@@ -27,6 +28,9 @@ function Article({ data, content }) {
     category: queryCategorySlug,
   } = router.query;
   const { t } = useTranslation();
+
+  const thumbnail = postThumbnail || Images.og.home.default.src;
+
   return (
     <>
       <Head>
@@ -52,12 +56,9 @@ function Article({ data, content }) {
           property="og:keywords"
           content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
         />
-        <meta property="og:image" content={Images.og.home.default.src} />
+        <meta property="og:image" content={thumbnail} />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:url"
-          content={`https://knowledge-base.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
-        />
+        <meta property="twitter:url" content={thumbnail} />
         <meta property="twitter:site" content="@Zaxe3D" />
         <meta property="twitter:site:id" content="@Zaxe3D" />
         <meta property="twitter:creator" content="@Zaxe3D" />
@@ -67,7 +68,7 @@ function Article({ data, content }) {
           content={`${postTitle}${t('meta.title.article')}`}
         />
         <meta property="twitter:description" content={`${description}`} />
-        <meta property="twitter:image" content={Images.og.home.default.src} />
+        <meta property="twitter:image" content={thumbnail} />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
         <link

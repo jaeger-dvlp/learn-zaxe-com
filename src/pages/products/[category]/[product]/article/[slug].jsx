@@ -1,12 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import { i18n } from '@/next.config';
-import { getPost } from '@/src/clients/post.client';
 import { useRouter } from 'next/router';
 import Images from '@/src/images/Images';
 import Content from '@/src/content/Content';
 import { useTranslation } from 'next-i18next';
 import rehypeHighlight from 'rehype-highlight';
+import { getPost } from '@/src/clients/post.client';
 import Schema from '@/src/components/articles/Schema';
 import { serialize } from 'next-mdx-remote/serialize';
 import ArticleContent from '@/src/components/articles/ArticleContent';
@@ -19,6 +19,7 @@ function Post({ data, content }) {
     title: postTitle,
     category: { slug: postCategorySlug, name: postCategory },
     description,
+    thumbnail: postThumbnail,
   } = data;
   const {
     slug: postSlug,
@@ -29,6 +30,7 @@ function Post({ data, content }) {
     ({ slug }) => slug === queryProductSlug
   );
   const { t } = useTranslation();
+  const thumbnail = postThumbnail || Images.og.home.default.src;
   return (
     <>
       <Head>
@@ -59,7 +61,7 @@ function Post({ data, content }) {
           property="og:keywords"
           content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
         />
-        <meta property="og:image" content={Images.og.home.default.src} />
+        <meta property="og:image" content={thumbnail} />
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
@@ -74,7 +76,7 @@ function Post({ data, content }) {
           content={`${postTitle} - ${Product.name}${t('meta.title.article')}`}
         />
         <meta property="twitter:description" content={`${description}`} />
-        <meta property="twitter:image" content={Images.og.home.default.src} />
+        <meta property="twitter:image" content={thumbnail} />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
         <link
