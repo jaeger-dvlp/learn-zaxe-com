@@ -45,7 +45,7 @@ function Post({ data, content }) {
           content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
         />
         <meta name="description" content={`${description}`} />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta
           property="og:url"
           content={`https://knowledge-base.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
