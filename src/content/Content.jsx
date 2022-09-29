@@ -143,6 +143,7 @@ const ProductVideos = [
       thumbnail: `${CDNURL}videos/zaxe-z3/thumbnails/unboxing.webp`,
       category: 'tips-tricks',
       tags: [
+        '*',
         'unbox',
         'unboxing',
         'z3',
@@ -159,7 +160,7 @@ const ProductVideos = [
       videoURL: `${CDNURL}videos/zaxe-z3/explore.mp4`,
       thumbnail: `${CDNURL}videos/zaxe-z3/thumbnails/explore.webp`,
       category: 'tips-tricks',
-      tags: ['z3'],
+      tags: ['*', 'z3'],
     },
     {
       product: 'zaxe-z3',
@@ -169,6 +170,7 @@ const ProductVideos = [
       thumbnail: `${CDNURL}videos/zaxe-z3/thumbnails/calibration.webp`,
       category: 'maintenance',
       tags: [
+        '*',
         'z3',
         'calibration',
         'calibrate',
@@ -191,7 +193,7 @@ const Downloadables = [
     link: `${CDNURL}docs/global/zaxe-z3-user-manual.pdf`,
     showLastUpdate: true,
     description: "Zaxe Z3's User Manual",
-    tags: ['z3', 'handbook', 'user', 'manual', 'kılavuz', 'kullanım'],
+    tags: ['*', 'z3', 'handbook', 'user', 'manual', 'kılavuz', 'kullanım'],
   },
   {
     slug: 'x3-user-manual',
@@ -201,7 +203,7 @@ const Downloadables = [
     link: `${CDNURL}docs/global/zaxe-x3-user-manual.pdf`,
     showLastUpdate: true,
     description: "Zaxe X3's Handbook",
-    tags: ['x3', 'handbook', 'user', 'manual', 'kılavuz', 'kullanım'],
+    tags: ['*', 'x3', 'handbook', 'user', 'manual', 'kılavuz', 'kullanım'],
   },
   {
     slug: 'x3-firmware',
@@ -211,7 +213,7 @@ const Downloadables = [
     link: `https://d.zaxe.com/x3en?d=${DateOfToday()}`,
     showLastUpdate: true,
     description: "Zaxe X3's Firmware",
-    tags: ['x3', 'firmware', 'yazılım'],
+    tags: ['*', 'x3', 'firmware', 'yazılım'],
   },
   {
     slug: 'xdesktop-latest',
@@ -225,7 +227,7 @@ const Downloadables = [
     },
     showLastUpdate: false,
     description: 'Zaxe xDesktop Download',
-    tags: ['xdesktop'],
+    tags: ['*', 'xdesktop'],
   },
   {
     slug: 'xdesktop-2-1-6',
@@ -240,7 +242,7 @@ const Downloadables = [
     showLastUpdate: false,
     description: 'Zaxe xDesktop Download',
     version: '2.1.6',
-    tags: ['xdesktop', 'older-version'],
+    tags: ['*', 'xdesktop', 'older-version'],
   },
   {
     slug: 'xdesktop-2-1-5',
@@ -255,7 +257,7 @@ const Downloadables = [
     showLastUpdate: false,
     description: 'Zaxe xDesktop Download',
     version: '2.1.5',
-    tags: ['xdesktop', 'older-version'],
+    tags: ['*', 'xdesktop', 'older-version'],
   },
   {
     slug: 'xdesktop-2-1-4',
@@ -270,7 +272,7 @@ const Downloadables = [
     showLastUpdate: false,
     description: 'Zaxe xDesktop Download',
     version: '2.1.4',
-    tags: ['xdesktop', 'older-version'],
+    tags: ['*', 'xdesktop', 'older-version'],
   },
   {
     slug: 'xdesktop-2-0-0',
@@ -284,7 +286,7 @@ const Downloadables = [
     showLastUpdate: false,
     description: 'Zaxe xDesktop Download',
     version: '2.0.0-win32',
-    tags: ['xdesktop', 'older-version'],
+    tags: ['*', 'xdesktop', 'older-version'],
   },
 ];
 
