@@ -23,7 +23,388 @@ const DateOfToday = () => {
   ).padStart(2, '0')}${todayDate.getFullYear().toString().slice(2)}`;
 };
 
+// ? Template of suggestions
+/*
+
+{
+text: {
+en: '',
+tr: '',
+},
+keys: [''],
+},
+
+*/
 const Suggestions = [
+  {
+    text: {
+      en: 'Guide to Getting Your First Print Using xDesktop',
+      tr: 'xDesktop Kullanarak İlk Baskınızı Alma Kılavuzu',
+    },
+    keys: ['guide', 'kılavuz', 'xdesktop', 'first', 'ilk', 'baskı'],
+  },
+  {
+    text: {
+      en: 'The New xDesktop 2.3.14 Version is Live!',
+      tr: 'Yeni xDesktop 2.3.14 Versiyonu Yayında!',
+    },
+    keys: [
+      'xdesktop',
+      'update',
+      'güncelleme',
+      'versiyon',
+      'yeni',
+      'new',
+      '2.3.14',
+    ],
+  },
+  {
+    text: {
+      en: 'How to Get Faster Prints with Your Zaxe Z3',
+      tr: "Zaxe Z3'ünüzle Nasıl Daha Hızlı Baskı Alınır",
+    },
+    keys: ['z3', 'faster', 'fast', 'hızlı', 'daha', 'speed', 'hız'],
+  },
+  {
+    text: {
+      en: 'How to Get Faster Prints with Your Zaxe X3',
+      tr: "Zaxe X3'ünüzle Nasıl Daha Hızlı Baskı Alınır",
+    },
+    keys: ['x3', 'faster', 'fast', 'hızlı', 'daha', 'speed', 'hız'],
+  },
+  {
+    text: {
+      en: 'Know Your Zaxe Z3 3D Printer',
+      tr: 'Zaxe Z3 3D Yazıcınızı Tanıyın',
+    },
+    keys: [
+      'z3',
+      'core',
+      'xy',
+      'spool',
+      'swing',
+      'door',
+      'nfc',
+      'sensor',
+      'power',
+      'loss',
+      'design',
+      'passive',
+      'heated',
+      'chamber',
+    ],
+  },
+  {
+    text: {
+      en: 'Know Your Zaxe X3 3D Printer',
+      tr: 'Zaxe X3 3D Yazıcınızı Tanıyın',
+    },
+    keys: [
+      'x3',
+      'core',
+      'xy',
+      'spool',
+      'swing',
+      'door',
+      'nfc',
+      'sensor',
+      'power',
+      'loss',
+      'design',
+      'passive',
+      'heated',
+      'chamber',
+    ],
+  },
+  {
+    text: {
+      en: 'Doing Basic Maintenance on Your Zaxe Z3 3D Printer',
+      tr: 'Zaxe Z3 3D Yazıcınızda Temel Bakım Yapımı',
+    },
+    keys: [
+      'z3',
+      'maintenance',
+      'bakım',
+      'basic',
+      'temel',
+      'lubrication',
+      'yağlama',
+      'adjustment',
+      'ayar',
+      'belt',
+      'tension',
+      'gerginlik',
+      'hepa',
+      'filtre',
+      'nozül',
+      'nozzle',
+      'değiştirme',
+    ],
+  },
+  {
+    text: {
+      en: 'Doing Basic Maintenance on Your Zaxe X3 3D Printer',
+      tr: 'Zaxe X3 3D Yazıcınızda Temel Bakım Yapımı',
+    },
+    keys: [
+      'x3',
+      'maintenance',
+      'bakım',
+      'basic',
+      'temel',
+      'lubrication',
+      'yağlama',
+      'adjustment',
+      'ayar',
+      'belt',
+      'tension',
+      'gerginlik',
+      'hepa',
+      'filtre',
+      'nozül',
+      'nozzle',
+      'değiştirme',
+    ],
+  },
+  {
+    text: {
+      en: 'About xDesktop',
+      tr: 'xDesktop Hakkında',
+    },
+    keys: ['xdesktop'],
+  },
+  {
+    text: {
+      en: 'About xCloud',
+      tr: 'xCloud Hakkında',
+    },
+    keys: ['xcloud'],
+  },
+  {
+    text: {
+      en: 'Replacing the HEPA Filter',
+      tr: 'HEPA Filtre Değişimi',
+    },
+    keys: [
+      'hepa',
+      'filter',
+      'filtre',
+      'replace',
+      'replacing',
+      'carbon',
+      'karbon',
+      'değişim',
+      'değişimi',
+      'değişimler',
+      'değişimleri',
+    ],
+  },
+  {
+    text: {
+      en: 'How to Change Your Nozzle',
+      tr: 'Nozül Nasıl Değiştirilir',
+    },
+    keys: [
+      'change',
+      'nozzle',
+      'nozül',
+      'değiştirme',
+      'değiştirilir',
+      'replace',
+    ],
+  },
+  {
+    text: {
+      en: 'How to Adjust Belt Tension',
+      tr: 'Kemer Gerginliği Nasıl Ayarlanır',
+    },
+    keys: [
+      'adjust',
+      'belt',
+      'tension',
+      'kemer',
+      'gerginligi',
+      'ayarlamak',
+      'ayarlanır',
+    ],
+  },
+  {
+    text: {
+      en: 'How to Grease the Rails',
+      tr: 'Raylar Nasıl Yağlanır',
+    },
+    keys: [
+      'grease',
+      'greasing',
+      'yağlama',
+      'yağlanır',
+      'yağ',
+      'raylar',
+      'rails',
+      'lubrication',
+      'lubricating',
+    ],
+  },
+  {
+    text: {
+      en: 'How to Fix Bad Overhangs',
+      tr: 'Çıkıntı Sorunları Nasıl Çözülür',
+    },
+    keys: [
+      'overhang',
+      'çıkıntı',
+      'köprü',
+      'bridge',
+      'overhangs',
+      'slope',
+      'slopes',
+    ],
+  },
+  {
+    text: {
+      en: 'How to Fix Layer Shifting',
+      tr: 'Katman Kayması Nasıl Çözülür',
+    },
+    keys: ['layer', 'shifting', 'shift', 'kayma', 'katman'],
+  },
+  {
+    text: {
+      en: 'How to Fix Ghosting',
+      tr: 'Dalgalanma Sorunu Nasıl Çözülür',
+    },
+    keys: ['ghosting', 'dalgalanma', 'ringing'],
+  },
+  {
+    text: {
+      en: 'How to Fix Clogged Nozzle',
+      tr: 'Tıkalı Nozül Nasıl Açılır',
+    },
+    keys: ['clogged', 'nozzle', 'nozül', 'tıkalı', 'tıkandı'],
+  },
+  {
+    text: {
+      en: 'How to Fix Stringing',
+      tr: 'İpliklenme Nasıl Çözülür',
+    },
+    keys: ['stringing', 'string', 'ipliklenme'],
+  },
+  {
+    text: {
+      en: 'How to Fix No Extrusion',
+      tr: 'Ekstrüzyon Durdu Sorunu Nasıl Çözülür',
+    },
+    keys: ['extrusion', 'ekstrüzyon', 'durdu', 'stopped', 'no'],
+  },
+  {
+    text: {
+      en: 'How to Fix Delamination or Layer Separation',
+      tr: 'Delaminasyon veya Katman Ayrılması Nasıl Çözülür',
+    },
+    keys: [
+      'delamination',
+      'delaminasyon',
+      'katman',
+      'ayrılma',
+      'seperation',
+      'layer',
+    ],
+  },
+  {
+    text: {
+      en: 'How to Fix Warping',
+      tr: 'Büzülme Sorunu Nasıl Çözülür',
+    },
+    keys: [
+      'warping',
+      'büzülme',
+      'köşe',
+      'corner',
+      'köşeler',
+      'corners',
+      'kalkma',
+      'rise',
+    ],
+  },
+  {
+    text: {
+      en: 'How to Achieve Better Dimensional Accuracy in Your 3D Prints',
+      tr: '3D Baskılarınızda Daha İyi Boyutsal Doğruluk Nasıl Elde Edilir',
+    },
+    keys: [
+      'dimensional',
+      'boyut',
+      'accuracy',
+      'doğruluk',
+      'stability',
+      'tutarlılık',
+    ],
+  },
+  {
+    text: {
+      en: 'Guide to Infill Settings in 3D Printing ',
+      tr: '3D Baskıda Dolgu Ayarları Rehberi',
+    },
+    keys: [
+      'infill',
+      'doluluk',
+      'dolgu',
+      'pattern',
+      'desen',
+      'rehber',
+      'grid',
+      'lines',
+      'triangle',
+      'triangles',
+      'honeycomb',
+      'gyroid',
+      'hexagon',
+      'cross',
+      'concentric',
+      'çizgiler',
+      'üçgen',
+      'kare',
+      'altıgen',
+      'çapraz',
+      'çaprazlar',
+      'balpeteği',
+    ],
+  },
+  {
+    text: {
+      en: 'How to Make 3D Printed Parts More Durable and Stronger',
+      tr: '3D Baskılı Parçaları Daha Dayanıklı ve Daha Güçlü Hale Getirme',
+    },
+    keys: [
+      'stronger',
+      'güçlü',
+      'durable',
+      'dayanıklı',
+      'longevity',
+      'sağlam',
+      'sturdy',
+    ],
+  },
+  {
+    text: {
+      en: 'How OctoPi Can Make 3D Printing Better for You',
+      tr: 'OctoPi 3D Baskıyı sizin için nasıl daha iyi hale getirir?',
+    },
+    keys: ['octo', 'pi', 'octopi', 'octoprint', 'plugin'],
+  },
+  {
+    text: {
+      en: 'What is Klipper and How It Makes Your Zaxe 3D Printer Better?',
+      tr: 'Klipper Nedir ve Zaxe 3D Yazıcınızı Nasıl Daha İyi Hale Getirir?',
+    },
+    keys: ['klipper', 'input', 'shaper', 'shape', 'shaping', 'inputshaper'],
+  },
+  {
+    text: {
+      en: 'Useful 3D Printing Tools and Accessories',
+      tr: 'Kullanışlı 3D Baskı Araçları ve Aksesuarları',
+    },
+    keys: ['useful', 'kullanışlı', 'tools', 'tool', 'araç', 'aksesuar', 'alet'],
+  },
   {
     text: {
       en: 'Basic 3D Printing Safety',
@@ -36,35 +417,46 @@ const Suggestions = [
       en: 'Basic Filaments Guide',
       tr: 'Temel Filamentler Kılavuzu',
     },
-    keys: ['filament', 'filaments', 'guide'],
+    keys: [
+      'filament',
+      'filaments',
+      'guide',
+      'abs',
+      'pla',
+      'petg',
+      'flex',
+      'asa',
+      'pc',
+      'pc-abs',
+    ],
   },
   {
     text: {
       en: 'How to Change Filament on Your Zaxe Z3',
       tr: "Zaxe Z3'de Nasıl Filament Değiştirilir?",
     },
-    keys: ['filament', 'change'],
+    keys: ['filament', 'change', 'değiştirme'],
   },
   {
     text: {
       en: 'How to Change Filament on Your Zaxe X3',
       tr: "Zaxe X3'de Nasıl Filament Değiştirilir?",
     },
-    keys: ['filament', 'change'],
+    keys: ['filament', 'change', 'değiştirme'],
   },
   {
     text: {
       en: 'Keeping Your Zaxe Z3 Clean',
       tr: "Zaxe Z3'ünüzü Temiz Tutma",
     },
-    keys: ['clean', 'temiz', 'temizlemek', 'cleaning'],
+    keys: ['clean', 'temiz', 'temizlemek', 'cleaning', 'maintenance'],
   },
   {
     text: {
       en: 'Keeping Your Zaxe X3 Clean',
       tr: "Zaxe X3'ünüzü Temiz Tutma",
     },
-    keys: ['clean', 'temiz', 'temizlemek', 'cleaning'],
+    keys: ['clean', 'temiz', 'temizlemek', 'cleaning', 'maintenance'],
   },
   {
     text: {
@@ -78,14 +470,14 @@ const Suggestions = [
       en: 'Your First Bed Calibration with Zaxe Z3 3D Printer',
       tr: 'Zaxe Z3 3D Yazıcınız ile İlk Kalibrasyonunuz',
     },
-    keys: ['calibration', 'kalibrasyon'],
+    keys: ['calibration', 'kalibrasyon', 'bed', 'yatak'],
   },
   {
     text: {
       en: 'Your First Bed Calibration with Zaxe X3 3D Printer',
       tr: 'Zaxe X3 3D Yazıcınız ile İlk Kalibrasyonunuz',
     },
-    keys: ['calibration', 'kalibrasyon'],
+    keys: ['calibration', 'kalibrasyon', 'bed', 'yatak'],
   },
   {
     text: {
@@ -125,6 +517,13 @@ const Suggestions = [
       'overhang',
       'layer shifting',
       'shifting',
+      'fix',
+      'çözme',
+      'çözümü',
+      'sorun',
+      'troubleshooting',
+      'failed',
+      'prints',
     ],
   },
 ];
