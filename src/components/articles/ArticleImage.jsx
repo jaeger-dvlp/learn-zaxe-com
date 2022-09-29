@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/future/image';
-import Images from '@/src/images/Images';
 import ImageControls from '@/src/components/articles/ImageControls';
 
 function ArticleImage({ className, image: { imageURL, imageALT } }) {
@@ -15,9 +14,10 @@ function ArticleImage({ className, image: { imageURL, imageALT } }) {
       <Image
         src={ImageSourceURL}
         alt={imageALT}
-        placeholder={Images.placeholder}
         layout="fill"
         className="object-cover p-0 !border-none object-center w-full h-full"
+        placeholder="blur"
+        blurDataURL="https://cdn.zaxe.com/knowledge-base/img/zaxe-placeholder.webp"
       />
       <ImageControls props={{ type: 'single', imageURL }} />
     </figure>

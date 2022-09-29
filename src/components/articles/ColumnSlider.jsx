@@ -1,7 +1,6 @@
 import React from 'react';
 import { v4 } from 'uuid';
 import Image from 'next/future/image';
-import Images from '@/src/images/Images';
 import ImageControls from '@/src/components/articles/ImageControls';
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs';
 
@@ -60,12 +59,13 @@ function ColumnSlider({ children, images: sliderImages }) {
               src={`${CDNURL}${imageURL}`}
               layout="fill"
               alt={imageALT}
-              placeholder={Images.placeholder}
               className={` ${
                 index === activeSlide
                   ? 'opacity-100 visible pointer-events-auto'
                   : 'opacity-0 invisible pointer-events-none'
               } object-cover transition-all duration-700 rounded-xl overflow-hidden slider-image absolute left-0 top-0 p-0 !border-none object-center w-full h-full`}
+              placeholder="blur"
+              blurDataURL="https://cdn.zaxe.com/knowledge-base/img/zaxe-placeholder.webp"
             />
             <ImageControls
               props={{ type: 'slider', sliderSlides, activeSlide, imageURL }}

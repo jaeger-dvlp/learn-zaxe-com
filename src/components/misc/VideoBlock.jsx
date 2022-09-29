@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/future/image';
-import Images from '@/src/images/Images';
 import Content from '@/src/content/Content';
 import { useTranslation } from 'next-i18next';
 import { BsFillPlayFill } from 'react-icons/bs';
@@ -37,8 +36,9 @@ function VideoBlock({ props }) {
           <Image
             src={poster}
             alt={t(label)}
-            placeholder={Images.placeholder}
             className="object-cover w-full h-full"
+            placeholder="blur"
+            blurDataURL="https://cdn.zaxe.com/knowledge-base/img/zaxe-placeholder.webp"
           />
         </div>
         <div className="w-full h-full bg-black/40 group-hover:bg-black/10 group-focus-within:bg-black/10 transition-all duration-200 absolute left-0 top-0 z-[3]" />
