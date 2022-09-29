@@ -14,23 +14,28 @@ import FullScreenViewer from '@/src/components/articles/FullScreenViewer';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 function Post({ data, content }) {
+  const { t } = useTranslation();
   const router = useRouter();
-  const {
-    title: postTitle,
-    category: { slug: postCategorySlug, name: postCategory },
-    description,
-    thumbnail: postThumbnail,
-  } = data;
+
   const {
     slug: postSlug,
     product: queryProductSlug,
     category: queryCategorySlug,
   } = router.query;
+
   const Product = Content.products.find(
     ({ slug }) => slug === queryProductSlug
   );
-  const { t } = useTranslation();
+
+  const {
+    description,
+    title: postTitle,
+    thumbnail: postThumbnail,
+    category: { slug: postCategorySlug, name: postCategory },
+  } = data;
+
   const thumbnail = postThumbnail || Images.og.home.default.src;
+
   return (
     <>
       <Head>

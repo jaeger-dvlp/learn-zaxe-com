@@ -14,20 +14,21 @@ import FullScreenViewer from '@/src/components/articles/FullScreenViewer';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 function Article({ data, content }) {
+  const { t } = useTranslation();
   const router = useRouter();
-  const {
-    title: postTitle,
-    // eslint-disable-next-line no-unused-vars
-    category: { slug: postCategorySlug, name: postCategory },
-    description,
-    thumbnail: postThumbnail,
-  } = data;
+
   const {
     slug: postSlug,
     product: queryProductSlug,
     category: queryCategorySlug,
   } = router.query;
-  const { t } = useTranslation();
+
+  const {
+    description,
+    title: postTitle,
+    thumbnail: postThumbnail,
+    category: { name: postCategory },
+  } = data;
 
   const thumbnail = postThumbnail || Images.og.home.default.src;
 
