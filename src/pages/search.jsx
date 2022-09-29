@@ -280,6 +280,16 @@ function Search({ posts: Posts }) {
       <section className="pt-[20vh] font-zaxe w-full flex flex-wrap justify-center items-start">
         <section className="grid w-full grid-cols-1 p-5 gap-14 max-w-app place-content-start place-items-center">
           <SearchBar className="heading-search-bar" />
+          {searchQuery && searchQuery.includes('*') && (
+            <section className="grid grid-cols-1 place-content-start place-items-center">
+              <p className="text-xs text-zaxe">
+                {t('common:search.keyword-easter.p1')}
+              </p>
+              <p className="text-xs text-zaxe">
+                {t('common:search.keyword-easter.p2')}
+              </p>
+            </section>
+          )}
           <section className="grid w-full grid-cols-1 pb-10 gap-7 place-content-start place-items-center">
             <h2 className="flex items-center justify-center gap-2 p-1 px-4 text-xl font-semibold text-center text-white shadow-xl shadow-black/30 rounded-xl bg-zaxe">
               <MdArticle />
