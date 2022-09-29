@@ -1,8 +1,8 @@
-const Content = require('@/src/content/Content');
 const fs = require('fs');
 const path = require('path');
 const { v4 } = require('uuid');
 const matter = require('gray-matter');
+const Content = require('@/src/content/Content');
 
 const getPost = async ({ postSlug, productSlug, locale }) => {
   const { data, content } = matter(

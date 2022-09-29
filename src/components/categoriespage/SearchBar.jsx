@@ -1,8 +1,8 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import Content from '@/src/content/Content';
 import { useTranslation } from 'next-i18next';
 import { AiOutlineSearch } from 'react-icons/ai';
-import Content from '@/src/content/Content';
 
 function SearchBar({ className }) {
   const router = useRouter();

@@ -1,12 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
 import Images from '@/src/images/Images';
+import { useTranslation } from 'next-i18next';
 import Products from '@/src/components/homepage/Products';
 import WelcomeSection from '@/src/components/homepage/WelcomeSection';
 import QuickNavigation from '@/src/components/homepage/QuickNavigation';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 function Home() {
   const { t } = useTranslation();

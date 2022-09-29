@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { BsArrowsFullscreen, BsLink45Deg } from 'react-icons/bs';
-import { useAppContext } from '../contexts/AppContext';
+import { useAppContext } from '@/src/components/contexts/AppContext';
 
 function ImageButtons({ props }) {
   const { type, imageURL, sliderSlides, activeSlide } = props;

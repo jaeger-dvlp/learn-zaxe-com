@@ -7,7 +7,6 @@ import '@/src/styles/globals.css';
 import '@/src/styles/animations.css';
 import '@/src/styles/fonts/fonts.css';
 import { appWithTranslation } from 'next-i18next';
-
 import Loader from '@/src/components/main/Loader';
 import Header from '@/src/components/main/Header';
 import Footer from '@/src/components/main/Footer';

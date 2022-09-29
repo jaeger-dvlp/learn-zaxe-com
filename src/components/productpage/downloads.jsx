@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 import DownloadBlock from '@/src/components/misc/DownloadBlock';
-import MultiDownloadBlock from '../misc/MultiDownloadBlock';
+import MultiDownloadBlock from '@/src/components/misc/MultiDownloadBlock';
 
 function Downloads({ product }) {
   const { t } = useTranslation();

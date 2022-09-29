@@ -1,7 +1,7 @@
 import React from 'react';
+import Head from 'next/head';
 import Images from '@/src/images/Images';
 import { useTranslation } from 'next-i18next';
-import Head from 'next/head';
 
 function Schema({ props }) {
   const {

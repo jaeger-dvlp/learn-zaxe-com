@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/future/image';
-import ImageControls from './ImageControls';
+import ImageControls from '@/src/components/articles/ImageControls';
 
 function ColumnImage({ children, image: { imageURL, imageALT } }) {
   const { CDNURL } = process.env;
