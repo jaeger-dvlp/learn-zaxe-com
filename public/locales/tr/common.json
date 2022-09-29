@@ -36,7 +36,11 @@
     "articles": "Makaleler",
     "videos": "Videolar",
     "downloads": "İndirmeler",
-    "no-query-content": "Arama kriterlerine göre uygun içerik bulunamadı."
+    "no-query-content": "Arama kriterlerine göre uygun içerik bulunamadı.",
+    "keyword-easter": {
+      "p1": "`*` anahtar kelimesini kullanıyorsunuz!",
+      "p2": "Artık tüm içeriği görebilirsiniz."
+    }
   },
   "homepage": {
     "banner": {

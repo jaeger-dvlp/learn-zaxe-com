@@ -36,7 +36,11 @@
     "articles": "Articles",
     "videos": "Videos",
     "downloads": "Downloads",
-    "no-query-content": "No content found for the search query."
+    "no-query-content": "No content found for the search query.",
+    "keyword-easter": {
+      "p1": "You are using the `*` keyword!",
+      "p2": "You can now see all the content."
+    }
   },
   "homepage": {
     "banner": {
