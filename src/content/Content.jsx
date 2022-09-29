@@ -15,6 +15,14 @@ const OSIcons = {
   mac: <BsApple />,
 };
 
+const DateOfToday = () => {
+  const todayDate = new Date();
+
+  return `${String(todayDate.getDate()).padStart(2, '0')}${String(
+    todayDate.getMonth() + 1
+  ).padStart(2, '0')}${todayDate.getFullYear().toString().slice(2)}`;
+};
+
 const Suggestions = [
   {
     text: {
@@ -200,7 +208,7 @@ const Downloadables = [
     title: 'content-zxx3:downloads.0.title',
     updateDate: '2022-01-01',
     type: 'firmware',
-    link: `${CDNURL}docs/global/zaxe-x3-user-manual.pdf`,
+    link: `https://d.zaxe.com/x3en?d=${DateOfToday()}`,
     showLastUpdate: true,
     description: "Zaxe X3's Firmware",
     tags: ['x3', 'firmware', 'yazılım'],
@@ -751,7 +759,7 @@ const QuickNavigationHome = [
       },
       {
         title: 'components.quick-navigation.columns.2.links.2',
-        link: `${CDNURL}docs/global/zaxe-x3-user-manual.pdf`,
+        link: `https://d.zaxe.com/x3en?d=${DateOfToday()}`,
         isExternal: true,
       },
       {
