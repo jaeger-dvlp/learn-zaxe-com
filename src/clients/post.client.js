@@ -4,7 +4,29 @@ const { v4 } = require('uuid');
 const matter = require('gray-matter');
 const Content = require('@/src/content/Content');
 
+const getPostThumbnail = (postSlug, productSlug) => {
+  if (
+    Content.products
+      .find((product) => product.slug === productSlug)
+      .content.posts.find((post) => post.slug === postSlug)
+  ) {
+    return Content.products
+      .find((product) => product.slug === productSlug)
+      .content.posts.find((post) => post.slug === postSlug).thumbnail;
+  }
+  return null;
+};
+
+const getGlobalPostThumbnail = (postSlug) => {
+  if (Content.globalPosts.find((post) => post.slug === postSlug)) {
+    return Content.globalPosts.find((post) => post.slug === postSlug).thumbnail;
+  }
+  return null;
+};
+
 const getPost = async ({ postSlug, productSlug, locale }) => {
+  const thumbnail = getPostThumbnail(postSlug, productSlug);
+
   const { data, content } = matter(
     fs.readFileSync(
       path.join(`src/posts/${productSlug}/${locale}/${postSlug}.mdx`),
@@ -12,12 +34,16 @@ const getPost = async ({ postSlug, productSlug, locale }) => {
     )
   );
   return {
-    data,
+    data: {
+      ...data,
+      thumbnail,
+    },
     content,
   };
 };
 
 const getGlobalPost = async ({ postSlug, locale }) => {
+  const thumbnail = getGlobalPostThumbnail(postSlug);
   const { data, content } = matter(
     fs.readFileSync(
       path.join(`src/posts/global/${locale}/${postSlug}.mdx`),
@@ -25,7 +51,10 @@ const getGlobalPost = async ({ postSlug, locale }) => {
     )
   );
   return {
-    data,
+    data: {
+      ...data,
+      thumbnail,
+    },
     content,
   };
 };
