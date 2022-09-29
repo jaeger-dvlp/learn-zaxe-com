@@ -201,6 +201,9 @@
       "doc": "Döküman",
       "firmware": "Yazılım"
     },
+    "component": {
+      "last-update": "Son güncelleme :"
+    },
     "buttons": {
       "download": "İndir",
       "download-for": "Şunun için indir "

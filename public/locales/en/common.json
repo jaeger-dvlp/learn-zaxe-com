@@ -201,6 +201,9 @@
       "doc": "Document",
       "firmware": "Firmware"
     },
+    "component": {
+      "last-update": "Last Update :"
+    },
     "buttons": {
       "download": "Download",
       "download-for": "Download for "
