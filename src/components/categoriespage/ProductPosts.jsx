@@ -125,7 +125,7 @@ function ProductPosts({ product }) {
             ) : (
               <NoContent />
             )
-          ) : (
+          ) : Videos.length > 0 ? (
             Videos.map(
               ({
                 category: videoCategory,
@@ -148,6 +148,8 @@ function ProductPosts({ product }) {
                 />
               )
             )
+          ) : (
+            <NoContent />
           )}
         </div>
       </div>
