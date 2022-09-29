@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Icon from '@/src/images/Icons';
 import { BsGrid } from 'react-icons/bs';
 import { useRouter } from 'next/router';
+import Images from '@/src/images/Images';
 import { i18n, useTranslation } from 'next-i18next';
 import NoContent from '@/src/components/misc/NoContent';
 import { MdArticle, MdVideoLibrary } from 'react-icons/md';
@@ -276,6 +277,7 @@ function PostBlock({ props }) {
           <Image
             src={postThumbnail}
             layout="fill"
+            placeholder={Images.placeholder}
             alt={postTitle.en}
             className="object-cover z-[1] object-center w-full h-full"
           />
@@ -323,6 +325,7 @@ function VideoBlock({ props }) {
     >
       <figure className="w-full rounded-b-xl overflow-hidden relative h-[10rem]">
         <Image
+          placeholder={Images.placeholder}
           src={poster}
           layout="fill"
           alt={label}

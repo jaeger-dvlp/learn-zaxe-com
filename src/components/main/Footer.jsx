@@ -45,6 +45,7 @@ function Footer() {
         <Link href="/" locale={router.locale}>
           <a className="relative w-20 transition-all duration-150 cursor-pointer hover:scale-105">
             <Image
+              placeholder="blur"
               className="object-contain w-full h-full"
               src={Images.logo.zxkb}
               alt="Zaxe Knowledge Base Logo"

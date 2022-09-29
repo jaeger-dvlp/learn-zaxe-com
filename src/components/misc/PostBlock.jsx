@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import Images from '@/src/images/Images';
 import Content from '@/src/content/Content';
 import { BiLinkExternal } from 'react-icons/bi';
 import { i18n, useTranslation } from 'next-i18next';
@@ -66,6 +67,7 @@ function PostBlock({ props }) {
             src={postThumbnail}
             layout="fill"
             alt={postTitle.en}
+            placeholder={Images.placeholder}
             className="object-cover object-center w-full h-full"
           />
         </figure>

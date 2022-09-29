@@ -1,6 +1,7 @@
 import React from 'react';
 import { v4 } from 'uuid';
 import Image from 'next/future/image';
+import Images from '@/src/images/Images';
 import ImageControls from '@/src/components/articles/ImageControls';
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs';
 
@@ -59,6 +60,7 @@ function ColumnSlider({ children, images: sliderImages }) {
               src={`${CDNURL}${imageURL}`}
               layout="fill"
               alt={imageALT}
+              placeholder={Images.placeholder}
               className={` ${
                 index === activeSlide
                   ? 'opacity-100 visible pointer-events-auto'

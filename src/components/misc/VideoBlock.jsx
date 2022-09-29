@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/future/image';
+import Images from '@/src/images/Images';
 import Content from '@/src/content/Content';
 import { useTranslation } from 'next-i18next';
 import { BsFillPlayFill } from 'react-icons/bs';
@@ -36,6 +37,7 @@ function VideoBlock({ props }) {
           <Image
             src={poster}
             alt={t(label)}
+            placeholder={Images.placeholder}
             className="object-cover w-full h-full"
           />
         </div>

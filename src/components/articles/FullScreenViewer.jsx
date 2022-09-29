@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Images from '@/src/images/Images';
 import { BsX, BsChevronRight, BsChevronLeft } from 'react-icons/bs';
 import { useAppContext } from '@/src/components/contexts/AppContext';
 
@@ -48,6 +49,7 @@ function FullScreenViewer() {
                     : 'opacity-0 invisible '
                 } object-contain transition-all duration-300 absolute left-0 top-0 border bg-transparent !border-none object-center`}
                 layout="fill"
+                placeholder={Images.placeholder}
                 alt="ZX Full Screen Viewer"
                 key={`fullscreen-slide-${uniqueId}`}
                 src={`${CDNURL}${slideImage}`}
@@ -55,8 +57,9 @@ function FullScreenViewer() {
             ))
           ) : (
             <Image
-              src={`${CDNURL}${imageURL || 'img/placeholder.png'}`}
+              src={`${imageURL ? `${CDNURL}${imageURL}` : Images.placeholder}`}
               layout="fill"
+              placeholder={Images.placeholder}
               alt="ZX Full Screen Viewer"
               className="object-contain border bg-transparent !border-none object-center"
             />
