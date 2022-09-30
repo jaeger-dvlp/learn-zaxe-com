@@ -21,7 +21,7 @@ function Home() {
         />
         <meta name="description" content={t('meta.content.home')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://knowledge-base.zaxe.com/" />
+        <meta property="og:url" content="https://learn.zaxe.com/" />
         <meta property="og:title" content={t('meta.title.home')} />
         <meta property="og:description" content={t('meta.content.home')} />
         <meta
@@ -30,10 +30,7 @@ function Home() {
         />
         <meta property="og:image" content={Images.og.home.default.src} />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:url"
-          content="https://knowledge-base.zaxe.com/"
-        />
+        <meta property="twitter:url" content="https://learn.zaxe.com/" />
         <meta property="twitter:site" content="@Zaxe3D" />
         <meta property="twitter:site:id" content="@Zaxe3D" />
         <meta property="twitter:creator" content="@Zaxe3D" />
@@ -43,20 +40,12 @@ function Home() {
         <meta property="twitter:image" content={Images.og.home.default.src} />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
-        <link
-          rel="alternate"
-          hrefLang="tr"
-          href="https://zaxe-knowledge-base.vercel.app/tr"
-        />
-        <link
-          rel="alternate"
-          hrefLang="en"
-          href="https://zaxe-knowledge-base.vercel.app/en"
-        />
+        <link rel="alternate" hrefLang="tr" href="https://learn.zaxe.com/tr" />
+        <link rel="alternate" hrefLang="en" href="https://learn.zaxe.com/en" />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href="https://zaxe-knowledge-base.vercel.app"
+          href="https://learn.zaxe.com"
         />
       </Head>
       <WelcomeSection />

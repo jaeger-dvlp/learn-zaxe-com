@@ -46,7 +46,7 @@ function Article({ data, content }) {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content={`https://knowledge-base.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
+          content={`https://learn.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
         <meta
           property="og:title"
@@ -75,17 +75,17 @@ function Article({ data, content }) {
         <link
           rel="alternate"
           hrefLang="tr"
-          content={`https://zaxe-knowledge-base.vercel.app/tr/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
+          content={`https://learn.zaxe.com/tr/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
         <link
           rel="alternate"
           hrefLang="en"
-          content={`https://zaxe-knowledge-base.vercel.app/en/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
+          content={`https://learn.zaxe.com/en/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
         <link
           rel="alternate"
           hrefLang="x-default"
-          content={`https://zaxe-knowledge-base.vercel.app/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
+          content={`https://learn.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
       </Head>
       <Schema

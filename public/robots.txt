@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://zaxe-knowledge-base.vercel.app
+Host: https://learn.zaxe.com
 
 # Sitemaps
-Sitemap: https://zaxe-knowledge-base.vercel.app/sitemap.xml
+Sitemap: https://learn.zaxe.com/sitemap.xml

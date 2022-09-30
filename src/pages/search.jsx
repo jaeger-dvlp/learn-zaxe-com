@@ -278,10 +278,7 @@ function Search({ posts: Posts }) {
         />
         <meta name="description" content={t('meta.content.search')} />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://knowledge-base.zaxe.com/search"
-        />
+        <meta property="og:url" content="https://learn.zaxe.com/search" />
         <meta property="og:title" content={t('meta.title.search')} />
         <meta property="og:description" content={t('meta.content.search')} />
         <meta
@@ -290,10 +287,7 @@ function Search({ posts: Posts }) {
         />
         <meta property="og:image" content={Images.og.home.default.src} />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:url"
-          content="https://knowledge-base.zaxe.com/search"
-        />
+        <meta property="twitter:url" content="https://learn.zaxe.com/search" />
         <meta property="twitter:site" content="@Zaxe3D" />
         <meta property="twitter:site:id" content="@Zaxe3D" />
         <meta property="twitter:creator" content="@Zaxe3D" />
@@ -309,17 +303,17 @@ function Search({ posts: Posts }) {
         <link
           rel="alternate"
           hrefLang="tr"
-          href="https://zaxe-knowledge-base.vercel.app/tr/search"
+          href="https://learn.zaxe.com/tr/search"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://zaxe-knowledge-base.vercel.app/en/search"
+          href="https://learn.zaxe.com/en/search"
         />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href="https://zaxe-knowledge-base.vercel.app/search"
+          href="https://learn.zaxe.com/search"
         />
       </Head>
       <section className="pt-[20vh] font-zaxe w-full flex flex-wrap justify-center items-start">

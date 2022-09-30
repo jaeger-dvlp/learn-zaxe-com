@@ -15,9 +15,9 @@ function Schema({ props }) {
 
   const getID = () => {
     if (productName) {
-      return `https://knowledge-base.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`;
+      return `https://learn.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`;
     }
-    return `https://knowledge-base.zaxe.com/articles/${postSlug}`;
+    return `https://learn.zaxe.com/articles/${postSlug}`;
   };
 
   const getHeadline = () => {
@@ -40,7 +40,7 @@ function Schema({ props }) {
           headline: getHeadline(),
           image: {
             '@type': 'ImageObject',
-            url: `https://knowledge-base.zaxe.com${Images.og.home.default.src}`,
+            url: `https://learn.zaxe.com${Images.og.home.default.src}`,
           },
         })}
       </script>

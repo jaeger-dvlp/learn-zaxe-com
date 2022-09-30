@@ -37,10 +37,7 @@ function Product({ product: stringProduct }) {
           />
           <meta name="description" content={t('meta.content.home')} />
           <meta property="og:type" content="website" />
-          <meta
-            property="og:url"
-            content={`https://knowledge-base.zaxe.com${asPath}`}
-          />
+          <meta property="og:url" content={`https://learn.zaxe.com${asPath}`} />
           <meta
             property="og:title"
             content={t(
@@ -56,7 +53,7 @@ function Product({ product: stringProduct }) {
           <meta property="twitter:card" content="summary_large_image" />
           <meta
             property="twitter:url"
-            content={`https://knowledge-base.zaxe.com${asPath}`}
+            content={`https://learn.zaxe.com${asPath}`}
           />
           <meta property="twitter:site" content="@Zaxe3D" />
           <meta property="twitter:site:id" content="@Zaxe3D" />
@@ -78,17 +75,17 @@ function Product({ product: stringProduct }) {
           <link
             rel="alternate"
             hrefLang="tr"
-            href={`https://zaxe-knowledge-base.vercel.app/tr${asPath}`}
+            href={`https://learn.zaxe.com/tr${asPath}`}
           />
           <link
             rel="alternate"
             hrefLang="en"
-            href={`https://zaxe-knowledge-base.vercel.app/en${asPath}`}
+            href={`https://learn.zaxe.com/en${asPath}`}
           />
           <link
             rel="alternate"
             hrefLang="x-default"
-            href={`https://zaxe-knowledge-base.vercel.app${asPath}`}
+            href={`https://learn.zaxe.com${asPath}`}
           />
         </Head>
         <div className="grid w-full font-zaxe pt-[15vh] grid-cols-1 place-content-start place-items-center">

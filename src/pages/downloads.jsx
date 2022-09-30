@@ -68,10 +68,7 @@ function Downloads() {
         />
         <meta name="description" content={t('meta.content.downloads')} />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://knowledge-base.zaxe.com/downloads"
-        />
+        <meta property="og:url" content="https://learn.zaxe.com/downloads" />
         <meta property="og:title" content={t('meta.title.downloads')} />
         <meta property="og:description" content={t('meta.content.downloads')} />
         <meta
@@ -82,7 +79,7 @@ function Downloads() {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content="https://knowledge-base.zaxe.com/downloads"
+          content="https://learn.zaxe.com/downloads"
         />
         <meta property="twitter:site" content="@Zaxe3D" />
         <meta property="twitter:site:id" content="@Zaxe3D" />
@@ -99,17 +96,17 @@ function Downloads() {
         <link
           rel="alternate"
           hrefLang="tr"
-          href="https://zaxe-knowledge-base.vercel.app/tr/downloads"
+          href="https://learn.zaxe.com/tr/downloads"
         />
         <link
           rel="alternate"
           hrefLang="en"
-          href="https://zaxe-knowledge-base.vercel.app/en/downloads"
+          href="https://learn.zaxe.com/en/downloads"
         />
         <link
           rel="alternate"
           hrefLang="x-default"
-          href="https://zaxe-knowledge-base.vercel.app/downloads"
+          href="https://learn.zaxe.com/downloads"
         />
       </Head>
       <main className="grid font-zaxe w-full grid-cols-1 p-0 m-0 place-content-start place-items-center py-[20vh]">
