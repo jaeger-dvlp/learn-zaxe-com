@@ -37,8 +37,6 @@ function VideoBlock({ props }) {
             src={poster}
             alt={t(label)}
             className="object-cover w-full h-full"
-            placeholder="blur"
-            blurDataURL="https://cdn.zaxe.com/knowledge-base/img/zaxe-placeholder.webp"
           />
         </div>
         <div className="w-full h-full bg-black/40 group-hover:bg-black/10 group-focus-within:bg-black/10 transition-all duration-200 absolute left-0 top-0 z-[3]" />

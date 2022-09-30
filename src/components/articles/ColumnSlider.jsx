@@ -64,8 +64,6 @@ function ColumnSlider({ children, images: sliderImages }) {
                   ? 'opacity-100 visible pointer-events-auto'
                   : 'opacity-0 invisible pointer-events-none'
               } object-cover transition-all duration-700 rounded-xl overflow-hidden slider-image absolute left-0 top-0 p-0 !border-none object-center w-full h-full`}
-              placeholder="blur"
-              blurDataURL="https://cdn.zaxe.com/knowledge-base/img/zaxe-placeholder.webp"
             />
             <ImageControls
               props={{ type: 'slider', sliderSlides, activeSlide, imageURL }}

@@ -16,8 +16,6 @@ function ArticleImage({ className, image: { imageURL, imageALT } }) {
         alt={imageALT}
         layout="fill"
         className="object-cover p-0 !border-none object-center w-full h-full"
-        placeholder="blur"
-        blurDataURL="https://cdn.zaxe.com/knowledge-base/img/zaxe-placeholder.webp"
       />
       <ImageControls props={{ type: 'single', imageURL }} />
     </figure>

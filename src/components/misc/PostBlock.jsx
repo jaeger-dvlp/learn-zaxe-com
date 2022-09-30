@@ -67,8 +67,6 @@ function PostBlock({ props }) {
             layout="fill"
             alt={postTitle.en}
             className="object-cover object-center w-full h-full"
-            placeholder="blur"
-            blurDataURL="https://cdn.zaxe.com/knowledge-base/img/zaxe-placeholder.webp"
           />
         </figure>
         <section className="relative z-[1] flex items-end justify-between w-full p-3 bg-white">

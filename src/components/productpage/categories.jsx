@@ -281,8 +281,6 @@ function PostBlock({ props }) {
             layout="fill"
             alt={postTitle.en}
             className="object-cover z-[1] object-center w-full h-full"
-            placeholder="blur"
-            blurDataURL="https://cdn.zaxe.com/knowledge-base/img/zaxe-placeholder.webp"
           />
         </figure>
         <div className="flex flex-wrap items-center justify-between w-full p-3 ">
@@ -332,8 +330,6 @@ function VideoBlock({ props }) {
           layout="fill"
           alt={label}
           className="object-cover z-[1] object-center w-full h-full"
-          placeholder="blur"
-          blurDataURL="https://cdn.zaxe.com/knowledge-base/img/zaxe-placeholder.webp"
         />
       </figure>
       <div className="flex items-center justify-between w-full p-3 ">

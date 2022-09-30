@@ -51,8 +51,6 @@ function FullScreenViewer() {
                 alt="ZX Full Screen Viewer"
                 key={`fullscreen-slide-${uniqueId}`}
                 src={`${CDNURL}${slideImage}`}
-                placeholder="blur"
-                blurDataURL="https://cdn.zaxe.com/knowledge-base/img/zaxe-placeholder.webp"
               />
             ))
           ) : (
@@ -65,8 +63,6 @@ function FullScreenViewer() {
               layout="fill"
               alt="ZX Full Screen Viewer"
               className="object-contain border bg-transparent !border-none object-center"
-              placeholder="blur"
-              blurDataURL="https://cdn.zaxe.com/knowledge-base/img/zaxe-placeholder.webp"
             />
           )}
         </div>
