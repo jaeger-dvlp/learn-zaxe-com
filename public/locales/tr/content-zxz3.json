@@ -16,7 +16,15 @@
   "starterVideos": [
     { "label": "Kutu Açılımı" },
     { "label": "Z3'ü Keşfedin" },
-    { "label": "Kalibrasyon" }
+    { "label": "Kalibrasyon" },
+    { "label": "Z Probe Ayarlama" },
+    { "label": "SD Kart Değişimi" },
+    { "label": "Teflon Boru Değişimi" },
+    { "label": "Anakart Değişimi" },
+    { "label": "Hotend Değişimi" },
+    { "label": "Fan Değişimi" },
+    { "label": "Baskı Kafası Sökümü" },
+    { "label": "Mandal Sökümü" }
   ],
   "categories": [
     {

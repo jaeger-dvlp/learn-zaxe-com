@@ -16,7 +16,15 @@
   "starterVideos": [
     { "label": "Unboxing" },
     { "label": "Explore Z3" },
-    { "label": "Calibration" }
+    { "label": "Calibration" },
+    { "label": "Z Probe Adjustment" },
+    { "label": "SD Card Replacement" },
+    { "label": "Tube Replacement" },
+    { "label": "Motherboard Replacement" },
+    { "label": "Hotend Replacement" },
+    { "label": "Fan Replacement" },
+    { "label": "Dissemble Head" },
+    { "label": "Dissemble Latch" }
   ],
   "categories": [
     {
