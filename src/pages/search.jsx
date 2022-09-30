@@ -39,7 +39,12 @@ function Search({ posts: Posts }) {
   const sortByPoints = (arr) =>
     arr.sort((a, b) => b.searchPoints - a.searchPoints);
 
-  const getPostTitle = (title) => title.replaceAll(' ', '').toLowerCase();
+  const getTitle = (title) => {
+    if (typeof title === 'string') {
+      return title.replaceAll(' ', '').toLowerCase();
+    }
+    return title[router.locale].replaceAll(' ', '').toLowerCase();
+  };
 
   const PostActions = {
     GetQueriedPosts: ({ queries }) => {
@@ -48,8 +53,8 @@ function Search({ posts: Posts }) {
           const foundPosts = posts.map((post) => {
             let currentPost = post;
             const theQuery = query.toLowerCase();
-            const postTitle = getPostTitle(post.title);
-            const searchQueryTitle = getPostTitle(searchQuery);
+            const postTitle = getTitle(post.title);
+            const searchQueryTitle = getTitle(searchQuery);
 
             currentPost.searchPoints = 0;
 
@@ -120,7 +125,7 @@ function Search({ posts: Posts }) {
       return allVideos;
     },
     ClearDuplicatedArray: (DuplicatedArray) => {
-      const uniqueArray = [];
+      let uniqueArray = [];
       DuplicatedArray.map((video) => {
         if (uniqueArray.find(({ slug }) => slug === video.slug) === undefined) {
           return uniqueArray.push(video);
@@ -128,21 +133,61 @@ function Search({ posts: Posts }) {
         return null;
       });
 
+      uniqueArray = sortByPoints(uniqueArray);
+
       return uniqueArray;
     },
     GetQueriedVideos: ({ queries }) => {
       const queriedVideos = queries
-        .map((query) =>
-          VideoActions.GetVideos().filter(({ tags }) =>
-            tags.find(
-              (tag) =>
-                tag.toLowerCase() === query ||
-                (query.length > 2 &&
-                  tag.length > 2 &&
-                  tag.toLowerCase().includes(query))
-            )
-          )
-        )
+        .map((query) => {
+          const foundVideos = VideoActions.GetVideos().map((video) => {
+            let currentVideo = video;
+            const productModel = Content.products.find(
+              ({ slug }) => slug === video.product
+            ).model;
+            const theQuery = query.toLowerCase();
+            const videoTitle = getTitle(t(video.label));
+            const searchQueryTitle = getTitle(searchQuery);
+
+            currentVideo.searchPoints = 0;
+
+            if (BannedWords.includes(theQuery) === false) {
+              if (searchQueryTitle === videoTitle) {
+                currentVideo = updateSearchPoints(currentVideo, 100);
+              }
+
+              if (
+                video.tags.find(
+                  (tag) => tag.toLowerCase() === query.toLowerCase()
+                )
+              ) {
+                currentVideo = updateSearchPoints(currentVideo, 5);
+              }
+              if (productModel.toLowerCase() === theQuery) {
+                currentVideo = updateSearchPoints(currentVideo, 5);
+              }
+
+              if (
+                query.length >= 2 &&
+                video.tags.find((tag) => tag.toLowerCase().includes(theQuery))
+              ) {
+                currentVideo = updateSearchPoints(currentVideo, 2);
+              }
+
+              if (query.length >= 2 && videoTitle.includes(theQuery)) {
+                currentVideo = updateSearchPoints(currentVideo, 1);
+              }
+            }
+
+            if (currentVideo.searchPoints > 1) {
+              return currentVideo;
+            }
+
+            return null;
+          });
+
+          return foundVideos.filter((obj) => obj !== null);
+        })
         .flat();
 
       return queriedVideos;
