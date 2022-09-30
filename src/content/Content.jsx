@@ -545,7 +545,6 @@ const ProductVideos = [
         '*',
         'unbox',
         'unboxing',
-        'z3',
         'z3 unbox',
         'z3 unboxing',
         'kutu açılımı',
@@ -570,7 +569,6 @@ const ProductVideos = [
       category: 'maintenance',
       tags: [
         '*',
-        'z3',
         'calibration',
         'calibrate',
         'how to calibrate',
@@ -585,7 +583,7 @@ const ProductVideos = [
       videoURL: `${CDNURL}videos/zaxe-z3/z-probe-adjustment.mp4`,
       thumbnail: `${CDNURL}videos/zaxe-z3/thumbnails/z-probe-adjustment.webp`,
       category: 'maintenance',
-      tags: ['*', 'z3', 'z', 'probe', 'adjustment', 'değiştirme'],
+      tags: ['*', 'z', 'probe', 'adjustment', 'değiştirme'],
     },
     {
       product: 'zaxe-z3',
@@ -594,16 +592,7 @@ const ProductVideos = [
       videoURL: `${CDNURL}videos/zaxe-z3/sd-card-replacement.mp4`,
       thumbnail: `${CDNURL}videos/zaxe-z3/thumbnails/sd-card-replacement.webp`,
       category: 'maintenance',
-      tags: [
-        '*',
-        'z3',
-        'sd',
-        'card',
-        'replacement',
-        'hafıza',
-        'kart',
-        'değiştirme',
-      ],
+      tags: ['*', 'sd', 'card', 'replacement', 'hafıza', 'kart', 'değiştirme'],
     },
     {
       product: 'zaxe-z3',
@@ -612,7 +601,7 @@ const ProductVideos = [
       videoURL: `${CDNURL}videos/zaxe-z3/tube-replacement.mp4`,
       thumbnail: `${CDNURL}videos/zaxe-z3/thumbnails/tube-replacement.webp`,
       category: 'maintenance',
-      tags: ['*', 'z3', 'tube', 'replacement', 'boru', 'teflon', 'değiştirme'],
+      tags: ['*', 'tube', 'replacement', 'boru', 'teflon', 'değiştirme'],
     },
     {
       product: 'zaxe-z3',
@@ -621,7 +610,7 @@ const ProductVideos = [
       videoURL: `${CDNURL}videos/zaxe-z3/motherboard-replacement.mp4`,
       thumbnail: `${CDNURL}videos/zaxe-z3/thumbnails/motherboard-replacement.webp`,
       category: 'maintenance',
-      tags: ['*', 'z3', 'motherboard', 'anakart', 'replacement', 'değiştirme'],
+      tags: ['*', 'motherboard', 'anakart', 'replacement', 'değiştirme'],
     },
     {
       product: 'zaxe-z3',
@@ -630,7 +619,7 @@ const ProductVideos = [
       videoURL: `${CDNURL}videos/zaxe-z3/hotend-replacement.mp4`,
       thumbnail: `${CDNURL}videos/zaxe-z3/thumbnails/hotend-replacement.webp`,
       category: 'maintenance',
-      tags: ['*', 'z3', 'hotend', 'replacement', 'değiştirme'],
+      tags: ['*', 'hotend', 'replacement', 'değiştirme'],
     },
     {
       product: 'zaxe-z3',
@@ -639,7 +628,7 @@ const ProductVideos = [
       videoURL: `${CDNURL}videos/zaxe-z3/fan-replacement.mp4`,
       thumbnail: `${CDNURL}videos/zaxe-z3/thumbnails/fan-replacement.webp`,
       category: 'maintenance',
-      tags: ['*', 'z3', 'fan', 'replacement', 'değiştirme'],
+      tags: ['*', 'fan', 'replacement', 'değiştirme'],
     },
     {
       product: 'zaxe-z3',
@@ -650,7 +639,6 @@ const ProductVideos = [
       category: 'maintenance',
       tags: [
         '*',
-        'z3',
         'head',
         'kafa',
         'extruder',
@@ -668,7 +656,7 @@ const ProductVideos = [
       videoURL: `${CDNURL}videos/zaxe-z3/dissemble-latch.mp4`,
       thumbnail: `${CDNURL}videos/zaxe-z3/thumbnails/dissemble-latch.webp`,
       category: 'maintenance',
-      tags: ['*', 'z3', 'latch', 'mandal', 'dissemble', 'sökme', 'değiştirme'],
+      tags: ['*', 'latch', 'mandal', 'dissemble', 'sökme', 'değiştirme'],
     },
   ],
   [],
