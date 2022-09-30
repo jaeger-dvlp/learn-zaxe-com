@@ -2,12 +2,62 @@
   [
     {
       "title": {
+        "tr": "Zaxe Z3 3D Yazıcınızı Tanıyın",
+        "en": "Know Your Zaxe Z3 3D Printer"
+      },
+      "slug": "know-your-zaxe-z3-3d-printer",
+      "category": "maintenance",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/know-your-zaxe-z3-3d-printer/img/zaxe-z3-thumbnail.webp",
+      "type": "product"
+    },
+    {
+      "title": {
         "tr": "Zaxe Z3 3D Yazıcınızda Temel Bakım Yapımı",
         "en": "Doing Basic Maintenance on Your Zaxe Z3 3D Printer"
       },
       "slug": "doing-basic-maintenance-on-your-zaxe-z3-3d-printer",
       "category": "maintenance",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-maintenance-thumbnail.webp",
+      "type": "product"
+    },
+    {
+      "title": {
+        "tr": "Zaxe Z3 Yazıcınızda OctoPi Nasıl Kullanılır",
+        "en": "How to Use OctoPi on Your Zaxe Z3 Printer"
+      },
+      "slug": "how-to-use-octopi-on-your-zaxe-z3-printer",
+      "category": "software",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/how-to-use-octopi-on-your-zaxe-z3-printer/img/how-to-use-octopi-on-your-zaxe-z3-printer-thumbnail.webp",
+      "type": "product"
+    },
+    {
+      "title": {
+        "tr": "xDesktop Hakkında",
+        "en": "About xDesktop"
+      },
+      "slug": "about-xdesktop",
+      "category": "software",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/about-xdesktop/img/about-xdesktop-thumbnail.webp",
+      "type": "global"
+    },
+    {
+      "title": {
+        "tr": "xCloud Hakkında",
+        "en": "About xCloud"
+      },
+      "slug": "about-xcloud",
+      "category": "software",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/about-xcloud/img/about-xcloud-thumbnail.webp",
+      "type": "global"
+    },
+    {
+      "title": {
+        "tr": "Zaxe Z3 3D Yazıcınız ile İlk Kalibrasyonunuz",
+        "en": "Your First Bed Calibration with Zaxe Z3 3D Printer"
+      },
+      "slug": "your-first-bed-calibration-with-zaxe-z3-3d-printer",
+      "category": "maintenance",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/your-first-bed-calibration-with-zaxe-z3-3d-printer/img/zaxe-z3-calibration-lines.webp",
       "type": "product"
     },
     {
@@ -22,42 +72,12 @@
     },
     {
       "title": {
-        "tr": "Zaxe Z3 3D Yazıcınızı Tanıyın",
-        "en": "Know Your Zaxe Z3 3D Printer"
-      },
-      "slug": "know-your-zaxe-z3-3d-printer",
-      "category": "maintenance",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/know-your-zaxe-z3-3d-printer/img/zaxe-z3-thumbnail.webp",
-      "type": "product"
-    },
-    {
-      "title": {
         "tr": "Zaxe Z3'ünüzü Temiz Tutmak",
         "en": "Keeping Your Zaxe Z3 Clean"
       },
       "slug": "keeping-your-zaxe-z3-clean",
       "category": "maintenance",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/keeping-your-zaxe-z3-clean/img/zaxe-z3-cleaning-printing-table.webp",
-      "type": "product"
-    },
-    {
-      "title": {
-        "tr": "Zaxe Z3 3D Yazıcınız ile İlk Kalibrasyonunuz",
-        "en": "Your First Bed Calibration with Zaxe Z3 3D Printer"
-      },
-      "slug": "your-first-bed-calibration-with-zaxe-z3-3d-printer",
-      "category": "maintenance",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/your-first-bed-calibration-with-zaxe-z3-3d-printer/img/zaxe-z3-calibration-lines.webp",
-      "type": "product"
-    },
-    {
-      "title": {
-        "tr": "Zaxe Z3 Yazıcınızda OctoPi Nasıl Kullanılır",
-        "en": "How to Use OctoPi on Your Zaxe Z3 Printer"
-      },
-      "slug": "how-to-use-octopi-on-your-zaxe-z3-printer",
-      "category": "software",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/how-to-use-octopi-on-your-zaxe-z3-printer/img/how-to-use-octopi-on-your-zaxe-z3-printer-thumbnail.webp",
       "type": "product"
     },
     {
@@ -82,6 +102,46 @@
     },
     {
       "title": {
+        "tr": "Nozül Nasıl Değiştirilir",
+        "en": "How to Change Your Nozzle"
+      },
+      "slug": "how-to-change-your-nozzle",
+      "category": "repair",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-nozzle.webp",
+      "type": "global"
+    },
+    {
+      "title": {
+        "tr": "Raylar Nasıl Yağlanır",
+        "en": "How to Grease the Rails"
+      },
+      "slug": "how-to-grease-the-rails",
+      "category": "maintenance",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-rail-oiling.webp",
+      "type": "global"
+    },
+    {
+      "title": {
+        "tr": "Kemer Gerginliği Nasıl Ayarlanır",
+        "en": "How to Adjust Belt Tension"
+      },
+      "slug": "how-to-adjust-belt-tension",
+      "category": "maintenance",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-adjusting-belt-tension.webp",
+      "type": "global"
+    },
+    {
+      "title": {
+        "tr": "HEPA Filtre Değişimi",
+        "en": "Replacing the HEPA Filter"
+      },
+      "slug": "replacing-the-hepa-filter",
+      "category": "maintenance",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-hepa-filter.webp",
+      "type": "global"
+    },
+    {
+      "title": {
         "tr": "Büzülme Sorunu Nasıl Çözülür",
         "en": "How to Fix Warping"
       },
@@ -159,45 +219,37 @@
       "category": "troubleshooting",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/bad-overhang.webp",
       "type": "global"
-    },
+    }
+  ],
+  [
     {
       "title": {
-        "tr": "Raylar Nasıl Yağlanır",
-        "en": "How to Grease the Rails"
+        "tr": "Zaxe X3 3D Yazıcınızı Tanıyın",
+        "en": "Know Your Zaxe X3 3D Printer"
       },
-      "slug": "how-to-grease-the-rails",
+      "slug": "know-your-zaxe-x3-3d-printer",
       "category": "maintenance",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-rail-oiling.webp",
-      "type": "global"
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/know-your-zaxe-x3-3d-printer/img/zaxe-x3-thumbnail.webp",
+      "type": "product"
     },
     {
       "title": {
-        "tr": "Kemer Gerginliği Nasıl Ayarlanır",
-        "en": "How to Adjust Belt Tension"
+        "tr": "Zaxe X3 3D Yazıcınızda Temel Bakım Yapımı",
+        "en": "Doing Basic Maintenance on Your Zaxe X3 3D Printer"
       },
-      "slug": "how-to-adjust-belt-tension",
+      "slug": "doing-basic-maintenance-on-your-zaxe-x3-3d-printer",
       "category": "maintenance",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-adjusting-belt-tension.webp",
-      "type": "global"
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-x3/img/zaxe-x3-maintenance-thumbnail.webp",
+      "type": "product"
     },
     {
       "title": {
-        "tr": "Nozül Nasıl Değiştirilir",
-        "en": "How to Change Your Nozzle"
+        "tr": "xDesktop Hakkında",
+        "en": "About xDesktop"
       },
-      "slug": "how-to-change-your-nozzle",
-      "category": "repair",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-nozzle.webp",
-      "type": "global"
-    },
-    {
-      "title": {
-        "tr": "HEPA Filtre Değişimi",
-        "en": "Replacing the HEPA Filter"
-      },
-      "slug": "replacing-the-hepa-filter",
-      "category": "maintenance",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-hepa-filter.webp",
+      "slug": "about-xdesktop",
+      "category": "software",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/about-xdesktop/img/about-xdesktop-thumbnail.webp",
       "type": "global"
     },
     {
@@ -212,24 +264,12 @@
     },
     {
       "title": {
-        "tr": "xDesktop Hakkında",
-        "en": "About xDesktop"
+        "tr": "Zaxe X3 3D Yazıcınız ile İlk Kalibrasyonunuz",
+        "en": "Your First Bed Calibration with Zaxe X3 3D Printer"
       },
-      "slug": "about-xdesktop",
-      "category": "software",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/about-xdesktop/img/about-xdesktop-thumbnail.webp",
-      "type": "global"
-    }
-  ],
-  [
-    {
-      "title": {
-        "tr": "Zaxe X3 3D Yazıcınızda Temel Bakım Yapımı",
-        "en": "Doing Basic Maintenance on Your Zaxe X3 3D Printer"
-      },
-      "slug": "doing-basic-maintenance-on-your-zaxe-x3-3d-printer",
+      "slug": "your-first-bed-calibration-with-zaxe-x3-3d-printer",
       "category": "maintenance",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-x3/img/zaxe-x3-maintenance-thumbnail.webp",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/your-first-bed-calibration-with-zaxe-x3-3d-printer/img/zaxe-x3-calibration.webp",
       "type": "product"
     },
     {
@@ -244,32 +284,12 @@
     },
     {
       "title": {
-        "tr": "Zaxe X3 3D Yazıcınızı Tanıyın",
-        "en": "Know Your Zaxe X3 3D Printer"
-      },
-      "slug": "know-your-zaxe-x3-3d-printer",
-      "category": "maintenance",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/know-your-zaxe-x3-3d-printer/img/zaxe-x3-thumbnail.webp",
-      "type": "product"
-    },
-    {
-      "title": {
         "tr": "Zaxe X3'ünüzü Temiz Tutmak",
         "en": "Keeping Your Zaxe X3 Clean"
       },
       "slug": "keeping-your-zaxe-x3-clean",
       "category": "maintenance",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/keeping-your-zaxe-x3-clean/img/zaxe-x3-cleaning-printing-table.webp",
-      "type": "product"
-    },
-    {
-      "title": {
-        "tr": "Zaxe X3 3D Yazıcınız ile İlk Kalibrasyonunuz",
-        "en": "Your First Bed Calibration with Zaxe X3 3D Printer"
-      },
-      "slug": "your-first-bed-calibration-with-zaxe-x3-3d-printer",
-      "category": "maintenance",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/your-first-bed-calibration-with-zaxe-x3-3d-printer/img/zaxe-x3-calibration.webp",
       "type": "product"
     },
     {
@@ -294,6 +314,46 @@
     },
     {
       "title": {
+        "tr": "Nozül Nasıl Değiştirilir",
+        "en": "How to Change Your Nozzle"
+      },
+      "slug": "how-to-change-your-nozzle",
+      "category": "repair",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-nozzle.webp",
+      "type": "global"
+    },
+    {
+      "title": {
+        "tr": "Raylar Nasıl Yağlanır",
+        "en": "How to Grease the Rails"
+      },
+      "slug": "how-to-grease-the-rails",
+      "category": "maintenance",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-rail-oiling.webp",
+      "type": "global"
+    },
+    {
+      "title": {
+        "tr": "Kemer Gerginliği Nasıl Ayarlanır",
+        "en": "How to Adjust Belt Tension"
+      },
+      "slug": "how-to-adjust-belt-tension",
+      "category": "maintenance",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-adjusting-belt-tension.webp",
+      "type": "global"
+    },
+    {
+      "title": {
+        "tr": "HEPA Filtre Değişimi",
+        "en": "Replacing the HEPA Filter"
+      },
+      "slug": "replacing-the-hepa-filter",
+      "category": "maintenance",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-hepa-filter.webp",
+      "type": "global"
+    },
+    {
+      "title": {
         "tr": "Büzülme Sorunu Nasıl Çözülür",
         "en": "How to Fix Warping"
       },
@@ -371,66 +431,6 @@
       "category": "troubleshooting",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/common-3d-printing-problems-and-how-to-troubleshoot-them/img/bad-overhang.webp",
       "type": "global"
-    },
-    {
-      "title": {
-        "tr": "Raylar Nasıl Yağlanır",
-        "en": "How to Grease the Rails"
-      },
-      "slug": "how-to-grease-the-rails",
-      "category": "maintenance",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-rail-oiling.webp",
-      "type": "global"
-    },
-    {
-      "title": {
-        "tr": "Kemer Gerginliği Nasıl Ayarlanır",
-        "en": "How to Adjust Belt Tension"
-      },
-      "slug": "how-to-adjust-belt-tension",
-      "category": "maintenance",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-adjusting-belt-tension.webp",
-      "type": "global"
-    },
-    {
-      "title": {
-        "tr": "Nozül Nasıl Değiştirilir",
-        "en": "How to Change Your Nozzle"
-      },
-      "slug": "how-to-change-your-nozzle",
-      "category": "repair",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-nozzle.webp",
-      "type": "global"
-    },
-    {
-      "title": {
-        "tr": "HEPA Filtre Değişimi",
-        "en": "Replacing the HEPA Filter"
-      },
-      "slug": "replacing-the-hepa-filter",
-      "category": "maintenance",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/basic-maintenance-zaxe-z3/img/zaxe-z3-changing-hepa-filter.webp",
-      "type": "global"
-    },
-    {
-      "title": {
-        "tr": "xCloud Hakkında",
-        "en": "About xCloud"
-      },
-      "slug": "about-xcloud",
-      "category": "software",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/about-xcloud/img/about-xcloud-thumbnail.webp",
-      "type": "global"
-    },
-    {
-      "title": {
-        "tr": "xDesktop Hakkında",
-        "en": "About xDesktop"
-      },
-      "slug": "about-xdesktop",
-      "category": "software",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/about-xdesktop/img/about-xdesktop-thumbnail.webp",
-      "type": "global"
     }
   ],
   [
@@ -446,22 +446,22 @@
     },
     {
       "title": {
-        "tr": "xDesktop Kullanarak İlk Baskınızı Alma Kılavuzu",
-        "en": "Guide to Getting Your First Print Using xDesktop"
-      },
-      "slug": "guide-to-getting-your-first-print-using-xdesktop",
-      "category": "start",
-      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/guide-to-getting-your-first-print-using-xdesktop/img/zaxe-xdesktop-first-print-model-orientation.webp",
-      "type": "product"
-    },
-    {
-      "title": {
         "tr": "Yeni xDesktop 2.3.14 Versiyonu Yayında!",
         "en": "The New xDesktop 2.3.14 Version is Live!"
       },
       "slug": "the-new-xdesktop-2-3-14-version-is-live",
       "category": "tips-tricks",
       "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/the-new-xdesktop-2-3-14-version-is-live/img/thumbnail-zaxe-xdesktop-update-2-3-14.webp",
+      "type": "product"
+    },
+    {
+      "title": {
+        "tr": "xDesktop Kullanarak İlk Baskınızı Alma Kılavuzu",
+        "en": "Guide to Getting Your First Print Using xDesktop"
+      },
+      "slug": "guide-to-getting-your-first-print-using-xdesktop",
+      "category": "start",
+      "thumbnail": "https://cdn.zaxe.com/knowledge-base/posts/guide-to-getting-your-first-print-using-xdesktop/img/zaxe-xdesktop-first-print-model-orientation.webp",
       "type": "product"
     },
     {
