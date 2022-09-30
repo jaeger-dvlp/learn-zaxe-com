@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Icon from '@/src/images/Icons';
 import { BsGrid } from 'react-icons/bs';
 import { useRouter } from 'next/router';
+import Content from '@/src/content/Content';
 import { i18n, useTranslation } from 'next-i18next';
 import NoContent from '@/src/components/misc/NoContent';
 import { MdArticle, MdVideoLibrary } from 'react-icons/md';
@@ -122,7 +123,7 @@ function Categories({ product }) {
                       />
                     )
                   )}
-                {product.content.starterVideos
+                {product.content.allVideos
                   .slice(0, 2)
                   .map(({ label, videoURL, thumbnail }) => (
                     <VideoBlock
@@ -139,7 +140,7 @@ function Categories({ product }) {
             ) : product.content.posts.filter(
                 ({ category }) => category === activeCategory
               ).length +
-                product.content.starterVideos.filter(
+                product.content.allVideos.filter(
                   ({ category }) => category === activeCategory
                 ).length >
               0 ? (
@@ -170,7 +171,7 @@ function Categories({ product }) {
                       />
                     )
                   )}
-                {product.content.starterVideos
+                {product.content.allVideos
                   .filter(({ category }) => category === activeCategory)
                   .slice(0, 2)
                   .map(
@@ -181,7 +182,9 @@ function Categories({ product }) {
                           label,
                           videoURL,
                           poster: thumbnail,
-                          productName: videoProduct,
+                          productName: Content.products.find(
+                            ({ slug }) => slug === videoProduct
+                          ).name,
                         }}
                       />
                     )
@@ -203,7 +206,7 @@ function GetSeeAllButton({ props }) {
 
   if (activeCategory) {
     if (
-      product.content.starterVideos
+      product.content.allVideos
         .filter(({ category }) => category === activeCategory)
         .slice(0, 2).length > 0 ||
       product.content.posts
