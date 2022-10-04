@@ -87,6 +87,10 @@ function Product({ product: stringProduct }) {
             hrefLang="x-default"
             href={`https://learn.zaxe.com${asPath}`}
           />
+          <meta
+            name="google-site-verification"
+            content="PqBnncgMb_K3JE-GhF9RqxgonMwX2dJwmOjYhmOJZew"
+          />
         </Head>
         <div className="grid w-full font-zaxe pt-[15vh] grid-cols-1 place-content-start place-items-center">
           <ProductNav product={product} />

@@ -47,6 +47,10 @@ function Home() {
           hrefLang="x-default"
           href="https://learn.zaxe.com"
         />
+        <meta
+          name="google-site-verification"
+          content="PqBnncgMb_K3JE-GhF9RqxgonMwX2dJwmOjYhmOJZew"
+        />
       </Head>
       <WelcomeSection />
       <Products />

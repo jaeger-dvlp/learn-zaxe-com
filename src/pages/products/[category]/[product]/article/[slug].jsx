@@ -99,6 +99,10 @@ function Post({ data, content }) {
           hrefLang="x-default"
           content={`https://learn.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
         />
+        <meta
+          name="google-site-verification"
+          content="PqBnncgMb_K3JE-GhF9RqxgonMwX2dJwmOjYhmOJZew"
+        />
       </Head>
       <Schema
         props={{

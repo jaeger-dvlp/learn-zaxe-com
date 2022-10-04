@@ -12,6 +12,10 @@ function NotFound() {
     <>
       <Head>
         <title>Zaxe | 404</title>
+        <meta
+          name="google-site-verification"
+          content="PqBnncgMb_K3JE-GhF9RqxgonMwX2dJwmOjYhmOJZew"
+        />
       </Head>
       <div className="grid w-full min-h-screen grid-cols-1 bg-white font-zaxe place-content-center place-items-center">
         <div

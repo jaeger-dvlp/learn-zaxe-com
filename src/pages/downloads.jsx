@@ -108,6 +108,10 @@ function Downloads() {
           hrefLang="x-default"
           href="https://learn.zaxe.com/downloads"
         />
+        <meta
+          name="google-site-verification"
+          content="PqBnncgMb_K3JE-GhF9RqxgonMwX2dJwmOjYhmOJZew"
+        />
       </Head>
       <main className="grid font-zaxe w-full grid-cols-1 p-0 m-0 place-content-start place-items-center py-[20vh]">
         <article className="grid w-full grid-cols-1 gap-10 p-5 max-w-app place-content-start place-items-start">

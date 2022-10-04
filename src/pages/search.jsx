@@ -315,6 +315,10 @@ function Search({ posts: Posts }) {
           hrefLang="x-default"
           href="https://learn.zaxe.com/search"
         />
+        <meta
+          name="google-site-verification"
+          content="PqBnncgMb_K3JE-GhF9RqxgonMwX2dJwmOjYhmOJZew"
+        />
       </Head>
       <section className="pt-[20vh] font-zaxe w-full flex flex-wrap justify-center items-start">
         <section className="grid w-full grid-cols-1 p-5 gap-14 max-w-app place-content-start place-items-center">
