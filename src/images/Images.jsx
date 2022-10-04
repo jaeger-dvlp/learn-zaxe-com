@@ -1,6 +1,6 @@
 const Images = {
   logo: {
-    zxkb: require('./misc/logo-zxkb.png'),
+    zxkb: require('./misc/logo-zxkb.webp'),
   },
   placeholder: require('./misc/zaxe-placeholder.webp'),
   loader: {
