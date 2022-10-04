@@ -2,17 +2,20 @@
   "3dprinters": {
     "zaxe-z3": {
       "title": "Zaxe Z3 | Zaxe Knowledge Base",
-      "categories-title": "Categories for Zaxe Z3 | Zaxe Knowledge Base"
+      "categories-title": "Categories for Zaxe Z3 | Zaxe Knowledge Base",
+      "categories-description": "All the categories for Zaxe Z3"
     },
     "zaxe-x3": {
       "title": "Zaxe X3 | Zaxe Knowledge Base",
-      "categories-title": "Categories for Zaxe X3 | Zaxe Knowledge Base"
+      "categories-title": "Categories for Zaxe X3 | Zaxe Knowledge Base",
+      "categories-description": "All the categories for Zaxe X3"
     }
   },
   "softwares": {
     "zaxe-xdesktop": {
       "title": "Zaxe xDesktop | Zaxe Knowledge Base",
-      "categories-title": "Categories for Zaxe xDesktop | Zaxe Knowledge Base"
+      "categories-title": "Categories for Zaxe xDesktop | Zaxe Knowledge Base",
+      "categories-description": "All the categories for Zaxe xDesktop"
     }
   }
 }
