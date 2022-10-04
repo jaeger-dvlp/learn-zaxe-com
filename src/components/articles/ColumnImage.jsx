@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import ImageControls from '@/src/components/articles/ImageControls';
 
 function ColumnImage({ children, image: { imageURL, imageALT } }) {

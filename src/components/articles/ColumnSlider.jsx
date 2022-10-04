@@ -1,6 +1,6 @@
 import React from 'react';
 import { v4 } from 'uuid';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import ImageControls from '@/src/components/articles/ImageControls';
 import { BsFillCaretLeftFill, BsFillCaretRightFill } from 'react-icons/bs';
 

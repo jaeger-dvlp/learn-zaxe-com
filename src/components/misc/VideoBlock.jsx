@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import Content from '@/src/content/Content';
 import { useTranslation } from 'next-i18next';
 import { BsFillPlayFill } from 'react-icons/bs';
