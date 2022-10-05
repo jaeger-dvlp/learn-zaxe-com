@@ -6,6 +6,7 @@ import '@/src/styles/posts.css';
 import '@/src/styles/globals.css';
 import '@/src/styles/animations.css';
 import '@/src/styles/fonts/fonts.css';
+import TagManager from 'react-gtm-module';
 import { appWithTranslation } from 'next-i18next';
 import Loader from '@/src/components/main/Loader';
 import Header from '@/src/components/main/Header';
@@ -17,10 +18,16 @@ import AppWrapper from '@/src/components/contexts/AppContext';
 import NotificationPopup from '@/src/components/popups/NotificationPopup';
 import DownloadListPopup from '@/src/components/popups/DownloadListPopup';
 
+const GTMARGS = {
+  gtmId: 'GTM-MZ85NH8',
+};
+
 function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
     AOS.init({ once: true, mirror: false });
+    TagManager.initialize(GTMARGS);
   }, []);
+
   return (
     <AppWrapper>
       <Header />
