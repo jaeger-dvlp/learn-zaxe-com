@@ -75,17 +75,17 @@ function Article({ data, content }) {
         <link
           rel="alternate"
           hrefLang="tr"
-          content={`https://learn.zaxe.com/tr/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
+          content={`https://learn.zaxe.com/tr/articles/${postSlug}`}
         />
         <link
           rel="alternate"
           hrefLang="en"
-          content={`https://learn.zaxe.com/en/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
+          content={`https://learn.zaxe.com/en/articles/${postSlug}`}
         />
         <link
           rel="alternate"
           hrefLang="x-default"
-          content={`https://learn.zaxe.com/products/${queryCategorySlug}/${queryProductSlug}/article/${postSlug}`}
+          content={`https://learn.zaxe.com/articles/${postSlug}`}
         />
         <meta
           name="google-site-verification"
