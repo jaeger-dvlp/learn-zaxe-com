@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Content from '@/src/content/Content';
 import { useTranslation } from 'next-i18next';
 import { BiLinkExternal } from 'react-icons/bi';
+import { useAppContext } from '@/src/components/contexts/AppContext';
 
 function QuickNavigation() {
   const [quickNavItems] = React.useState(Content.components.quickNavigation);
@@ -54,8 +55,8 @@ function QuickNavigation() {
 }
 
 function LinkButton({ link }) {
+  const { activateNotificationPopup } = useAppContext();
   const { isExternal, link: url, title: linkTitle } = link;
-
   const router = useRouter();
   const { t } = useTranslation();
   if (isExternal) {
@@ -63,6 +64,17 @@ function LinkButton({ link }) {
       <li>
         <a
           href={url}
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => {
+            if (link.isDownload) {
+              return activateNotificationPopup({
+                message: 'common:popups.notification-popup.download-started',
+                icon: 'success',
+              });
+            }
+            return null;
+          }}
           className="relative flex group justify-start items-center gap-2 transition-all duration-100 after:absolute after:-bottom-1 after:h-[1px] after:w-0 after:bg-zaxe after:left-0 hover:after:w-full after:transition-all after:duration-[300ms] decoration-gray-600 hover:text-zaxe"
         >
           <span className="w-full">{t(linkTitle)}</span>
