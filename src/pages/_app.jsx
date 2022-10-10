@@ -17,6 +17,7 @@ import VideoPopup from '@/src/components/popups/VideoPopup';
 import AppWrapper from '@/src/components/contexts/AppContext';
 import NotificationPopup from '@/src/components/popups/NotificationPopup';
 import DownloadListPopup from '@/src/components/popups/DownloadListPopup';
+import GTM from '../components/misc/GTM';
 
 const GTMARGS = {
   gtmId: 'GTM-MZ85NH8',
@@ -38,6 +39,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <ScrollTop />
       <Footer />
+      <GTM />
     </AppWrapper>
   );
 }
