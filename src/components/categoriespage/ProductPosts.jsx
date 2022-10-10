@@ -25,7 +25,7 @@ function ProductPosts({ product }) {
   return (
     product && (
       <div className="grid w-full grid-cols-1 gap-10 place-content-start place-items-center">
-        <div className="grid min-h-[20rem] w-full grid-cols-1 p-5 gap-14 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 place-content-start place-items-start rounded-xl">
+        <div className="grid min-h-[20rem] w-full grid-cols-1 p-5 gap-14 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 place-content-start place-items-center rounded-xl">
           <div className="flex items-center justify-center w-full col-span-full">
             <h2 className="flex items-center justify-center gap-2 p-1 px-4 text-xl font-semibold text-center text-white shadow-xl shadow-black/30 rounded-xl bg-zaxe">
               <MdArticle />
@@ -89,7 +89,7 @@ function ProductPosts({ product }) {
             )
           )}
         </div>
-        <div className="grid min-h-[20rem] gap-14 w-full grid-cols-1 p-5 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 place-content-start place-items-start rounded-xl">
+        <div className="grid min-h-[20rem] gap-14 w-full grid-cols-1 p-5 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 place-content-start place-items-center rounded-xl">
           <div className="flex items-center justify-center w-full col-span-full">
             <h2 className="flex items-center justify-center gap-2 p-1 px-4 text-xl font-semibold text-center text-white shadow-xl shadow-black/30 rounded-xl bg-zaxe">
               <MdVideoLibrary />
