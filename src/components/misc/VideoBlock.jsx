@@ -36,6 +36,7 @@ function VideoBlock({ props }) {
           <Image
             src={poster}
             alt={t(label)}
+            layout="fill"
             className="object-cover w-full h-full"
           />
         </div>
