@@ -5,6 +5,7 @@ import { i18n } from '@/next-i18next.config';
 import { useTranslation } from 'next-i18next';
 import SearchBar from '@/src/components/misc/SearchBar';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Images from '../images/Images';
 
 function NotFound() {
   const { t } = useTranslation();
@@ -12,6 +13,48 @@ function NotFound() {
     <>
       <Head>
         <title>Zaxe | 404</title>
+        <meta name="description" content={t('meta.content.home')} />
+        <meta name="title" content="Zaxe | 404" />
+        <meta
+          name="keywords"
+          content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
+        />
+        <meta name="description" content={t('meta.content.home')} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://learn.zaxe.com/404" />
+        <meta property="og:title" content="Zaxe | 404" />
+        <meta property="og:description" content={t('meta.content.home')} />
+        <meta
+          property="og:keywords"
+          content="Zaxe, Zaxe Knowledge Base, Zaxe 3D, Knowledge, 3D Printer, 3D Printing, Slicer, Filament"
+        />
+        <meta property="og:image" content={Images.og.home.default.src} />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://learn.zaxe.com/" />
+        <meta property="twitter:site" content="@Zaxe3D" />
+        <meta property="twitter:site:id" content="@Zaxe3D" />
+        <meta property="twitter:creator" content="@Zaxe3D" />
+        <meta property="twitter:creator:id" content="@Zaxe3D" />
+        <meta property="twitter:title" content="Zaxe | 404" />
+        <meta property="twitter:description" content={t('meta.content.home')} />
+        <meta property="twitter:image" content={Images.og.home.default.src} />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+        <link
+          rel="alternate"
+          hrefLang="tr"
+          href="https://learn.zaxe.com/tr/404"
+        />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://learn.zaxe.com/en/404"
+        />
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://learn.zaxe.com/404"
+        />
         <meta
           name="google-site-verification"
           content="PqBnncgMb_K3JE-GhF9RqxgonMwX2dJwmOjYhmOJZew"
