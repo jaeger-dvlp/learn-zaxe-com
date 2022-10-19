@@ -2,6 +2,14 @@ import axios from 'axios';
 
 const { APIURL } = process.env;
 
+const sendPositiveFeedback = (body) =>
+  new Promise((resolve, reject) => {
+    axios
+      .post(`${APIURL}/kb/form/feedback/positive`, body)
+      .then((res) => resolve(res))
+      .catch((err) => reject(err));
+  });
+
 const sendForm = async (body, setFeedBack) => {
   setFeedBack({
     vote: {
@@ -22,7 +30,8 @@ const sendForm = async (body, setFeedBack) => {
   });
 };
 
-const VoteYes = (setFeedBack) => {
+const VoteYes = (body, setFeedBack) => {
+  sendPositiveFeedback(body);
   setFeedBack({
     vote: {
       yes: true,
@@ -101,4 +110,4 @@ const VoteNo = (setFeedBack) => {
   }, 500);
 };
 
-export { VoteNo, VoteYes, sendForm };
+export { VoteNo, VoteYes, sendForm, sendPositiveFeedback };
