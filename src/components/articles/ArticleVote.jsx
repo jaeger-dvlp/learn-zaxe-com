@@ -111,7 +111,9 @@ function ArticleVote({ postTitle }) {
           <div className="flex items-center justify-center w-full gap-7">
             <button
               type="button"
-              onClick={() => VoteYes(setFeedBack)}
+              onClick={() => {
+                VoteYes({ post: helpForm.post }, setFeedBack);
+              }}
               className="py-1 hover:bg-zaxe hover:-translate-y-1 active:scale-75 hover:border-zaxe hover:text-white transition-all duration-200 px-4 min-w-[6rem] border border-zinc-100 shadow-xl shadow-black/20 rounded-2xl text-zinc-500"
             >
               {t('common:article.vote-area.vote-button-yes')}
