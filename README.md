@@ -33,7 +33,7 @@ deploy.learn.zaxe.com.sh
 # [ zaxe3D ] : Running deploy script learn.zaxe.com...
 # ...
 # [ zaxe3D ] : Deployed successfully to production at https://learn.zaxe.com
-# [ zaxe3D ] : Restartimg PM2 instance..
+# [ zaxe3D ] : Restarting PM2 instance..
 # [ zaxe3D ] : PM2 instance restarted.
 # zaxe@zaxe3dprinters:/var/www/deployment#
 ```
